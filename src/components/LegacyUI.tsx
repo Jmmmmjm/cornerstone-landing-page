@@ -7,14 +7,14 @@ export function LegacyUI() {
 
   useGSAP(() => {
     if (!containerRef.current) return;
-    const fragments = gsap.utils.toArray('.legacy-fragment');
+    const windows = gsap.utils.toArray('.legacy-window');
     
-    fragments.forEach((frag: any) => {
-      gsap.to(frag, {
-        x: () => `+=${Math.random() * 20 - 10}`,
-        y: () => `+=${Math.random() * 20 - 10}`,
-        rotation: () => `+=${Math.random() * 4 - 2}`,
-        duration: () => 2 + Math.random() * 3,
+    windows.forEach((win: any) => {
+      gsap.to(win, {
+        x: () => `+=${Math.random() * 15 - 7.5}`,
+        y: () => `+=${Math.random() * 15 - 7.5}`,
+        rotation: () => `+=${Math.random() * 2 - 1}`,
+        duration: () => 4 + Math.random() * 2,
         repeat: -1,
         yoyo: true,
         ease: "sine.inOut"
@@ -22,41 +22,111 @@ export function LegacyUI() {
     });
   }, { scope: containerRef });
 
-  return (
-    <div ref={containerRef} className="absolute inset-0 overflow-hidden bg-[#020813]">
-      {/* Spreadsheet */}
-      <div className="legacy-fragment absolute top-[10%] left-[5%] w-[300px] h-[200px] bg-white text-black p-3 shadow-lg rotate-[-3deg] opacity-80">
-        <div className="border-b border-gray-300 pb-2 mb-3 font-bold text-sm">Q3 Financials.xlsx</div>
-        <div className="grid grid-cols-4 gap-2 text-[10px]">
-          <div className="bg-gray-200 h-4"></div><div className="bg-gray-100 h-4"></div><div className="bg-gray-100 h-4"></div><div className="bg-gray-100 h-4"></div>
-          <div className="bg-gray-200 h-4"></div><div className="bg-gray-100 h-4"></div><div className="bg-gray-100 h-4"></div><div className="bg-gray-100 h-4"></div>
-          <div className="bg-gray-200 h-4"></div><div className="bg-gray-100 h-4"></div><div className="bg-gray-100 h-4"></div><div className="bg-gray-100 h-4"></div>
-          <div className="bg-gray-200 h-4"></div><div className="bg-gray-100 h-4"></div><div className="bg-gray-100 h-4"></div><div className="bg-gray-100 h-4"></div>
+  const LegacyWindow = ({ className = "", title = "Legacy System", children }: { className?: string, title?: string, children?: React.ReactNode }) => (
+    <div className={`legacy-window bg-white border border-gray-400 rounded-lg overflow-hidden shadow-2xl flex flex-col pointer-events-none ${className}`}>
+      <div className="h-8 bg-[#D1D5DB] flex items-center justify-between px-3 border-b border-gray-400">
+        <div className="flex gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-gray-400"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-gray-400"></div>
         </div>
+        <div className="text-[9px] font-bold text-gray-600 uppercase tracking-wider">{title}</div>
+        <div className="w-8"></div>
       </div>
-      
-      {/* Email */}
-      <div className="legacy-fragment absolute top-[40%] left-[20%] w-[350px] h-[180px] bg-[#f0f0f0] text-black p-4 shadow-xl rotate-[2deg] opacity-90 border border-gray-300">
-        <div className="text-xs font-bold mb-2">Fwd: URGENT: Data mismatch</div>
-        <div className="text-[10px] text-gray-600 mb-3 border-b border-gray-300 pb-2">From: boss@company.com</div>
-        <div className="text-[11px] leading-relaxed">Can someone please consolidate these reports? We have 4 different numbers for the same metric. This is unacceptable.</div>
+      <div className="flex-1 bg-white p-4">
+        {children}
       </div>
-      
-      {/* Error Dialog */}
-      <div className="legacy-fragment absolute bottom-[20%] left-[10%] w-[280px] h-[120px] bg-gray-100 text-black shadow-2xl border-t-4 border-red-500 p-4 z-10">
-        <div className="text-sm font-bold text-red-600 mb-2">System Error</div>
-        <div className="text-[11px] text-gray-700">ERP Sync failed. Please manually export CSV and upload to the portal.</div>
-        <div className="mt-4 flex justify-end"><div className="bg-gray-300 px-4 py-1 text-[10px] font-bold cursor-pointer">OK</div></div>
-      </div>
-      
-      {/* Paper Form */}
-      <div className="legacy-fragment absolute top-[15%] left-[35%] w-[250px] h-[350px] bg-[#fdfdfd] shadow-md rotate-[6deg] opacity-70 p-6 border border-gray-200">
-        <div className="text-center text-xs font-bold mb-6 uppercase tracking-widest border-b border-black pb-2">Intake Form</div>
-        <div className="border-b border-gray-400 h-6 mb-4"></div>
-        <div className="border-b border-gray-400 h-6 mb-4"></div>
-        <div className="border-b border-gray-400 h-6 mb-4"></div>
-        <div className="border-b border-gray-400 h-6 mb-4"></div>
+    </div>
+  );
+
+  return (
+    <div ref={containerRef} className="absolute inset-0 bg-[#0A192F] overflow-hidden">
+      {/* Background noise grid */}
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+
+      {/* Clutter Windows - Scattered in background */}
+      <LegacyWindow title="Internal Mail" className="absolute top-[5%] left-[2%] w-[300px] h-[250px] opacity-40 -rotate-3">
+        <div className="space-y-3">
+          <div className="h-2 bg-gray-200 rounded w-full"></div>
+          <div className="h-2 bg-gray-200 rounded w-5/6"></div>
+          <div className="h-2 bg-gray-100 rounded w-4/6"></div>
+          <div className="h-12 bg-blue-50 border border-blue-100 rounded"></div>
+        </div>
+      </LegacyWindow>
+
+      <LegacyWindow title="Terminal v2.0" className="absolute bottom-[10%] left-[5%] w-[400px] h-[200px] opacity-30 rotate-2">
+        <div className="font-mono text-[8px] text-gray-500">
+          &gt; EXPORT_DATA --format=csv --target=s3<br/>
+          &gt; ERROR: Connection timed out (504)<br/>
+          &gt; RETRYING... [3/10]
+        </div>
+      </LegacyWindow>
+
+      <LegacyWindow title="Q4_Final_Final_v2.xlsx" className="absolute top-[10%] right-[2%] w-[350px] h-[300px] opacity-40 rotate-6">
+        <div className="grid grid-cols-4 gap-1">
+          {[...Array(24)].map((_, i) => (
+            <div key={i} className={`h-3 rounded-sm ${i % 7 === 0 ? 'bg-red-100' : 'bg-gray-100'}`}></div>
+          ))}
+        </div>
+      </LegacyWindow>
+
+      <LegacyWindow title="Manual Override" className="absolute bottom-[15%] right-[8%] w-[280px] h-[180px] opacity-50 -rotate-2">
+        <div className="flex flex-col items-center justify-center h-full gap-2">
+          <div className="w-10 h-10 rounded-full border-4 border-red-200 border-t-red-500"></div>
+          <div className="text-[10px] text-red-600 font-bold">Awaiting Input...</div>
+        </div>
+      </LegacyWindow>
+
+      {/* PRIMARY WINDOW - Matches Section2 "After" sizing exactly */}
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="w-full max-w-7xl px-6 md:px-12">
+          <div className="legacy-window w-full h-[500px] bg-white border border-gray-400 rounded-xl overflow-hidden shadow-2xl flex flex-col">
+            <div className="h-10 bg-[#D1D5DB] flex items-center justify-between px-4 border-b border-gray-400">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-gray-400"></div>
+                <div className="w-3 h-3 rounded-full bg-gray-400"></div>
+                <div className="w-3 h-3 rounded-full bg-gray-400"></div>
+              </div>
+              <div className="text-[10px] font-bold text-gray-600 uppercase tracking-widest">Main Dashboard (Deprecated)</div>
+              <div className="w-12"></div>
+            </div>
+            
+            <div className="flex-1 flex overflow-hidden">
+              <div className="w-48 bg-[#F3F4F6] border-r border-gray-300 p-4 flex flex-col gap-2">
+                {[...Array(8)].map((_, i) => (
+                  <div key={i} className="h-6 bg-gray-200 rounded border border-gray-300 flex items-center px-2">
+                    <div className="w-2 h-2 bg-gray-400 rounded-sm mr-2"></div>
+                    <div className="h-2 bg-gray-300 rounded w-full"></div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex-1 p-6 bg-white overflow-hidden">
+                <div className="flex gap-4 mb-6">
+                  <div className="flex-1 h-32 bg-red-50 border border-red-200 rounded p-4">
+                    <div className="text-[10px] font-bold text-red-800 uppercase mb-2">Critical Sync Error</div>
+                    <div className="h-2 bg-red-200 rounded w-3/4 mb-2"></div>
+                    <div className="h-2 bg-red-100 rounded w-full"></div>
+                  </div>
+                  <div className="w-1/3 h-32 bg-gray-50 border border-gray-200 rounded p-4">
+                    <div className="text-[10px] font-bold text-gray-400 uppercase mb-2">Idle Resource</div>
+                    <div className="h-2 bg-gray-200 rounded w-1/2"></div>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  {[...Array(6)].map((_, i) => (
+                    <div key={i} className="h-8 bg-gray-50 border border-gray-200 rounded flex items-center px-4 gap-4">
+                      <div className="w-4 h-4 bg-gray-200 rounded-full"></div>
+                      <div className="h-2 bg-gray-200 rounded flex-1"></div>
+                      <div className="h-2 bg-gray-200 rounded w-24"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
+
+

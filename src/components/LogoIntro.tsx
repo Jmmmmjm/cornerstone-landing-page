@@ -36,12 +36,12 @@ export function LogoIntro({ onComplete }: { onComplete: () => void }) {
   }, [onComplete]);
 
   return (
-    <div ref={containerRef} className="fixed inset-0 z-[10000] bg-[#F8F9FA] flex items-center justify-center">
+    <div ref={containerRef} className="fixed inset-0 z-[10000] bg-[#0A192F] flex items-center justify-center">
       <svg width="120" height="120" viewBox="0 0 100 100">
-        <path ref={path1Ref} d="M 0 0 H 100 V 100 H 80 V 20 H 0 Z" fill="#0A192F" />
-        <path ref={path2Ref} d="M 0 30 H 70 V 100 H 50 V 50 H 0 Z" fill="#0A192F" />
-        <path ref={path3Ref} d="M 0 60 H 40 V 100 H 20 V 80 H 0 Z" fill="#0A192F" />
-        <polygon ref={triangleRef} points="0,100 20,100 0,80" fill="#8892B0" />
+        <path ref={path1Ref} d="M 0 0 H 100 V 100 H 80 V 20 H 0 Z" fill="#F8F9FA" />
+        <path ref={path2Ref} d="M 0 30 H 70 V 100 H 50 V 50 H 0 Z" fill="#F8F9FA" />
+        <path ref={path3Ref} d="M 0 60 H 40 V 100 H 20 V 80 H 0 Z" fill="#F8F9FA" />
+        <polygon ref={triangleRef} points="0,100 20,100 0,80" fill="#64FFDA" />
       </svg>
     </div>
   );

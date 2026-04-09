@@ -3,7 +3,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { FileSpreadsheet, Mail, Database, FileText, LayoutDashboard, MessageSquare, PieChart, FolderOpen, Calendar, Briefcase } from 'lucide-react';
-import { WindowUI } from './WindowUI';
 import { BreathingGrid } from './BreathingGrid';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -13,8 +12,8 @@ const ICONS = [FileSpreadsheet, Mail, Database, FileText, LayoutDashboard, Messa
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const iconsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const windowRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const questionRef = useRef<HTMLDivElement>(null);
 
   const scatterPositions = useMemo(() => {
     return ICONS.map((_, i) => {
@@ -31,14 +30,15 @@ export function Hero() {
   }, []);
 
   const innerIconsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const idleTweens = useRef<gsap.core.Tween[]>([]);
 
   useGSAP(() => {
     if (!containerRef.current) return;
 
-    // Idle animation
+    // Idle animation for floating icons
     innerIconsRef.current.forEach((icon, i) => {
       if (!icon) return;
-      gsap.to(icon, {
+      const tween = gsap.to(icon, {
         y: 15,
         rotation: 10,
         duration: 2 + (i % 3),
@@ -46,100 +46,190 @@ export function Hero() {
         yoyo: true,
         ease: "sine.inOut"
       });
+      idleTweens.current.push(tween);
     });
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "+=300%", // 3 viewport heights
-        scrub: true,
+        end: "+=150%", // Reduced from 200% to make the section feel faster
+        scrub: 1,
         pin: true,
+        anticipatePin: 1,
+        onUpdate: (self) => {
+          // As we scroll, gradually stop the idle floating
+          const progress = self.progress;
+          idleTweens.current.forEach(tween => {
+            tween.timeScale(Math.max(0, 1 - progress * 2));
+          });
+        }
       }
     });
 
-    // Phase 1: Icons converge
+    tl.addLabel("start");
+
+    // Phase 0: Question fades out
+    tl.to(questionRef.current, {
+      opacity: 0,
+      scale: 0.8,
+      duration: 0.3,
+      ease: "power2.inOut"
+    }, 0);
+
+    // Phase 1: Icons converge and meet at center (logo position)
     iconsRef.current.forEach((icon, i) => {
       if (!icon) return;
-      
-      // Comet tail effect
+
+      // Initial state to ensure they start from their scatter positions
+      const pos = scatterPositions[i];
+      gsap.set(icon, {
+        x: `${pos.x}vw`,
+        y: `${pos.y}vh`,
+        xPercent: -50,
+        yPercent: -50,
+        rotation: pos.rotation
+      });
+
       tl.to(icon, {
-        filter: "drop-shadow(0px 0px 12px rgba(136, 146, 176, 0.8)) blur(1px)",
-        duration: 0.1
+        filter: "drop-shadow(0px 0px 12px rgba(100, 255, 218, 0.8)) blur(2px)",
+        duration: 0.1,
+        overwrite: 'auto'
       }, i * 0.02);
 
       tl.to(icon, {
-        x: 0, // center
-        y: 0, // center
+        x: 0,
+        y: 0,
         rotation: 0,
-        scale: 0.5,
+        scale: 0.1,
         opacity: 0,
-        duration: 1,
+        duration: 0.8,
         ease: "power2.inOut"
-      }, i * 0.02); // slight stagger
+      }, i * 0.02);
     });
 
-    // Phase 2: Window frame appears
-    tl.fromTo(windowRef.current, 
-      { scale: 0, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 0.8, ease: "back.out(1.2)" },
-      0.6 // overlap with icon convergence
+    // Fade in and FORM the global shared logo AS icons merge
+    // Icons finish merging around 0.8s, so we make logo fully done by then
+    const sharedObj = document.getElementById('shared-global-object');
+    if (sharedObj) {
+      tl.set(sharedObj, { opacity: 1, scale: 1 }, 0.1);
+
+      const paths = sharedObj.querySelectorAll('path');
+      paths.forEach((path, i) => {
+        const p = path as SVGPathElement;
+        const length = p.getTotalLength();
+        
+        // Start drawing as icons fly in
+        tl.set(p, { 
+          strokeDasharray: length, 
+          strokeDashoffset: length,
+          stroke: '#F8F9FA',
+          strokeWidth: 2,
+          fill: 'rgba(248, 249, 250, 0)',
+          opacity: 1 
+        }, 0.1);
+
+        // Draw the lines quickly to finish by the merge point
+        tl.to(p, { 
+          strokeDashoffset: 0, 
+          duration: 0.5, 
+          ease: "power1.inOut" 
+        }, 0.1 + (i * 0.05));
+        
+        // Fade the fill in so it's solid by 0.8s
+        tl.to(p, { 
+          fill: 'rgba(248, 249, 250, 1)', 
+          strokeWidth: 0, 
+          duration: 0.3,
+          ease: "power1.out"
+        }, 0.4 + (i * 0.05));
+      });
+
+      // Triangle pops in at the very end of the merge
+      const poly = sharedObj.querySelector('polygon');
+      if (poly) {
+        tl.fromTo(poly, 
+          { opacity: 0, scale: 0 }, 
+          { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.5)" }, 
+          0.6
+        );
+      }
+    }
+
+    // Phase 2: Text appears below the fully formed logo
+    tl.fromTo(textRef.current,
+      { opacity: 0, scale: 0.9, y: 30 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.4, ease: "power2.out" },
+      0.6
     );
 
-    // Phase 3: Words appear
-    tl.to(windowRef.current, { y: -80, duration: 0.5, ease: "power2.inOut" }, 1.2);
-    tl.fromTo(textRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
-      1.2
-    );
+    // Phase 3: Text fades out, THEN the logo morphs into the line
+    tl.to(textRef.current, {
+      opacity: 0,
+      y: 30,
+      scale: 1.05,
+      duration: 0.4,
+      ease: "power2.in"
+    }, 1.3);
+
+    // Increase dummy duration significantly to delay the start of the morphing in App.tsx
+    // Total duration becomes 3.2. Title finishes fading at 1.7.
+    // 1.7 / 3.2 = ~53% of the pin progress.
+    tl.to({}, { duration: 1.5 }, 1.7);
+
+    tl.addLabel("end");
 
   }, { scope: containerRef });
 
   return (
-    <div ref={containerRef} className="relative w-full h-screen bg-[#0A192F] overflow-hidden flex items-center justify-center">
+    <section ref={containerRef} data-hero data-scroll-anim className="relative w-full h-screen bg-[#0A192F] overflow-hidden flex items-center justify-center">
       
       <BreathingGrid />
 
+      {/* Initial Question */}
+      <div 
+        ref={questionRef}
+        className="absolute z-30 text-center px-6"
+      >
+        <h2 className="text-[#8892B0] font-display font-light text-2xl md:text-4xl tracking-[0.2em] uppercase">
+          Are you ready to scale?
+        </h2>
+      </div>
+
       {/* Scattered Icons */}
-      <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-        {ICONS.map((Icon, i) => {
-          const pos = scatterPositions[i];
-          return (
-            <div
-              key={i}
-              ref={el => { iconsRef.current[i] = el; }}
-              className="absolute text-[#8892B0]"
-              style={{
-                transform: `translate(${pos.x}vw, ${pos.y}vh) rotate(${pos.rotation}deg)`,
-              }}
-            >
-              <div ref={el => { innerIconsRef.current[i] = el; }}>
-                <Icon size={32} strokeWidth={1.5} />
+      <div className="absolute inset-0 pointer-events-none flex justify-center pt-[40vh]">
+        <div className="relative">
+          {ICONS.map((Icon, i) => {
+            return (
+              <div
+                key={i}
+                ref={el => { iconsRef.current[i] = el; }}
+                className="absolute text-[#8892B0] will-change-transform"
+              >
+                <div ref={el => { innerIconsRef.current[i] = el; }}>
+                  <Icon size={32} strokeWidth={1.5} />
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
 
-      {/* Window Frame */}
-      <div ref={windowRef} className="absolute z-10 w-full max-w-3xl px-6 opacity-0 scale-0">
-        <WindowUI className="w-full h-[400px]" buildAnimation={true} />
-      </div>
+      {/* Window is now handled by App.tsx sharedWindowRef */}
 
-      {/* Text Content */}
-      <div ref={textRef} className="absolute z-20 flex flex-col items-center justify-center text-center opacity-0 mt-[450px]">
+      {/* Text Content - Positioned lower (top: 60%) */}
+      <div ref={textRef} className="absolute z-50 flex flex-col items-center justify-center text-center opacity-0 top-[60%] left-1/2 -translate-x-1/2">
         <h1 className="text-[#F8F9FA] font-display font-bold text-4xl md:text-6xl lg:text-7xl tracking-[0.15em] uppercase whitespace-nowrap drop-shadow-lg">
-          Scale On Stability
+          Cornerstone
         </h1>
         <p className="text-[#F8F9FA] font-display font-light text-lg md:text-xl lg:text-2xl mt-4 tracking-normal drop-shadow-md">
-          The foundation for the next generation of builders.
+          Scale On Stability
         </p>
         <button className="mt-8 px-8 py-3 bg-[#F8F9FA] text-[#0A192F] font-sans font-medium rounded hover:bg-[#8892B0] transition-colors pointer-events-auto">
           Get Started
         </button>
       </div>
 
-    </div>
+    </section>
   );
 }

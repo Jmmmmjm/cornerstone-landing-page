@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-export function WindowUI({ className = "", partial = false, buildAnimation = false }: { className?: string, partial?: boolean, buildAnimation?: boolean }) {
+export function WindowUI({ className = "", style = {}, partial = false, buildAnimation = false, children }: { className?: string; style?: React.CSSProperties; partial?: boolean; buildAnimation?: boolean; children?: React.ReactNode }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const titleBarRef = useRef<HTMLDivElement>(null);
   const sidebarRef = useRef<HTMLDivElement>(null);
@@ -31,7 +31,7 @@ export function WindowUI({ className = "", partial = false, buildAnimation = fal
   }, { scope: containerRef, dependencies: [buildAnimation] });
 
   return (
-    <div ref={containerRef} className={`flex flex-col bg-[#0A192F] border border-[#8892B0]/30 rounded-xl overflow-hidden shadow-2xl ${className}`}>
+    <div ref={containerRef} style={style} className={`flex flex-col bg-[#0A192F] border border-[#8892B0]/30 rounded-xl overflow-hidden shadow-2xl ${className}`}>
       {/* Title bar */}
       <div ref={titleBarRef} className="h-10 bg-[#112240] flex items-center px-4 gap-2 border-b border-[#8892B0]/20">
         <div className="w-3 h-3 rounded-full bg-[#FF5F56]"></div>
@@ -39,6 +39,7 @@ export function WindowUI({ className = "", partial = false, buildAnimation = fal
         <div className="w-3 h-3 rounded-full bg-[#27C93F]"></div>
       </div>
       {/* Content */}
+      {children || (
       <div className="flex-1 flex p-6 gap-6 bg-[#0A192F]">
         {/* Sidebar */}
         <div ref={sidebarRef} className="w-48 flex flex-col gap-4 border-r border-[#8892B0]/10 pr-6">
@@ -73,6 +74,6 @@ export function WindowUI({ className = "", partial = false, buildAnimation = fal
           </div>
         </div>
       </div>
-    </div>
+      )}</div>
   )
 }

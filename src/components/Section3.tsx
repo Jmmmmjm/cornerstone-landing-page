@@ -15,16 +15,16 @@ export function Section3() {
     if (!containerRef.current || !sliderRef.current) return;
 
     const panels = gsap.utils.toArray('.process-panel');
-    
+
     gsap.to(panels, {
       xPercent: -100 * (panels.length - 1),
       ease: "none",
       scrollTrigger: {
         trigger: containerRef.current,
-        pin: true,
+        start: "top top",
+        end: "+=200%",
         scrub: 1,
-        snap: 1 / (panels.length - 1),
-        end: () => "+=" + sliderRef.current!.offsetWidth,
+        pin: true,
         onUpdate: (self) => {
           const step = Math.round(self.progress * 2);
           setActiveStep(step);
@@ -34,7 +34,7 @@ export function Section3() {
   }, { scope: containerRef });
 
   return (
-    <section id="process" ref={containerRef} className="relative h-screen bg-[#0A192F] overflow-hidden">
+    <section id="process" ref={containerRef} data-scroll-anim className="relative h-screen bg-[#0A192F] overflow-hidden">
       
       {/* Progress Bar */}
       <div className="absolute top-24 left-1/2 -translate-x-1/2 z-20 flex gap-4">
@@ -100,7 +100,10 @@ export function Section3() {
               </p>
             </div>
             <div className="flex justify-center">
-              <LiveWindowUI className="w-full max-w-md h-[300px]" />
+              {/* Removed LiveWindowUI as it's now shared and handled globally */}
+              <div className="w-full max-w-md h-[300px] border border-[#8892B0]/20 rounded-xl bg-[#112240]/50 flex items-center justify-center">
+                 <p className="text-[#8892B0] text-sm italic">System Ready</p>
+              </div>
             </div>
           </div>
         </div>

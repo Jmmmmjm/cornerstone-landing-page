@@ -1,42 +1,100 @@
 import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className={`fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none transition-all duration-500 ${scrolled ? 'pt-6' : 'pt-0'}`}>
-      <nav className={`pointer-events-auto flex items-center justify-between transition-all duration-500 ${
-        scrolled 
-          ? 'bg-[#112240] border border-[#8892B0]/30 rounded-full px-8 py-3 shadow-2xl w-auto gap-8 md:gap-12' 
-          : 'bg-transparent w-full px-6 md:px-12 py-6'
-      }`}>
-        <div className="flex items-center gap-3">
-          {scrolled && <div className="w-2 h-2 rounded-full bg-[#64FFDA]"></div>}
-          <span className="text-[#F8F9FA] font-display font-medium tracking-widest uppercase text-sm">Cornerstone</span>
-        </div>
-        
-        <div className={`hidden md:flex items-center gap-8`}>
-          <a href="#process" className="text-[#8892B0] hover:text-[#F8F9FA] text-sm font-medium transition-colors">Process</a>
-          <a href="#solutions" className="text-[#8892B0] hover:text-[#F8F9FA] text-sm font-medium transition-colors">Solutions</a>
-          <a href="#results" className="text-[#8892B0] hover:text-[#F8F9FA] text-sm font-medium transition-colors">Case Studies</a>
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none py-4">
+      <motion.nav
+        initial={false}
+        animate={{
+          y: scrolled ? 0 : 20,
+          width: scrolled ? 'min(calc(100% - 3rem), 900px)' : '100%',
+          backgroundColor: scrolled ? 'rgba(10, 25, 47, 0.85)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(16px)' : 'blur(0px)',
+          borderRadius: scrolled ? '100px' : '0px',
+          borderWidth: scrolled ? '1px' : '0px',
+          borderColor: scrolled ? 'rgba(100, 255, 218, 0.15)' : 'transparent',
+          padding: scrolled ? '0.6rem 1.5rem 0.6rem 2rem' : '1.5rem 3rem',
+          boxShadow: scrolled ? '0 10px 40px -10px rgba(2, 12, 27, 0.8), 0 0 30px rgba(100, 255, 218, 0.08)' : 'none',
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 280,
+          damping: 32,
+          mass: 0.8,
+        }}
+        className="pointer-events-auto flex items-center justify-between relative group/nav will-change-transform"
+      >
+        <div className="flex items-center gap-3 relative z-10">
+          <motion.div
+            initial={false}
+            animate={{
+              scale: scrolled ? 1 : 0,
+              opacity: scrolled ? 1 : 0,
+              rotate: scrolled ? 0 : -90,
+            }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+            className="w-1.5 h-1.5 rounded-full bg-[#64FFDA] shadow-[0_0_8px_#64FFDA]"
+          />
+          <span className="text-[#F8F9FA] font-display font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs whitespace-nowrap">
+            Cornerstone
+          </span>
         </div>
 
-        <a href="https://calendar.google.com" target="_blank" rel="noreferrer" className={`text-sm font-medium transition-colors flex items-center gap-2 ${
-          scrolled
-            ? 'text-[#64FFDA] hover:text-[#F8F9FA]'
-            : 'border border-[#F8F9FA] text-[#F8F9FA] hover:bg-[#F8F9FA] hover:text-[#0A192F] px-5 py-2'
-        }`}>
-          Book a Call {scrolled && <span>&rarr;</span>}
-        </a>
-      </nav>
+        <div className={`hidden md:flex items-center gap-10 ${scrolled ? 'mx-12' : 'absolute left-1/2 -translate-x-1/2'}`}>
+          {['Process', 'Solutions', 'Results'].map((item) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="text-[#8892B0] hover:text-[#64FFDA] text-[10px] font-bold tracking-[0.15em] uppercase transition-colors relative group"
+            >
+              {item}
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#64FFDA] transition-all duration-300 group-hover:w-full" />
+            </a>
+          ))}
+        </div>
+
+        <div className="flex items-center relative z-10">
+          <motion.a
+            initial={false}
+            animate={{
+              backgroundColor: scrolled ? '#64FFDA' : 'transparent',
+              color: scrolled ? '#0A192F' : '#64FFDA',
+              borderRadius: scrolled ? '100px' : '4px',
+              padding: scrolled ? '0.5rem 1.25rem' : '0.5rem 1.5rem',
+              scale: 1,
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            href="https://calendar.google.com"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 border border-[#64FFDA]/50 font-bold tracking-widest uppercase text-[10px] transition-colors duration-300"
+            style={{
+              boxShadow: scrolled ? '0 0 15px rgba(100, 255, 218, 0.25)' : 'none',
+            }}
+          >
+            <span>{scrolled ? 'Connect' : 'Book a Call'}</span>
+            <motion.span
+              initial={false}
+              animate={{ opacity: scrolled ? 1 : 0, x: scrolled ? 0 : -5 }}
+              transition={{ duration: 0.2 }}
+            >
+              &rarr;
+            </motion.span>
+          </motion.a>
+        </div>
+      </motion.nav>
     </div>
   );
 }
