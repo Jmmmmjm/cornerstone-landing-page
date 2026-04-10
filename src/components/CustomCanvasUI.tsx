@@ -32,13 +32,13 @@ export function CustomCanvasUI() {
   }, []);
 
   return (
-    <div ref={containerRef} className="w-full h-32 bg-[#0A192F] rounded-lg border border-[#8892B0]/20 mb-6 flex items-center justify-center overflow-hidden relative">
+    <div ref={containerRef} className="w-full h-32 bg-white dark:bg-[#0A192F] rounded-none border border-slate-300 dark:border-[#8892B0]/20 mb-6 flex items-center justify-center overflow-hidden relative">
       <div className="absolute inset-0 p-4">
-        <div className="blinking-cursor w-2 h-4 bg-[#64FFDA] absolute top-4 left-4"></div>
+        <div className="blinking-cursor w-2 h-4 bg-teal-500 dark:bg-[#64FFDA] absolute top-4 left-4"></div>
         
-        <div className="custom-shape absolute top-6 left-12 w-16 h-16 border-2 border-[#8892B0] rounded-lg"></div>
-        <div className="custom-shape absolute top-12 left-32 w-12 h-12 border-2 border-[#64FFDA] rounded-full"></div>
-        <div className="custom-shape absolute top-4 left-48 w-20 h-8 border-2 border-[#8892B0] rounded"></div>
+        <div className="custom-shape absolute top-6 left-12 w-16 h-16 border-2 border-slate-300 dark:border-[#8892B0] rounded-none"></div>
+        <div className="custom-shape absolute top-12 left-32 w-12 h-12 border-2 border-teal-500 dark:border-[#64FFDA] rounded-none"></div>
+        <div className="custom-shape absolute top-4 left-48 w-20 h-8 border-2 border-slate-300 dark:border-[#8892B0] rounded-none"></div>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ export function CountUp({ end, suffix = "", duration = 2 }: { end: number, suffi
   }, [end, duration]);
 
   return (
-    <div ref={ref} className="text-5xl font-mono text-[#64FFDA] mb-2">
+    <div ref={ref} className="text-5xl font-mono text-teal-600 dark:text-[#64FFDA] mb-2">
       {count}{suffix}
     </div>
   );

@@ -59,11 +59,11 @@ export function Section4() {
   }, { scope: containerRef });
 
   return (
-    <section id="solutions" ref={containerRef} className="relative py-32 bg-[#0A192F] overflow-hidden border-t border-[#8892B0]/10">
+    <section id="solutions" ref={containerRef} className="relative py-32 bg-white dark:bg-[#0A192F] overflow-hidden border-t border-slate-300 dark:border-[#8892B0]/10">
       
       {/* Full-width Intro Moment */}
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-0 z-0">
-        <div ref={introLeftRef} className="flex-1 h-64 border-r border-[#8892B0]/20 flex items-center justify-center opacity-0">
+        <div ref={introLeftRef} className="flex-1 h-64 border-r border-slate-300 dark:border-[#8892B0]/20 flex items-center justify-center opacity-0">
            <div className="w-full max-w-lg opacity-30"><WorkflowDiagramUI /></div>
         </div>
         <div ref={introRightRef} className="flex-1 h-64 flex items-center justify-center opacity-0">
@@ -78,21 +78,21 @@ export function Section4() {
           {/* Left Card */}
           <div 
             ref={leftCardRef}
-            className="flex-1 flex flex-col bg-[#112240] border border-[#8892B0]/20 rounded-xl p-10 transition-all duration-300 hover:-translate-y-1 hover:border-[#8892B0]/50"
+            className="flex-1 flex flex-col bg-slate-50 dark:bg-[#112240] border border-slate-300 dark:border-[#8892B0]/20 rounded-none p-10 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 dark:border-[#8892B0]/50"
           >
-            <Reveal delay={0}><h3 className="text-3xl font-display font-medium text-[#F8F9FA] mb-2">Standard</h3></Reveal>
-            <Reveal delay={0.1}><p className="text-[#8892B0] text-sm mb-8 h-10">Pre-built automation workflows for your industry. Ready to deploy.</p></Reveal>
+            <Reveal delay={0}><h3 className="text-3xl font-display font-medium text-[#0A192F] dark:text-[#F8F9FA] mb-2">Standard</h3></Reveal>
+            <Reveal delay={0.1}><p className="text-[#0A192F]/70 dark:text-[#8892B0] text-sm mb-8 h-10">Pre-built automation workflows for your industry. Ready to deploy.</p></Reveal>
             
             <WorkflowDiagramUI />
             
             <div className="flex flex-col gap-4 flex-1 mb-10">
-              <div className="border-t border-[#8892B0]/20 pt-4 text-[#F8F9FA] text-sm">Automated reporting & dashboards</div>
-              <div className="border-t border-[#8892B0]/20 pt-4 text-[#F8F9FA] text-sm">Standard ERP/CRM integrations</div>
-              <div className="border-t border-[#8892B0]/20 pt-4 text-[#F8F9FA] text-sm">Role-based access control</div>
-              <div className="border-t border-[#8892B0]/20 pt-4 text-[#F8F9FA] text-sm">Email & Slack notifications</div>
+              <div className="border-t border-slate-300 dark:border-[#8892B0]/20 pt-4 text-[#0A192F] dark:text-[#F8F9FA] text-sm">Automated reporting & dashboards</div>
+              <div className="border-t border-slate-300 dark:border-[#8892B0]/20 pt-4 text-[#0A192F] dark:text-[#F8F9FA] text-sm">Standard ERP/CRM integrations</div>
+              <div className="border-t border-slate-300 dark:border-[#8892B0]/20 pt-4 text-[#0A192F] dark:text-[#F8F9FA] text-sm">Role-based access control</div>
+              <div className="border-t border-slate-300 dark:border-[#8892B0]/20 pt-4 text-[#0A192F] dark:text-[#F8F9FA] text-sm">Email & Slack notifications</div>
             </div>
 
-            <button className="w-full border border-[#8892B0]/50 text-[#F8F9FA] hover:bg-[#F8F9FA] hover:text-[#0A192F] px-6 py-3 text-sm font-medium transition-colors rounded">
+            <button className="w-full bg-[#0A192F] dark:bg-transparent border border-[#0A192F] dark:border-[#8892B0]/50 text-white dark:text-[#F8F9FA] hover:bg-[#0A192F]/80 dark:hover:bg-[#F8F9FA] dark:hover:text-[#0A192F] px-6 py-3 text-sm font-medium transition-colors rounded-none">
               See what's included
             </button>
           </div>
@@ -100,27 +100,27 @@ export function Section4() {
           {/* Divider */}
           <div className="hidden md:flex flex-col items-center justify-center relative w-px">
             <div ref={dividerRef} className="absolute top-0 bottom-0 w-px bg-[#8892B0]/30 origin-top"></div>
-            <div className="bg-[#0A192F] py-4 z-10 text-[#8892B0] text-sm italic">or</div>
+            <div className="bg-white dark:bg-[#0A192F] py-4 z-10 text-[#0A192F]/70 dark:text-[#8892B0] text-sm italic">or</div>
           </div>
 
           {/* Right Card */}
           <div 
             ref={rightCardRef}
-            className="flex-1 flex flex-col bg-[#112240] border border-[#8892B0]/20 rounded-xl p-10 transition-all duration-300 hover:-translate-y-1 hover:border-[#8892B0]/50"
+            className="flex-1 flex flex-col bg-slate-50 dark:bg-[#112240] border border-slate-300 dark:border-[#8892B0]/20 rounded-none p-10 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 dark:border-[#8892B0]/50"
           >
-            <Reveal delay={0}><h3 className="text-3xl font-display font-medium text-[#F8F9FA] mb-2">Custom</h3></Reveal>
-            <Reveal delay={0.1}><p className="text-[#8892B0] text-sm mb-8 h-10">Built from the ground up around your specific workflows. No compromises.</p></Reveal>
+            <Reveal delay={0}><h3 className="text-3xl font-display font-medium text-[#0A192F] dark:text-[#F8F9FA] mb-2">Custom</h3></Reveal>
+            <Reveal delay={0.1}><p className="text-[#0A192F]/70 dark:text-[#8892B0] text-sm mb-8 h-10">Built from the ground up around your specific workflows. No compromises.</p></Reveal>
             
             <CustomCanvasUI />
             
             <div className="flex flex-col gap-4 flex-1 mb-10">
-              <div className="border-t border-[#8892B0]/20 pt-4 text-[#F8F9FA] text-sm">Bespoke system architecture</div>
-              <div className="border-t border-[#8892B0]/20 pt-4 text-[#F8F9FA] text-sm">Legacy database migration</div>
-              <div className="border-t border-[#8892B0]/20 pt-4 text-[#F8F9FA] text-sm">Custom AI model fine-tuning</div>
-              <div className="border-t border-[#8892B0]/20 pt-4 text-[#F8F9FA] text-sm">Dedicated support SLA</div>
+              <div className="border-t border-slate-300 dark:border-[#8892B0]/20 pt-4 text-[#0A192F] dark:text-[#F8F9FA] text-sm">Bespoke system architecture</div>
+              <div className="border-t border-slate-300 dark:border-[#8892B0]/20 pt-4 text-[#0A192F] dark:text-[#F8F9FA] text-sm">Legacy database migration</div>
+              <div className="border-t border-slate-300 dark:border-[#8892B0]/20 pt-4 text-[#0A192F] dark:text-[#F8F9FA] text-sm">Custom AI model fine-tuning</div>
+              <div className="border-t border-slate-300 dark:border-[#8892B0]/20 pt-4 text-[#0A192F] dark:text-[#F8F9FA] text-sm">Dedicated support SLA</div>
             </div>
 
-            <button className="w-full bg-[#F8F9FA] text-[#0A192F] hover:bg-[#8892B0] px-6 py-3 text-sm font-medium transition-colors rounded">
+            <button className="w-full bg-[#0A192F] dark:bg-[#F8F9FA] text-white dark:text-[#0A192F] hover:bg-[#8892B0] px-6 py-3 text-sm font-medium transition-colors rounded-none">
               Talk to us about your operation
             </button>
           </div>
@@ -128,7 +128,7 @@ export function Section4() {
         </div>
 
         <div className="text-center mt-16">
-          <Reveal delay={0.2}><p className="text-[#8892B0] text-sm">Not sure which fits? The Discovery Call will tell us.</p></Reveal>
+          <Reveal delay={0.2}><p className="text-[#0A192F]/70 dark:text-[#8892B0] text-sm">Not sure which fits? The Discovery Call will tell us.</p></Reveal>
         </div>
 
       </div>

@@ -79,11 +79,12 @@ export function IlluminationGrid() {
         return;
       }
 
-      const radius = 200;
-      const maxOpacity = 0.15;
+      const isDarkMode = document.documentElement.classList.contains('dark');
+      const radius = 250; // Increased radius for better visibility
+      const maxOpacity = isDarkMode ? 0.15 : 0.25; // More noticeable in light mode
 
-      ctx.strokeStyle = '#8892B0';
-      ctx.lineWidth = 1;
+      ctx.strokeStyle = isDarkMode ? '#8892B0' : '#0A192F'; // Use navy in light mode
+      ctx.lineWidth = isDarkMode ? 1 : 1.5; // Slightly thicker lines in light mode
 
       const startCol = Math.max(0, Math.floor((mouseX - radius) / step));
       const endCol = Math.min(Math.ceil(width / step), Math.ceil((mouseX + radius) / step));

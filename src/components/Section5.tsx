@@ -72,15 +72,15 @@ export function Section5() {
   }, { scope: containerRef });
 
   return (
-    <section id="results" ref={containerRef} className="py-32 bg-[#0A192F] border-t border-[#8892B0]/10 relative">
+    <section id="results" ref={containerRef} className="py-32 bg-white dark:bg-[#0A192F] border-t border-slate-300 dark:border-[#8892B0]/10 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         <div className="text-center mb-20">
           <Reveal delay={0}>
-            <span className="text-[#8892B0] font-sans text-sm tracking-widest uppercase mb-4 block">Results</span>
+            <span className="text-[#0A192F]/70 dark:text-[#8892B0] font-sans text-sm tracking-widest uppercase mb-4 block">Results</span>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="text-3xl md:text-5xl font-display font-medium text-[#F8F9FA]">What stability looks like in practice.</h2>
+            <h2 className="text-3xl md:text-5xl font-display font-medium text-[#0A192F] dark:text-[#F8F9FA]">What stability looks like in practice.</h2>
           </Reveal>
         </div>
 
@@ -96,27 +96,27 @@ export function Section5() {
               <div 
                 key={i}
                 ref={el => { cardsRef.current[i] = el; }}
-                className="bg-[#112240] p-8 rounded-xl flex flex-col border border-[#8892B0]/10 shadow-xl"
+                className="bg-slate-50 dark:bg-[#112240] p-8 rounded-none flex flex-col border border-slate-300 dark:border-[#8892B0]/10 shadow-xl"
               >
-                <div className="text-[#8892B0] text-xs font-bold tracking-widest uppercase mb-6">
+                <div className="text-[#0A192F]/70 dark:text-[#8892B0] text-xs font-bold tracking-widest uppercase mb-6">
                   {study.industry}
                 </div>
                 
                 <div className="mb-6">
                   <CountUp end={study.stat} suffix={study.suffix} />
-                  <div className="w-full h-1 bg-[#0A192F] rounded mt-2">
-                    <div className="h-full bg-[#64FFDA] rounded" style={{ width: study.barWidth }}></div>
+                  <div className="w-full h-1 bg-white dark:bg-[#0A192F] rounded-none mt-2">
+                    <div className="h-full bg-teal-500 dark:bg-[#64FFDA] rounded-none" style={{ width: study.barWidth }}></div>
                   </div>
                 </div>
 
-                <h3 className="text-[#F8F9FA] font-display font-medium text-xl leading-tight mb-4">
+                <h3 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-medium text-xl leading-tight mb-4">
                   {study.outcome}
                 </h3>
-                <p className="text-[#8892B0] text-sm leading-relaxed mb-8 flex-1">
+                <p className="text-[#0A192F]/70 dark:text-[#8892B0] text-sm leading-relaxed mb-8 flex-1">
                   {study.context}
                 </p>
-                <div className="border-t border-[#8892B0]/20 pt-6 mt-auto">
-                  <a href="#" className="text-[#F8F9FA] text-sm font-medium hover:text-[#64FFDA] transition-colors inline-flex items-center gap-2">
+                <div className="border-t border-slate-300 dark:border-[#8892B0]/20 pt-6 mt-auto">
+                  <a href="#" className="text-[#0A192F] dark:text-[#F8F9FA] text-sm font-medium hover:text-teal-600 dark:text-[#64FFDA] transition-colors inline-flex items-center gap-2">
                     Read more <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>

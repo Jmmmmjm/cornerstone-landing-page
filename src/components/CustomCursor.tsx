@@ -2,22 +2,26 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 export function CustomCursor() {
-  const outerRef = useRef<HTMLDivElement>(null);
-  const innerRef = useRef<HTMLDivElement>(null);
+  const tipRef = useRef<HTMLDivElement>(null);
+  const midRef = useRef<HTMLDivElement>(null);
+  const botRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    const outer = outerRef.current;
-    const inner = innerRef.current;
-    if (!outer || !inner) return;
+    const tip = tipRef.current;
+    const mid = midRef.current;
+    const bot = botRef.current;
+    if (!tip || !mid || !bot) return;
 
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
     
-    let outerX = mouseX;
-    let outerY = mouseY;
-    let innerX = mouseX;
-    let innerY = mouseY;
+    let tipX = mouseX;
+    let tipY = mouseY;
+    let midX = mouseX;
+    let midY = mouseY;
+    let botX = mouseX;
+    let botY = mouseY;
 
     const onMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
@@ -38,14 +42,21 @@ export function CustomCursor() {
 
     let animationFrameId: number;
     const render = () => {
-      outerX += (mouseX - outerX) * 0.15;
-      outerY += (mouseY - outerY) * 0.15;
+      // The tip of the logo locks tightly to the mouse
+      tipX += (mouseX - tipX) * 0.8;
+      tipY += (mouseY - tipY) * 0.8;
       
-      innerX += (mouseX - innerX) * 0.3;
-      innerY += (mouseY - innerY) * 0.3;
+      // The middle magnetically trails behind
+      midX += (mouseX - midX) * 0.55;
+      midY += (mouseY - midY) * 0.55;
 
-      gsap.set(outer, { x: outerX, y: outerY });
-      gsap.set(inner, { x: innerX, y: innerY });
+      // The bottom magnetically trails furthest behind
+      botX += (mouseX - botX) * 0.35;
+      botY += (mouseY - botY) * 0.35;
+
+      gsap.set(tip, { x: tipX, y: tipY });
+      gsap.set(mid, { x: midX, y: midY });
+      gsap.set(bot, { x: botX, y: botY });
 
       animationFrameId = requestAnimationFrame(render);
     };
@@ -60,24 +71,50 @@ export function CustomCursor() {
 
   useEffect(() => {
     if (isHovering) {
-      gsap.to(outerRef.current, { scale: 2, rotation: 45, duration: 0.3, ease: "back.out(1.5)" });
-      gsap.to(innerRef.current, { opacity: 0, scale: 0, duration: 0.2 });
+      gsap.to([botRef.current, midRef.current, tipRef.current], { 
+        scale: 1.25, 
+        duration: 0.4, 
+        ease: "back.out(2)",
+        stagger: 0.05
+      });
     } else {
-      gsap.to(outerRef.current, { scale: 1, rotation: 0, duration: 0.3, ease: "back.out(1.5)" });
-      gsap.to(innerRef.current, { opacity: 1, scale: 1, duration: 0.2 });
+      gsap.to([botRef.current, midRef.current, tipRef.current], { 
+        scale: 1, 
+        duration: 0.4, 
+        ease: "back.out(1.5)",
+        stagger: 0.02
+      });
     }
   }, [isHovering]);
 
   return (
     <>
       <div 
-        ref={outerRef} 
-        className="fixed top-0 left-0 w-8 h-8 border border-[#64FFDA] pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 mix-blend-difference" 
-      />
+        ref={botRef} 
+        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[9997] drop-shadow-sm origin-top-left"
+      >
+         <svg className="w-full h-full" style={{ transform: 'rotate(-75deg)' }} viewBox="0 0 100 100">
+           <path d="M 0 60 H 40 V 100 Z" fill="currentColor" className="text-slate-400 dark:text-[#8892B0]" />
+         </svg>
+      </div>
+
       <div 
-        ref={innerRef} 
-        className="fixed top-0 left-0 w-2 h-2 bg-[#64FFDA] pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 mix-blend-difference" 
-      />
+        ref={midRef} 
+        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[9998] drop-shadow-sm origin-top-left"
+      >
+         <svg className="w-full h-full" style={{ transform: 'rotate(-75deg)' }} viewBox="0 0 100 100">
+           <path d="M 0 30 H 70 V 100 H 50 V 50 H 0 Z" fill="currentColor" className="text-[#0A192F] dark:text-[#F8F9FA]" />
+         </svg>
+      </div>
+
+      <div 
+        ref={tipRef} 
+        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[9999] drop-shadow-md origin-top-left"
+      >
+         <svg className="w-full h-full" style={{ transform: 'rotate(-75deg)' }} viewBox="0 0 100 100">
+           <path d="M 0 0 H 100 V 100 H 80 V 20 H 0 Z" fill="currentColor" className="text-[#0A192F] dark:text-[#F8F9FA]" />
+         </svg>
+      </div>
     </>
   );
 }

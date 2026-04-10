@@ -52,8 +52,8 @@ export function Section2() {
       1.5
     );
 
-    // Special: Move the global shared object (the line) along with the clipPath
-    const sharedObject = document.getElementById('shared-global-object');
+    // Special: Move the transition line along with the clipPath
+    const sharedObject = document.getElementById('shared-transition-line');
     if (sharedObject) {
       tl.fromTo(sharedObject, 
         { left: '50%' },
@@ -63,20 +63,6 @@ export function Section2() {
     }
 
     tl.addLabel("end");
-
-    // Cleanup: Fade out shared object when leaving
-    ScrollTrigger.create({
-      trigger: containerRef.current,
-      start: "bottom top",
-      onEnter: () => {
-        const obj = document.getElementById('shared-global-object');
-        if (obj) gsap.to(obj, { opacity: 0, duration: 0.3 });
-      },
-      onLeaveBack: () => {
-        const obj = document.getElementById('shared-global-object');
-        if (obj) gsap.to(obj, { opacity: 1, duration: 0.3 });
-      },
-    });
 
   }, { scope: containerRef });
 
@@ -88,14 +74,14 @@ export function Section2() {
         {/* New World (After) - The background and the WindowUI */}
         <div 
           ref={newWorldRef} 
-          className="absolute inset-0 w-full h-full bg-[#0A192F] z-0"
+          className="absolute inset-0 w-full h-full bg-white dark:bg-[#0A192F] z-0"
         >
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-full max-w-7xl px-6 md:px-12">
                <WindowUI className="w-full h-[500px]" />
             </div>
           </div>
-          <div className="absolute top-8 right-8 text-[#8892B0] font-sans text-sm tracking-widest uppercase z-10">
+          <div className="absolute top-8 right-8 text-[#0A192F]/70 dark:text-[#8892B0] font-sans text-sm tracking-widest uppercase z-10">
             With Cornerstone
           </div>
         </div>
@@ -103,7 +89,7 @@ export function Section2() {
         {/* Old World (Before) - Clipped by the slider */}
         <div ref={legacyLayerRef} className="absolute inset-0 w-full h-full z-[45]">
           <LegacyUI />
-          <div className="absolute top-8 left-8 text-[#8892B0] font-sans text-sm tracking-widest uppercase z-[46]">
+          <div className="absolute top-8 left-8 text-[#0A192F]/70 dark:text-[#8892B0] font-sans text-sm tracking-widest uppercase z-[46]">
             Before Cornerstone
           </div>
         </div>
@@ -114,12 +100,12 @@ export function Section2() {
           className="absolute bottom-12 left-0 right-0 flex flex-col items-center text-center z-[60] opacity-0 pointer-events-none"
         >
           <Reveal delay={0}>
-            <h2 className="text-[#F8F9FA] font-display font-medium text-3xl md:text-4xl tracking-wide">
+            <h2 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-medium text-3xl md:text-4xl tracking-wide">
               One platform. Every workflow.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-[#8892B0] font-sans text-lg mt-2">
+            <p className="text-[#0A192F]/70 dark:text-[#8892B0] font-sans text-lg mt-2">
               Cornerstone replaces the stack you've been managing around.
             </p>
           </Reveal>

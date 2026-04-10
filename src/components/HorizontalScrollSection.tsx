@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, forwardRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -26,273 +26,285 @@ const TABS = [
   },
 ];
 
-function DockIcon({
-  Icon,
-  label,
-  isActive,
-  onClick,
-}: {
+const DockIcon = forwardRef<HTMLButtonElement, {
   Icon: typeof BarChart3;
   label: string;
   isActive: boolean;
   onClick: () => void;
-}) {
+}>(({ Icon, label, isActive, onClick }, ref) => {
   return (
     <button
+      ref={ref}
       onClick={onClick}
       className="relative flex flex-col items-center gap-1.5 group focus:outline-none"
     >
-      {/* Active dot */}
       <div
-        className="absolute -top-3 w-1.5 h-1.5 rounded-full bg-[#64FFDA]"
+        className="absolute -top-3 w-1.5 h-1.5 rounded-none bg-teal-500 dark:bg-[#64FFDA]"
         style={{
           opacity: isActive ? 1 : 0,
           transform: isActive ? 'scale(1)' : 'scale(0)',
           transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
         }}
       />
-      {/* Icon box */}
       <div
-        className="w-12 h-12 rounded-xl flex items-center justify-center border transition-all duration-300"
+        className="w-12 h-12 rounded-none flex items-center justify-center border transition-all duration-300"
         style={{
-          background: isActive ? 'rgba(100, 255, 218, 0.15)' : 'rgba(17, 34, 64, 0.8)',
-          borderColor: isActive ? '#64FFDA' : 'rgba(136, 145, 176, 0.3)',
-          boxShadow: isActive ? '0 0 20px rgba(100, 255, 218, 0.35)' : 'none',
+          background: isActive ? 'rgba(20, 184, 166, 0.15)' : 'rgba(136, 145, 176, 0.1)',
+          borderColor: isActive ? '#14b8a6' : 'rgba(136, 145, 176, 0.3)',
+          boxShadow: isActive ? '0 0 20px rgba(20, 184, 166, 0.25)' : 'none',
           transform: isActive ? 'scale(1.15)' : 'scale(1)',
         }}
       >
         <Icon
           size={24}
-          style={{ color: isActive ? '#64FFDA' : '#8892B0' }}
+          className={isActive ? 'text-teal-600 dark:text-[#64FFDA]' : 'text-[#0A192F]/70 dark:text-[#8892B0]'}
           strokeWidth={1.5}
         />
       </div>
-      {/* Tooltip */}
       <div className="absolute -top-8 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-        <span className="text-xs text-[#F8F9FA] bg-[#112240] px-2 py-1 rounded whitespace-nowrap border border-[#8892B0]/20">
+        <span className="text-xs text-white dark:text-[#F8F9FA] bg-[#0A192F] dark:bg-[#112240] px-2 py-1 rounded whitespace-nowrap border border-[#0A192F]/30 dark:border-[#8892B0]/20">
           {label}
         </span>
       </div>
     </button>
   );
-}
+});
 
 export function HorizontalScrollSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const dockRef = useRef<HTMLDivElement>(null);
-  const windowRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const iconRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const windowRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const prevIndexRef = useRef(0);
+  const [content, setContent] = useState(TABS[0]);
   const activeIndexRef = useRef(0);
-  const dockPositions = useRef<DOMRect[]>([]);
-  const hasInitialized = useRef(false);
+  const isAnimating = useRef(false);
 
-  // Capture dock icon positions after mount
+  // Responsive window sizing
+  const [winSize, setWinSize] = useState({ w: 800, h: 500 });
+  const winSizeRef = useRef({ w: 800, h: 500 });
+
   useEffect(() => {
-    if (!dockRef.current) return;
-    const buttons = dockRef.current.querySelectorAll('button');
-    dockPositions.current = Array.from(buttons).map((btn) =>
-      btn.getBoundingClientRect()
-    );
+    const handleResize = () => {
+      const size = {
+        w: Math.min(window.innerWidth * 0.85, 900),
+        h: Math.min(window.innerHeight * 0.65, 600)
+      };
+      setWinSize(size);
+      winSizeRef.current = size;
+      ScrollTrigger.refresh();
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  useGSAP(() => {
-    const section = containerRef.current;
-    if (!section) return;
+  const openWindow = (index: number) => {
+    const wrap = windowRef.current;
+    if (!wrap || !containerRef.current) return;
+    const btn = iconRefs.current[index];
+    if (!btn) return;
+    
+    const r = btn.getBoundingClientRect();
+    const sectionRect = containerRef.current.getBoundingClientRect();
+    
+    const iconCenterX = r.left - sectionRect.left + r.width / 2;
+    const iconCenterY = r.top - sectionRect.top + r.height / 2;
 
-    // Header entrance
-    gsap.fromTo(
-      textRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse',
-        },
-      }
-    );
-
-    // Dock entrance
-    gsap.fromTo(
-      dockRef.current,
-      { opacity: 0, y: 20 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 60%',
-          toggleActions: 'play none none reverse',
-        },
-      }
-    );
-
-    // All windows start hidden
-    windowRefs.current.forEach((win) => {
-      if (!win) return;
-      gsap.set(win, { opacity: 0, scale: 0.08, autoAlpha: 0 });
+    gsap.killTweensOf(wrap);
+    
+    // Set current size from ref
+    gsap.set(wrap, { 
+      width: winSizeRef.current.w,
+      height: winSizeRef.current.h,
+      visibility: 'visible',
+      pointerEvents: 'auto',
+      opacity: 0,
+      scale: 0.1,
+      left: iconCenterX,
+      top: iconCenterY,
+      xPercent: -50,
+      yPercent: -50,
     });
 
-    // Open initial window (tab 0) expanding from dock icon 0
-    const initWin = windowRefs.current[0];
-    if (initWin && dockPositions.current[0]) {
-      const dockRect = dockPositions.current[0];
-      const winRect = initWin.getBoundingClientRect();
-      const ox = dockRect.left + dockRect.width / 2 - winRect.left - winRect.width / 2;
-      const oy = dockRect.top + dockRect.height / 2 - winRect.top - winRect.height / 2;
+    // Animate to screen center
+    gsap.to(wrap, {
+      opacity: 1,
+      scale: 1,
+      left: '50%',
+      top: '50%',
+      duration: 0.4,
+      ease: "power2.out"
+    });
+  };
 
-      gsap.set(initWin, { transformOrigin: `${ox}px ${oy}px`, scale: 0.08, autoAlpha: 0 });
-      gsap.to(initWin, {
-        opacity: 1,
-        scale: 1,
-        autoAlpha: 1,
-        duration: 0.75,
-        ease: 'power3.out',
+  const closeWindow = (index: number, cb?: () => void) => {
+    const wrap = windowRef.current;
+    if (!wrap || !containerRef.current) return;
+    const btn = iconRefs.current[index];
+    
+    gsap.killTweensOf(wrap);
+
+    if (btn) {
+      const r = btn.getBoundingClientRect();
+      const sectionRect = containerRef.current.getBoundingClientRect();
+      
+      const iconCenterX = r.left - sectionRect.left + r.width / 2;
+      const iconCenterY = r.top - sectionRect.top + r.height / 2;
+
+      gsap.to(wrap, {
+        opacity: 0,
+        scale: 0.1,
+        left: iconCenterX,
+        top: iconCenterY,
+        duration: 0.4,
+        ease: "power2.in",
+        onComplete: () => {
+          gsap.set(wrap, { visibility: 'hidden', pointerEvents: 'none' });
+          cb?.();
+        }
       });
-      hasInitialized.current = true;
+    } else {
+      gsap.to(wrap, {
+        opacity: 0,
+        duration: 0.2,
+        onComplete: () => {
+          gsap.set(wrap, { visibility: 'hidden', pointerEvents: 'none' });
+          cb?.();
+        }
+      });
     }
+  };
 
-    // Scroll-driven tab switching
-    ScrollTrigger.create({
-      trigger: section,
-      start: 'top top',
-      end: '+=200%',
+  useGSAP(() => {
+    if (!containerRef.current) return;
+
+    // Initial reveal of section header and dock — use gsap.set first so
+    // if they're already visible (e.g. after a resize re-run) we don't flash back to opacity 0.
+    const revealST = gsap.fromTo(
+      [textRef.current, dockRef.current],
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          once: true,
+        },
+      }
+    );
+
+    // Pinning and window lifecycle.
+    const mainST = ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: "top top",
+      end: "+=300%",
       pin: true,
-      scrub: 1,
+      pinSpacing: true,
+      pinType: "transform",
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      onEnter: () => {
+        openWindow(activeIndexRef.current);
+      },
+      onLeave: () => {
+        closeWindow(activeIndexRef.current);
+      },
+      onEnterBack: () => {
+        openWindow(activeIndexRef.current);
+      },
       onUpdate: (self) => {
         const progress = self.progress;
-        const newIndex = Math.round(progress * (TABS.length - 1));
-        const clampedIndex = Math.max(0, Math.min(TABS.length - 1, newIndex));
+        const index = Math.min(TABS.length - 1, Math.floor(progress * TABS.length));
 
-        if (clampedIndex !== activeIndexRef.current) {
-          const prevIndex = activeIndexRef.current;
-          activeIndexRef.current = clampedIndex;
-          prevIndexRef.current = prevIndex;
-          setActiveIndex(clampedIndex);
-
-          // Animate the transition
-          animateTabChange(prevIndex, clampedIndex);
+        if (index !== activeIndexRef.current) {
+          const oldIndex = activeIndexRef.current;
+          activeIndexRef.current = index;
+          
+          closeWindow(oldIndex, () => {
+            setActiveIndex(index);
+            setContent(TABS[index]);
+            openWindow(index);
+          });
         }
       },
     });
-  }, { scope: containerRef });
 
-  const animateTabChange = (fromIdx: number, toIdx: number) => {
-    if (!dockPositions.current[toIdx]) return;
+    return () => {
+      mainST.kill();
+      revealST.scrollTrigger?.kill();
+    };
+  }, []); // Remove winSize dependency for stability
 
-    const fromWin = windowRefs.current[fromIdx];
-    const toWin = windowRefs.current[toIdx];
-    if (!fromWin || !toWin) return;
-
-    const dockRect = dockPositions.current[toIdx];
-    const winRect = toWin.getBoundingClientRect();
-    const ox = dockRect.left + dockRect.width / 2 - winRect.left - winRect.width / 2;
-    const oy = dockRect.top + dockRect.height / 2 - winRect.top - winRect.height / 2;
-
-    // Collapse old to the new dock icon
-    gsap.set(fromWin, { transformOrigin: `${ox}px ${oy}px` });
-    gsap.to(fromWin, {
-      opacity: 0,
-      scale: 0.08,
-      duration: 0.4,
-      ease: 'power3.in',
-    });
-
-    // Expand new from the dock icon
-    gsap.set(toWin, {
-      transformOrigin: `${ox}px ${oy}px`,
-      opacity: 0,
-      scale: 0.08,
-      autoAlpha: 0,
-    });
-    gsap.to(toWin, {
-      opacity: 1,
-      scale: 1,
-      autoAlpha: 1,
-      duration: 0.55,
-      ease: 'power3.out',
-      delay: 0.1,
+  const handleTabChange = (index: number) => {
+    if (index === activeIndex || isAnimating.current) return;
+    const oldIndex = activeIndex;
+    setActiveIndex(index);
+    activeIndexRef.current = index;
+    isAnimating.current = true;
+    
+    closeWindow(oldIndex, () => {
+      setContent(TABS[index]);
+      openWindow(index);
+      isAnimating.current = false;
     });
   };
 
   return (
-    <section
-      ref={containerRef}
-      className="relative w-full h-screen overflow-hidden bg-[#0A192F]"
-    >
+    <section ref={containerRef} className="relative w-full h-screen bg-white dark:bg-[#0A192F] z-30 will-change-transform">
       {/* Header */}
-      <div
-        ref={textRef}
-        className="absolute top-16 left-0 right-0 z-20 text-center opacity-0 pointer-events-none"
-      >
-        <p className="text-[#64FFDA] font-sans text-sm tracking-[0.3em] uppercase mb-2">
-          See it in action
-        </p>
-        <h2 className="text-[#F8F9FA] font-display font-bold text-3xl md:text-5xl tracking-wide">
-          Built for the way you work
-        </h2>
+      <div ref={textRef} className="absolute top-16 left-0 right-0 z-[150] text-center opacity-0">
+        <p className="text-teal-600 dark:text-[#64FFDA] font-sans text-sm tracking-[0.3em] uppercase mb-2">See it in action</p>
+        <h2 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-bold text-3xl md:text-5xl tracking-wide">Built for the way you work</h2>
       </div>
 
-      {/* Stacked windows — all centered, overlapping */}
-      <div className="absolute inset-0 flex items-center justify-center px-16">
-        {TABS.map((tab, i) => (
-          <div
-            key={i}
-            ref={(el) => { windowRefs.current[i] = el; }}
-            className="absolute w-full max-w-4xl pointer-events-none"
-            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
-          >
-            <WindowUI className="w-full">
-              <div className="relative w-full h-[480px] overflow-hidden bg-[#0D1B2A]">
-                <img
-                  src={tab.url}
-                  alt={tab.label}
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/90 via-[#0A192F]/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h3 className="text-[#F8F9FA] font-display font-bold text-2xl md:text-3xl tracking-wide">
-                    {tab.label}
-                  </h3>
-                  <p className="text-[#64FFDA] font-sans text-sm mt-2 tracking-widest uppercase">
-                    {tab.sublabel}
-                  </p>
-                </div>
-              </div>
-            </WindowUI>
+      {/* Main Window — initially centered so it never bleeds outside section bounds before openWindow sets its position */}
+      <div
+        ref={windowRef}
+        className="absolute z-[200] pointer-events-none invisible"
+        style={{
+          width: winSize.w,
+          height: winSize.h,
+          left: '50%',
+          top: '50%',
+          transform: 'translate(-50%, -50%)',
+        }}
+      >
+        <WindowUI className="w-full h-full shadow-2xl">
+          <div className="relative w-full h-full overflow-hidden bg-slate-100 dark:bg-[#0D1B2A]">
+            <img 
+              src={content.url} 
+              alt={content.label} 
+              className="w-full h-full object-cover" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/20 to-transparent dark:from-[#0A192F]/90 dark:via-[#0A192F]/20 dark:to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 text-left">
+              <h3 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-bold text-2xl md:text-3xl tracking-wide">{content.label}</h3>
+              <p className="text-teal-600 dark:text-[#64FFDA] font-sans text-sm mt-2 tracking-widest uppercase">{content.sublabel}</p>
+            </div>
           </div>
-        ))}
+        </WindowUI>
       </div>
 
-      {/* Dock */}
-      <div
-        ref={dockRef}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 opacity-0"
-      >
-        <div className="flex items-center gap-5 px-7 py-4 bg-[#112240]/85 backdrop-blur-2xl border border-[#8892B0]/20 rounded-2xl shadow-2xl">
+      <div ref={dockRef} className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[110] opacity-0">
+        <div className="flex items-center gap-5 px-7 py-4 bg-white/80 dark:bg-[#112240]/80 backdrop-blur-xl border border-[#0A192F]/10 dark:border-[#8892B0]/20 rounded-none shadow-xl">
           {TABS.map((tab, i) => (
             <DockIcon
               key={i}
+              ref={el => { iconRefs.current[i] = el; }}
               Icon={tab.Icon}
               label={tab.label}
               isActive={i === activeIndex}
-              onClick={() => {}}
+              onClick={() => handleTabChange(i)}
             />
           ))}
         </div>
         <div className="text-center mt-3">
-          <p className="text-[#8892B0] font-sans text-xs tracking-wider">
-            {TABS[activeIndex]?.label}
-          </p>
+          <p className="text-[#0A192F]/60 dark:text-[#8892B0] font-sans text-xs tracking-wider uppercase font-bold">{TABS[activeIndex]?.label}</p>
         </div>
       </div>
     </section>

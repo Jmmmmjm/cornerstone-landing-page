@@ -51,29 +51,29 @@ export function Section6() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative h-screen bg-[#0A192F] flex items-center justify-center overflow-hidden border-t border-[#8892B0]/10">
+    <section ref={containerRef} className="relative h-screen bg-white dark:bg-[#0A192F] flex items-center justify-center overflow-hidden border-t border-slate-300 dark:border-[#8892B0]/10">
       <ActiveGrid />
       
       <div className="relative z-10 flex flex-col items-center text-center px-6">
-        <div ref={wordmarkRef} className="text-[#8892B0] font-display font-medium tracking-widest uppercase text-2xl md:text-4xl mb-6 flex">
+        <div ref={wordmarkRef} className="text-[#0A192F]/70 dark:text-[#8892B0] font-display font-medium tracking-widest uppercase text-2xl md:text-4xl mb-6 flex">
           {"CORNERSTONE".split('').map((char, i) => (
             <span key={i}>{char}</span>
           ))}
         </div>
         
         <Reveal delay={0.2}>
-          <h2 className="text-[#F8F9FA] font-display font-bold text-4xl md:text-6xl lg:text-7xl tracking-[0.15em] uppercase whitespace-nowrap drop-shadow-lg mb-6">
+          <h2 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-bold text-4xl md:text-6xl lg:text-7xl tracking-[0.15em] uppercase whitespace-nowrap drop-shadow-lg mb-6">
             Scale On Stability
           </h2>
         </Reveal>
         
         <Reveal delay={0.3}>
-          <p className="text-[#8892B0] font-display font-light text-xl md:text-2xl mb-16">
+          <p className="text-[#0A192F]/70 dark:text-[#8892B0] font-display font-light text-xl md:text-2xl mb-16">
             Built for industries that can't afford to fail.
           </p>
         </Reveal>
         
-        <div className="flex items-center gap-4 text-[#8892B0] font-sans text-sm tracking-widest uppercase mb-12">
+        <div className="flex items-center gap-4 text-[#0A192F]/70 dark:text-[#8892B0] font-sans text-sm tracking-widest uppercase mb-12">
           <span ref={el => { summaryRefs.current[0] = el; }}>Discovery Call</span>
           <span ref={el => { summaryRefs.current[1] = el; }}>&rarr;</span>
           <span ref={el => { summaryRefs.current[2] = el; }}>Draft Solution</span>
@@ -86,7 +86,7 @@ export function Section6() {
           href="https://calendar.google.com" 
           target="_blank" 
           rel="noreferrer"
-          className="bg-[#F8F9FA] text-[#0A192F] hover:bg-[#8892B0] px-8 py-4 text-base font-medium transition-colors rounded inline-block"
+          className="bg-[#0A192F] dark:bg-[#F8F9FA] text-white dark:text-[#0A192F] hover:bg-[#0A192F]/80 dark:hover:bg-[#8892B0] px-8 py-4 text-base font-medium transition-colors rounded-none inline-block shadow-xl"
         >
           Book your Discovery Call
         </a>

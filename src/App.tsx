@@ -7,6 +7,8 @@ import { useEffect, useState, useRef } from 'react';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+import { AnimatePresence } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Section2 } from './components/Section2';
@@ -29,8 +31,8 @@ export default function App() {
   const [introDone, setIntroDone] = useState(false);
   const scrollbarRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
-  const sharedWindowRef = useRef<HTMLDivElement>(null);
-  const sharedLogoRef = useRef<SVGSVGElement>(null);
+  const sharedLogoContainerRef = useRef<HTMLDivElement>(null);
+  const sharedLineContainerRef = useRef<HTMLDivElement>(null);
   const sharedLineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -46,7 +48,6 @@ export default function App() {
       touchMultiplier: 2,
     });
 
-    // Connect Lenis to GSAP ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update);
 
     gsap.ticker.add((time) => {
@@ -54,7 +55,6 @@ export default function App() {
     });
     gsap.ticker.lagSmoothing(0);
 
-    // Custom scrollbar animation
     gsap.to(scrollbarRef.current, {
       scaleY: 1,
       ease: "none",
@@ -66,107 +66,9 @@ export default function App() {
       }
     });
 
-    // --- SHARED OBJECT (LOGO → LINE) ANIMATION ---
-    // Object starts as Logo in Hero center → morphs into a Vertical Line → travels to Section 2
-
-    const allSections = gsap.utils.toArray<HTMLElement>('section');
-    const heroSection = allSections[0];
-    const section2 = allSections[1];
-
-    // Initial state for the shared container (opacity 0, Hero will fade it in)
-    gsap.set(sharedWindowRef.current, { 
-      opacity: 0, 
-      left: '50%', 
-      top: '40%',
-      xPercent: -50,
-      yPercent: -50,
-      width: '100px',
-      height: '100px',
-      scale: 0.8
-    });
-    // Ensure logo paths are hidden initially for the drawing effect
-    if (sharedLogoRef.current) {
-      gsap.set(sharedLogoRef.current.querySelectorAll('path, polygon'), { opacity: 0 });
-    }
-    gsap.set(sharedLineRef.current, { opacity: 0, height: '0%' });
-
-    // Force a refresh after components mount
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 500);
-
-    // --- SHARED OBJECT (LOGO → LINE) ANIMATION ---
-    // Trigger 1: Hero Pin Phase (Logo stays static, then shrinks to dot at the very end of the pin)
-    ScrollTrigger.create({
-      trigger: heroSection,
-      start: "top top",
-      end: "bottom top",
-      scrub: 1,
-      onUpdate: (self) => {
-        if (!sharedWindowRef.current || !sharedLogoRef.current || !sharedLineRef.current) return;
-        const p = self.progress;
-
-        if (p < 0.98) {
-          // STATIC: Logo is solid and static at 40%
-          // Title is gone by p = 0.53. This gives a massive buffer.
-          gsap.set(sharedWindowRef.current, {
-            top: '40%',
-            width: '100px',
-            height: '100px',
-            yPercent: -50,
-            opacity: 1
-          });
-          gsap.set(sharedLogoRef.current, { opacity: 1, scale: 1 });
-          gsap.set(sharedLineRef.current, { opacity: 0 });
-        } else {
-          // MORPH: Shrink to dot (0.98 -> 1.0 of the pin duration)
-          const dotP = (p - 0.98) / 0.02;
-          gsap.set(sharedLogoRef.current, { 
-            opacity: 1 - dotP,
-            scale: 1 - (dotP * 0.98)
-          });
-          gsap.set(sharedWindowRef.current, {
-            width: `${100 - (dotP * 98)}px`,
-            height: `${100 - (dotP * 98)}px`,
-            top: '40%',
-            yPercent: -50
-          });
-        }
-      }
-    });
-
-    // Trigger 2: Transition Phase (Dot grows into full-height line while moving to Section 2)
-    // Synchronized to start when Section 2 fills the screen and finish as it reveals its content.
-    ScrollTrigger.create({
-      trigger: section2,
-      start: "top top",
-      end: "+=100vh", // Line forms over the first 100vh of the S2 pin duration
-      scrub: 1,
-      onUpdate: (self) => {
-        if (!sharedWindowRef.current || !sharedLogoRef.current || !sharedLineRef.current) return;
-        const p = self.progress;
-
-        // Ensure logo is hidden
-        gsap.set(sharedLogoRef.current, { opacity: 0 });
-
-        // Growth: From top: 40% (2px high) to top: 0% (100vh high)
-        // Shifting from 40% to 0% and 2px to 100vh
-        gsap.set(sharedWindowRef.current, {
-          top: `${40 - (p * 40)}%`, 
-          width: '2px',
-          height: `calc(2px + ${p * 100}vh)`,
-          yPercent: 0,
-        });
-
-        gsap.set(sharedLineRef.current, { 
-          opacity: 1,
-          height: '100%',
-          backgroundColor: '#64FFDA',
-          boxShadow: '0 0 15px rgba(100,255,218,0.5)',
-          borderRadius: '2px'
-        });
-      }
-    });
 
     return () => {
       lenis.destroy();
@@ -174,29 +76,85 @@ export default function App() {
     };
   }, [introDone]);
 
+  useGSAP(() => {
+    if (!introDone) return;
+    const allSections = gsap.utils.toArray<HTMLElement>('section');
+    const heroSection = allSections[0];
+    const section2 = allSections[1];
+
+    if (!heroSection || !section2) return;
+
+    // Trigger 2: Transition Line Phase (Grows from Scroll Label at 78%)
+    ScrollTrigger.create({
+      trigger: section2,
+      start: "top top",
+      end: "+=400%", // Explicitly match Section2 pin duration!
+      scrub: 1,
+      onUpdate: (self) => {
+        if (!sharedLineContainerRef.current || !sharedLineRef.current) return;
+        const p = self.progress;
+
+        const isDark = document.documentElement.classList.contains('dark');
+        const lineColor = isDark ? '#FFFFFF' : '#0A192F';
+        const shadowColor = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(10,25,47,0.5)';
+
+        let topPos = 78;
+        let finalHeight = 2; // px
+
+        if (p < 0.2) {
+          const growP = p / 0.2;
+          finalHeight = 2 + (growP * (window.innerHeight * 0.22)); 
+        } else {
+          const slideP = (p - 0.2) / 0.8;
+          topPos = 78 - (slideP * 78);
+          finalHeight = (window.innerHeight * 0.22) + (slideP * (window.innerHeight * 0.78));
+        }
+
+        // Manage clean fade in/out perfectly within this single timeline
+        let opacity = 1;
+        if (p < 0.01) {
+          opacity = p / 0.01;
+        } else if (p > 0.98) {
+          opacity = 1 - ((p - 0.98) / 0.02);
+        }
+
+        gsap.set(sharedLineContainerRef.current, {
+          top: `${topPos}%`, 
+          width: '2px', // Restored precision width
+          height: `${finalHeight}px`,
+          opacity: opacity,
+        });
+
+        gsap.set(sharedLineRef.current, { 
+          backgroundColor: lineColor, // Strict theme color
+          boxShadow: `0 0 12px ${shadowColor}`,
+        });
+      }
+    });
+
+  }, { dependencies: [introDone] });
+
   return (
-    <main ref={mainRef} className="bg-[#0A192F] text-[#F8F9FA] cursor-none">
-      {!introDone && <LogoIntro onComplete={() => setIntroDone(true)} />}
+    <main ref={mainRef} className="bg-white dark:bg-[#0A192F] text-[#0A192F] dark:text-[#F8F9FA] cursor-none">
+      <AnimatePresence>
+        {!introDone && <LogoIntro key="intro" onComplete={() => setIntroDone(true)} />}
+      </AnimatePresence>
 
       <CustomCursor />
       <IlluminationGrid />
 
-      {/* Shared Global Transitioning Object (Logo → Line) */}
+      {/* Transition Line (Starts at bottom Scroll label) */}
       <div 
-        id="shared-global-object"
-        ref={sharedWindowRef}
-        className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[500] w-[100px] h-[100px] pointer-events-none flex items-center justify-center opacity-0`}
+        id="shared-transition-line"
+        ref={sharedLineContainerRef}
+        className="fixed top-[78%] left-1/2 z-[500] w-[2px] h-[2px] pointer-events-none opacity-0"
       >
-        {/* Logo State */}
-        <Logo ref={sharedLogoRef} className="absolute text-[#F8F9FA]" />
-        
-        {/* Line State */}
-        <div ref={sharedLineRef} className="w-full opacity-0 rounded-full" />
+        <div ref={sharedLineRef} className="w-full h-full rounded-none" />
       </div>
 
       {/* Custom Scrollbar */}
-      <div className="fixed top-0 right-0 w-1.5 h-full bg-[#112240] z-[100] hidden md:block">
-        <div ref={scrollbarRef} className="w-full bg-[#64FFDA] origin-top scale-y-0 rounded-full" style={{ height: '100%' }} />
+      <div className="fixed top-0 right-0 w-1.5 h-full bg-slate-50 dark:bg-[#112240] z-[100] hidden md:block">
+        <div ref={scrollbarRef} className="w-full bg-teal-500 dark:bg-[#64FFDA] origin-top scale-y-0 rounded-none" style={{ height: '100%' }} />
       </div>
 
       {introDone && (
@@ -209,6 +167,7 @@ export default function App() {
           <Section2 />
           <SectionTransition />
           <HorizontalScrollSection />
+          <SectionTransition />
           <Section3 />
           <SectionTransition />
           <Section4 />
