@@ -140,7 +140,7 @@ export function IlluminationGrid() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none z-10 hidden md:block"
+      className="fixed inset-0 w-full h-full pointer-events-none z-[5] hidden md:block"
     />
   );
 }

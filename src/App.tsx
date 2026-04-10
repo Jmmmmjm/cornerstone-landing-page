@@ -18,7 +18,6 @@ import { Section5 } from './components/Section5';
 import { Section6 } from './components/Section6';
 import { Footer } from './components/Footer';
 import { CustomCursor } from './components/CustomCursor';
-import { SectionTransition } from './components/SectionTransition';
 import { LogoIntro } from './components/LogoIntro';
 import { IlluminationGrid } from './components/IlluminationGrid';
 import { WindowUI } from './components/WindowUI';
@@ -59,10 +58,11 @@ export default function App() {
       scaleY: 1,
       ease: "none",
       scrollTrigger: {
-        trigger: document.body,
+        trigger: "html",
         start: "top top",
         end: "bottom bottom",
-        scrub: 0.1
+        scrub: true,
+        invalidateOnRefresh: true,
       }
     });
 
@@ -84,50 +84,71 @@ export default function App() {
 
     if (!heroSection || !section2) return;
 
-    // Trigger 2: Transition Line Phase (Grows from Scroll Label at 78%)
+    // Trigger 2: Transition Line Phase (Connects Hero Scroll Label to Section 2 Slider)
     ScrollTrigger.create({
-      trigger: section2,
-      start: "top top",
-      end: "+=400%", // Explicitly match Section2 pin duration!
-      scrub: 1,
+      trigger: heroSection,
+      start: "bottom 15%", // Starts slightly BEFORE Hero fully unpins
+      end: "+=550%", // Spans gap + full Section 2 pin duration
+      scrub: true,
       onUpdate: (self) => {
         if (!sharedLineContainerRef.current || !sharedLineRef.current) return;
         const p = self.progress;
 
         const isDark = document.documentElement.classList.contains('dark');
-        const lineColor = isDark ? '#FFFFFF' : '#0A192F';
-        const shadowColor = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(10,25,47,0.5)';
+        
+        // p=0: Hero unpins. Label is moving up with the section.
+        // We track the anchor element which is pinned inside Hero.
+        const anchor = document.getElementById('hero-scroll-anchor');
+        if (!anchor) return;
+        
+        const anchorRect = anchor.getBoundingClientRect();
+        // Keep the line's top at the label until it hits the screen top, then pin it to 0
+        let topPosPx = Math.max(0, anchorRect.bottom);
 
-        let topPos = 78;
-        let finalHeight = 2; // px
-
-        if (p < 0.2) {
-          const growP = p / 0.2;
-          finalHeight = 2 + (growP * (window.innerHeight * 0.22)); 
+        // Calculate line height
+        let finalHeight = 0;
+        if (topPosPx === 0) {
+          // If pinned to top, it should span the whole screen height
+          finalHeight = window.innerHeight;
+        } else if (p < 0.05) {
+          // Initial growth downwards from the label
+          let growP = p / 0.05;
+          let distanceToBottom = window.innerHeight - topPosPx; 
+          finalHeight = distanceToBottom * growP;
         } else {
-          const slideP = (p - 0.2) / 0.8;
-          topPos = 78 - (slideP * 78);
-          finalHeight = (window.innerHeight * 0.22) + (slideP * (window.innerHeight * 0.78));
+          // Spanning from label to bottom
+          finalHeight = window.innerHeight - topPosPx;
         }
 
-        // Manage clean fade in/out perfectly within this single timeline
+        // Manage clean fade in/out
         let opacity = 1;
-        if (p < 0.01) {
-          opacity = p / 0.01;
+        if (p < 0.02) {
+          opacity = p / 0.02; 
         } else if (p > 0.98) {
           opacity = 1 - ((p - 0.98) / 0.02);
         }
 
         gsap.set(sharedLineContainerRef.current, {
-          top: `${topPos}%`, 
-          width: '2px', // Restored precision width
-          height: `${finalHeight}px`,
+          top: `${topPosPx}px`, 
+          width: '2px', 
+          height: `${Math.max(0, finalHeight)}px`,
           opacity: opacity,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'flex-start'
         });
 
+        // Maintain aesthetic with margins
+        let lineGrowthP = Math.min(1, p / 0.05);
+        let currentHeight = 48 + (lineGrowthP * ( (finalHeight * 0.6) - 48 ));
+        let currentMarginTop = lineGrowthP * (finalHeight * 0.2);
+
         gsap.set(sharedLineRef.current, { 
-          backgroundColor: lineColor, // Strict theme color
-          boxShadow: `0 0 12px ${shadowColor}`,
+          height: `${currentHeight}px`,
+          marginTop: `${currentMarginTop}px`,
+          backgroundColor: '#FFFFFF', 
+          boxShadow: '0 0 20px rgba(255,255,255,0.3)',
         });
       }
     });
@@ -163,17 +184,11 @@ export default function App() {
             <Navbar />
           </div>
           <Hero />
-          <SectionTransition />
           <Section2 />
-          <SectionTransition />
           <HorizontalScrollSection />
-          <SectionTransition />
           <Section3 />
-          <SectionTransition />
           <Section4 />
-          <SectionTransition />
           <Section5 />
-          <SectionTransition />
           <Section6 />
           <Footer />
         </>

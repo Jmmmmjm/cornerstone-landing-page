@@ -1,128 +1,139 @@
-import { useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Factory, Truck, Building2, ArrowRight } from 'lucide-react';
 import { CountUp } from './CountUp';
 import { Reveal } from './Reveal';
 
 const CASE_STUDIES = [
   {
     industry: "Heavy Manufacturing",
-    outcome: "Reduced reporting time by 80%.",
-    context: "A mid-size steel fabricator replaced seven disconnected tools with one Cornerstone workflow.",
+    outcome: "Lightning Fast",
+    context: "Reduced reporting time by 80%. A mid-size steel fabricator unified seven tools into one.",
     stat: 80,
     suffix: "%",
-    barWidth: "80%"
+    barWidth: "80%",
+    Icon: Factory,
   },
   {
     industry: "Logistics",
-    outcome: "Eliminated manual dispatch errors.",
-    context: "A regional freight carrier automated their entire routing and driver assignment process.",
+    outcome: "Secure Vaults",
+    context: "Eliminated manual dispatch errors. A regional freight carrier automated their entire routing process.",
     stat: 100,
     suffix: "%",
-    barWidth: "100%"
+    barWidth: "100%",
+    Icon: Truck,
   },
   {
-    industry: "Commercial Real Estate",
-    outcome: "Accelerated lease approvals by 3x.",
-    context: "A property management firm unified their tenant screening, document signing, and onboarding.",
+    industry: "AI Automation",
+    outcome: "AI Automation",
+    context: "Intelligent automation that learns from your workflow. Let AI handle the repetitive tasks.",
     stat: 3,
     suffix: "x",
-    barWidth: "66%"
+    barWidth: "66%",
+    Icon: Building2,
+  },
+  {
+    industry: "Scale Forever",
+    outcome: "Scale Forever",
+    context: "A property management firm unified tenant screening and onboarding for 3x growth.",
+    stat: 3,
+    suffix: "x",
+    barWidth: "66%",
+    Icon: ArrowRight,
   }
 ];
 
 export function Section5() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const linesRef = useRef<SVGSVGElement>(null);
-
-  useGSAP(() => {
-    if (!containerRef.current) return;
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 70%",
-      }
-    });
-
-    // Perspective landing
-    tl.fromTo(cardsRef.current,
-      { y: 80, opacity: 0, rotationX: 45, transformPerspective: 1000 },
-      {
-        y: 0,
-        opacity: 1,
-        rotationX: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power3.out"
-      }
-    );
-
-    // Connecting lines
-    if (linesRef.current) {
-      const paths = linesRef.current.querySelectorAll('path');
-      tl.fromTo(paths,
-        { strokeDasharray: "0 1000" },
-        { strokeDasharray: "1000 1000", duration: 1, ease: "power2.inOut" },
-        "-=0.2"
-      );
-    }
-  }, { scope: containerRef });
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(0); // First card preloaded
 
   return (
-    <section id="results" ref={containerRef} className="py-32 bg-white dark:bg-[#0A192F] border-t border-slate-300 dark:border-[#8892B0]/10 relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    <section id="results" className="py-32 bg-white dark:bg-[#0A192F] overflow-hidden min-h-screen flex flex-col justify-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
         
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <Reveal delay={0}>
-            <span className="text-[#0A192F]/70 dark:text-[#8892B0] font-sans text-sm tracking-widest uppercase mb-4 block">Results</span>
+            <span className="text-teal-600 dark:text-[#64FFDA] font-sans text-sm tracking-[0.3em] uppercase mb-4 block">Success Stories</span>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="text-3xl md:text-5xl font-display font-medium text-[#0A192F] dark:text-[#F8F9FA]">What stability looks like in practice.</h2>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-[#0A192F] dark:text-[#F8F9FA]">Results that matter.</h2>
           </Reveal>
         </div>
 
-        <div className="relative">
-          {/* Connecting lines between cards (desktop only) */}
-          <svg ref={linesRef} className="absolute top-1/2 left-0 w-full h-24 -translate-y-1/2 hidden md:block pointer-events-none z-0" viewBox="0 0 1000 100" preserveAspectRatio="none">
-            <path d="M 150 50 L 500 50" stroke="#8892B0" strokeWidth="1" fill="none" opacity="0.3" />
-            <path d="M 500 50 L 850 50" stroke="#8892B0" strokeWidth="1" fill="none" opacity="0.3" />
-          </svg>
+        <div className="flex flex-col md:flex-row gap-0 w-full h-[600px] md:h-[550px] border border-slate-300 dark:border-[#8892B0]/20">
+          {CASE_STUDIES.map((study, i) => {
+            const isExpanded = hoveredIndex === i;
+            const Icon = study.Icon;
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-            {CASE_STUDIES.map((study, i) => (
-              <div 
+            return (
+              <motion.div
                 key={i}
-                ref={el => { cardsRef.current[i] = el; }}
-                className="bg-slate-50 dark:bg-[#112240] p-8 rounded-none flex flex-col border border-slate-300 dark:border-[#8892B0]/10 shadow-xl"
+                layout
+                onMouseEnter={() => setHoveredIndex(i)}
+                className={`relative cursor-pointer overflow-hidden transition-all duration-500 ease-out p-8 md:p-10 flex flex-col border-r last:border-r-0 border-slate-300 dark:border-[#8892B0]/20
+                  ${isExpanded 
+                    ? 'flex-[3] bg-slate-50 dark:bg-[#112240]' 
+                    : 'flex-1 bg-white dark:bg-[#0A192F] hover:bg-slate-50 dark:hover:bg-[#112240]/30'}`}
               >
-                <div className="text-[#0A192F]/70 dark:text-[#8892B0] text-xs font-bold tracking-widest uppercase mb-6">
-                  {study.industry}
-                </div>
-                
-                <div className="mb-6">
-                  <CountUp end={study.stat} suffix={study.suffix} />
-                  <div className="w-full h-1 bg-white dark:bg-[#0A192F] rounded-none mt-2">
-                    <div className="h-full bg-teal-500 dark:bg-[#64FFDA] rounded-none" style={{ width: study.barWidth }}></div>
-                  </div>
+                {/* Icon Box - Brand Teal */}
+                <div 
+                  className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center mb-12 shrink-0 bg-teal-500 dark:bg-[#64FFDA]"
+                >
+                  <Icon size={24} className="text-white dark:text-[#0A192F]" strokeWidth={2.5} />
                 </div>
 
-                <h3 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-medium text-xl leading-tight mb-4">
-                  {study.outcome}
-                </h3>
-                <p className="text-[#0A192F]/70 dark:text-[#8892B0] text-sm leading-relaxed mb-8 flex-1">
-                  {study.context}
-                </p>
-                <div className="border-t border-slate-300 dark:border-[#8892B0]/20 pt-6 mt-auto">
-                  <a href="#" className="text-[#0A192F] dark:text-[#F8F9FA] text-sm font-medium hover:text-teal-600 dark:text-[#64FFDA] transition-colors inline-flex items-center gap-2">
-                    Read more <span aria-hidden="true">&rarr;</span>
-                  </a>
+                {/* Content */}
+                <div className="flex-1 flex flex-col justify-center">
+                  <motion.h3 
+                    layout="position"
+                    className={`font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] leading-tight mb-6 uppercase tracking-wider
+                      ${isExpanded ? 'text-3xl md:text-5xl' : 'text-xl md:text-2xl mt-auto'}`}
+                  >
+                    {study.outcome}
+                  </motion.h3>
+
+                  <AnimatePresence mode="wait">
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -10 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex flex-col"
+                      >
+                        <p className="text-[#0A192F]/70 dark:text-[#8892B0] text-lg leading-relaxed mb-12 max-w-md font-sans">
+                          {study.context}
+                        </p>
+
+                        <div className="flex items-center gap-10 mb-8">
+                           <div className="flex flex-col">
+                             <CountUp end={study.stat} suffix={study.suffix} className="text-4xl text-[#0A192F] dark:text-[#F8F9FA]" />
+                             <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-teal-600 dark:text-[#64FFDA] mt-1">{study.industry}</span>
+                           </div>
+                        </div>
+
+                        <button className="w-fit px-8 py-3 bg-[#0A192F] dark:bg-[#64FFDA] text-white dark:text-[#0A192F] font-bold text-[10px] tracking-[0.2em] uppercase hover:opacity-90 transition-opacity">
+                          Learn More
+                        </button>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
-              </div>
-            ))}
-          </div>
+
+                {/* Vertical Text for Collapsed State */}
+                {!isExpanded && (
+                  <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="absolute bottom-10 left-10 md:left-12 origin-left whitespace-nowrap"
+                  >
+                    <span className="text-[#0A192F]/30 dark:text-[#8892B0]/30 font-display font-bold text-[10px] tracking-[0.3em] uppercase block -rotate-90 origin-left translate-x-4">
+                      {study.industry}
+                    </span>
+                  </motion.div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
 
       </div>

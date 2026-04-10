@@ -58,6 +58,7 @@ export function Hero() {
         scrub: 1,
         pin: true,
         anticipatePin: 1,
+        refreshPriority: 1,
         onUpdate: (self) => {
           const progress = self.progress;
           idleTweens.current.forEach(tween => {
@@ -211,11 +212,11 @@ export function Hero() {
           Scale On Stability
         </p>
         
-        <div className="mt-16 flex flex-col items-center gap-3">
+        <div id="hero-scroll-anchor" className="mt-16 flex flex-col items-center gap-3">
           <span className="text-[#0A192F]/40 dark:text-[#8892B0]/50 font-sans font-bold tracking-[0.4em] uppercase text-[10px]">
             Scroll
           </span>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-teal-500/50 to-transparent relative overflow-hidden">
+          <div id="hero-scroll-line" className="w-[1px] h-12 bg-gradient-to-b from-teal-500/50 to-transparent relative overflow-hidden">
              <div className="absolute top-0 left-0 w-full h-1/2 bg-teal-500 animate-scroll-line" />
           </div>
         </div>

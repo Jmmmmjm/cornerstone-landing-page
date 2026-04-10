@@ -11,10 +11,18 @@
   --color-brand-text: #F8F9FA;
 }
 
+html {
+  overflow-x: hidden;
+  height: auto;
+  scroll-behavior: auto !important;
+}
+
 body {
   font-weight: 450;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,6 +33,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Hide native scrollbar */
 ::-webkit-scrollbar {
   display: none;
+}
+
+* {
+  scrollbar-width: none;
 }
 @keyframes scroll-line {
   0% { transform: translateY(-100%); }

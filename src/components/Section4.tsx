@@ -59,7 +59,7 @@ export function Section4() {
   }, { scope: containerRef });
 
   return (
-    <section id="solutions" ref={containerRef} className="relative py-32 bg-white dark:bg-[#0A192F] overflow-hidden border-t border-slate-300 dark:border-[#8892B0]/10">
+    <section id="solutions" ref={containerRef} className="relative py-32 bg-white dark:bg-[#0A192F] overflow-hidden">
       
       {/* Full-width Intro Moment */}
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-0 z-0">
