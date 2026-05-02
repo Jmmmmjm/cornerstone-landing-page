@@ -32,7 +32,7 @@ export function CustomCanvasUI() {
   }, []);
 
   return (
-    <div ref={containerRef} className="w-full h-32 bg-white dark:bg-[#0A192F] rounded-none border border-slate-300 dark:border-[#8892B0]/20 mb-6 flex items-center justify-center overflow-hidden relative">
+    <div ref={containerRef} className="w-full h-32 bg-[#F8F9FA] dark:bg-[#0A192F] rounded-none border border-slate-300 dark:border-[#8892B0]/20 mb-6 flex items-center justify-center overflow-hidden relative">
       <div className="absolute inset-0 p-4">
         <div className="blinking-cursor w-2 h-4 bg-teal-500 dark:bg-[#64FFDA] absolute top-4 left-4"></div>
         

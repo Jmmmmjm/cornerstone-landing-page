@@ -36,7 +36,7 @@ export function LiveWindowUIOverlay() {
         </div>
         <div className="flex gap-6 flex-1">
           <div className="flex-1 p-4 flex flex-col justify-end">
-              <div className="w-full h-2 bg-white dark:bg-[#0A192F] rounded-none overflow-hidden">
+              <div className="w-full h-2 bg-[#F8F9FA] dark:bg-[#0A192F] rounded-none overflow-hidden">
                 <div className="h-full bg-teal-500 dark:bg-[#64FFDA] transition-all duration-100" style={{ width: `${progress}%` }}></div>
               </div>
           </div>

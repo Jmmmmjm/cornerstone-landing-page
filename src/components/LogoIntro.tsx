@@ -15,7 +15,7 @@ export function LogoIntro({ onComplete }: { onComplete: () => void }) {
     <motion.div 
       initial={{ opacity: 1 }}
       exit={{ y: "-100%", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
-      className="fixed inset-0 z-[10000] bg-white dark:bg-[#0A192F] flex flex-col items-center justify-center text-[#0A192F] dark:text-[#F8F9FA]"
+      className="fixed inset-0 z-[10000] bg-[#F8F9FA] dark:bg-[#0A192F] flex flex-col items-center justify-center text-[#0A192F] dark:text-[#F8F9FA]"
     >
       <div className="flex flex-col items-center gap-8">
         <Logo className="w-32 h-32" isAnimated={true} />

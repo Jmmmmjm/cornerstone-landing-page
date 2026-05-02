@@ -47,7 +47,7 @@ export function Section5() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0); // First card preloaded
 
   return (
-    <section id="results" className="py-32 bg-white dark:bg-[#0A192F] overflow-hidden min-h-screen flex flex-col justify-center">
+    <section id="results" className="py-32 bg-[#F8F9FA] dark:bg-[#0A192F] overflow-hidden min-h-screen flex flex-col justify-center">
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
         
         <div className="text-center mb-16">
@@ -72,7 +72,7 @@ export function Section5() {
                 className={`relative cursor-pointer overflow-hidden transition-all duration-500 ease-out p-8 md:p-10 flex flex-col border-r last:border-r-0 border-slate-300 dark:border-[#8892B0]/20
                   ${isExpanded 
                     ? 'flex-[3] bg-slate-50 dark:bg-[#112240]' 
-                    : 'flex-1 bg-white dark:bg-[#0A192F] hover:bg-slate-50 dark:hover:bg-[#112240]/30'}`}
+                    : 'flex-1 bg-[#F8F9FA] dark:bg-[#0A192F] hover:bg-slate-50 dark:hover:bg-[#112240]/30'}`}
               >
                 {/* Icon Box - Brand Teal */}
                 <div 

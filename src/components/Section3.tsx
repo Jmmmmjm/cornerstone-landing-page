@@ -34,7 +34,7 @@ export function Section3() {
   }, { scope: containerRef });
 
   return (
-    <section id="process" ref={containerRef} data-scroll-anim className="relative h-screen bg-white dark:bg-[#0A192F] overflow-hidden">
+    <section id="process" ref={containerRef} data-scroll-anim className="relative h-screen bg-[#F8F9FA] dark:bg-[#0A192F] overflow-hidden">
       
       {/* Progress Bar */}
       <div className="absolute top-24 left-1/2 -translate-x-1/2 z-20 flex gap-4">

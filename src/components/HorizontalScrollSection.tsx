@@ -78,7 +78,7 @@ export function HorizontalScrollSection() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative w-full h-screen bg-white dark:bg-[#0A192F] overflow-hidden">
+    <section ref={containerRef} className="relative w-full h-screen bg-[#F8F9FA] dark:bg-[#0A192F] overflow-hidden">
       <div className="relative z-10 h-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-12 md:gap-20">
         
         {/* Left Side: Text Content */}

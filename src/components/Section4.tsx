@@ -59,7 +59,7 @@ export function Section4() {
   }, { scope: containerRef });
 
   return (
-    <section id="solutions" ref={containerRef} className="relative py-32 bg-white dark:bg-[#0A192F] overflow-hidden">
+    <section id="solutions" ref={containerRef} className="relative py-32 bg-[#F8F9FA] dark:bg-[#0A192F] overflow-hidden">
       
       {/* Full-width Intro Moment */}
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-0 z-0">
@@ -100,7 +100,7 @@ export function Section4() {
           {/* Divider */}
           <div className="hidden md:flex flex-col items-center justify-center relative w-px">
             <div ref={dividerRef} className="absolute top-0 bottom-0 w-px bg-[#8892B0]/30 origin-top"></div>
-            <div className="bg-white dark:bg-[#0A192F] py-4 z-10 text-[#0A192F]/70 dark:text-[#8892B0] text-sm italic">or</div>
+            <div className="bg-[#F8F9FA] dark:bg-[#0A192F] py-4 z-10 text-[#0A192F]/70 dark:text-[#8892B0] text-sm italic">or</div>
           </div>
 
           {/* Right Card */}

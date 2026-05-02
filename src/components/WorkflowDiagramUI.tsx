@@ -17,7 +17,7 @@ export function WorkflowDiagramUI() {
   }, []);
 
   return (
-    <div className="w-full h-32 bg-white dark:bg-[#0A192F] rounded-none border border-slate-300 dark:border-[#8892B0]/20 mb-6 flex items-center justify-center overflow-hidden relative">
+    <div className="w-full h-32 bg-[#F8F9FA] dark:bg-[#0A192F] rounded-none border border-slate-300 dark:border-[#8892B0]/20 mb-6 flex items-center justify-center overflow-hidden relative">
       <svg ref={svgRef} viewBox="0 0 300 100" className="w-full h-full">
         {/* Base paths */}
         <path d="M 40 50 L 100 50 L 150 20 L 240 20 M 100 50 L 150 80 L 240 80" stroke="#8892B0" strokeWidth="2" fill="none" opacity="0.2" />

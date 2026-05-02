@@ -31,7 +31,7 @@ export function WindowUI({ className = "", style = {}, partial = false, buildAni
   }, { scope: containerRef, dependencies: [buildAnimation] });
 
   return (
-    <div ref={containerRef} style={style} className={`flex flex-col bg-white dark:bg-[#0A192F] border border-slate-300 dark:border-[#8892B0]/30 rounded-none overflow-hidden shadow-2xl ${className}`}>
+    <div ref={containerRef} style={style} className={`flex flex-col bg-[#F8F9FA] dark:bg-[#0A192F] border border-slate-300 dark:border-[#8892B0]/30 rounded-none overflow-hidden shadow-2xl ${className}`}>
       {/* Title bar */}
       <div ref={titleBarRef} className="h-10 bg-slate-50 dark:bg-[#112240] flex items-center px-4 gap-2 border-b border-slate-300 dark:border-[#8892B0]/20">
         <div className="w-3 h-3 rounded-none bg-[#FF5F56]"></div>
@@ -40,7 +40,7 @@ export function WindowUI({ className = "", style = {}, partial = false, buildAni
       </div>
       {/* Content */}
       {children || (
-      <div className="flex-1 flex p-6 gap-6 bg-white dark:bg-[#0A192F]">
+      <div className="flex-1 flex p-6 gap-6 bg-[#F8F9FA] dark:bg-[#0A192F]">
         {/* Sidebar */}
         <div ref={sidebarRef} className="w-48 flex flex-col gap-4 border-r border-slate-300 dark:border-[#8892B0]/10 pr-6">
           <div className="h-6 bg-[#8892B0]/20 rounded-none w-3/4 mb-4"></div>

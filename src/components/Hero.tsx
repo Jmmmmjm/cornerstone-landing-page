@@ -172,7 +172,7 @@ export function Hero() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative w-full h-screen bg-white dark:bg-[#0A192F] overflow-hidden flex items-center justify-center">
+    <section ref={containerRef} className="relative w-full h-screen bg-[#F8F9FA] dark:bg-[#0A192F] overflow-hidden flex items-center justify-center">
       <BreathingGrid />
 
       <div ref={questionRef} className="absolute z-30 text-center px-6">

@@ -74,7 +74,7 @@ export function Section2() {
         {/* New World (After) - The background and the WindowUI */}
         <div 
           ref={newWorldRef} 
-          className="absolute inset-0 w-full h-full bg-white dark:bg-[#0A192F] z-0"
+          className="absolute inset-0 w-full h-full bg-[#F8F9FA] dark:bg-[#0A192F] z-0"
         >
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-full max-w-7xl px-6 md:px-12">

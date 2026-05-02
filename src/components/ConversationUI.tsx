@@ -30,7 +30,7 @@ export function ConversationUI() {
           <div className={`max-w-[80%] p-3 rounded-none text-sm ${
             msg.sender === 'us' 
               ? 'bg-teal-500 dark:bg-[#64FFDA]/10 text-teal-600 dark:text-[#64FFDA] border border-teal-500 dark:border-[#64FFDA]/20' 
-              : 'bg-white dark:bg-[#0A192F] text-[#0A192F]/70 dark:text-[#8892B0] border border-slate-300 dark:border-[#8892B0]/20'
+              : 'bg-[#F8F9FA] dark:bg-[#0A192F] text-[#0A192F]/70 dark:text-[#8892B0] border border-slate-300 dark:border-[#8892B0]/20'
           }`}>
             {msg.text}
           </div>
@@ -38,7 +38,7 @@ export function ConversationUI() {
       ))}
       {visibleMessages < MESSAGES.length && (
         <div className="flex justify-start animate-pulse">
-          <div className="bg-white dark:bg-[#0A192F] border border-slate-300 dark:border-[#8892B0]/20 p-3 rounded-none flex gap-1">
+          <div className="bg-[#F8F9FA] dark:bg-[#0A192F] border border-slate-300 dark:border-[#8892B0]/20 p-3 rounded-none flex gap-1">
             <div className="w-1.5 h-1.5 bg-[#8892B0] rounded-none"></div>
             <div className="w-1.5 h-1.5 bg-[#8892B0] rounded-none"></div>
             <div className="w-1.5 h-1.5 bg-[#8892B0] rounded-none"></div>

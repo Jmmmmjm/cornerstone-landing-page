@@ -51,7 +51,7 @@ export function Section6() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative h-screen bg-white dark:bg-[#0A192F] flex items-center justify-center overflow-hidden">
+    <section ref={containerRef} className="relative h-screen bg-[#F8F9FA] dark:bg-[#0A192F] flex items-center justify-center overflow-hidden">
       <ActiveGrid />
       
       <div className="relative z-10 flex flex-col items-center text-center px-6">

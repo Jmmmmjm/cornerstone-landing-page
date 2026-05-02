@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { Sun, Moon } from 'lucide-react';
+import { Logo } from './Logo';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -63,17 +64,8 @@ export function Navbar() {
         }}
         className="pointer-events-auto flex items-center justify-between relative group/nav will-change-transform"
       >
-        <div className="flex items-center gap-3 relative z-10">
-          <motion.div
-            initial={false}
-            animate={{
-              scale: scrolled ? 1 : 0,
-              opacity: scrolled ? 1 : 0,
-              rotate: scrolled ? 0 : -90,
-            }}
-            transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="w-1.5 h-1.5 rounded-none bg-teal-500 dark:bg-[#64FFDA] shadow-[0_0_8px_#64FFDA]"
-          />
+        <div className="flex items-center gap-2 relative z-10">
+          <Logo className="w-4 h-4 md:w-5 md:h-5" />
           <span className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs whitespace-nowrap">
             Cornerstone
           </span>

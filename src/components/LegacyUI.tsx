@@ -23,7 +23,7 @@ export function LegacyUI() {
   }, { scope: containerRef });
 
   const LegacyWindow = ({ className = "", title = "Legacy System", children }: { className?: string, title?: string, children?: React.ReactNode }) => (
-    <div className={`legacy-window bg-white border border-gray-400 rounded-none overflow-hidden shadow-2xl flex flex-col pointer-events-none ${className}`}>
+    <div className={`legacy-window bg-[#F8F9FA] border border-gray-400 rounded-none overflow-hidden shadow-2xl flex flex-col pointer-events-none ${className}`}>
       <div className="h-8 bg-[#D1D5DB] flex items-center justify-between px-3 border-b border-gray-400">
         <div className="flex gap-1.5">
           <div className="w-2.5 h-2.5 rounded-none bg-gray-400"></div>
@@ -32,14 +32,14 @@ export function LegacyUI() {
         <div className="text-[9px] font-bold text-gray-600 uppercase tracking-wider">{title}</div>
         <div className="w-8"></div>
       </div>
-      <div className="flex-1 bg-white p-4">
+      <div className="flex-1 bg-[#F8F9FA] p-4">
         {children}
       </div>
     </div>
   );
 
   return (
-    <div ref={containerRef} className="absolute inset-0 bg-white dark:bg-[#0A192F] overflow-hidden">
+    <div ref={containerRef} className="absolute inset-0 bg-[#F8F9FA] dark:bg-[#0A192F] overflow-hidden">
       {/* Background noise grid */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
 
@@ -79,7 +79,7 @@ export function LegacyUI() {
       {/* PRIMARY WINDOW - Matches Section2 "After" sizing exactly */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
         <div className="w-full max-w-7xl px-6 md:px-12">
-          <div className="legacy-window w-full h-[500px] bg-white border border-gray-400 rounded-none overflow-hidden shadow-2xl flex flex-col">
+          <div className="legacy-window w-full h-[500px] bg-[#F8F9FA] border border-gray-400 rounded-none overflow-hidden shadow-2xl flex flex-col">
             <div className="h-10 bg-[#D1D5DB] flex items-center justify-between px-4 border-b border-gray-400">
               <div className="flex gap-2">
                 <div className="w-3 h-3 rounded-none bg-gray-400"></div>
@@ -99,7 +99,7 @@ export function LegacyUI() {
                   </div>
                 ))}
               </div>
-              <div className="flex-1 p-6 bg-white overflow-hidden">
+              <div className="flex-1 p-6 bg-[#F8F9FA] overflow-hidden">
                 <div className="flex gap-4 mb-6">
                   <div className="flex-1 h-32 bg-red-50 border border-red-200 rounded-none p-4">
                     <div className="text-[10px] font-bold text-red-800 uppercase mb-2">Critical Sync Error</div>
