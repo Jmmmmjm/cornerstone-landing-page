@@ -13,6 +13,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { PlaceholderSection } from './components/PlaceholderSection';
 import { PlanSection } from './components/PlanSection';
+import { AboutSection } from './components/AboutSection';
 import { Section6 } from './components/Section6';
 import { Footer } from './components/Footer';
 import { CustomCursor } from './components/CustomCursor';
@@ -88,7 +89,7 @@ export default function App() {
             <Navbar />
           </div>
           <Hero />
-          <PlaceholderSection title="About" number={2} />
+          <AboutSection />
           <PlaceholderSection title="Portfolio" number={3} />
           <PlanSection />
           <Section6 />
