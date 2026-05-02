@@ -19,7 +19,7 @@ export const Logo = forwardRef<SVGSVGElement, { className?: string; isAnimated?:
         className="text-[#0A192F] dark:text-[#F8F9FA]"
         initial={isAnimated ? { pathLength: 0, opacity: 0 } : {}}
         animate={isAnimated ? { pathLength: 1, opacity: 1 } : {}}
-        transition={{ ...transition, delay: 0 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 0 }}
       />
       
       {/* Inner L-shape */}
@@ -29,7 +29,7 @@ export const Logo = forwardRef<SVGSVGElement, { className?: string; isAnimated?:
         className="text-[#0A192F] dark:text-[#F8F9FA]"
         initial={isAnimated ? { pathLength: 0, opacity: 0 } : {}}
         animate={isAnimated ? { pathLength: 1, opacity: 1 } : {}}
-        transition={{ ...transition, delay: 0.3 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
       />
       
       {/* The Triangle */}

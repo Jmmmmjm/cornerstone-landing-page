@@ -12,6 +12,7 @@ import { AnimatePresence } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { PlaceholderSection } from './components/PlaceholderSection';
+import { PlanSection } from './components/PlanSection';
 import { Section6 } from './components/Section6';
 import { Footer } from './components/Footer';
 import { CustomCursor } from './components/CustomCursor';
@@ -89,7 +90,7 @@ export default function App() {
           <Hero />
           <PlaceholderSection title="About" number={2} />
           <PlaceholderSection title="Portfolio" number={3} />
-          <PlaceholderSection title="Plans" number={4} />
+          <PlanSection />
           <Section6 />
           <Footer />
         </>

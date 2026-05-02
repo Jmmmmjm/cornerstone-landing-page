@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-export function CountUp({ end, suffix = "", duration = 2 }: { end: number, suffix?: string, duration?: number }) {
+export function CountUp({ end, suffix = "", duration = 2, className = "" }: { end: number, suffix?: string, duration?: number, className?: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -26,7 +26,7 @@ export function CountUp({ end, suffix = "", duration = 2 }: { end: number, suffi
   }, [end, duration]);
 
   return (
-    <div ref={ref} className="text-5xl font-mono text-teal-600 dark:text-[#64FFDA] mb-2">
+    <div ref={ref} className={className}>
       {count}{suffix}
     </div>
   );

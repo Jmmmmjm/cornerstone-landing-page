@@ -91,10 +91,17 @@ export function CustomCursor() {
     <>
       <div 
         ref={botRef} 
-        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[9997] drop-shadow-sm origin-top-left"
+        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[9997] drop-shadow-sm origin-top-left transition-colors duration-300"
       >
          <svg className="w-full h-full" style={{ transform: 'rotate(-75deg)' }} viewBox="0 0 100 100">
-           <path d="M 0 60 H 40 V 100 Z" fill="currentColor" className="text-slate-400 dark:text-[#8892B0]" />
+           <path 
+            d="M 0 60 H 40 V 100 Z" 
+            fill="currentColor" 
+            className={isHovering 
+              ? "text-teal-500 dark:text-[#64FFDA]" 
+              : "text-slate-400 dark:text-[#8892B0]"
+            } 
+           />
          </svg>
       </div>
 
