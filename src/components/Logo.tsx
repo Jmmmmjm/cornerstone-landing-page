@@ -7,8 +7,6 @@ export const Logo = forwardRef<SVGSVGElement, { className?: string; isAnimated?:
   return (
     <svg 
       ref={ref}
-      width="100" 
-      height="100" 
       viewBox="0 0 100 100" 
       className={className}
       fill="none"

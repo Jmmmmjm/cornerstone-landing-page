@@ -199,9 +199,9 @@ export function Hero() {
 
       <div 
         ref={centeredLogoRef}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[500] w-[100px] h-[100px] pointer-events-none flex items-center justify-center -mt-[10vh]"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[500] w-[140px] h-[140px] md:w-[180px] md:h-[180px] pointer-events-none flex items-center justify-center -mt-[10vh]"
       >
-        <Logo className="absolute text-[#0A192F] dark:text-[#F8F9FA]" />
+        <Logo className="absolute w-full h-full text-[#0A192F] dark:text-[#F8F9FA]" />
       </div>
 
       <div ref={textRef} className="absolute z-50 flex flex-col items-center justify-center text-center opacity-0 top-[65%] left-1/2 -translate-x-1/2">
