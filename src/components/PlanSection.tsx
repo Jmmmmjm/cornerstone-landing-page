@@ -54,17 +54,25 @@ export function PlanSection() {
   const [activeTab, setActiveTab] = useState<string | null>('keystone');
   
   return (
-    <section className="relative min-h-screen md:h-screen w-full bg-[#F8F9FA] dark:bg-[#0A192F] flex flex-col overflow-hidden select-none border-b border-slate-200 dark:border-[#8892B0]/10 font-sans">
+    <section className="relative min-h-screen md:h-screen w-full bg-transparent flex flex-col overflow-hidden select-none border-b border-slate-200 dark:border-[#8892B0]/10 font-sans">
       
-      {/* Centered Architectural Header */}
-      <div className="pt-24 px-6 md:px-12 pb-16 shrink-0 z-20 flex flex-col items-center text-center">
+      {/* Right-aligned Architectural Header */}
+      <div className="pt-24 px-6 md:px-12 pb-16 shrink-0 z-20 w-full flex flex-col items-end text-right">
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="font-mono text-xs md:text-sm text-teal-600 dark:text-[#64FFDA] tracking-[0.2em] uppercase mb-4"
+        >
+          Pricing
+        </motion.div>
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-8xl font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] tracking-[0.1em] uppercase leading-none"
+          className="text-6xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase w-full text-right"
         >
-          Architectural Tiers
+          PLANS
         </motion.h2>
       </div>
 

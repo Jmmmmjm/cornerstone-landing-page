@@ -1,0 +1,219 @@
+- main [ref=e12]:
+  - generic:
+    - img
+  - generic:
+    - img
+  - generic:
+    - img
+  - navigation [ref=e13]:
+    - generic [ref=e14]:
+      - img [ref=e15]
+      - generic [ref=e19]: Cornerstone
+    - generic [ref=e20]:
+      - link "Process" [ref=e21]:
+        - /url: "#process"
+        - text: Process
+      - link "Portfolio" [ref=e22]:
+        - /url: "#portfolio"
+        - text: Portfolio
+      - link "Pricing" [ref=e23]:
+        - /url: "#pricing"
+        - text: Pricing
+    - generic [ref=e24]:
+      - button "Toggle Theme" [ref=e25]:
+        - img [ref=e26]
+      - link "Connect →" [ref=e296]:
+        - /url: https://calendar.google.com
+        - generic [ref=e33]: Connect
+        - generic [ref=e34]: →
+  - generic [ref=e36]:
+    - heading "Are you scaling on a shaky foundation?" [level=2] [ref=e38]
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - img
+        - generic:
+          - generic:
+            - img
+        - generic:
+          - generic:
+            - img
+        - generic:
+          - generic:
+            - img
+        - generic:
+          - generic:
+            - img
+        - generic:
+          - generic:
+            - img
+        - generic:
+          - generic:
+            - img
+        - generic:
+          - generic:
+            - img
+        - generic:
+          - generic:
+            - img
+        - generic:
+          - generic:
+            - img
+    - generic:
+      - img
+    - generic [ref=e39]:
+      - heading "Cornerstone" [level=1] [ref=e40]
+      - paragraph [ref=e41]: Scale On Stability
+      - generic [ref=e43]: Scroll
+  - generic [ref=e48]:
+    - generic [ref=e49]: "02"
+    - generic [ref=e50]:
+      - heading "Process" [level=2] [ref=e51]
+      - paragraph [ref=e54]: Placeholder Section
+  - generic [ref=e57]:
+    - generic [ref=e58]:
+      - generic [ref=e61]: Showcase // 03
+      - heading "Proven Systems" [level=2] [ref=e64]
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - img "MindJoin" [ref=e68]
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: Full-Scale Platform
+            - img [ref=e74]
+          - generic [ref=e76]:
+            - heading "MindJoin" [level=3] [ref=e77]
+            - paragraph [ref=e78]: A unified global publishing platform built for scale and localisation.
+            - generic [ref=e79]:
+              - generic [ref=e80]:
+                - generic [ref=e81]: Uptime
+                - generic [ref=e82]: 99.9%
+              - generic [ref=e83]:
+                - generic [ref=e84]: Integration
+                - generic [ref=e85]: n8n Core
+      - generic [ref=e88]:
+        - img "The Unknown" [ref=e90]
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - generic [ref=e94]: Bespoke Architecture
+            - img [ref=e96]
+          - generic [ref=e98]:
+            - heading "The Unknown" [level=3] [ref=e99]
+            - paragraph [ref=e100]: Data-driven paid media engine, built for sustainable agency growth.
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - generic [ref=e103]: Flows
+                - generic [ref=e104]: 250+
+              - generic [ref=e105]:
+                - generic [ref=e106]: Speed
+                - generic [ref=e107]: 0.4s
+      - generic [ref=e110]:
+        - img "Cornerstone OS" [ref=e112]
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - generic [ref=e116]: Internal Systems
+            - img [ref=e118]
+          - generic [ref=e120]:
+            - heading "Cornerstone OS" [level=3] [ref=e121]
+            - paragraph [ref=e122]: The definitive Agency Operating System (AOS) for operational control.
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - generic [ref=e125]: Efficiency
+                - generic [ref=e126]: +45%
+              - generic [ref=e127]:
+                - generic [ref=e128]: Users
+                - generic [ref=e129]: 1.2k
+      - generic [ref=e132]:
+        - img "Keystone Engine" [ref=e134]
+        - generic [ref=e136]:
+          - generic [ref=e137]:
+            - generic [ref=e138]: Automation Engine
+            - img [ref=e140]
+          - generic [ref=e142]:
+            - heading "Keystone Engine" [level=3] [ref=e143]
+            - paragraph [ref=e144]: Advanced custom engineering. Full integration of the n8n automation engine.
+            - generic [ref=e145]:
+              - generic [ref=e146]:
+                - generic [ref=e147]: Auto-runs
+                - generic [ref=e148]: 50k/mo
+              - generic [ref=e149]:
+                - generic [ref=e150]: Stability
+                - generic [ref=e151]: High
+  - generic [ref=e155]:
+    - heading "Architectural Tiers" [level=2] [ref=e157]
+    - generic [ref=e158]:
+      - generic [ref=e160]:
+        - generic [ref=e161]:
+          - generic [ref=e163]: Foundation // 01
+          - heading "Free" [level=3] [ref=e166]
+          - paragraph [ref=e169]: Entry-level access to the Cornerstone architecture. Perfect for identifying core bottlenecks.
+        - generic [ref=e172]: Stability_Index
+      - generic [ref=e176]:
+        - generic [ref=e177]:
+          - generic [ref=e179]: Framework // 02
+          - heading "Capstone" [level=3] [ref=e182]
+          - paragraph [ref=e185]: Strategic infrastructure for agencies ready to transition from manual to automated workflows.
+        - generic [ref=e188]: Stability_Index
+      - generic [ref=e192]:
+        - generic [ref=e193]:
+          - generic [ref=e195]: Assembly // 03
+          - heading "Keystone" [level=3] [ref=e198]
+          - paragraph [ref=e201]: Advanced custom engineering. Full integration of the n8n automation engine and client portals.
+          - generic [ref=e203]:
+            - generic [ref=e206]: Advanced n8n Flows
+            - generic [ref=e209]: Admin/Client Portals
+            - generic [ref=e212]: Recruitment Sys
+            - generic [ref=e215]: AI Chatbot
+            - generic [ref=e218]: 10k Auto-runs/mo
+            - generic [ref=e221]: Wise Integration
+        - generic [ref=e222]:
+          - generic [ref=e224]: Stability_Index
+          - generic:
+            - img
+      - generic [ref=e228]:
+        - generic [ref=e229]:
+          - generic [ref=e231]: Core System // 04
+          - heading "Cornerstone" [level=3] [ref=e234]
+          - paragraph [ref=e237]: The definitive Agency Operating System (AOS). Complete operational control in one unified environment.
+        - generic [ref=e240]: Stability_Index
+      - generic [ref=e244]:
+        - generic [ref=e245]:
+          - generic [ref=e247]: Ecosystem // 05
+          - heading "Customer" [level=3] [ref=e250]
+          - paragraph [ref=e253]: Bespoke architectural solutions. We build exactly how your agency thinks.
+        - generic [ref=e256]: Stability_Index
+  - generic [ref=e260]:
+    - generic [ref=e261]:
+      - generic [ref=e262]: C
+      - generic [ref=e263]: O
+      - generic [ref=e264]: R
+      - generic [ref=e265]: "N"
+      - generic [ref=e266]: E
+      - generic [ref=e267]: R
+      - generic [ref=e268]: S
+      - generic [ref=e269]: T
+      - generic [ref=e270]: O
+      - generic [ref=e271]: "N"
+      - generic [ref=e272]: E
+    - heading "Scale On Stability" [level=2] [ref=e275]
+    - paragraph [ref=e278]: Built for industries that can't afford to fail.
+    - generic [ref=e279]:
+      - generic [ref=e280]: Discovery Call
+      - generic [ref=e281]: →
+      - generic [ref=e282]: Draft Solution
+      - generic [ref=e283]: →
+      - generic [ref=e284]: Kick-off
+    - link "Book your Discovery Call" [ref=e285]:
+      - /url: https://calendar.google.com
+  - generic [ref=e287]:
+    - generic [ref=e288]:
+      - generic [ref=e289]: Cornerstone
+      - generic [ref=e290]: — Enterprise automation for traditional industries.
+    - generic [ref=e291]:
+      - link "Privacy" [ref=e292]:
+        - /url: "#"
+      - link "Terms" [ref=e293]:
+        - /url: "#"
+      - link "Contact" [ref=e294]:
+        - /url: "#"

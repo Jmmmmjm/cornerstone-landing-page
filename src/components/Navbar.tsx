@@ -72,7 +72,7 @@ export function Navbar() {
         </div>
 
         <div className={`hidden md:flex items-center gap-10 ${scrolled ? 'mx-12' : 'absolute left-1/2 -translate-x-1/2'}`}>
-          {['Process', 'Solutions', 'Results'].map((item) => (
+          {['About', 'Portfolio', 'Pricing'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}

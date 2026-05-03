@@ -11,23 +11,38 @@ import { useGSAP } from '@gsap/react';
 import { AnimatePresence } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { PlaceholderSection } from './components/PlaceholderSection';
-import { PlanSection } from './components/PlanSection';
 import { AboutSection } from './components/AboutSection';
+import { PlaceholderSection } from './components/PlaceholderSection';
+import { PortfolioSection } from './components/PortfolioSection';
+import { PlanSection } from './components/PlanSection';
 import { Section6 } from './components/Section6';
 import { Footer } from './components/Footer';
 import { CustomCursor } from './components/CustomCursor';
 import { LogoIntro } from './components/LogoIntro';
 import { IlluminationGrid } from './components/IlluminationGrid';
+import Grainient from './components/Grainient';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const [introDone, setIntroDone] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const scrollbarRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Sync theme state with document class
+    const checkTheme = () => {
+      setIsDark(document.documentElement.classList.contains('dark'));
+    };
+    
+    // Initial check
+    checkTheme();
+
+    // Observe class changes on html element
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
     if (!introDone) return;
 
     const lenis = new Lenis({
@@ -70,12 +85,27 @@ export default function App() {
   }, [introDone]);
 
   return (
-    <main ref={mainRef} className="bg-[#F8F9FA] dark:bg-[#0A192F] text-[#0A192F] dark:text-[#F8F9FA] cursor-none">
+    <main ref={mainRef} className="bg-transparent text-[#0A192F] dark:text-[#F8F9FA] cursor-none">
       <AnimatePresence>
         {!introDone && <LogoIntro key="intro" onComplete={() => setIntroDone(true)} />}
       </AnimatePresence>
 
       <CustomCursor />
+      <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
+        <Grainient
+          color1={isDark ? "#1B2B4A" : "#F8FAFC"}
+          color2={isDark ? "#112240" : "#F1F5F9"}
+          color3={isDark ? "#0A192F" : "#E2E8F0"}
+          timeSpeed={0.12}
+          grainAmount={isDark ? 0.12 : 0.05}
+          grainScale={2.2}
+          grainAnimated
+          warpStrength={0.4}
+          warpFrequency={1.8}
+          zoom={1.1}
+          contrast={isDark ? 1.5 : 1.1}
+        />
+      </div>
       <IlluminationGrid />
 
       {/* Custom Scrollbar */}
@@ -89,9 +119,15 @@ export default function App() {
             <Navbar />
           </div>
           <Hero />
-          <AboutSection />
-          <PlaceholderSection title="Portfolio" number={3} />
-          <PlanSection />
+          <div id="about">
+            <AboutSection />
+          </div>
+          <div id="portfolio">
+            <PortfolioSection />
+          </div>
+          <div id="pricing">
+            <PlanSection />
+          </div>
           <Section6 />
           <Footer />
         </>

@@ -1,0 +1,486 @@
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - link "MHHW MHHW" [ref=e8] [cursor=pointer]:
+      - /url: ./
+      - paragraph [ref=e10]: MHHW
+      - paragraph [ref=e12]: MHHW
+    - generic [ref=e13]:
+      - link "HOME HOME" [ref=e15] [cursor=pointer]:
+        - /url: ./home
+        - paragraph [ref=e18]: HOME
+        - paragraph [ref=e20]: HOME
+      - link "WORK WORK" [ref=e22] [cursor=pointer]:
+        - /url: ./work
+        - paragraph [ref=e24]: WORK
+        - paragraph [ref=e26]: WORK
+      - paragraph [ref=e30]: ON THE SIDE
+      - link "INFO INFO" [ref=e34] [cursor=pointer]:
+        - /url: ./info
+        - paragraph [ref=e36]: INFO
+        - paragraph [ref=e38]: INFO
+    - generic [ref=e40]:
+      - paragraph [ref=e42]: "[2026]"
+      - paragraph [ref=e44]: "2024"
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - paragraph [ref=e51]:
+        - generic [ref=e53]: M
+      - generic [ref=e55]:
+        - paragraph [ref=e58]:
+          - generic [ref=e60]: H
+        - paragraph [ref=e63]:
+          - generic [ref=e65]: ﹁
+          - generic [ref=e67]: 黃
+          - generic [ref=e69]: 愷
+          - generic [ref=e71]: 熹
+          - generic [ref=e73]: ﹂
+        - paragraph [ref=e76]:
+          - generic [ref=e78]: H
+      - paragraph [ref=e81]:
+        - generic [ref=e83]: M
+    - generic [ref=e91]:
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - heading "MHHW" [level=5] [ref=e96]:
+            - generic [ref=e97]: MHHW
+          - paragraph [ref=e100]:
+            - generic [ref=e101]: "[HOME]"
+          - heading "is the folio of" [level=5] [ref=e103]:
+            - generic [ref=e104]: is
+            - generic [ref=e105]: the
+            - generic [ref=e106]: folio
+            - generic [ref=e107]: of
+        - generic [ref=e108]:
+          - heading "mason" [level=5] [ref=e111]:
+            - generic [ref=e112]: mason
+          - paragraph [ref=e115]:
+            - generic [ref=e116]: "["
+          - heading "HOI HEI" [level=5] [ref=e119]:
+            - generic [ref=e120]: HOI
+            - generic [ref=e121]: HEI
+          - paragraph [ref=e124]:
+            - generic [ref=e125]: "]"
+          - heading "wong ↓" [level=5] [ref=e128]:
+            - generic [ref=e129]: wong
+            - generic [ref=e130]: ↓
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - heading "visual designer, swimmer" [level=5] [ref=e136]:
+            - generic [ref=e137]: visual
+            - generic [ref=e138]: designer,
+            - generic [ref=e139]: swimmer
+          - generic [ref=e140]:
+            - heading "an d" [level=5] [ref=e143]:
+              - generic [ref=e144]: an
+              - generic [ref=e146]: d
+            - heading "Porsche fanatic" [level=5] [ref=e149]:
+              - generic [ref=e150]: Porsche
+              - generic [ref=e151]: fanatic
+        - generic [ref=e154]:
+          - paragraph [ref=e155]:
+            - text: SR VISUAL DESIGN CONSULTANT @ IBM IX
+            - text: BASED IN LONDON
+          - paragraph [ref=e156]: I partner with brands, companies and entrepreneurs to transform visions into captivating experiences, all designed with the users at the helm.
+      - generic [ref=e157]:
+        - generic [ref=e158]:
+          - heading "[ N I C E T O M E E T Y O U ]" [level=5] [ref=e160]:
+            - generic [ref=e161]:
+              - generic [ref=e162]: "["
+              - generic [ref=e163]: "N"
+              - generic [ref=e164]: I
+              - generic [ref=e165]: C
+              - generic [ref=e166]: E
+            - generic [ref=e167]:
+              - generic [ref=e168]: T
+              - generic [ref=e169]: O
+            - generic [ref=e170]:
+              - generic [ref=e171]: M
+              - generic [ref=e172]: E
+              - generic [ref=e173]: E
+              - generic [ref=e174]: T
+            - generic [ref=e175]:
+              - generic [ref=e176]: "Y"
+              - generic [ref=e177]: O
+              - generic [ref=e178]: U
+              - generic [ref=e179]: "]"
+          - generic [ref=e180]:
+            - heading [level=5] [ref=e181]
+            - heading "「 很 高 興 見 到 你 」" [level=5] [ref=e182]:
+              - generic [ref=e183]:
+                - generic [ref=e184]: 「
+                - generic [ref=e185]: 很
+                - generic [ref=e186]: 高
+                - generic [ref=e187]: 興
+                - generic [ref=e188]: 見
+                - generic [ref=e189]: 到
+                - generic [ref=e190]: 你
+                - generic [ref=e191]: 」
+        - heading "[ S C R O L L 請 下 去 D O W N ]" [level=5] [ref=e193]:
+          - generic [ref=e194]:
+            - generic [ref=e195]: "["
+            - generic [ref=e196]: S
+            - generic [ref=e197]: C
+            - generic [ref=e198]: R
+            - generic [ref=e199]: O
+            - generic [ref=e200]: L
+            - generic [ref=e201]: L
+          - generic [ref=e203]:
+            - generic [ref=e204]: 請
+            - generic [ref=e205]: 下
+            - generic [ref=e206]: 去
+          - generic [ref=e207]:
+            - generic [ref=e208]: D
+            - generic [ref=e209]: O
+            - generic [ref=e210]: W
+            - generic [ref=e211]: "N"
+            - generic [ref=e212]: "]"
+    - generic [ref=e213]:
+      - generic [ref=e214]:
+        - generic [ref=e216]:
+          - img [ref=e220]:
+            - heading "FEATURED" [level=5] [ref=e222]
+          - paragraph [ref=e225]:
+            - generic [ref=e227]: ﹁
+            - generic [ref=e229]: 作
+            - generic [ref=e231]: 品
+            - generic [ref=e233]: 集
+            - generic [ref=e235]: ﹂
+          - img [ref=e239]:
+            - heading "PROJECTS" [level=5] [ref=e241]
+        - generic [ref=e242]:
+          - link "Wild website design mock up Wild website design mock up LIVERPOOL FC MOBILE APP" [ref=e245] [cursor=pointer]:
+            - /url: ./liverpoolfc
+            - generic [ref=e246]:
+              - img "Wild website design mock up" [ref=e250]
+              - img "Wild website design mock up" [ref=e254]
+              - generic [ref=e255]:
+                - paragraph [ref=e258]: LIVERPOOL FC
+                - paragraph [ref=e261]: MOBILE APP
+          - link "Wild website design mock up Wild website design mock up THE NORWEGIAN CAPSULE RESPONSIVE WEB" [ref=e264] [cursor=pointer]:
+            - /url: ./thenorwegiancapsule
+            - generic [ref=e265]:
+              - img "Wild website design mock up" [ref=e269]
+              - img "Wild website design mock up" [ref=e273]
+              - generic [ref=e274]:
+                - paragraph [ref=e277]: THE NORWEGIAN CAPSULE
+                - paragraph [ref=e280]: RESPONSIVE WEB
+      - generic [ref=e281]:
+        - paragraph [ref=e284]: Immersive experiences uniquely created based on user-insights and design thinking methodologies. Always setting you apart from the industry.
+        - link "VIEW ALL WORK 看作品集" [ref=e287] [cursor=pointer]:
+          - /url: ./work
+          - paragraph [ref=e289]: VIEW ALL WORK
+          - paragraph [ref=e291]: 看作品集
+    - generic [ref=e292]:
+      - generic [ref=e293]:
+        - paragraph [ref=e296]:
+          - generic [ref=e297]:
+            - generic [ref=e298]: I
+            - generic [ref=e299]: "N"
+        - paragraph [ref=e303]:
+          - generic [ref=e306]: ﹁
+          - generic [ref=e309]: 簡
+          - generic [ref=e312]: 介
+          - generic [ref=e315]: ﹂
+        - paragraph [ref=e318]:
+          - generic [ref=e319]:
+            - generic [ref=e320]: F
+            - generic [ref=e321]: O
+      - generic [ref=e322]:
+        - generic [ref=e324]:
+          - paragraph [ref=e327]:
+            - generic [ref=e330]: A
+            - generic [ref=e333]: "["
+            - generic [ref=e335]:
+              - generic [ref=e336]: c
+              - generic [ref=e337]: r
+              - generic [ref=e338]: o
+              - generic [ref=e339]: s
+              - generic [ref=e340]: s
+              - generic [ref=e341]: "-"
+              - generic [ref=e342]: c
+              - generic [ref=e343]: u
+              - generic [ref=e344]: l
+              - generic [ref=e345]: t
+              - generic [ref=e346]: u
+              - generic [ref=e347]: r
+              - generic [ref=e348]: a
+              - generic [ref=e349]: l
+            - generic [ref=e352]: "]"
+            - generic [ref=e353]:
+              - generic [ref=e354]:
+                - generic [ref=e355]: p
+                - generic [ref=e356]: e
+                - generic [ref=e357]: r
+                - generic [ref=e358]: s
+                - generic [ref=e359]: p
+                - generic [ref=e360]: e
+                - generic [ref=e361]: c
+                - generic [ref=e362]: t
+                - generic [ref=e363]: i
+                - generic [ref=e364]: v
+                - generic [ref=e365]: e
+              - generic [ref=e366]:
+                - generic [ref=e367]: s
+                - generic [ref=e368]: h
+                - generic [ref=e369]: a
+                - generic [ref=e370]: p
+                - generic [ref=e371]: e
+                - generic [ref=e372]: d
+            - generic [ref=e374]:
+              - generic [ref=e375]: b
+              - generic [ref=e376]: "y"
+            - generic [ref=e377]:
+              - generic [ref=e378]:
+                - generic [ref=e379]: H
+                - generic [ref=e380]: o
+                - generic [ref=e381]: "n"
+                - generic [ref=e382]: g
+              - generic [ref=e383]:
+                - generic [ref=e384]: K
+                - generic [ref=e385]: o
+                - generic [ref=e386]: "n"
+                - generic [ref=e387]: g
+            - generic [ref=e389]:
+              - generic [ref=e390]:
+                - generic [ref=e391]: r
+                - generic [ref=e392]: o
+                - generic [ref=e393]: o
+                - generic [ref=e394]: t
+                - generic [ref=e395]: s
+              - generic [ref=e396]:
+                - generic [ref=e397]: a
+                - generic [ref=e398]: "n"
+                - generic [ref=e399]: d
+            - generic [ref=e401]:
+              - generic [ref=e402]: A
+              - generic [ref=e403]: "n"
+            - generic [ref=e405]:
+              - generic [ref=e406]: E
+              - generic [ref=e407]: "n"
+              - generic [ref=e408]: g
+              - generic [ref=e409]: l
+              - generic [ref=e410]: i
+              - generic [ref=e411]: s
+              - generic [ref=e412]: h
+            - generic [ref=e414]:
+              - generic [ref=e415]:
+                - generic [ref=e416]: c
+                - generic [ref=e417]: o
+                - generic [ref=e418]: u
+                - generic [ref=e419]: "n"
+                - generic [ref=e420]: t
+                - generic [ref=e421]: r
+                - generic [ref=e422]: "y"
+                - generic [ref=e423]: s
+                - generic [ref=e424]: i
+                - generic [ref=e425]: d
+                - generic [ref=e426]: e
+              - generic [ref=e427]:
+                - generic [ref=e428]: u
+                - generic [ref=e429]: p
+                - generic [ref=e430]: b
+                - generic [ref=e431]: r
+                - generic [ref=e432]: i
+                - generic [ref=e433]: "n"
+                - generic [ref=e434]: g
+                - generic [ref=e435]: i
+                - generic [ref=e436]: "n"
+                - generic [ref=e437]: g
+          - generic [ref=e438]:
+            - paragraph [ref=e441]:
+              - text: A design approach led by curiosity, emotion, and empathy.
+              - text: All digital experiences created are crafted to be intuitive, meaningful, and quietly delightful.
+            - link "READ MY STORY 讀我的故事" [ref=e444] [cursor=pointer]:
+              - /url: ./info
+              - paragraph [ref=e446]: READ MY STORY
+              - paragraph [ref=e448]: 讀我的故事
+        - generic [ref=e449]:
+          - paragraph [ref=e454]:
+            - text: ﹁
+            - text: 技
+            - text: 術
+            - text: ﹂
+          - generic [ref=e457]:
+            - generic [ref=e463]:
+              - generic [ref=e464]:
+                - generic [ref=e466]:
+                  - paragraph [ref=e467]: Quietly powerful
+                  - paragraph [ref=e468]: Digital Experiences
+                - paragraph [ref=e470]: Design to me is a bridge between emotion and function. My goal has always been to elevate everyday interactions into something more meaningful and crucially, quietly threading in moments of joy that catch us by surprise and stay with us for years to come.
+              - link "READ MY STORY 讀我的故事" [ref=e473] [cursor=pointer]:
+                - /url: ./info
+                - paragraph [ref=e475]: READ MY STORY
+                - paragraph [ref=e477]: 讀我的故事
+            - generic [ref=e478]:
+              - heading "[ E X P E R T I S E A N D S E R V I C E S ]" [level=5] [ref=e482]:
+                - generic [ref=e483]:
+                  - generic [ref=e484]: "["
+                  - generic [ref=e485]: E
+                  - generic [ref=e486]: X
+                  - generic [ref=e487]: P
+                  - generic [ref=e488]: E
+                  - generic [ref=e489]: R
+                  - generic [ref=e490]: T
+                  - generic [ref=e491]: I
+                  - generic [ref=e492]: S
+                  - generic [ref=e493]: E
+                - generic [ref=e494]:
+                  - generic [ref=e495]: A
+                  - generic [ref=e496]: "N"
+                  - generic [ref=e497]: D
+                - generic [ref=e498]:
+                  - generic [ref=e499]: S
+                  - generic [ref=e500]: E
+                  - generic [ref=e501]: R
+                  - generic [ref=e502]: V
+                  - generic [ref=e503]: I
+                  - generic [ref=e504]: C
+                  - generic [ref=e505]: E
+                  - generic [ref=e506]: S
+                  - generic [ref=e507]: "]"
+              - generic [ref=e510]:
+                - generic [ref=e513]:
+                  - generic [ref=e515]: ART DIRECTION
+                  - generic [ref=e517]: ART DIRECTION
+                - generic [ref=e520]:
+                  - generic [ref=e522]: UI / VISUAL DESIGN
+                  - generic [ref=e524]: UI / VISUAL DESIGN
+                - generic [ref=e527]:
+                  - generic [ref=e529]: USER EXPERIENCE DESIGN
+                  - generic [ref=e531]: USER EXPERIENCE DESIGN
+                - generic [ref=e534]:
+                  - generic [ref=e536]: ENTERPRISE DESIGN THINKING
+                  - generic [ref=e538]: ENTERPRISE DESIGN THINKING
+                - generic [ref=e541]:
+                  - generic [ref=e543]: RESEARCH / STRATEGY
+                  - generic [ref=e545]: RESEARCH / STRATEGY
+                - generic [ref=e548]:
+                  - generic [ref=e550]: BRAND IDENTITY
+                  - generic [ref=e552]: BRAND IDENTITY
+              - generic [ref=e554]:
+                - heading "[ F U E L E D B Y C U R O S I T Y , S H A P E D B Y I N S I G H T ]" [level=5] [ref=e557]:
+                  - generic [ref=e558]:
+                    - generic [ref=e559]: "["
+                    - generic [ref=e560]: F
+                    - generic [ref=e561]: U
+                    - generic [ref=e562]: E
+                    - generic [ref=e563]: L
+                    - generic [ref=e564]: E
+                    - generic [ref=e565]: D
+                  - generic [ref=e566]:
+                    - generic [ref=e567]: B
+                    - generic [ref=e568]: "Y"
+                  - generic [ref=e569]:
+                    - generic [ref=e570]: C
+                    - generic [ref=e571]: U
+                    - generic [ref=e572]: R
+                    - generic [ref=e573]: O
+                    - generic [ref=e574]: S
+                    - generic [ref=e575]: I
+                    - generic [ref=e576]: T
+                    - generic [ref=e577]: "Y"
+                    - generic [ref=e578]: ","
+                  - generic [ref=e579]:
+                    - generic [ref=e580]: S
+                    - generic [ref=e581]: H
+                    - generic [ref=e582]: A
+                    - generic [ref=e583]: P
+                    - generic [ref=e584]: E
+                    - generic [ref=e585]: D
+                  - generic [ref=e586]:
+                    - generic [ref=e587]: B
+                    - generic [ref=e588]: "Y"
+                  - generic [ref=e589]:
+                    - generic [ref=e590]: I
+                    - generic [ref=e591]: "N"
+                    - generic [ref=e592]: S
+                    - generic [ref=e593]: I
+                    - generic [ref=e594]: G
+                    - generic [ref=e595]: H
+                    - generic [ref=e596]: T
+                    - generic [ref=e597]: "]"
+                - heading "[ M H H W © 2 0 2 6 ]" [level=5] [ref=e599]:
+                  - generic [ref=e600]:
+                    - generic [ref=e601]: "["
+                    - generic [ref=e602]: M
+                    - generic [ref=e603]: H
+                    - generic [ref=e604]: H
+                    - generic [ref=e605]: W
+                  - generic [ref=e608]: ©
+                  - generic [ref=e609]:
+                    - generic [ref=e610]: "2"
+                    - generic [ref=e611]: "0"
+                    - generic [ref=e612]: "2"
+                    - generic [ref=e613]: "6"
+                    - generic [ref=e614]: "]"
+    - generic [ref=e623]:
+      - generic [ref=e624]:
+        - paragraph [ref=e626]: "[MASON WONG]"
+        - paragraph [ref=e628]: "[COPYRIGHT 2026]"
+      - generic [ref=e629]:
+        - generic [ref=e631]:
+          - paragraph [ref=e632]:
+            - generic [ref=e633]: COME
+          - paragraph [ref=e634]:
+            - generic [ref=e635]: say
+          - paragraph [ref=e636]:
+            - generic [ref=e637]: HELLO
+        - paragraph [ref=e640]:
+          - generic [ref=e643]: ﹁
+          - generic [ref=e646]: 你
+          - generic [ref=e649]: 好
+          - generic [ref=e652]: ﹂
+        - generic [ref=e654]:
+          - paragraph [ref=e656]: "[CURRENTLY ON REPEAT]"
+          - generic [ref=e661] [cursor=pointer]:
+            - iframe [ref=e663]:
+              - generic [active] [ref=f4e1]:
+                - generic [ref=f4e6]:
+                  - button "Play on Spotify" [ref=f4e10] [cursor=pointer]:
+                    - img [ref=f4e11]
+                  - generic [ref=f4e13]:
+                    - heading "Mean It In The Morning" [level=1] [ref=f4e14]:
+                      - link "Mean It In The Morning" [ref=f4e18] [cursor=pointer]:
+                        - /url: https://open.spotify.com/track/19yMYXxG3gtIbKxOpQo9vL?go=1&sp_cid=307e72c5a1f7cd238f3751801a1a1fad&utm_source=embed_player_p&utm_medium=desktop
+                    - generic [ref=f4e19]:
+                      - list "Tags" [ref=f4e20]:
+                        - generic "Preview" [ref=f4e21]
+                      - heading "Loyle Carner" [level=2] [ref=f4e22]:
+                        - link "Loyle Carner" [ref=f4e27] [cursor=pointer]:
+                          - /url: https://open.spotify.com/artist/4oDjh8wNW5vDHyFRrDYC4k?go=1&sp_cid=307e72c5a1f7cd238f3751801a1a1fad
+                    - button "Save on Spotify" [ref=f4e29] [cursor=pointer]:
+                      - img [ref=f4e31]
+                      - generic [ref=f4e34]: Save on Spotify
+                  - generic [ref=f4e35]:
+                    - button "More" [ref=f4e37] [cursor=pointer]:
+                      - img [ref=f4e38]
+                    - button "Play" [ref=f4e41] [cursor=pointer]:
+                      - img [ref=f4e42]
+                - alert [ref=f4e44]
+            - img [ref=e668]
+          - paragraph [ref=e671]: "[LC - MEAN IT IN THE MORNING]"
+      - generic [ref=e672]:
+        - link "→ LINKEDIN LINKEDIN" [ref=e674] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/masonhhwong/
+          - paragraph [ref=e676]: →
+          - paragraph [ref=e678]: LINKEDIN
+          - paragraph [ref=e680]: LINKEDIN
+        - generic [ref=e682] [cursor=pointer]:
+          - generic [ref=e684]:
+            - img [ref=e687]
+            - img [ref=e691]
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - paragraph: Label
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: Back to top
+        - link "→ INSTAGRAM INSTAGRAM" [ref=e694] [cursor=pointer]:
+          - /url: https://www.instagram.com/_mhhw/
+          - paragraph [ref=e696]: →
+          - paragraph [ref=e698]: INSTAGRAM
+          - paragraph [ref=e700]: INSTAGRAM
