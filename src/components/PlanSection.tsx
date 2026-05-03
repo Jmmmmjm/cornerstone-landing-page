@@ -77,7 +77,7 @@ export function PlanSection() {
       </div>
 
       {/* Main Interactive Grid - Switched to column on mobile */}
-      <div className="flex-1 flex flex-col md:flex-row w-full border-t border-slate-200 dark:border-[#8892B0]/10 overflow-hidden bg-transparent">
+      <div className="flex-1 flex flex-col md:flex-row w-full overflow-hidden bg-transparent">
         {plans.map((plan, index) => {
           const isExpanded = activeTab === plan.id;
           const Icon = plan.Icon;
@@ -88,11 +88,12 @@ export function PlanSection() {
               onMouseEnter={() => setActiveTab(plan.id)}
               onClick={() => setActiveTab(plan.id)} // Touch support
               animate={{ 
-                flex: isExpanded ? 5 : 2.5, // Increased base flex for readability
+                flex: isExpanded ? 5 : 2.5,
                 // On mobile we expand height instead of width
                 height: typeof window !== 'undefined' && window.innerWidth < 768 
                   ? (isExpanded ? '450px' : '100px') 
-                  : 'auto'
+                  : 'auto',
+                borderTopColor: isExpanded ? 'rgba(0,0,0,0)' : (document.documentElement.classList.contains('dark') ? 'rgba(136, 146, 176, 0.1)' : 'rgba(226, 232, 240, 1)')
               }}
               transition={{ 
                 type: 'spring',
@@ -100,15 +101,15 @@ export function PlanSection() {
                 damping: 32,
                 restDelta: 0.001
               }}
-              className="relative min-w-[150px] md:min-w-[280px] md:h-full group border-b md:border-b-0 md:border-r border-slate-200 dark:border-[#8892B0]/10 last:border-r-0 last:border-b-0 cursor-pointer overflow-hidden will-change-[flex,height]"
+              className="relative min-w-[150px] md:min-w-[280px] md:h-full group border-t md:border-r border-slate-200 dark:border-[#8892B0]/10 last:border-r-0 cursor-pointer overflow-hidden will-change-[flex,height]"
               style={{ flexBasis: 0 }}
             >
-              {/* Material Backdrop - Subtle highlight when expanded */}
+              {/* Material Backdrop - Darken when NOT expanded to make hovered one pop */}
               <motion.div 
                 animate={{ 
-                    opacity: isExpanded ? 1 : 0,
+                    opacity: isExpanded ? 0 : 0.3,
                 }}
-                className="absolute inset-0 pointer-events-none will-change-opacity bg-white dark:bg-[#112240]/20" 
+                className="absolute inset-0 pointer-events-none hide-mobile will-change-opacity bg-slate-900/10 dark:bg-black/40" 
               />
 
               <div className="relative h-full w-full p-6 md:p-12 flex flex-col justify-between overflow-hidden">
