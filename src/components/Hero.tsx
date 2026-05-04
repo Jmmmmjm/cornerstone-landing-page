@@ -177,7 +177,7 @@ export function Hero() {
 
       <div ref={questionRef} className="absolute z-30 text-center px-6">
         <h2 className="text-[#0A192F]/70 dark:text-[#8892B0] font-display font-light text-2xl md:text-3xl tracking-[0.2em] uppercase max-w-2xl">
-          Are you scaling on a shaky foundation?
+          Tired of manual work holding you back?
         </h2>
       </div>
 
@@ -206,10 +206,10 @@ export function Hero() {
 
       <div ref={textRef} className="absolute z-50 flex flex-col items-center justify-center text-center opacity-0 top-[65%] left-1/2 -translate-x-1/2">
         <h1 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-bold text-4xl md:text-6xl lg:text-7xl tracking-[0.15em] uppercase whitespace-nowrap drop-shadow-lg">
-          Cornerstone
+          Save 15 Hours Every Week
         </h1>
         <p className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-light text-lg md:text-xl lg:text-2xl mt-4 tracking-normal drop-shadow-md">
-          Scale On Stability
+          Automate the work. Accelerate your growth.
         </p>
         
         <div id="hero-scroll-anchor" className="mt-16 flex flex-col items-center gap-3">

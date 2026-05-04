@@ -8,10 +8,10 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { Reveal } from './Reveal';
 
 const team = [
-  { name: 'Marcus', role: 'Architect', bio: 'Specialising in distributed systems and high-scale infrastructure.', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600' },
-  { name: 'Sarah', role: 'Operations', bio: 'Expert in workflow automation and strategic agency scaling.', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600' },
-  { name: 'David', role: 'Engineering', bio: 'Full-stack developer focused on performance and reliability.', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600' },
-  { name: 'Elena', role: 'Design', bio: 'Creating cohesive digital experiences and design systems.', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600' }
+  { name: 'Marcus', role: 'Architect', bio: 'Builds scalable systems that let teams do more with less.', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600' },
+  { name: 'Sarah', role: 'Operations', bio: 'Expert in workflow automation and accelerating team velocity.', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600' },
+  { name: 'David', role: 'Engineering', bio: 'Optimizes performance to reduce friction and boost productivity.', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600' },
+  { name: 'Elena', role: 'Design', bio: 'Creates intuitive experiences that save users time and effort.', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600' }
 ];
 
 export function AboutSection() {
@@ -35,12 +35,12 @@ export function AboutSection() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="text-5xl md:text-7xl lg:text-[8rem] font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase max-w-5xl">
-            Thinkers. Engineers. <span className="text-teal-600 dark:text-[#64FFDA]">Foundations.</span>
+            Work <span className="text-teal-600 dark:text-[#64FFDA]">faster.</span> Scale <span className="text-teal-600 dark:text-[#64FFDA]">smarter.</span>
           </h2>
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mt-12 text-xl md:text-3xl text-[#0A192F]/70 dark:text-white/60 max-w-3xl leading-relaxed">
-            We build the systems that support modern agencies. Not just websites, but the complete operational infrastructure required to scale with absolute confidence.
+            We help teams save 10+ hours per week by automating workflows and building systems that let you focus on what matters.
           </p>
         </Reveal>
       </div>
@@ -74,22 +74,22 @@ export function AboutSection() {
         <div className="flex flex-col justify-center">
           <Reveal>
             <h3 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tight mb-8">
-              Reliability is the New Innovation
+              Efficiency Drives Growth
             </h3>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-lg md:text-xl text-[#0A192F]/70 dark:text-white/60 leading-relaxed mb-12">
-              Most agencies scale until they break. We ensure your growth is supported by architectural precision. From automated workflows to high-performance platforms, every decision is intentional.
+              Most teams waste time on repetitive work. We eliminate that friction with intelligent automation. The result: faster delivery, happier teams, and the bandwidth to grow.
             </p>
           </Reveal>
           <div className="grid grid-cols-2 gap-8 pt-8 border-t border-slate-200 dark:border-white/10">
              <div>
-                <div className="text-4xl md:text-6xl font-display font-bold text-teal-600 dark:text-[#64FFDA] mb-2">15+</div>
-                <div className="font-mono text-xs uppercase tracking-widest opacity-50">Years Experience</div>
+                <div className="text-4xl md:text-6xl font-display font-bold text-teal-600 dark:text-[#64FFDA] mb-2">10+</div>
+                <div className="font-mono text-xs uppercase tracking-widest opacity-50">Hours Saved Weekly</div>
              </div>
              <div>
-                <div className="text-4xl md:text-6xl font-display font-bold text-teal-600 dark:text-[#64FFDA] mb-2">100%</div>
-                <div className="font-mono text-xs uppercase tracking-widest opacity-50">Reliability Rate</div>
+                <div className="text-4xl md:text-6xl font-display font-bold text-teal-600 dark:text-[#64FFDA] mb-2">3x</div>
+                <div className="font-mono text-xs uppercase tracking-widest opacity-50">Faster Delivery</div>
              </div>
           </div>
         </div>
