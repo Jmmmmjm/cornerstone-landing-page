@@ -83,10 +83,10 @@ export function Section6() {
         
         <a 
           ref={ctaRef}
-          href="https://calendar.google.com" 
+          href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2eEOUtyaVnNrgyCwVj_5zBnmIYLxtjY1xfkc8nQA_S3CvSQfvzaGxkmkdVg7A6LZuhULIgg9gC" 
           target="_blank" 
           rel="noreferrer"
-          className="bg-[#0A192F] dark:bg-[#F8F9FA] text-white dark:text-[#0A192F] hover:bg-[#0A192F]/80 dark:hover:bg-[#8892B0] px-8 py-4 text-base font-medium transition-colors rounded-none inline-block shadow-xl"
+          className="bg-teal-500 dark:bg-[#64FFDA] text-white dark:text-[#0A192F] hover:bg-teal-600 dark:hover:bg-[#4dffcc] px-8 py-4 text-base font-bold tracking-[0.2em] uppercase transition-all duration-300 rounded-none inline-block shadow-[0_0_20px_rgba(20,184,166,0.3)] dark:shadow-[0_0_20px_rgba(100,255,218,0.3)]"
         >
           Book your Discovery Call
         </a>

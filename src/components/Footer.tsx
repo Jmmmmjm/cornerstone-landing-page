@@ -2,23 +2,29 @@ import Grainient from './Grainient';
 
 export function Footer() {
   return (
-    <footer className="relative bg-transparent overflow-hidden pt-32 pb-12">
-      {/* 1. THE REFINED SVG MASK DEFINITION 
-           We use userSpaceOnUse and ensure the SVG container is sized to the footer.
-      */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-0" aria-hidden="true">
+    <footer className="relative bg-transparent overflow-hidden pb-12 -mt-20 md:-mt-32">
+      {/* 1. THE REFINED SVG MASK DEFINITION */}
+      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-0 overflow-visible" aria-hidden="true">
         <defs>
           <mask id="cornerstone-mask" maskUnits="userSpaceOnUse">
             {/* White: Background is visible */}
             <rect width="100%" height="100%" fill="white" />
             {/* Black: This area becomes transparent (the hole) */}
-            <text 
-              x="50%" 
-              y="110" 
-              textAnchor="middle" 
+            <text
+              x="50%"
+              y="-70"
+              textAnchor="middle"
               fill="black"
-              className="font-display font-bold uppercase"
-              style={{ fontSize: '13.5vw', letterSpacing: '-0.05em', dominantBaseline: 'middle' }}
+              stroke="black"
+              strokeWidth="0.02em"
+              className="font-display uppercase"
+              dominantBaseline="text-before-edge"
+              style={{
+                fontSize: '13.5vw',
+                letterSpacing: '-0.05em',
+                fontWeight: 900,
+                paintOrder: 'stroke fill'
+              }}
             >
               Cornerstone
             </text>
@@ -29,31 +35,31 @@ export function Footer() {
       {/* 2. THE FOOTER BASE LAYER (The slate/cyan background) 
            We apply the mask here. 
       */}
-      <div 
-        className="absolute inset-0 z-0" 
-        style={{ 
+      <div
+        className="absolute -top-px inset-x-0 bottom-0 z-0"
+        style={{
           mask: 'url(#cornerstone-mask)',
           WebkitMask: 'url(#cornerstone-mask)'
         }}
       >
-        <Grainient 
-          color1="#1c7c6a" 
-          color2="#70d1bb" 
-          color3="#5a9ea3" 
+        <Grainient
+          color1="#299682ff"
+          color2="#70d1bb"
+          color3="#5a9ea3"
           timeSpeed={0.12}
           grainAmount={0.05}
           grainScale={2.0}
-          grainAnimated          warpStrength={0.4}
+          grainAnimated warpStrength={0.4}
           warpFrequency={1.8}
           zoom={1.1}
-          contrast={1.1} 
+          contrast={1.1}
         />
       </div>
 
       {/* 3. Content Container */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 mt-40 md:mt-56">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
-          
+
           {/* Column 1: Navigation */}
           <div>
             <ul className="space-y-3">
@@ -82,11 +88,11 @@ export function Footer() {
 
           {/* Column 3: Telemetry / Status */}
           <div className="lg:col-span-2 flex flex-col justify-end items-start md:items-end">
-             <div className="text-left md:text-right font-mono text-[10px] text-slate-900/60 space-y-1 font-bold uppercase">
-                <p>System Status: Operational</p>
-                <p>Build: v2.4.0-Stable</p>
-                <p>Latency: 24ms // Protocol: Secure</p>
-             </div>
+            <div className="text-left md:text-right font-mono text-[10px] text-slate-900/60 space-y-1 font-bold uppercase">
+              <p>System Status: Operational</p>
+              <p>Build: v2.4.0-Stable</p>
+              <p>Latency: 24ms // Protocol: Secure</p>
+            </div>
           </div>
         </div>
 

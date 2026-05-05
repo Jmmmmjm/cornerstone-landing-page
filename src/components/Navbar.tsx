@@ -104,9 +104,7 @@ export function Navbar() {
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="https://calendar.google.com"
-            target="_blank"
-            rel="noreferrer"
+            href="#pricing"
             className="flex items-center gap-2 border border-teal-500 dark:border-[#64FFDA]/50 font-bold tracking-widest uppercase text-[10px] transition-colors duration-300"
             style={{
               boxShadow: scrolled ? (isDark ? '0 0 15px rgba(100, 255, 218, 0.25)' : '0 0 10px rgba(20, 184, 166, 0.2)') : 'none',
