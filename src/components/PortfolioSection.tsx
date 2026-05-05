@@ -72,18 +72,26 @@ export function PortfolioSection() {
            </div>
         </motion.div>
 
-        {/* CURATED column - always visible, never fades */}
+        {/* OUTPUT column - always visible, never fades */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
           <div className="flex flex-col items-center shrink-0">
-            <div className="w-6 md:w-10 h-3 border-t border-x border-teal-500/50" />
-            <div className="flex flex-col gap-3 py-6">
-               {['C','U','R','A','T','E','D'].map((char, i) => (
-                  <span key={i} className="text-lg md:text-2xl lg:text-3xl font-display font-medium text-teal-500 dark:text-[#64FFDA] leading-none">
+            <div className="w-8 md:w-12 lg:w-16 h-5 border-t-[3px] border-x-[3px] border-teal-500/90" />
+            <div className="flex flex-col items-center gap-4 py-8">
+               {['O','U','T','P','U','T'].map((char, i) => (
+                  <span 
+                    key={i} 
+                    className="text-xl md:text-4xl lg:text-5xl font-display font-black text-teal-500 dark:text-[#64FFDA] leading-none"
+                    style={{ 
+                      WebkitTextStroke: '1.5px currentColor',
+                      paintOrder: 'stroke fill',
+                      strokeLinejoin: 'round'
+                    }}
+                  >
                      {char}
                   </span>
                ))}
             </div>
-            <div className="w-6 md:w-10 h-3 border-b border-x border-teal-500/50" />
+            <div className="w-8 md:w-12 lg:w-16 h-5 border-b-[3px] border-x-[3px] border-teal-500/90" />
           </div>
         </div>
 

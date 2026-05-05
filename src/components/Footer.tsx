@@ -2,7 +2,7 @@ import Grainient from './Grainient';
 
 export function Footer() {
   return (
-    <footer className="relative bg-transparent overflow-hidden pb-12 -mt-20 md:-mt-32">
+    <footer className="relative bg-transparent overflow-hidden pb-12">
       {/* 1. THE REFINED SVG MASK DEFINITION */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-0 overflow-visible" aria-hidden="true">
         <defs>
