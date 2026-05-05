@@ -13,6 +13,8 @@ const ICONS = [FileSpreadsheet, Mail, Database, FileText, LayoutDashboard, Messa
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const iconsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const magneticRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const innerIconsRef = useRef<(HTMLDivElement | null)[]>([]);
   const textRef = useRef<HTMLDivElement>(null);
   const questionRef = useRef<HTMLDivElement>(null);
   const centeredLogoRef = useRef<HTMLDivElement>(null);
@@ -30,11 +32,49 @@ export function Hero() {
     });
   }, []);
 
-  const innerIconsRef = useRef<(HTMLDivElement | null)[]>([]);
   const idleTweens = useRef<gsap.core.Tween[]>([]);
 
   useGSAP(() => {
     if (!containerRef.current) return;
+
+    // Magnetic Repel Logic
+    const handleMouseMove = (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      
+      magneticRefs.current.forEach((ref) => {
+        if (!ref) return;
+        
+        const rect = ref.getBoundingClientRect();
+        const iconX = rect.left + rect.width / 2;
+        const iconY = rect.top + rect.height / 2;
+        
+        const dist = Math.hypot(clientX - iconX, clientY - iconY);
+        const threshold = 150; // Reduced from 180
+        
+        if (dist < threshold) {
+          const angle = Math.atan2(iconY - clientY, iconX - clientX);
+          const force = (threshold - dist) / threshold;
+          const moveX = Math.cos(angle) * force * 35; // Reduced from 60
+          const moveY = Math.sin(angle) * force * 35; // Reduced from 60
+          
+          gsap.to(ref, {
+            x: moveX,
+            y: moveY,
+            duration: 0.8, // Slightly slower for smoothness
+            ease: "power2.out"
+          });
+        } else {
+          gsap.to(ref, {
+            x: 0,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out"
+          });
+        }
+      });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
 
     // Idle animation for floating icons
     innerIconsRef.current.forEach((icon, i) => {
@@ -64,6 +104,13 @@ export function Hero() {
           idleTweens.current.forEach(tween => {
             tween.timeScale(Math.max(0, 1 - progress * 2));
           });
+          
+          // Disable magnetic effect as icons converge
+          if (progress > 0.1) {
+            magneticRefs.current.forEach(ref => {
+              if (ref) gsap.to(ref, { x: 0, y: 0, duration: 0.3 });
+            });
+          }
         }
       }
     });
@@ -169,6 +216,7 @@ export function Hero() {
     tl.to({}, { duration: 1.5 }, 1.7);
     tl.addLabel("end");
 
+    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, { scope: containerRef });
 
   return (
@@ -189,8 +237,10 @@ export function Hero() {
               ref={el => { iconsRef.current[i] = el; }}
               className="absolute text-[#0A192F]/70 dark:text-[#8892B0] will-change-transform"
             >
-              <div ref={el => { innerIconsRef.current[i] = el; }}>
-                <Icon size={32} strokeWidth={1.5} />
+              <div ref={el => { magneticRefs.current[i] = el; }}>
+                <div ref={el => { innerIconsRef.current[i] = el; }}>
+                  <Icon size={32} strokeWidth={1.5} />
+                </div>
               </div>
             </div>
           ))}

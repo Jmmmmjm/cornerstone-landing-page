@@ -1,23 +1,106 @@
+import Grainient from './Grainient';
+
 export function Footer() {
   return (
-    <footer className="bg-transparent py-8">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        <div className="flex items-center gap-4">
-          <span className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-medium tracking-widest uppercase text-sm">
-            Cornerstone
-          </span>
-          <span className="text-[#0A192F]/70 dark:text-[#8892B0] text-sm hidden md:inline">
-            — Enterprise automation for traditional industries.
-          </span>
+    <footer className="relative bg-transparent overflow-hidden pt-32 pb-12">
+      {/* 1. THE REFINED SVG MASK DEFINITION 
+           We use userSpaceOnUse and ensure the SVG container is sized to the footer.
+      */}
+      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-0" aria-hidden="true">
+        <defs>
+          <mask id="cornerstone-mask" maskUnits="userSpaceOnUse">
+            {/* White: Background is visible */}
+            <rect width="100%" height="100%" fill="white" />
+            {/* Black: This area becomes transparent (the hole) */}
+            <text 
+              x="50%" 
+              y="110" 
+              textAnchor="middle" 
+              fill="black"
+              className="font-display font-bold uppercase"
+              style={{ fontSize: '13.5vw', letterSpacing: '-0.05em', dominantBaseline: 'middle' }}
+            >
+              Cornerstone
+            </text>
+          </mask>
+        </defs>
+      </svg>
+
+      {/* 2. THE FOOTER BASE LAYER (The slate/cyan background) 
+           We apply the mask here. 
+      */}
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{ 
+          mask: 'url(#cornerstone-mask)',
+          WebkitMask: 'url(#cornerstone-mask)'
+        }}
+      >
+        <Grainient 
+          color1="#1c7c6a" 
+          color2="#70d1bb" 
+          color3="#5a9ea3" 
+          timeSpeed={0.12}
+          grainAmount={0.05}
+          grainScale={2.0}
+          grainAnimated          warpStrength={0.4}
+          warpFrequency={1.8}
+          zoom={1.1}
+          contrast={1.1} 
+        />
+      </div>
+
+      {/* 3. Content Container */}
+      <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 mt-40 md:mt-56">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
+          
+          {/* Column 1: Navigation */}
+          <div>
+            <ul className="space-y-3">
+              {['Home', 'About Us', 'Architecture', 'Solutions'].map((item) => (
+                <li key={item}>
+                  <a href="#" className="text-slate-900/80 hover:text-slate-900 transition-colors text-sm font-bold tracking-wide uppercase">
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 2: Connect */}
+          <div>
+            <ul className="space-y-3">
+              {['LinkedIn', 'Twitter', 'GitHub', 'Documentation'].map((item) => (
+                <li key={item}>
+                  <a href="#" className="text-slate-900/80 hover:text-slate-900 transition-colors text-sm font-bold tracking-wide uppercase">
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Telemetry / Status */}
+          <div className="lg:col-span-2 flex flex-col justify-end items-start md:items-end">
+             <div className="text-left md:text-right font-mono text-[10px] text-slate-900/60 space-y-1 font-bold uppercase">
+                <p>System Status: Operational</p>
+                <p>Build: v2.4.0-Stable</p>
+                <p>Latency: 24ms // Protocol: Secure</p>
+             </div>
+          </div>
         </div>
 
-        <div className="flex items-center gap-8 text-[#0A192F]/70 dark:text-[#8892B0] text-sm">
-          <a href="#" className="hover:text-[#0A192F] dark:text-[#F8F9FA] transition-colors">Privacy</a>
-          <a href="#" className="hover:text-[#0A192F] dark:text-[#F8F9FA] transition-colors">Terms</a>
-          <a href="#" className="hover:text-[#0A192F] dark:text-[#F8F9FA] transition-colors">Contact</a>
+        {/* 4. Final Legal Row */}
+        <div className="pt-8 border-t border-slate-900/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="font-mono text-[10px] text-slate-900/70 tracking-wider font-bold uppercase">
+            © 2026 Cornerstone Industrial Systems • All Rights Reserved
+          </p>
+          <div className="flex gap-8 font-mono text-[10px] uppercase tracking-wider text-slate-900/70 font-bold">
+            <a href="#" className="hover:text-slate-900 transition-colors">Privacy</a>
+            <a href="#" className="hover:text-slate-900 transition-colors">Terms</a>
+            <a href="#" className="hover:text-slate-900 transition-colors">Contact</a>
+          </div>
         </div>
-
       </div>
     </footer>
   );

@@ -93,11 +93,11 @@ export default function App() {
       <CustomCursor />
       <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
         <Grainient
-          color1={isDark ? "#1B2B4A" : "#F8FAFC"}
+          color1={isDark ? "#4A5568" : "#F8FAFC"}
           color2={isDark ? "#112240" : "#F1F5F9"}
           color3={isDark ? "#0A192F" : "#E2E8F0"}
           timeSpeed={0.12}
-          grainAmount={isDark ? 0.12 : 0.05}
+          grainAmount={isDark ? 0.08 : 0.03}
           grainScale={2.2}
           grainAnimated
           warpStrength={0.4}

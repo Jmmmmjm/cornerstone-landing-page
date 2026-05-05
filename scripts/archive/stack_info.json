@@ -1,0 +1,35 @@
+{
+  "stackStyles": {
+    "position": "static",
+    "display": "block"
+  },
+  "wrapperStyles": {
+    "position": "static"
+  },
+  "cardStyles": [
+    {
+      "index": 0,
+      "position": "relative",
+      "top": "0px",
+      "transform": "none",
+      "zIndex": "auto",
+      "cssText": "background-color: rgb(224, 41, 49);"
+    },
+    {
+      "index": 1,
+      "position": "relative",
+      "top": "0px",
+      "transform": "none",
+      "zIndex": "auto",
+      "cssText": "background-color: rgb(7, 161, 197);"
+    },
+    {
+      "index": 2,
+      "position": "relative",
+      "top": "0px",
+      "transform": "none",
+      "zIndex": "auto",
+      "cssText": "background-color: rgb(46, 28, 95);"
+    }
+  ]
+}
