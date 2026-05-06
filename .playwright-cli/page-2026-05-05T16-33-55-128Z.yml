@@ -1,0 +1,612 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - paragraph [ref=e3]:
+      - text: Our website uses cookies to enhance user experience. By clicking "Accept", you consent to our use of cookies.
+      - link "Privacy policy" [ref=e4]:
+        - /url: /privacy-policy
+      - text: .
+    - generic [ref=e5]:
+      - button "Accept" [ref=e6]
+      - button "Reject" [ref=e7]
+  - generic:
+    - button [ref=e9]
+    - complementary:
+      - navigation:
+        - list:
+          - listitem:
+            - link "Work":
+              - /url: https://kota.co.uk/work/
+          - listitem:
+            - link "Agency":
+              - /url: https://kota.co.uk/agency/
+          - listitem:
+            - generic:
+              - text: Services
+              - figure
+            - list:
+              - listitem:
+                - link "Web design & development":
+                  - /url: https://kota.co.uk/service/web-design-development/
+              - listitem:
+                - link "Branding":
+                  - /url: https://kota.co.uk/service/branding/
+              - listitem:
+                - link "Digital marketing":
+                  - /url: https://kota.co.uk/service/digital-marketing/
+          - listitem:
+            - link "Blog":
+              - /url: https://kota.co.uk/blog/
+          - listitem:
+            - link "Culture":
+              - /url: https://kota.co.uk/culture/
+          - listitem:
+            - link "Contact":
+              - /url: https://kota.co.uk/contact/
+        - generic:
+          - generic:
+            - generic:
+              - link "Start your project":
+                - /url: /start-your-project
+                - generic:
+                  - generic: Start your project
+                  - img
+    - figure
+  - banner:
+    - link [ref=e12]:
+      - /url: /
+      - img [ref=e13]
+    - link "Hire us" [ref=e15]:
+      - /url: /start-your-project
+      - generic [ref=e16]:
+        - generic [ref=e17]: Hire us
+        - img [ref=e18]
+  - paragraph:
+    - 'link "Celebrating 13 years : 2013 - 2026" [ref=e20]':
+      - /url: https://10-years.kota.co.uk/
+  - link "Start your project" [ref=e21]:
+    - /url: /start-your-project
+    - generic [ref=e22]:
+      - generic [ref=e23]: Start your project
+      - img [ref=e24]
+  - main [ref=e26]:
+    - generic:
+      - generic:
+        - generic:
+          - img
+          - heading "We’re a creative web design and branding agency based in London that crafts beautiful work for brands who refuse to blend in." [level=1]:
+            - generic:
+              - generic:
+                - text: We’re a creative web design and branding agency based in London that crafts beautiful work for brands who
+                - strong: refuse to blend in.
+          - button
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - heading "Our Services" [level=2] [ref=e34]:
+          - generic [ref=e37]:
+            - generic "Our" [ref=e38]:
+              - generic [ref=e40]:
+                - generic [ref=e41]: O
+                - generic [ref=e42]: u
+                - generic [ref=e43]: r
+            - generic "Services" [ref=e44]:
+              - generic [ref=e46]:
+                - generic [ref=e47]: S
+                - generic [ref=e48]: e
+                - generic [ref=e49]: r
+                - generic [ref=e50]: v
+                - generic [ref=e51]: i
+                - generic [ref=e52]: c
+                - generic [ref=e53]: e
+                - generic [ref=e54]: s
+          - img [ref=e58]
+        - generic [ref=e61]:
+          - generic [ref=e66]:
+            - heading "Web design & development" [level=3] [ref=e67]
+            - generic [ref=e68]:
+              - link "Creative web design" [ref=e69]:
+                - /url: service/creative-web-design
+              - link "Web development" [ref=e70]:
+                - /url: service/web-development
+              - link "Copywriting" [ref=e71]:
+                - /url: service/copywriting
+              - link "E-Commerce" [ref=e72]:
+                - /url: service/e-commerce
+              - link "WordPress" [ref=e73]:
+                - /url: service/wordpress
+            - paragraph [ref=e74]: Crafting digital experiences where beauty meets ROI, turning heads and unlocking revenue potential with every click.
+            - link "Find out more" [ref=e77]:
+              - /url: service/web-design-development
+              - generic [ref=e78]:
+                - generic [ref=e79]: Find out more
+                - img [ref=e80]
+          - generic [ref=e90]:
+            - heading "Branding" [level=3] [ref=e91]
+            - generic [ref=e92]:
+              - link "Brand strategy" [ref=e93]:
+                - /url: service/brand-strategy
+              - link "Tone of voice" [ref=e94]:
+                - /url: service/tone-of-voice
+              - link "Visual identity" [ref=e95]:
+                - /url: service/visual-identity
+            - paragraph [ref=e96]: It all starts with your brand. We use sound strategic thinking to create or elevate your brand identity, from your visuals to your voice.
+            - link "Find out more" [ref=e99]:
+              - /url: service/branding
+              - generic [ref=e100]:
+                - generic [ref=e101]: Find out more
+                - img [ref=e102]
+          - generic [ref=e112]:
+            - heading "Digital Marketing" [level=3] [ref=e113]
+            - generic [ref=e114]:
+              - link "Motion graphics" [ref=e115]:
+                - /url: service/motion-graphics
+              - link "Creative campaigns" [ref=e116]:
+                - /url: service/creative-campaigns
+              - link "Marketing support" [ref=e117]:
+                - /url: service/marketing-support
+            - paragraph [ref=e118]: Delivering eye-catching motion graphics and campaigns that earn attention, spark emotion and increase conversions.
+            - link "Find out more" [ref=e121]:
+              - /url: service/digital-marketing
+              - generic [ref=e122]:
+                - generic [ref=e123]: Find out more
+                - img [ref=e124]
+      - generic [ref=e131]:
+        - heading "Brand-led. Strategically built." [level=2] [ref=e132]:
+          - generic [ref=e134]:
+            - text: Brand-led.
+            - text: Strategically built.
+        - generic [ref=e135]:
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - generic [ref=e141]: 01/
+              - heading "Design with guts." [level=3] [ref=e143]
+            - paragraph [ref=e145]: We build immersive, brand-led digital experiences that wow and work hard. The kind that raises eyebrows, sparks emotion, and moves people to act.
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - generic [ref=e151]: 02/
+              - heading "Nail the process." [level=3] [ref=e153]
+            - paragraph [ref=e155]: We’re collaborative, decisive, and clear from day one. You’ll feel the momentum. You’ll know where you stand. You’ll have a team that knows when to lead, and when to listen.
+          - generic [ref=e158]:
+            - generic [ref=e159]:
+              - generic [ref=e161]: 03/
+              - heading "Build to flex." [level=3] [ref=e163]
+            - paragraph [ref=e165]: We’re ready for your growth. In fact, we’re rooting for it. Whether it’s a new campaign, product, or pivot, we make sure your digital presence is set up to flex with you.
+          - generic [ref=e168]:
+            - generic [ref=e169]:
+              - generic [ref=e171]: 04/
+              - heading "Create to convert." [level=3] [ref=e173]
+            - paragraph [ref=e175]: We sweat the small stuff. From brand visuals to UX flow, every decision is intentional—designed to boost engagement, drive conversions, and build brand equity.
+    - generic [ref=e176]:
+      - generic [ref=e178]:
+        - heading "Our Work" [level=2] [ref=e179]:
+          - generic [ref=e180]:
+            - generic "Our" [ref=e181]:
+              - generic [ref=e183]:
+                - generic [ref=e184]: O
+                - generic [ref=e185]: u
+                - generic [ref=e186]: r
+            - generic "Work" [ref=e187]:
+              - generic [ref=e189]:
+                - generic [ref=e190]: W
+                - generic [ref=e191]: o
+                - generic [ref=e192]: r
+                - generic [ref=e193]: k
+        - generic [ref=e194]:
+          - heading "Making brands a damn site better." [level=3] [ref=e195]:
+            - generic [ref=e196]: Making brands a damn site better.
+          - paragraph [ref=e197]:
+            - generic [ref=e198]: Let’s face it, first impressions matter. Your website’s an opportunity to wow your audience, so why choose bad design? Brands win over fans when they’re brave enough to go beyond their creative comfort zone.
+      - generic [ref=e201]:
+        - link "UPP 2025 We crafted a cinematic web experience for a Hollywood powerhouse. Web design & development Agencies" [ref=e202]:
+          - /url: /work/upp
+          - generic [ref=e203]:
+            - heading "UPP" [level=3] [ref=e204]:
+              - img [ref=e205]
+              - text: UPP
+            - paragraph [ref=e207]: "2025"
+          - generic [ref=e209]:
+            - paragraph [ref=e210]: We crafted a cinematic web experience for a Hollywood powerhouse.
+            - list [ref=e211]:
+              - listitem [ref=e212]: Web design & development
+              - listitem [ref=e213]: Agencies
+        - 'link "The Goat Agency 2025 Influence everywhere: a future-ready website for The Goat Agency. Web design & development Agencies" [ref=e216]':
+          - /url: /work/the-goat-agency
+          - generic [ref=e217]:
+            - heading "The Goat Agency" [level=3] [ref=e218]:
+              - img [ref=e219]
+              - text: The Goat Agency
+            - paragraph [ref=e221]: "2025"
+          - generic [ref=e223]:
+            - paragraph [ref=e224]: "Influence everywhere: a future-ready website for The Goat Agency."
+            - list [ref=e225]:
+              - listitem [ref=e226]: Web design & development
+              - listitem [ref=e227]: Agencies
+        - link "ISI Global 2025 We revamped this global design agency's digital identity. Branding Web design & development Agencies Retail" [ref=e230]:
+          - /url: /work/isi-global
+          - generic [ref=e231]:
+            - heading "ISI Global" [level=3] [ref=e232]:
+              - img [ref=e233]
+              - text: ISI Global
+            - paragraph [ref=e235]: "2025"
+          - generic [ref=e237]:
+            - paragraph [ref=e238]: We revamped this global design agency's digital identity.
+            - list [ref=e239]:
+              - listitem [ref=e240]: Branding
+              - listitem [ref=e241]: Web design & development
+              - listitem [ref=e242]: Agencies
+              - listitem [ref=e243]: Retail
+        - link "Incentive Games 2025 We designed for play with Incentive Games’ new website. Web design & development B2B tech, software & SaaS" [ref=e246]:
+          - /url: /work/incentive-games
+          - generic [ref=e247]:
+            - heading "Incentive Games" [level=3] [ref=e248]:
+              - img [ref=e249]
+              - text: Incentive Games
+            - paragraph [ref=e251]: "2025"
+          - generic [ref=e253]:
+            - paragraph [ref=e254]: We designed for play with Incentive Games’ new website.
+            - list [ref=e255]:
+              - listitem [ref=e256]: Web design & development
+              - listitem [ref=e257]: B2B tech, software & SaaS
+        - link "Wogan Coffee 2023 We completely transformed the image of Bristol's finest coffee company. Branding Web design & development E-Commerce Digital Marketing Retail" [ref=e260]:
+          - /url: /work/wogan-coffee
+          - generic [ref=e261]:
+            - heading "Wogan Coffee" [level=3] [ref=e262]:
+              - img [ref=e263]
+              - text: Wogan Coffee
+            - paragraph [ref=e265]: "2023"
+          - generic [ref=e267]:
+            - paragraph [ref=e268]: We completely transformed the image of Bristol's finest coffee company.
+            - list [ref=e269]:
+              - listitem [ref=e270]: Branding
+              - listitem [ref=e271]: Web design & development
+              - listitem [ref=e272]: E-Commerce
+              - listitem [ref=e273]: Digital Marketing
+              - listitem [ref=e274]: Retail
+        - link "View all projects" [ref=e280]:
+          - /url: /work
+          - generic [ref=e281]:
+            - generic [ref=e282]: View all projects
+            - img [ref=e283]
+    - generic [ref=e286]:
+      - heading "Our Results" [level=2] [ref=e288]:
+        - generic [ref=e291]:
+          - generic "Our" [ref=e292]:
+            - generic [ref=e294]:
+              - generic [ref=e295]: O
+              - generic [ref=e296]: u
+              - generic [ref=e297]: r
+          - generic "Results" [ref=e298]:
+            - generic [ref=e300]:
+              - generic [ref=e301]: R
+              - generic [ref=e302]: e
+              - generic [ref=e303]: s
+              - generic [ref=e304]: u
+              - generic [ref=e305]: l
+              - generic [ref=e306]: t
+              - generic [ref=e307]: s
+      - generic [ref=e311]:
+        - generic [ref=e313]:
+          - figure [ref=e314]
+          - generic [ref=e316]:
+            - figure [ref=e317]
+            - heading "67.6%" [level=3] [ref=e319]
+            - generic [ref=e320]: rise in engaged sessions per user after 1 month.
+            - link "View Project" [ref=e324]:
+              - /url: https://kota.co.uk/work/pison/
+              - generic [ref=e325]:
+                - generic [ref=e326]: View Project
+                - img [ref=e327]
+          - figure [ref=e329]
+        - generic [ref=e332]:
+          - figure [ref=e333]
+          - generic [ref=e335]:
+            - figure [ref=e336]
+            - heading "70.8%" [level=3] [ref=e338]
+            - generic [ref=e339]: increase in average engagement time after 3 months.
+            - link "View Project" [ref=e343]:
+              - /url: https://kota.co.uk/work/dka/
+              - generic [ref=e344]:
+                - generic [ref=e345]: View Project
+                - img [ref=e346]
+          - figure [ref=e348]
+        - generic [ref=e351]:
+          - figure [ref=e352]
+          - generic [ref=e354]:
+            - figure [ref=e355]
+            - heading "83.14%" [level=3] [ref=e357]
+            - generic [ref=e358]: increase in sales after 1 year.
+            - link "View Project" [ref=e362]:
+              - /url: https://kota.co.uk/work/wogan-coffee/
+              - generic [ref=e363]:
+                - generic [ref=e364]: View Project
+                - img [ref=e365]
+          - figure [ref=e367]
+        - generic [ref=e370]:
+          - figure [ref=e371]
+          - generic [ref=e373]:
+            - figure [ref=e374]
+            - heading "104.9%" [level=3] [ref=e376]
+            - generic [ref=e377]: increase in organic visits after 1 month
+            - link "View project" [ref=e381]:
+              - /url: https://kota.co.uk/work/isi-global/
+              - generic [ref=e382]:
+                - generic [ref=e383]: View project
+                - img [ref=e384]
+          - figure [ref=e386]
+    - generic [ref=e391]:
+      - heading "Our Partners" [level=2] [ref=e392]:
+        - generic [ref=e393]:
+          - generic "Our" [ref=e394]:
+            - generic [ref=e396]:
+              - generic [ref=e397]: O
+              - generic [ref=e398]: u
+              - generic [ref=e399]: r
+          - generic "Partners" [ref=e400]:
+            - generic [ref=e402]:
+              - generic [ref=e403]: P
+              - generic [ref=e404]: a
+              - generic [ref=e405]: r
+              - generic [ref=e406]: t
+              - generic [ref=e407]: "n"
+              - generic [ref=e408]: e
+              - generic [ref=e409]: r
+              - generic [ref=e410]: s
+      - img [ref=e413]
+    - generic [ref=e434]:
+      - heading "What our clients say" [level=2] [ref=e435]:
+        - generic "What our clients say" [ref=e437]:
+          - generic [ref=e439]: What our
+          - generic [ref=e441]: clients say
+      - generic [ref=e446]:
+        - generic [ref=e449]:
+          - figure [ref=e450]
+          - paragraph [ref=e452]: "\"Kota have been brilliant from day one to work with. Very quick to respond to any queries, a lovely group of people, with a great eye for design and detail. I've loved working with them so far, and I'm sure they'll be partners for much more time to come!\""
+          - generic [ref=e453]:
+            - generic [ref=e454]: Laura Wogan
+            - generic [ref=e455]: Third Generation Director
+          - link "View project" [ref=e459]:
+            - /url: https://kota.co.uk/work/wogan-coffee/
+            - generic [ref=e460]:
+              - generic [ref=e461]: View project
+              - img [ref=e462]
+        - generic [ref=e466]:
+          - figure [ref=e467]
+          - paragraph [ref=e469]: "\"It was our brand positioning work that really made everything click. KOTA were empathetic, patient, flexible, quick, and, most importantly, incredibly talented with brand positioning, visual identity, and digital experiences. I've already recommended them twice!\""
+          - generic [ref=e470]:
+            - generic [ref=e471]: Shanice Daeche
+            - generic [ref=e472]: CMO
+          - link "View project" [ref=e476]:
+            - /url: https://kota.co.uk/work/florence/
+            - generic [ref=e477]:
+              - generic [ref=e478]: View project
+              - img [ref=e479]
+        - generic [ref=e483]:
+          - figure [ref=e484]
+          - paragraph [ref=e486]: "\"Beyond the aesthetics, the website is incredibly functional. The CMS gives us the flexibility and control we need to keep our content fresh and relevant, and they have significantly improved the website’s UX. We couldn't be happier!\""
+          - generic [ref=e487]:
+            - generic [ref=e488]: Jenny Frame
+            - generic [ref=e489]: Marketing Manager
+          - link "View project" [ref=e493]:
+            - /url: https://kota.co.uk/work/incentive-games/
+            - generic [ref=e494]:
+              - generic [ref=e495]: View project
+              - img [ref=e496]
+        - generic [ref=e500]:
+          - figure [ref=e501]
+          - paragraph [ref=e503]: "\"We needed something that would blur the lines between web, technology, and cinema, and reflect who we are: an artist-led, tech-forward company creating work at the highest level. From the very first conversations, KOTA understood that vision. They transformed the brief beyond what we had imagined. It’s no exaggeration to say the final product redefines what a website can be.\""
+          - generic [ref=e504]:
+            - generic [ref=e505]: Shaun Obanion
+            - generic [ref=e506]: PR Manager of Universal Production Partners
+          - link "View project" [ref=e510]:
+            - /url: https://kota.co.uk/work/upp/
+            - generic [ref=e511]:
+              - generic [ref=e512]: View project
+              - img [ref=e513]
+        - generic [ref=e517]:
+          - figure [ref=e518]
+          - paragraph [ref=e520]: "\"Beyond the initial launch, KOTA have continued to support us over the past 12 months with ongoing SEO, helping us build visibility and performance in a really strategic, considered way. Their team are creative, knowledgeable, responsive, and genuinely invested in delivering long-term value, not just a one-off project. We wouldn’t hesitate to recommend KOTA to any brand looking for a smart, design-led agency that truly understands digital growth.\""
+          - generic [ref=e521]:
+            - generic [ref=e522]: Bianca Cristescu
+            - generic [ref=e523]: Key Account Director, ISI Global
+          - link "View project" [ref=e527]:
+            - /url: https://kota.co.uk/work/isi-global/
+            - generic [ref=e528]:
+              - generic [ref=e529]: View project
+              - img [ref=e530]
+        - generic [ref=e534]:
+          - figure [ref=e535]
+          - paragraph [ref=e537]: "\"As a design agency ourselves, handing responsibility for our web re-design to another creative agency needed to be well considered. We were immediately impressed by their designs and their interpretation of our brief. Nice bunch of people to work with too!\""
+          - generic [ref=e538]:
+            - generic [ref=e539]: Laurie Bushe
+            - generic [ref=e540]: Head of Marketing
+          - link "View project" [ref=e544]:
+            - /url: https://kota.co.uk/work/tangerine/
+            - generic [ref=e545]:
+              - generic [ref=e546]: View project
+              - img [ref=e547]
+    - generic [ref=e551]:
+      - generic [ref=e552]:
+        - paragraph [ref=e553]:
+          - generic [ref=e554]: Latest articles
+        - link "View our blog" [ref=e558]:
+          - /url: /blog
+          - generic [ref=e559]:
+            - generic [ref=e560]: View our blog
+            - img [ref=e561]
+      - generic [ref=e564]:
+        - link [ref=e565]:
+          - /url: /blog/branding-inspiration-brand-design-trends-for-2026
+          - article [ref=e566]:
+            - figure [ref=e567]
+            - generic [ref=e569]:
+              - paragraph [ref=e570]: Expertise, Inspiration
+              - 'heading "Branding inspiration: design trends for 2026" [level=3] [ref=e571]'
+        - link [ref=e572]:
+          - /url: /blog/design-with-guts-kotas-manifesto-for-creative-bravery
+          - article [ref=e573]:
+            - figure [ref=e574]
+            - generic [ref=e576]:
+              - paragraph [ref=e577]: Expertise, Inspiration
+              - 'heading "Design with guts: KOTA’s manifesto for creative bravery" [level=3] [ref=e578]'
+        - link [ref=e579]:
+          - /url: /blog/kota-wins-a-lovie-award-for-best-web-design-aesthetic
+          - article [ref=e580]:
+            - figure [ref=e581]
+            - generic [ref=e583]:
+              - paragraph [ref=e584]: Culture, Our work
+              - heading "KOTA wins a Lovie award for Best Web Design – Aesthetic!" [level=3] [ref=e585]
+        - link [ref=e586]:
+          - /url: /blog/brand-first-vs-dev-first-what-actually-sets-kota-apart-and-why-it-matters
+          - article [ref=e587]:
+            - figure [ref=e588]
+            - generic [ref=e590]:
+              - paragraph [ref=e591]: Expertise
+              - 'heading "Brand-First vs Dev-First: What actually sets KOTA apart (and why it matters)" [level=3] [ref=e592]'
+        - link [ref=e593]:
+          - /url: /blog/10-creative-websites-to-inspire-your-next-web-design-2025-update
+          - article [ref=e594]:
+            - figure [ref=e595]
+            - generic [ref=e597]:
+              - paragraph [ref=e598]: Inspiration
+              - heading "10 creative websites to inspire your next design (2025 update)" [level=3] [ref=e599]
+        - link [ref=e600]:
+          - /url: /blog/web-design-inspiration-50-sites-to-bookmark
+          - article [ref=e601]:
+            - figure [ref=e602]
+            - generic [ref=e604]:
+              - paragraph [ref=e605]: Inspiration
+              - 'heading "Web design inspiration: 50 sites to bookmark" [level=3] [ref=e606]'
+        - link [ref=e607]:
+          - /url: /blog/clutch-names-kota-a-2024-global-winner-clutch-champion-and-top-branding-company
+          - article [ref=e608]:
+            - figure [ref=e609]
+            - generic [ref=e611]:
+              - paragraph [ref=e612]: Culture, Our work
+              - heading "Clutch names KOTA a 2024 Global Winner, Clutch Champion & Top Branding Company" [level=3] [ref=e613]
+        - link [ref=e614]:
+          - /url: /blog/kota-earns-2025-great-place-to-work-certification
+          - article [ref=e615]:
+            - figure [ref=e616]
+            - generic [ref=e618]:
+              - paragraph [ref=e619]: Culture
+              - heading "KOTA earns 2025 Great Place to Work Certification™ 🎉" [level=3] [ref=e620]
+        - link [ref=e621]:
+          - /url: /blog/what-your-2026-website-brief-should-include
+          - article [ref=e622]:
+            - figure [ref=e623]
+            - generic [ref=e625]:
+              - paragraph [ref=e626]: Expertise
+              - heading "What your 2026 website brief should include" [level=3] [ref=e627]
+    - generic [ref=e629]:
+      - paragraph [ref=e631]:
+        - generic [ref=e632]: FAQ's
+      - generic [ref=e634]:
+        - generic [ref=e635]:
+          - img [ref=e637]
+          - text: How much does web design and development typically cost?
+        - paragraph [ref=e639]: The majority of our projects sit between £30k and £150k, but project costs will depend on the final scope of work and vary from project to project. We generally have a minimum project size of £25k and prefer to agree a fixed cost with agreed milestone payments.
+      - generic [ref=e641]:
+        - generic [ref=e642]:
+          - img [ref=e644]
+          - text: How long does a project usually take?
+        - paragraph [ref=e646]: A web design and build project can last around 12-14 weeks, whereas brand-into-website-and-marketing can take 6 months or more. There are always ways to consider business objectives (such as phased launches) so even if your timescales don’t work with this, it’s always worth reaching out. Expect clear milestones and a timeline that respects your urgency, without ever skimping on the quality that makes your site distinctly you.
+      - generic [ref=e648]:
+        - generic [ref=e649]:
+          - img [ref=e651]
+          - text: Can your creative agency accommodate tight deadlines?
+        - paragraph [ref=e653]: Sure thing! We’re ready to mobilise our design and development teams, prioritising the essentials to turn your dream site from a fast-approaching deadline into a reality. Flexibility and focus are our middle names, ensuring your project crosses the finish line.
+      - generic [ref=e655]:
+        - generic [ref=e656]:
+          - img [ref=e658]
+          - text: What ongoing support and maintenance do you offer post-launch?
+        - paragraph [ref=e660]:
+          - text: SiteCare is a huge part of what we offer here at KOTA. Think of us as the guardians of your digital home, offering a suite of post-launch support and maintenance services to ensure your website continues to thrive. From regular updates to performance tuning, we’re on hand to keep your site smooth, secure, and evolving along with your brand. You can read more about SiteCare
+          - link "here" [ref=e661]:
+            - /url: https://kota.co.uk/blog/sitecare-management-website-maintenance
+          - text: .
+      - generic [ref=e663]:
+        - generic [ref=e664]:
+          - img [ref=e666]
+          - text: How do you handle revisions and feedback during the design process?
+        - paragraph [ref=e668]: Your feedback is the secret sauce in our design process. We welcome your thoughts, tweaks, and “aha” moments, incorporating them into each iteration to ensure the end product is nothing short of perfection. Our process is built on collaboration, making sure your voice is heard loud and clear at every turn.
+      - generic [ref=e670]:
+        - generic [ref=e671]:
+          - img [ref=e673]
+          - text: Are there additional costs for digital marketing services integrated into web projects?
+        - paragraph [ref=e675]: Integrating our digital marketing services into your web project is like adding rocket fuel to your online presence. We offer clear, upfront pricing for any add-on services, ensuring you know exactly what to expect—no surprises. Whether part of a package deal or a la carte, we tailor our digital marketing solutions to fit your budget and goals. Get in touch to find out more!
+    - generic [ref=e676]:
+      - generic [ref=e677]:
+        - paragraph [ref=e678]: Celebrating 12 years
+        - generic [ref=e679]:
+          - figure [ref=e681]:
+            - img [ref=e682]
+            - img [ref=e687]
+            - img [ref=e692]
+          - figure [ref=e698]:
+            - img [ref=e699]
+            - img [ref=e704]
+            - img [ref=e709]
+        - link "Explore" [ref=e716]:
+          - /url: https://10-years.kota.co.uk/
+          - generic [ref=e717]:
+            - generic [ref=e718]: Explore
+            - img [ref=e719]
+      - figure [ref=e721]
+  - contentinfo [ref=e728]:
+    - generic [ref=e729]:
+      - generic [ref=e730]:
+        - img [ref=e731]
+        - generic [ref=e733]:
+          - text: hello@kota.co.uk
+          - generic: Copy email address
+      - generic [ref=e735]:
+        - link "LinkedIn" [ref=e736]:
+          - /url: https://www.linkedin.com/company/kota-creative/
+          - text: LinkedIn
+          - img [ref=e737]
+        - link "Facebook" [ref=e739]:
+          - /url: https://www.facebook.com/kotacreative/
+          - text: Facebook
+          - img [ref=e740]
+        - link "Instagram" [ref=e742]:
+          - /url: https://www.instagram.com/kotalondon/
+          - text: Instagram
+          - img [ref=e743]
+        - link "Bluesky" [ref=e745]:
+          - /url: https://bsky.app/profile/kotacreative.bsky.social
+          - text: Bluesky
+          - img [ref=e746]
+      - generic [ref=e749]:
+        - list [ref=e750]:
+          - listitem [ref=e751]:
+            - link "Contact" [ref=e752]:
+              - /url: /contact
+          - listitem [ref=e753]:
+            - link "FAQs" [ref=e754]:
+              - /url: /faqs
+          - listitem [ref=e755]:
+            - link "Privacy Policy" [ref=e756]:
+              - /url: /privacy-policy
+        - link "Sign up to our newsletter" [ref=e757]:
+          - /url: /newsletter
+      - generic [ref=e758]:
+        - generic [ref=e759]:
+          - generic [ref=e760]: "Our sectors :"
+          - list [ref=e761]:
+            - link "Agencies" [ref=e762]:
+              - /url: https://kota.co.uk/agencies/
+            - link "SaaS and Tech" [ref=e763]:
+              - /url: https://kota.co.uk/b2b-tech-software-saas/
+            - link "B2B Transformation" [ref=e764]:
+              - /url: https://kota.co.uk/b2b-transformation/
+            - link "Healthcare" [ref=e765]:
+              - /url: https://kota.co.uk/healthcare/
+            - link "Media & Entertainment" [ref=e766]:
+              - /url: https://kota.co.uk/media-entertainment/
+            - link "Retail" [ref=e767]:
+              - /url: https://kota.co.uk/retail/
+        - generic [ref=e768]:
+          - generic [ref=e769]: © KOTA 2026
+          - link "cyber-essentials" [ref=e770]:
+            - /url: https://registry.blockmarktech.com/certificates/f2732cc3-b4f0-4dd3-85ce-fa6ee589e132/
+            - img "cyber-essentials" [ref=e771]
+  - alert [ref=e772]

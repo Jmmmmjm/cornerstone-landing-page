@@ -1,0 +1,875 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - paragraph [ref=e6]:
+      - generic [ref=e7]: "["
+      - generic [ref=e8]:
+        - generic [ref=e9]: s
+        - generic [ref=e10]: t
+        - generic [ref=e11]: a
+        - generic [ref=e12]: t
+        - generic [ref=e13]: u
+        - generic [ref=e14]: s
+      - generic [ref=e15]: ":"
+      - generic [ref=e16]: a
+      - generic [ref=e17]: c
+      - generic [ref=e18]: t
+      - generic [ref=e19]: i
+      - generic [ref=e20]: v
+      - generic [ref=e21]: e
+      - generic [ref=e22]: "]"
+    - generic [ref=e37]:
+      - heading "0" [level=1] [ref=e38]: "5"
+      - heading "%" [level=1] [ref=e39]:
+        - generic [ref=e40]: "%"
+    - generic [ref=e42]:
+      - paragraph [ref=e46]: ©CWM — FW25
+      - generic [ref=e47]:
+        - paragraph [ref=e48]: prjct by
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: huy + ivor
+          - paragraph [ref=e51]: "[l] vn.us"
+      - generic [ref=e52]:
+        - paragraph [ref=e53]: // site.loading
+        - generic [ref=e54]:
+          - paragraph [ref=e55]: "[f] Scripts() {"
+          - paragraph [ref=e56]: initlenis()
+          - paragraph
+          - paragraph
+          - paragraph
+  - link "Menu [+]" [ref=e59] [cursor=pointer]:
+    - /url: "#"
+  - main [ref=e60]:
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - img [ref=e64]
+        - img
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - paragraph [ref=e71]:
+              - generic [ref=e72]: "[X]"
+              - text: .0px
+            - paragraph [ref=e73]:
+              - generic [ref=e74]: "[Y]"
+              - text: .0px
+          - generic [ref=e75]:
+            - generic [ref=e76]:
+              - paragraph [ref=e77]: project by
+              - generic [ref=e78]:
+                - link "huy" [ref=e79] [cursor=pointer]:
+                  - /url: https://bymonolog.com/
+                - paragraph [ref=e80]: +
+                - link "ivor" [ref=e81] [cursor=pointer]:
+                  - /url: https://www.ivorjian.com/
+            - img [ref=e82]
+        - generic [ref=e87]:
+          - img [ref=e89]
+          - img [ref=e92]
+          - img [ref=e95]
+          - img [ref=e98]
+          - paragraph [ref=e101]:
+            - text: The creative process of
+            - text: crafting stand-out websites
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - paragraph [ref=e105]: active ingredients
+              - generic [ref=e106]:
+                - paragraph [ref=e108]: webflow
+                - paragraph [ref=e110]: gsap
+            - generic [ref=e111]:
+              - paragraph [ref=e113]: chapters
+              - generic [ref=e114]:
+                - paragraph [ref=e116]: 01. about
+                - paragraph [ref=e118]: 02. design + dev
+    - generic [ref=e122]:
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - paragraph [ref=e125]: "chapter 1:"
+          - paragraph [ref=e126]: about
+        - generic [ref=e127]:
+          - paragraph [ref=e128]: Why creative websites?
+          - paragraph [ref=e129]: ←
+      - generic [ref=e130]:
+        - heading "CREATIVITY" [level=2] [ref=e132]:
+          - generic [ref=e133]: C
+          - generic [ref=e134]: R
+          - generic [ref=e135]: E
+          - generic [ref=e136]: A
+          - generic [ref=e137]: T
+          - generic [ref=e138]: I
+          - generic [ref=e139]: V
+          - generic [ref=e140]: I
+          - generic [ref=e141]: T
+          - generic [ref=e142]: "Y"
+        - img [ref=e143]
+        - heading "<_<" [level=2] [ref=e147]
+    - generic [ref=e150]:
+      - img [ref=e151]
+      - generic [ref=e234]:
+        - heading "Creative websites are the" [level=2] [ref=e235]:
+          - generic [ref=e237]: Creative
+          - generic [ref=e240]: websites
+          - generic [ref=e243]: are
+          - generic [ref=e246]: the
+        - heading "intersection of creativity" [level=2] [ref=e248]:
+          - generic [ref=e250]: intersection
+          - generic [ref=e253]: of
+          - generic [ref=e256]: creativity
+        - heading "and technicality to form" [level=2] [ref=e258]:
+          - generic [ref=e260]: and
+          - generic [ref=e263]: technicality
+          - generic [ref=e266]: to
+          - generic [ref=e269]: form
+        - heading "bespoke digital expierences" [level=2] [ref=e271]:
+          - generic [ref=e273]: bespoke
+          - generic [ref=e276]: digital
+          - generic [ref=e279]: expierences
+        - heading "that spark emotion." [level=2] [ref=e281]:
+          - generic [ref=e283]: that
+          - generic [ref=e286]: spark
+          - generic [ref=e290]: emotion
+          - generic [ref=e293]: .
+    - generic [ref=e297]:
+      - paragraph [ref=e302]: about
+      - heading "This project is dedicated to the methodology behind crafting websites that pushes boundaries. Our process values curiosity iteration, and experimentation. View some of our techniques on creating projects that leave a lasting impression." [level=2] [ref=e303]:
+        - generic [ref=e304]:
+          - generic [ref=e306]: This
+          - generic [ref=e308]: project
+          - generic [ref=e310]: is
+          - generic [ref=e312]: dedicated
+          - generic [ref=e314]: to
+          - generic [ref=e316]: the
+          - generic [ref=e318]: methodology
+          - generic [ref=e320]: behind
+          - generic [ref=e322]: crafting
+          - generic [ref=e324]: websites
+          - generic [ref=e326]: that
+          - generic [ref=e328]: pushes
+          - generic [ref=e330]: boundaries.
+          - generic [ref=e332]: Our
+          - generic [ref=e334]: process
+          - generic [ref=e336]: values
+          - generic [ref=e338]: curiosity
+          - generic [ref=e340]: iteration,
+          - generic [ref=e342]: and
+          - generic [ref=e344]: experimentation.
+          - generic [ref=e346]: View
+          - generic [ref=e348]: some
+          - generic [ref=e350]: of
+          - generic [ref=e352]: our
+          - generic [ref=e354]: techniques
+          - generic [ref=e356]: "on"
+          - generic [ref=e358]: creating
+          - generic [ref=e360]: projects
+          - generic [ref=e362]: that
+          - generic [ref=e364]: leave
+          - generic [ref=e366]: a
+          - generic [ref=e368]: lasting
+          - generic [ref=e370]: impression.
+    - generic [ref=e463]:
+      - generic [ref=e464]:
+        - heading "Design &Development" [level=2] [ref=e465]:
+          - generic [ref=e467]: D
+          - generic [ref=e469]: e
+          - generic [ref=e471]: s
+          - generic [ref=e473]: i
+          - generic [ref=e475]: g
+          - generic [ref=e477]: "n"
+          - generic [ref=e479]: "&"
+          - generic [ref=e481]: D
+          - generic [ref=e483]: e
+          - generic [ref=e485]: v
+          - generic [ref=e487]: e
+          - generic [ref=e489]: l
+          - generic [ref=e491]: o
+          - generic [ref=e493]: p
+          - generic [ref=e495]: m
+          - generic [ref=e497]: e
+          - generic [ref=e499]: "n"
+          - generic [ref=e501]: t
+        - generic [ref=e502]:
+          - paragraph [ref=e503]: "chapter:"
+          - paragraph [ref=e504]:
+            - generic [ref=e506]: "0"
+            - generic [ref=e508]: "2"
+      - generic [ref=e510]:
+        - heading "chapters" [level=3] [ref=e511]
+        - generic [ref=e512]:
+          - generic [ref=e513]:
+            - generic [ref=e514]: "2.1"
+            - generic [ref=e515]: grids & layouts
+          - generic [ref=e516]:
+            - generic [ref=e517]: "2.2"
+            - generic [ref=e518]: typography
+          - generic [ref=e519]:
+            - generic [ref=e520]: "2.3"
+            - generic [ref=e521]: color
+          - generic [ref=e522]:
+            - generic [ref=e523]: "2.4"
+            - generic [ref=e524]: animation
+    - generic [ref=e525]:
+      - generic [ref=e526]:
+        - generic [ref=e527]:
+          - generic [ref=e528]:
+            - generic [ref=e529]:
+              - paragraph [ref=e531]: "chapter 2.1: grids & layouts"
+              - img [ref=e532]
+            - generic [ref=e535]:
+              - heading "CURRENT GRID SPECS" [level=4] [ref=e536]
+              - generic [ref=e537]:
+                - generic [ref=e538]:
+                  - generic [ref=e539]: columns
+                  - generic [ref=e540]: "12"
+                - generic [ref=e541]:
+                  - generic [ref=e542]: rows
+                  - generic [ref=e543]: none
+                - generic [ref=e544]:
+                  - generic [ref=e545]: gutter / gap
+                  - generic [ref=e546]: 1rem / 16px
+          - generic [ref=e547]:
+            - heading "Grids & Layouts" [level=2] [ref=e548]
+            - generic [ref=e549]:
+              - img [ref=e550]
+              - generic:
+                - img [ref=e552]
+                - img [ref=e555]
+                - img [ref=e558]
+                - img [ref=e561]
+            - paragraph [ref=e564]:
+              - text: Using a grid can assist in creative cohesive,
+              - text: precise and satisfying layouts by aligning
+              - text: and grouping elements within the grid.
+        - generic [ref=e565]:
+          - generic [ref=e567]:
+            - heading "There are different types of grids, but the 12 column grid is the most commonly used grid because of it’s flexibility." [level=3] [ref=e568]
+            - generic [ref=e569]:
+              - paragraph [ref=e574]: try these different layouts
+              - paragraph [ref=e575]: ↓
+          - generic [ref=e577]:
+            - generic [ref=e578]:
+              - generic [ref=e579]:
+                - button "Button Text" [ref=e581] [cursor=pointer]:
+                  - generic [ref=e582]: Button Text
+                - generic [ref=e583]: "1"
+                - generic: layout 1
+              - generic [ref=e584]:
+                - button "Button Text" [ref=e586] [cursor=pointer]:
+                  - generic [ref=e587]: Button Text
+                - generic [ref=e588]: "2"
+                - generic: layout 2
+              - generic [ref=e589]:
+                - button "Button Text" [ref=e591] [cursor=pointer]:
+                  - generic [ref=e592]: Button Text
+                - generic [ref=e593]: "3"
+                - generic: layout 3
+            - img [ref=e594]
+            - generic [ref=e608]:
+              - generic [ref=e609]: See projects
+              - img [ref=e610]
+            - paragraph [ref=e613]: We are a multidisciplinary design studio specializing in bespoke residential projects.
+      - heading "However, grids are just guidelines and breaking out of a grid can form completely different designs." [level=2] [ref=e628]:
+        - generic [ref=e630]: However,
+        - generic [ref=e632]: grids
+        - generic [ref=e634]: are
+        - generic [ref=e636]: just
+        - generic [ref=e638]: guidelines
+        - generic [ref=e640]: and
+        - generic [ref=e642]: breaking
+        - generic [ref=e644]: out
+        - generic [ref=e646]: of
+        - generic [ref=e648]: a
+        - generic [ref=e650]: grid
+        - generic [ref=e652]: can
+        - generic [ref=e654]: form
+        - generic [ref=e656]: completely
+        - generic [ref=e658]: different
+        - generic [ref=e660]: designs.
+      - generic [ref=e661]:
+        - img [ref=e662]
+        - img [ref=e676]
+    - generic [ref=e678]:
+      - generic [ref=e679]:
+        - generic [ref=e681]: ↘
+        - generic [ref=e683]: "#@$"
+        - img [ref=e685]
+        - generic [ref=e687]:
+          - paragraph [ref=e692]: Chapter 2.2 Type Fundamentals
+          - heading "Typography." [level=2] [ref=e693]:
+            - generic [ref=e694]: T
+            - generic [ref=e695]: "y"
+            - generic [ref=e696]: p
+            - generic [ref=e697]: o
+            - generic [ref=e698]: g
+            - generic [ref=e699]: r
+            - generic [ref=e700]: a
+            - generic [ref=e701]: p
+            - generic [ref=e702]: h
+            - generic [ref=e703]: "y"
+            - generic [ref=e704]: .
+          - heading "Typography." [level=2] [ref=e705]:
+            - generic [ref=e706]: T
+            - generic [ref=e707]: "y"
+            - generic [ref=e708]: p
+            - generic [ref=e709]: o
+            - generic [ref=e710]: g
+            - generic [ref=e711]: r
+            - generic [ref=e712]: a
+            - generic [ref=e713]: p
+            - generic [ref=e714]: h
+            - generic [ref=e715]: "y"
+            - generic [ref=e716]: .
+          - heading "Typography." [level=2] [ref=e717]:
+            - generic [ref=e718]: T
+            - generic [ref=e719]: "y"
+            - generic [ref=e720]: p
+            - generic [ref=e721]: o
+            - generic [ref=e722]: g
+            - generic [ref=e723]: r
+            - generic [ref=e724]: a
+            - generic [ref=e725]: p
+            - generic [ref=e726]: h
+            - generic [ref=e727]: "y"
+            - generic [ref=e728]: .
+        - generic [ref=e729]:
+          - paragraph [ref=e730]: Typography sets the foundation of any creative websites, period. Whether you’re trying to establish a strong first impression or communicating a message to a target audience, your type has to be dialed in and align with your story and identity.
+          - generic [ref=e731]:
+            - generic [ref=e732]: Typeface
+            - generic [ref=e733]: PP Neue Montreal
+          - generic [ref=e734]:
+            - generic [ref=e735]: Letter Spacing
+            - generic [ref=e736]: "-3%"
+          - generic [ref=e737]:
+            - generic [ref=e738]: Line Height
+            - generic [ref=e739]: 1.1 em
+      - generic [ref=e740]:
+        - generic [ref=e741]:
+          - heading "Type usage in award winning sites" [level=1] [ref=e742]:
+            - text: Type usage in
+            - text: award winning sites
+          - paragraph [ref=e743]: A brief breakdown behind typefaces behind our projects.
+        - list [ref=e745]:
+          - listitem [ref=e746]:
+            - generic [ref=e747]:
+              - img "Supersolid" [ref=e749]
+              - generic [ref=e751]:
+                - generic [ref=e752]:
+                  - button [ref=e754] [cursor=pointer]
+                  - paragraph [ref=e759]: Supersolid
+                - generic [ref=e760]:
+                  - paragraph [ref=e761]: For Supersolid, we used Montserrat as the base typeface, then applied a WebGL flowmap effect with chromatic aberration—creating kinetic, distorted typography that became the brand's signature and made it instantly memorable.
+                  - generic [ref=e762]:
+                    - generic [ref=e763]: "typefaces:"
+                    - generic [ref=e764]: Joyride, Montserrat, & Sono
+                  - generic [ref=e765]:
+                    - generic [ref=e766]: "traits:"
+                    - generic [ref=e767]: 1.5sec
+          - listitem [ref=e768]:
+            - generic [ref=e769]:
+              - img "S-2K" [ref=e771]
+              - generic [ref=e773]:
+                - generic [ref=e774]:
+                  - button [ref=e776] [cursor=pointer]
+                  - paragraph [ref=e781]: S-2K
+                - generic [ref=e782]:
+                  - paragraph [ref=e783]: For S-2K, the goal was to express the car’s duality of technical precision and raw emotion. A combination of contemporary sans-serif and a monospace typeface to mirrors its multifaceted character that’s inspired directly from the car’s design language.
+                  - generic [ref=e784]:
+                    - generic [ref=e785]: "typefaces:"
+                    - generic [ref=e786]: PP Neue Montreal, PP Formula, IBM Plex Mono
+                  - generic [ref=e787]:
+                    - generic [ref=e788]: "traits:"
+                    - generic [ref=e789]: 1.5sec
+          - listitem [ref=e790]:
+            - generic [ref=e791]:
+              - img "Mammoth Murals" [ref=e793]
+              - generic [ref=e795]:
+                - generic [ref=e796]:
+                  - button [ref=e798] [cursor=pointer]
+                  - paragraph [ref=e803]: Mammoth Murals
+                - generic [ref=e804]:
+                  - paragraph [ref=e805]: For Mammoth Murals, we used Obviously Condensed Black to position them as the bold choice in a safe market, creating strong hierarchy that guided users to inquiry points. Suisse for body copy balanced impact with readability and professionalism.
+                  - generic [ref=e806]:
+                    - generic [ref=e807]: "typefaces:"
+                    - generic [ref=e808]: Obviously Condensed Black & Suisse
+                  - generic [ref=e809]:
+                    - generic [ref=e810]: "traits:"
+                    - generic [ref=e811]: 1.5sec
+    - generic [ref=e814]:
+      - generic [ref=e815]:
+        - generic [ref=e816]:
+          - paragraph [ref=e821]: chapter 2.3
+          - heading "Colors" [level=1] [ref=e822]
+        - 'heading "Every award-winning site shares one thing: intentional color. It’s not picked from a palette, it’s designed to evoke, to direct, and to tell a story." [level=2] [ref=e823]':
+          - generic [ref=e826]: Every
+          - generic [ref=e828]: award-winning
+          - generic [ref=e830]: site
+          - generic [ref=e832]: shares
+          - generic [ref=e834]: one
+          - generic [ref=e836]: "thing:"
+          - generic [ref=e838]: intentional
+          - generic [ref=e840]: color.
+          - generic [ref=e842]: It’s
+          - generic [ref=e844]: not
+          - generic [ref=e846]: picked
+          - generic [ref=e848]: from
+          - generic [ref=e850]: a
+          - generic [ref=e852]: palette,
+          - generic [ref=e854]: it’s
+          - generic [ref=e856]: designed
+          - generic [ref=e858]: to
+          - generic [ref=e860]: evoke,
+          - generic [ref=e862]: to
+          - generic [ref=e864]: direct,
+          - generic [ref=e866]: and
+          - generic [ref=e868]: to
+          - generic [ref=e870]: tell
+          - generic [ref=e872]: a
+          - generic [ref=e874]: story.
+      - generic [ref=e875]:
+        - generic [ref=e882]:
+          - generic [ref=e883]: Cool tones
+          - generic [ref=e884]: Evoke emotions such as calm, sophistication, and trust.
+        - generic [ref=e885]:
+          - generic [ref=e886]: Warm tones
+          - generic [ref=e887]: evoke emotions such as energy, passion, and anger.
+      - generic [ref=e888]:
+        - generic [ref=e889]:
+          - heading "Examples" [level=3] [ref=e890]
+          - paragraph [ref=e891]: Colors on a website are rarely picked from colors or any typical palettes. Rather it’s a combination of carefully using the right accent colors to highlight a specific element or emotion and using secondary and primary colors to support it.
+        - list [ref=e893]:
+          - listitem [ref=e894]:
+            - generic [ref=e895]:
+              - link [ref=e897] [cursor=pointer]:
+                - /url: https://www.oharchitecture.com.au/
+              - generic [ref=e901]: OH Architecture
+            - img "OH Architecture" [ref=e903]
+            - paragraph [ref=e905]: We used a monochromatic system to reflect OH Architecture's minimalist design philosophy. Subtle shade variations added dimension while maintaining the refined, gallery-like experience their work demands.
+            - list [ref=e907]:
+              - listitem [ref=e908]
+              - listitem [ref=e909]
+              - listitem [ref=e910]
+              - listitem [ref=e911]
+              - listitem [ref=e912]
+              - listitem [ref=e913]
+          - listitem [ref=e914]:
+            - generic [ref=e915]:
+              - link [ref=e917] [cursor=pointer]:
+                - /url: https://mammothmurals.com/
+              - generic [ref=e921]: Mammoth Murals
+            - img "Mammoth Murals" [ref=e923]
+            - paragraph [ref=e925]: To elevate Mammoth Murals beyond typical mural contractors, we built a monochrome foundation that positions their work as fine art. Yellow and blue accents inject the brand's playful energy at critical moments.
+            - list [ref=e927]:
+              - listitem [ref=e928]
+              - listitem [ref=e929]
+              - listitem [ref=e930]
+              - listitem [ref=e931]
+          - listitem [ref=e932]:
+            - generic [ref=e933]:
+              - link [ref=e935] [cursor=pointer]:
+                - /url: https://www.sogaiart.com/
+              - generic [ref=e939]: SOGAI™
+            - img "SOGAI™" [ref=e941]
+            - paragraph [ref=e943]: SOGAI explores generative AI in fine arts. We used rich teals and dark tones for depth and contemplation, balanced with warm creams to soften the tech-forward subject and make it approachable.
+            - list [ref=e945]:
+              - listitem [ref=e946]
+              - listitem [ref=e947]
+              - listitem [ref=e948]
+              - listitem [ref=e949]
+              - listitem [ref=e950]
+              - listitem [ref=e951]
+              - listitem [ref=e952]
+              - listitem [ref=e953]
+    - generic [ref=e954]:
+      - generic [ref=e955]:
+        - generic [ref=e956]:
+          - paragraph [ref=e961]: chapter 2.4
+          - generic [ref=e963]:
+            - generic [ref=e964]:
+              - generic [ref=e965]:
+                - heading "Motion" [level=2] [ref=e966]
+                - img [ref=e967]
+              - generic [ref=e969]:
+                - heading "Animation" [level=2] [ref=e970]
+                - img [ref=e971]
+              - generic [ref=e973]:
+                - heading "Interaction" [level=2] [ref=e974]
+                - img [ref=e975]
+            - generic [ref=e977]:
+              - generic [ref=e978]:
+                - heading "Motion" [level=2] [ref=e979]
+                - img [ref=e980]
+              - generic [ref=e982]:
+                - heading "Animation" [level=2] [ref=e983]
+                - img [ref=e984]
+              - generic [ref=e986]:
+                - heading "Interaction" [level=2] [ref=e987]
+                - img [ref=e988]
+            - generic [ref=e990]:
+              - generic [ref=e991]:
+                - heading "Motion" [level=2] [ref=e992]
+                - img [ref=e993]
+              - generic [ref=e995]:
+                - heading "Animation" [level=2] [ref=e996]
+                - img [ref=e997]
+              - generic [ref=e999]:
+                - heading "Interaction" [level=2] [ref=e1000]
+                - img [ref=e1001]
+        - heading "Animations can truly make a website come to life. It can tastefully enhance the user experience by drawing attention and establishing a feeling of a website." [level=2] [ref=e1006]:
+          - generic [ref=e1009]: Animations
+          - generic [ref=e1011]: can
+          - generic [ref=e1013]: truly
+          - generic [ref=e1015]: make
+          - generic [ref=e1017]: a
+          - generic [ref=e1019]: website
+          - generic [ref=e1021]: come
+          - generic [ref=e1023]: to
+          - generic [ref=e1025]: life.
+          - generic [ref=e1027]: It
+          - generic [ref=e1029]: can
+          - generic [ref=e1031]: tastefully
+          - generic [ref=e1033]: enhance
+          - generic [ref=e1035]: the
+          - generic [ref=e1037]: user
+          - generic [ref=e1039]: experience
+          - generic [ref=e1041]: by
+          - generic [ref=e1043]: drawing
+          - generic [ref=e1045]: attention
+          - generic [ref=e1047]: and
+          - generic [ref=e1049]: establishing
+          - generic [ref=e1051]: a
+          - generic [ref=e1053]: feeling
+          - generic [ref=e1055]: of
+          - generic [ref=e1057]: a
+          - generic [ref=e1059]: website.
+      - generic [ref=e1060]:
+        - generic [ref=e1061]:
+          - heading "Methods" [level=1] [ref=e1062]
+          - paragraph [ref=e1064]: Any element can be animated, but here are some of the most common ways to implement motion for the web.
+        - generic [ref=e1065]:
+          - generic [ref=e1066]:
+            - generic [ref=e1067]:
+              - generic [ref=e1068]:
+                - paragraph [ref=e1069]: "01"
+                - heading "21" [level=1] [ref=e1071]
+                - paragraph [ref=e1076]: text
+              - generic [ref=e1077]:
+                - paragraph [ref=e1078]: "02"
+                - generic [ref=e1080]:
+                  - img [ref=e1081]
+                  - img [ref=e1084]
+                - paragraph [ref=e1091]: hover
+            - generic [ref=e1092]:
+              - paragraph [ref=e1093]: "03"
+              - img [ref=e1095]
+              - paragraph [ref=e1102]: icons
+          - generic [ref=e1104]:
+            - paragraph [ref=e1105]: "04"
+            - paragraph [ref=e1138]: scrolling
+      - generic [ref=e1139]:
+        - heading "Use delays, staggers, and easings to make more organic animations." [level=2] [ref=e1141]:
+          - generic [ref=e1143]: Use
+          - generic [ref=e1145]: delays,
+          - generic [ref=e1147]: staggers,
+          - generic [ref=e1149]: and
+          - generic [ref=e1151]: easings
+          - generic [ref=e1153]: to
+          - generic [ref=e1155]: make
+          - generic [ref=e1157]: more
+          - generic [ref=e1159]: organic
+          - generic [ref=e1161]: animations.
+        - generic [ref=e1175]:
+          - paragraph [ref=e1176]: Just like in nature, nothing moves in straight lines, every motion influences the next. Delays and easings create that organic rhythm, turning motion into flow.
+          - generic [ref=e1177]:
+            - generic [ref=e1178]:
+              - generic [ref=e1179]: Duration
+              - generic [ref=e1180]: 1.5 sec
+            - generic [ref=e1181]:
+              - generic [ref=e1182]: Easing
+              - generic [ref=e1183]: 0.23, 0.32, 0.23, 0.2
+            - generic [ref=e1184]:
+              - generic [ref=e1185]: stagger
+              - generic [ref=e1186]: 0.025 sec
+    - generic [ref=e1188]:
+      - generic [ref=e1189]:
+        - paragraph [ref=e1195]: examples of micro-interactions
+        - paragraph [ref=e1196]: Well-crafted micro interactions can turn a plain website into an engaging, memorable experience—making every click, hover, and scroll feel smoother, smarter, and more delightful for your users.
+      - generic [ref=e1197]:
+        - generic [ref=e1198]:
+          - button "HOVER ME" [ref=e1199] [cursor=pointer]:
+            - generic "HOVER ME" [ref=e1201]:
+              - generic [ref=e1202]: H
+              - generic [ref=e1203]: O
+              - generic [ref=e1204]: V
+              - generic [ref=e1205]: E
+              - generic [ref=e1206]: R
+              - generic [ref=e1207]: M
+              - generic [ref=e1208]: E
+          - img [ref=e1210]
+          - generic [ref=e1213]:
+            - generic [ref=e1214]:
+              - generic [ref=e1215]: Duration
+              - generic [ref=e1216]: .6 sec
+            - generic [ref=e1217]:
+              - generic [ref=e1218]: easing
+              - generic [ref=e1219]: 0.87, 0, 0.13, 1
+            - generic [ref=e1220]:
+              - generic [ref=e1221]: method
+              - generic [ref=e1222]: split-text (gsap)
+        - generic [ref=e1223]:
+          - button "Hover Me Hover me" [ref=e1224] [cursor=pointer]:
+            - generic [ref=e1225]:
+              - generic: Hover Me
+            - generic [ref=e1226]:
+              - generic: Hover me
+          - img [ref=e1228]
+          - generic [ref=e1231]:
+            - generic [ref=e1232]:
+              - generic [ref=e1233]: Duration
+              - generic [ref=e1234]: .45 sec
+            - generic [ref=e1235]:
+              - generic [ref=e1236]: Easing
+              - generic [ref=e1237]: 0.16, 1, 0.3, 1
+            - generic [ref=e1238]:
+              - generic [ref=e1239]: Method
+              - generic [ref=e1240]: Overlap & Follow through (CSS)
+    - generic [ref=e1241]:
+      - generic [ref=e1242]:
+        - paragraph [ref=e1247]: "chapter 3: Final word"
+        - heading "And last but not least, it is important for you to constantly..." [level=2] [ref=e1248]
+      - generic [ref=e1249]:
+        - generic [ref=e1250]:
+          - img [ref=e1251]
+          - img [ref=e1260]
+        - generic [ref=e1269]:
+          - img [ref=e1270]
+          - img [ref=e1279]
+        - generic [ref=e1288]:
+          - img [ref=e1289]
+          - img [ref=e1298]
+        - generic [ref=e1307]:
+          - img [ref=e1308]
+          - img [ref=e1317]
+        - generic [ref=e1326]:
+          - img [ref=e1327]
+          - img [ref=e1336]
+        - generic [ref=e1345]:
+          - img [ref=e1346]
+          - img [ref=e1355]
+        - generic [ref=e1364]:
+          - img [ref=e1365]
+          - img [ref=e1374]
+    - generic [ref=e1386]:
+      - generic [ref=e1387]:
+        - paragraph [ref=e1393]: Put in the reps
+        - paragraph [ref=e1394]: Create passion projects, experiment with animations, and explore new design ideas. The more you build, break, and refine, the sharper your creative instincts get. Make connections, refine your taste, and have fun making websites.
+      - generic [ref=e1395]:
+        - heading "We understand the process of a creative website can be overwhelming so here are is a collection of resources for you to learn and use." [level=3] [ref=e1396]:
+          - generic [ref=e1399]: We
+          - generic [ref=e1401]: understand
+          - generic [ref=e1403]: the
+          - generic [ref=e1405]: process
+          - generic [ref=e1407]: of
+          - generic [ref=e1409]: a
+          - generic [ref=e1411]: creative
+          - generic [ref=e1413]: website
+          - generic [ref=e1415]: can
+          - generic [ref=e1417]: be
+          - generic [ref=e1419]: overwhelming
+          - generic [ref=e1421]: so
+          - generic [ref=e1423]: here
+          - generic [ref=e1425]: are
+          - generic [ref=e1427]: is
+          - generic [ref=e1429]: a
+          - generic [ref=e1431]: collection
+          - generic [ref=e1433]: of
+          - generic [ref=e1435]: resources
+          - generic [ref=e1437]: for
+          - generic [ref=e1439]: you
+          - generic [ref=e1441]: to
+          - generic [ref=e1443]: learn
+          - generic [ref=e1445]: and
+          - generic [ref=e1447]: use.
+        - generic [ref=e1448]:
+          - generic [ref=e1449]:
+            - generic [ref=e1451]: RESOURCES CURATED BY HUY AND IVOR
+            - img [ref=e1452]
+          - list [ref=e1455]:
+            - listitem [ref=e1456]:
+              - heading "Books" [level=3] [ref=e1459]
+              - list [ref=e1461]:
+                - listitem [ref=e1462]:
+                  - link "SANS-in-USE by VIctionary ↗" [ref=e1463] [cursor=pointer]:
+                    - /url: https://victionary.com/products/sans-in-use
+                    - generic [ref=e1464]: SANS-in-USE by VIctionary
+                    - generic [ref=e1465]: ↗
+                - listitem [ref=e1466]:
+                  - link "display-in-use by victionary ↗" [ref=e1467] [cursor=pointer]:
+                    - /url: https://victionary.com/products/display-in-use
+                    - generic [ref=e1468]: display-in-use by victionary
+                    - generic [ref=e1469]: ↗
+                - listitem [ref=e1470]:
+                  - link "Serif-in-use by victionary ↗" [ref=e1471] [cursor=pointer]:
+                    - /url: https://victionary.com/products/serif-in-use
+                    - generic [ref=e1472]: Serif-in-use by victionary
+                    - generic [ref=e1473]: ↗
+                - listitem [ref=e1474]:
+                  - link "grid systems in graphic design by Josef Müller-Brockmann ↗" [ref=e1475] [cursor=pointer]:
+                    - /url: https://www.amazon.com.au/dp/3721201450
+                    - generic [ref=e1476]: grid systems in graphic design by Josef Müller-Brockmann
+                    - generic [ref=e1477]: ↗
+                - listitem [ref=e1478]:
+                  - link "New Utilitarian by VICTIONARY ↗" [ref=e1479] [cursor=pointer]:
+                    - /url: https://victionary.com/products/new-utilitarian?variant=44509817176306
+                    - generic [ref=e1480]: New Utilitarian by VICTIONARY
+                    - generic [ref=e1481]: ↗
+                - listitem [ref=e1482]:
+                  - link "Thinking with type by ellen lupton ↗" [ref=e1483] [cursor=pointer]:
+                    - /url: https://www.amazon.com.au/dp/1797226827
+                    - generic [ref=e1484]: Thinking with type by ellen lupton
+                    - generic [ref=e1485]: ↗
+                - listitem [ref=e1486]:
+                  - link "The design of everyday things by don norman ↗" [ref=e1487] [cursor=pointer]:
+                    - /url: https://www.amazon.com.au/dp/0465050654
+                    - generic [ref=e1488]: The design of everyday things by don norman
+                    - generic [ref=e1489]: ↗
+                - listitem [ref=e1490]:
+                  - link "Don’t make me think by steve krug ↗" [ref=e1491] [cursor=pointer]:
+                    - /url: https://www.amazon.com.au/dp/0321965515
+                    - generic [ref=e1492]: Don’t make me think by steve krug
+                    - generic [ref=e1493]: ↗
+            - listitem [ref=e1494]:
+              - heading "Courses and Communities" [level=3] [ref=e1497]
+              - list [ref=e1499]:
+                - listitem [ref=e1500]:
+                  - link "Maxime Heckel’s blog (3d blogs) ↗" [ref=e1501] [cursor=pointer]:
+                    - /url: https://blog.maximeheckel.com/
+                    - generic [ref=e1502]: Maxime Heckel’s blog (3d blogs)
+                    - generic [ref=e1503]: ↗
+                - listitem [ref=e1504]:
+                  - link "Three.js Journey ↗" [ref=e1505] [cursor=pointer]:
+                    - /url: https://threejs-journey.com/
+                    - generic [ref=e1506]: Three.js Journey
+                    - generic [ref=e1507]: ↗
+                - listitem [ref=e1508]:
+                  - link "oliver larose’s youtube ↗" [ref=e1509] [cursor=pointer]:
+                    - /url: https://www.youtube.com/@olivierlarose1
+                    - generic [ref=e1510]: oliver larose’s youtube
+                    - generic [ref=e1511]: ↗
+                - listitem [ref=e1512]:
+                  - link "Ilja van ecks’s youtube ↗" [ref=e1513] [cursor=pointer]:
+                    - /url: https://www.youtube.com/@iljavaneck
+                    - generic [ref=e1514]: Ilja van ecks’s youtube
+                    - generic [ref=e1515]: ↗
+                - listitem [ref=e1516]:
+                  - link "OSMO ↗" [ref=e1517] [cursor=pointer]:
+                    - /url: https://www.osmo.supply/
+                    - generic [ref=e1518]: OSMO
+                    - generic [ref=e1519]: ↗
+                - listitem [ref=e1520]:
+                  - link "Made with gsap ↗" [ref=e1521] [cursor=pointer]:
+                    - /url: https://madewithgsap.com/
+                    - generic [ref=e1522]: Made with gsap
+                    - generic [ref=e1523]: ↗
+                - listitem [ref=e1524]:
+                  - link "12 Principle of animations ↗" [ref=e1525] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=uDqjIdI4bF4&t=6s
+                    - generic [ref=e1526]: 12 Principle of animations
+                    - generic [ref=e1527]: ↗
+            - listitem [ref=e1528]:
+              - heading "Inspiration" [level=3] [ref=e1531]
+              - list [ref=e1533]:
+                - listitem [ref=e1534]:
+                  - link "INSPO.page ↗" [ref=e1535] [cursor=pointer]:
+                    - /url: https://INSPO.page
+                    - generic [ref=e1536]: INSPO.page
+                    - generic [ref=e1537]: ↗
+                - listitem [ref=e1538]:
+                  - link "AWWWARDS.com ↗" [ref=e1539] [cursor=pointer]:
+                    - /url: https://AWWWARDS.com
+                    - generic [ref=e1540]: AWWWARDS.com
+                    - generic [ref=e1541]: ↗
+                - listitem [ref=e1542]:
+                  - link "FOOTER.DESIGN ↗" [ref=e1543] [cursor=pointer]:
+                    - /url: https://FOOTER.DESIGN
+                    - generic [ref=e1544]: FOOTER.DESIGN
+                    - generic [ref=e1545]: ↗
+                - listitem [ref=e1546]:
+                  - link "minimal.gallery ↗" [ref=e1547] [cursor=pointer]:
+                    - /url: https://minimal.gallery
+                    - generic [ref=e1548]: minimal.gallery
+                    - generic [ref=e1549]: ↗
+                - listitem [ref=e1550]:
+                  - link "maxibestof ↗" [ref=e1551] [cursor=pointer]:
+                    - /url: https://maxibestof.one/
+                    - generic [ref=e1552]: maxibestof
+                    - generic [ref=e1553]: ↗
+                - listitem [ref=e1554]:
+                  - link "muzli.me ↗" [ref=e1555] [cursor=pointer]:
+                    - /url: https://muzli.me
+                    - generic [ref=e1556]: muzli.me
+                    - generic [ref=e1557]: ↗
+                - listitem [ref=e1558]:
+                  - link "fontsinuse.com ↗" [ref=e1559] [cursor=pointer]:
+                    - /url: https://fontsinuse.com
+                    - generic [ref=e1560]: fontsinuse.com
+                    - generic [ref=e1561]: ↗
+                - listitem [ref=e1562]:
+                  - link "Grids by obys agency ↗" [ref=e1563] [cursor=pointer]:
+                    - /url: https://grids.obys.agency/
+                    - generic [ref=e1564]: Grids by obys agency
+                    - generic [ref=e1565]: ↗
+                - listitem [ref=e1566]:
+                  - link "Motion by Zajno ↗" [ref=e1567] [cursor=pointer]:
+                    - /url: https://motion.zajno.com/
+                    - generic [ref=e1568]: Motion by Zajno
+                    - generic [ref=e1569]: ↗
+                - listitem [ref=e1570]:
+                  - link "savee.com ↗" [ref=e1571] [cursor=pointer]:
+                    - /url: https://savee.com/
+                    - generic [ref=e1572]: savee.com
+                    - generic [ref=e1573]: ↗
+    - generic [ref=e1575]:
+      - generic [ref=e1576]:
+        - img [ref=e1577]
+        - img
+      - generic [ref=e1581]:
+        - generic [ref=e1582]:
+          - generic [ref=e1583]:
+            - paragraph [ref=e1584]:
+              - generic [ref=e1585]: "[X]"
+              - text: .
+              - generic [ref=e1586]: "0"
+              - text: px
+            - paragraph [ref=e1587]:
+              - generic [ref=e1588]: "[Y]"
+              - text: .
+              - generic [ref=e1589]: "0"
+              - text: px
+          - generic [ref=e1590]:
+            - generic [ref=e1591]:
+              - paragraph [ref=e1592]: project by
+              - generic [ref=e1593]:
+                - link "huy" [ref=e1594] [cursor=pointer]:
+                  - /url: https://bymonolog.com/
+                - paragraph [ref=e1595]: +
+                - link "ivor" [ref=e1596] [cursor=pointer]:
+                  - /url: https://www.ivorjian.com/
+            - img [ref=e1597]
+        - generic [ref=e1602]:
+          - img [ref=e1604]
+          - img [ref=e1607]
+          - img [ref=e1610]
+          - img [ref=e1613]
+          - paragraph [ref=e1616]:
+            - text: The creative process of
+            - text: crafting stand-out websites
+          - generic [ref=e1617]:
+            - generic [ref=e1618]:
+              - paragraph [ref=e1620]: active ingredients
+              - generic [ref=e1621]:
+                - paragraph [ref=e1623]: webflow
+                - paragraph [ref=e1625]: gsap
+            - generic [ref=e1626]:
+              - paragraph [ref=e1628]: chapters
+              - generic [ref=e1629]:
+                - paragraph [ref=e1631]: 01. about
+                - paragraph [ref=e1633]: 02. design + dev

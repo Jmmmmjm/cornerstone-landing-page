@@ -3,16 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useRef, useState } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { Reveal } from './Reveal';
-
-const team = [
-  { name: 'Marcus', role: 'Architect', bio: 'Builds scalable systems that let teams do more with less.', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600' },
-  { name: 'Sarah', role: 'Operations', bio: 'Expert in workflow automation and accelerating team velocity.', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600' },
-  { name: 'David', role: 'Engineering', bio: 'Optimizes performance to reduce friction and boost productivity.', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600' },
-  { name: 'Elena', role: 'Design', bio: 'Creates intuitive experiences that save users time and effort.', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600' }
-];
+import { ServicesSection } from './ServicesSection';
+import { NumbersSection } from './NumbersSection';
 
 export function AboutSection() {
   const marqueeRef = useRef<HTMLDivElement>(null);
@@ -24,7 +19,7 @@ export function AboutSection() {
   const xMarquee = useTransform(scrollYProgress, [0, 1], [0, -400]);
 
   return (
-    <section className="relative w-full bg-transparent py-24 md:py-32 select-none font-sans overflow-hidden">
+    <section className="relative w-full bg-transparent py-24 md:py-32 select-none font-sans overflow-x-clip">
       
       {/* Intro Header */}
       <div className="px-4 md:px-8 w-full mb-20 md:mb-32">
@@ -69,57 +64,16 @@ export function AboutSection() {
         </motion.div>
       </div>
 
-      {/* Philosophy Section */}
-      <div className="px-4 md:px-8 max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32">
-        <div className="flex flex-col justify-center">
-          <Reveal>
-            <h3 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tight mb-8">
-              Efficiency Drives Growth
-            </h3>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <p className="text-lg md:text-xl text-[#0A192F]/70 dark:text-white/60 leading-relaxed mb-12">
-              Most teams waste time on repetitive work. We eliminate that friction with intelligent automation. The result: faster delivery, happier teams, and the bandwidth to grow.
-            </p>
-          </Reveal>
-          <div className="grid grid-cols-2 gap-8 pt-8 border-t border-slate-200 dark:border-white/10">
-             <div>
-                <div className="text-4xl md:text-6xl font-display font-bold text-teal-600 dark:text-[#64FFDA] mb-2">10+</div>
-                <div className="font-mono text-xs uppercase tracking-widest opacity-50">Hours Saved Weekly</div>
-             </div>
-             <div>
-                <div className="text-4xl md:text-6xl font-display font-bold text-teal-600 dark:text-[#64FFDA] mb-2">3x</div>
-                <div className="font-mono text-xs uppercase tracking-widest opacity-50">Faster Delivery</div>
-             </div>
-          </div>
+      {/* Stacked Layout Container */}
+      <div className="relative w-full">
+        {/* Services Section - Stays sticky so Numbers can slide over it */}
+        <div className="relative z-10">
+           <ServicesSection />
         </div>
-        <div className="aspect-square bg-slate-200 dark:bg-[#112240] overflow-hidden border border-slate-200 dark:border-white/10">
-          <img 
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1200" 
-            alt="Workplace" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
 
-      {/* Team Grid */}
-      <div className="px-4 md:px-8 max-w-[1400px] mx-auto mb-32">
-        <Reveal>
-           <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight mb-16 border-b border-slate-200 dark:border-white/10 pb-8">
-             Meet the Team
-           </h2>
-        </Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-px bg-slate-200/20 dark:bg-white/10 border border-slate-200 dark:border-white/10">
-          {team.map((member, i) => (
-            <div key={i} className="bg-transparent p-8 group">
-              <div className="aspect-[3/4] mb-8 overflow-hidden bg-slate-100 dark:bg-[#112240]">
-                <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
-              </div>
-              <h4 className="text-2xl font-display font-bold uppercase mb-1">{member.name}</h4>
-              <p className="font-mono text-xs text-teal-600 dark:text-[#64FFDA] uppercase tracking-widest mb-4">{member.role}</p>
-              <p className="text-sm text-[#0A192F]/60 dark:text-white/40 leading-relaxed">{member.bio}</p>
-            </div>
-          ))}
+        {/* Numbers Section - Higher Z-index to cover Services */}
+        <div className="relative z-20 -mt-[100vh]">
+           <NumbersSection />
         </div>
       </div>
 

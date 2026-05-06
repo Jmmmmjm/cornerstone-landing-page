@@ -1,0 +1,631 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link "Logo" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Logo" [ref=e5]
+      - generic [ref=e8]: FULL-CYCLE CONSULTING SERVICES FOR WEB3
+    - generic [ref=e9]:
+      - generic [ref=e11]:
+        - link "A A A B b B O o O U u U T t T U u U S s S" [ref=e12] [cursor=pointer]:
+          - /url: "#about"
+          - generic:
+            - generic [ref=e13]:
+              - generic: A A A
+              - generic: B b B
+              - generic: O o O
+              - generic: U u U
+              - generic: T t T
+            - generic [ref=e14]:
+              - generic: U u U
+              - generic: S s S
+        - link "S S S E e E R r R V v V I i I C c C E e E S s S" [ref=e15] [cursor=pointer]:
+          - /url: "#services"
+          - generic [ref=e16]:
+            - generic: S S S
+            - generic: E e E
+            - generic: R r R
+            - generic: V v V
+            - generic: I i I
+            - generic: C c C
+            - generic: E e E
+            - generic: S s S
+        - link "B B B E e E N n N E e E F f F I i I T t T S s S" [ref=e17] [cursor=pointer]:
+          - /url: "#benefits"
+          - generic [ref=e18]:
+            - generic: B B B
+            - generic: E e E
+            - generic: N n N
+            - generic: E e E
+            - generic: F f F
+            - generic: I i I
+            - generic: T t T
+            - generic: S s S
+        - link "P P P R r R O o O C c C E e E S s S S s S" [ref=e19] [cursor=pointer]:
+          - /url: "#steps"
+          - generic [ref=e20]:
+            - generic: P P P
+            - generic: R r R
+            - generic: O o O
+            - generic: C c C
+            - generic: E e E
+            - generic: S s S
+            - generic: S s S
+      - link "G G G E e E T t T F F F R r R E e E E e E C C C O o O N n N S s S U u U L l L T t T A a A T t T I i I O o O N n N" [ref=e21] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e22]:
+          - generic [ref=e24]:
+            - generic: G G G
+            - generic: E e E
+            - generic: T t T
+          - generic [ref=e26]:
+            - generic: F F F
+            - generic: R r R
+            - generic: E e E
+            - generic: E e E
+          - generic [ref=e28]:
+            - generic: C C C
+            - generic: O o O
+            - generic: N n N
+            - generic: S s S
+            - generic: U u U
+            - generic: L l L
+            - generic: T t T
+            - generic: A a A
+            - generic: T t T
+            - generic: I i I
+            - generic: O o O
+            - generic: N n N
+  - generic [ref=e32]:
+    - generic [ref=e33]: About us
+    - heading "We're full-cycle consulting company, providing fundraising, development, marketing, and listing services to drive blockchain projects from concept to success." [level=3] [ref=e34]
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: "Partnering with the best:"
+        - generic [ref=e38]:
+          - img "logo partners" [ref=e39]
+          - img "logo partners" [ref=e40]
+      - generic [ref=e42]:
+        - generic [ref=e43]: "“Coinsetters was built for crypto projects aiming to launch effectively, swiftly, and without the hassle of bureaucracy. In four words: we make it happen.”"
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - img "Dmytro" [ref=e46]
+            - generic [ref=e47]:
+              - generic [ref=e48]: Dmytro Dmytrenko
+              - generic [ref=e49]: Co-founder
+              - generic [ref=e50]:
+                - link "social icon" [ref=e51] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/dmytrodmytrenko/
+                  - img "social icon" [ref=e52]
+                - link:
+                  - /url: "#"
+          - generic [ref=e53]:
+            - img "Areseniy" [ref=e54]
+            - generic [ref=e55]:
+              - generic [ref=e56]: Arsenii Koniev
+              - generic [ref=e57]: Co-founder
+              - generic [ref=e58]:
+                - link "social icon" [ref=e59] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/arsenii-koniev/
+                  - img "social icon" [ref=e60]
+                - link:
+                  - /url: "#"
+  - generic [ref=e61]:
+    - generic [ref=e62]:
+      - generic [ref=e63]: We are setting
+      - heading "Customer-centric services focused on exceptional client experience" [level=3] [ref=e64]
+    - generic [ref=e66]:
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - heading "(01)" [level=1] [ref=e70]
+          - heading "Fundraising" [level=1] [ref=e71]
+        - img [ref=e73]
+        - generic [ref=e177]: "We assist clients in securing investments at various stages: pre-seed, seed round, round A, with potential for Round B and beyond. Our network of over 500 VCs and angels allows us to quickly source funding ranging from $50k to $2M. We also provide pre-approval from exchanges, increasing the likelihood of successful investments."
+      - generic [ref=e179]:
+        - generic [ref=e180]:
+          - heading "(02)" [level=1] [ref=e181]
+          - heading "Development" [level=1] [ref=e182]
+        - img [ref=e184]
+        - generic [ref=e235]: We offer software development services, including blockchain solution creation and integration. Our developers work closely with clients to build secure, scalable applications, providing support throughout the entire development process.
+      - generic [ref=e237]:
+        - generic [ref=e238]:
+          - heading "(03)" [level=1] [ref=e239]
+          - heading "Marketing" [level=1] [ref=e240]
+        - img [ref=e242]
+        - generic [ref=e314]: We craft and execute marketing strategies tailored to each client, setting clear goals, aligning KPIs, analyzing target audiences and competitors. Our services include content creation, social media management, campaign execution, and community engagement, all aimed at increasing brand awareness, audience growth, and lead optimization.
+      - generic [ref=e316]:
+        - generic [ref=e317]:
+          - heading "(04)" [level=1] [ref=e318]
+          - heading "Listing" [level=1] [ref=e319]
+        - img [ref=e321]
+        - generic [ref=e498]: We specialize in listing projects primarily on Tier 1 exchanges, with access to prominent Tier 2-3 exchanges. Strong, long-standing relationships with listing and research teams enable us to secure faster approvals and terms. Our expertise guide clients through pre-listing preparations & post-listing activities to max impact.
+  - generic [ref=e502]:
+    - generic [ref=e503]:
+      - generic [ref=e504]: Numbers that matter
+      - heading "Facts and figures that define us" [level=2] [ref=e505]
+    - generic [ref=e507]:
+      - generic [ref=e508]:
+        - generic [ref=e509]:
+          - marquee [ref=e510]: "90"
+          - heading "+" [level=2] [ref=e511]
+        - generic [ref=e512]:
+          - generic [ref=e513]: Successful projects in our portfolio
+          - generic [ref=e514]: Each project is a unique solution tailored to the specific needs of the client, ensuring maximum efficiency and effectiveness.
+      - generic [ref=e515]:
+        - generic [ref=e516]:
+          - marquee [ref=e517]: "4"
+          - heading "+" [level=2] [ref=e518]
+        - generic [ref=e519]:
+          - generic [ref=e520]: Years of experience in Web3
+          - generic [ref=e521]: Our extensive experience in Web3 enables us to consider multiple factors in negotiations and decision-making.
+      - generic [ref=e522]:
+        - generic [ref=e523]:
+          - heading "$" [level=2] [ref=e524]
+          - marquee [ref=e525]: "8"
+          - heading "M" [level=2] [ref=e526]
+        - generic [ref=e527]:
+          - generic [ref=e528]: Raised for our clients
+          - generic [ref=e529]: With strong relationships and active collaboration with VCs and angel investors, our clients secure investment rounds swiftly and stress-free.
+      - generic [ref=e530]:
+        - generic [ref=e531]:
+          - heading "$" [level=2] [ref=e532]
+          - marquee [ref=e533]: "6.5"
+          - heading "M" [level=2] [ref=e534]
+        - generic [ref=e535]:
+          - generic [ref=e536]: Saved for our clients on services
+          - generic [ref=e537]: Leveraging our expertise in process optimization, we’ve helped our clients save substantial amounts on services we deliver more profitably.
+      - generic [ref=e538]:
+        - generic [ref=e539]:
+          - marquee [ref=e540]: "50"
+          - heading "+" [level=2] [ref=e541]
+        - generic [ref=e542]:
+          - generic [ref=e543]: Partners and collaborators have trusted us
+          - generic [ref=e544]: Each project is a unique solution tailored to the specific needs of the client, ensuring maximum efficiency and effectiveness.
+      - generic [ref=e545]:
+        - generic [ref=e546]:
+          - marquee [ref=e547]: "3"
+          - heading "X" [level=2] [ref=e548]
+        - generic [ref=e549]:
+          - generic [ref=e550]: Accelerated process with us
+          - generic [ref=e551]: We provide efficient solutions and tailored approaches to resolve issues swiftly and effectively, cutting out unnecessary bureaucracy and the hassle of finding the right contacts.
+  - generic [ref=e553]:
+    - generic [ref=e554]:
+      - generic [ref=e555]: Special benefits
+      - heading "Premium perks for enhanced engagement and value" [level=3] [ref=e556]
+    - generic [ref=e557]:
+      - generic [ref=e558]:
+        - generic [ref=e559]:
+          - img "Direct contacts" [ref=e560]
+          - generic [ref=e561]:
+            - heading "Direct contacts" [level=1] [ref=e562]
+            - generic [ref=e563]: You receive feedback directly from our trusted contacts, bypassing the need to wait for responses through contact forms or applications.
+        - generic [ref=e565]:
+          - img "Lower fees" [ref=e566]
+          - generic [ref=e567]:
+            - heading "Lower fees" [level=1] [ref=e568]
+            - generic [ref=e569]: We know how to secure the best terms, offering up to 15% savings on standard costs, marketing fees, audits, and more.
+        - generic [ref=e571]:
+          - img "Pay after you see a result" [ref=e572]
+          - generic [ref=e573]:
+            - heading "Pay after you see a result" [level=1] [ref=e574]
+            - generic [ref=e575]: There are no upfront costs for our listing & fundraising services – conveniently pay only after we deliver on our part.
+      - generic [ref=e577]:
+        - generic [ref=e578]:
+          - img "Visionary guidance" [ref=e579]
+          - generic [ref=e580]:
+            - heading "Visionary guidance" [level=1] [ref=e581]
+            - generic [ref=e582]: You get expert support with a detailed long-term roadmap, guiding you through every next step and ensuring nothing is overlooked.
+        - generic [ref=e584]:
+          - img "Pre-approval" [ref=e585]
+          - generic [ref=e586]:
+            - heading "Pre-approval" [level=1] [ref=e587]
+            - generic [ref=e588]: Plan events and marketing activities and convince investors to fund your project with pre-approval from top tier platforms, crypto exchanges and KOLs.
+        - generic [ref=e590]:
+          - img "Additional unique services" [ref=e591]
+          - generic [ref=e592]:
+            - heading "Additional unique services" [level=1] [ref=e593]
+            - generic [ref=e594]: Need help with issuing ETPs, attracting investors, handling OTC sales, integrating platforms, or facilitating Visa/MasterCard collab? We can do it all.
+  - generic [ref=e596]:
+    - heading "Trust the pros to do the work for you" [level=2] [ref=e597]
+    - generic [ref=e598]: Let's craft a strategy that brings your project to life in the crypto world.
+    - link "G G G E e E T t T F F F R r R E e E E e E C C C O o O N n N S s S U u U L l L T t T A a A T t T I i I O o O N n N" [ref=e599] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=e600]:
+        - generic [ref=e602]:
+          - generic: G G G
+          - generic: E e E
+          - generic: T t T
+        - generic [ref=e604]:
+          - generic: F F F
+          - generic: R r R
+          - generic: E e E
+          - generic: E e E
+        - generic [ref=e606]:
+          - generic: C C C
+          - generic: O o O
+          - generic: N n N
+          - generic: S s S
+          - generic: U u U
+          - generic: L l L
+          - generic: T t T
+          - generic: A a A
+          - generic: T t T
+          - generic: I i I
+          - generic: O o O
+          - generic: N n N
+    - img "CTA image" [ref=e608]
+  - generic [ref=e610]:
+    - generic [ref=e611]:
+      - generic [ref=e613]: From consultation to launch
+      - generic [ref=e614]: Our clients
+      - heading "Taking blockchain projects from concept to success" [level=3] [ref=e615]
+    - generic [ref=e617]:
+      - 'link "Floki Floki FLOKI FLOKI FLOKI/USD $0.00003303 3.6% Market Cap Rank #144 Market Cap $318,790,455 24h Volume $33,168,216 24h High/Low $0.00003323 / $0.00003178" [ref=e619] [cursor=pointer]':
+        - /url: https://floki.com/
+        - generic [ref=e620]:
+          - heading "Floki" [level=1] [ref=e622]
+          - img "Floki" [ref=e623]
+        - generic [ref=e627]:
+          - generic [ref=e628]:
+            - generic [ref=e629]:
+              - img "FLOKI" [ref=e630]
+              - generic [ref=e631]:
+                - generic [ref=e632]: FLOKI
+                - generic [ref=e633]: FLOKI/USD
+            - link [ref=e635]:
+              - /url: https://www.coingecko.com/
+              - img [ref=e637]
+          - generic [ref=e647]:
+            - generic [ref=e648]: $0.00003303
+            - generic [ref=e649]:
+              - img [ref=e650]
+              - text: 3.6%
+          - generic [ref=e652]:
+            - generic [ref=e653]:
+              - generic [ref=e654]: Market Cap Rank
+              - generic [ref=e655]: "#144"
+            - generic [ref=e657]:
+              - generic [ref=e658]: Market Cap
+              - generic [ref=e659]: $318,790,455
+            - generic [ref=e661]:
+              - generic [ref=e662]: 24h Volume
+              - generic [ref=e663]: $33,168,216
+            - generic [ref=e665]:
+              - generic [ref=e666]: 24h High/Low
+              - generic [ref=e667]: $0.00003323 / $0.00003178
+      - link "Bonk Bonk Market Cap Rank Market Cap 24h Volume 24h High/Low" [ref=e669] [cursor=pointer]:
+        - /url: https://bonkcoin.com/
+        - generic [ref=e670]:
+          - heading "Bonk" [level=1] [ref=e672]
+          - img "Bonk" [ref=e673]
+        - generic [ref=e677]:
+          - link [ref=e681]:
+            - /url: https://www.coingecko.com/
+            - img [ref=e683]
+          - generic [ref=e694]:
+            - generic [ref=e696]: Market Cap Rank
+            - generic [ref=e700]: Market Cap
+            - generic [ref=e704]: 24h Volume
+            - generic [ref=e708]: 24h High/Low
+      - 'link "TokenFi TokenFi TokenFi TokenFi TOKEN/USD $0.003522 6.1% Market Cap Rank #1096 Market Cap $12,937,585 24h Volume $2,427,923 24h High/Low $0.00375 / $0.00329" [ref=e711] [cursor=pointer]':
+        - /url: https://tokenfi.com/
+        - generic [ref=e712]:
+          - heading "TokenFi" [level=1] [ref=e714]
+          - img "TokenFi" [ref=e715]
+        - generic [ref=e719]:
+          - generic [ref=e720]:
+            - generic [ref=e721]:
+              - img "TokenFi" [ref=e722]
+              - generic [ref=e723]:
+                - generic [ref=e724]: TokenFi
+                - generic [ref=e725]: TOKEN/USD
+            - link [ref=e727]:
+              - /url: https://www.coingecko.com/
+              - img [ref=e729]
+          - generic [ref=e739]:
+            - generic [ref=e740]: $0.003522
+            - generic [ref=e741]:
+              - img [ref=e742]
+              - text: 6.1%
+          - generic [ref=e744]:
+            - generic [ref=e745]:
+              - generic [ref=e746]: Market Cap Rank
+              - generic [ref=e747]: "#1096"
+            - generic [ref=e749]:
+              - generic [ref=e750]: Market Cap
+              - generic [ref=e751]: $12,937,585
+            - generic [ref=e753]:
+              - generic [ref=e754]: 24h Volume
+              - generic [ref=e755]: $2,427,923
+            - generic [ref=e757]:
+              - generic [ref=e758]: 24h High/Low
+              - generic [ref=e759]: $0.00375 / $0.00329
+      - 'link "Kaspa Kaspa Kaspa Kaspa KAS/USD $0.03414 1.5% Market Cap Rank #75 Market Cap $934,860,395 24h Volume $15,497,384 24h High/Low $0.03429 / $0.03338" [ref=e761] [cursor=pointer]':
+        - /url: https://kaspa.org/
+        - generic [ref=e762]:
+          - heading "Kaspa" [level=1] [ref=e764]
+          - img "Kaspa" [ref=e765]
+        - generic [ref=e769]:
+          - generic [ref=e770]:
+            - generic [ref=e771]:
+              - img "Kaspa" [ref=e772]
+              - generic [ref=e773]:
+                - generic [ref=e774]: Kaspa
+                - generic [ref=e775]: KAS/USD
+            - link [ref=e777]:
+              - /url: https://www.coingecko.com/
+              - img [ref=e779]
+          - generic [ref=e789]:
+            - generic [ref=e790]: $0.03414
+            - generic [ref=e791]:
+              - img [ref=e792]
+              - text: 1.5%
+          - generic [ref=e794]:
+            - generic [ref=e795]:
+              - generic [ref=e796]: Market Cap Rank
+              - generic [ref=e797]: "#75"
+            - generic [ref=e799]:
+              - generic [ref=e800]: Market Cap
+              - generic [ref=e801]: $934,860,395
+            - generic [ref=e803]:
+              - generic [ref=e804]: 24h Volume
+              - generic [ref=e805]: $15,497,384
+            - generic [ref=e807]:
+              - generic [ref=e808]: 24h High/Low
+              - generic [ref=e809]: $0.03429 / $0.03338
+      - 'link "Dog Wif Hat Dog Wif Hat dogwifhat dogwifhat WIF/USD $0.1948 1.9% Market Cap Rank #187 Market Cap $194,613,036 24h Volume $38,704,670 24h High/Low $0.1973 / $0.1905" [ref=e811] [cursor=pointer]':
+        - /url: https://dogwifcoin.org/
+        - generic [ref=e812]:
+          - heading "Dog Wif Hat" [level=1] [ref=e814]
+          - img "Dog Wif Hat" [ref=e815]
+        - generic [ref=e819]:
+          - generic [ref=e820]:
+            - generic [ref=e821]:
+              - img "dogwifhat" [ref=e822]
+              - generic [ref=e823]:
+                - generic [ref=e824]: dogwifhat
+                - generic [ref=e825]: WIF/USD
+            - link [ref=e827]:
+              - /url: https://www.coingecko.com/
+              - img [ref=e829]
+          - generic [ref=e839]:
+            - generic [ref=e840]: $0.1948
+            - generic [ref=e841]:
+              - img [ref=e842]
+              - text: 1.9%
+          - generic [ref=e844]:
+            - generic [ref=e845]:
+              - generic [ref=e846]: Market Cap Rank
+              - generic [ref=e847]: "#187"
+            - generic [ref=e849]:
+              - generic [ref=e850]: Market Cap
+              - generic [ref=e851]: $194,613,036
+            - generic [ref=e853]:
+              - generic [ref=e854]: 24h Volume
+              - generic [ref=e855]: $38,704,670
+            - generic [ref=e857]:
+              - generic [ref=e858]: 24h High/Low
+              - generic [ref=e859]: $0.1973 / $0.1905
+      - 'link "SmarDex SmarDex SMARDEX SMARDEX SDEX/USD $0.001674 0.2% Market Cap Rank #997 Market Cap $16,395,951 24h Volume $244,535 24h High/Low $0.001678 / $0.00166" [ref=e861] [cursor=pointer]':
+        - /url: https://smardex.io/
+        - generic [ref=e862]:
+          - heading "SmarDex" [level=1] [ref=e864]
+          - img "SmarDex" [ref=e865]
+        - generic [ref=e869]:
+          - generic [ref=e870]:
+            - generic [ref=e871]:
+              - img "SMARDEX" [ref=e872]
+              - generic [ref=e873]:
+                - generic [ref=e874]: SMARDEX
+                - generic [ref=e875]: SDEX/USD
+            - link [ref=e877]:
+              - /url: https://www.coingecko.com/
+              - img [ref=e879]
+          - generic [ref=e889]:
+            - generic [ref=e890]: $0.001674
+            - generic [ref=e891]:
+              - img [ref=e892]
+              - text: 0.2%
+          - generic [ref=e894]:
+            - generic [ref=e895]:
+              - generic [ref=e896]: Market Cap Rank
+              - generic [ref=e897]: "#997"
+            - generic [ref=e899]:
+              - generic [ref=e900]: Market Cap
+              - generic [ref=e901]: $16,395,951
+            - generic [ref=e903]:
+              - generic [ref=e904]: 24h Volume
+              - generic [ref=e905]: $244,535
+            - generic [ref=e907]:
+              - generic [ref=e908]: 24h High/Low
+              - generic [ref=e909]: $0.001678 / $0.00166
+      - generic [ref=e911]:
+        - heading "Trusted clients and friends" [level=1] [ref=e913]
+        - generic [ref=e914]:
+          - marquee [ref=e915]: "45"
+          - heading "+" [level=2] [ref=e916]
+  - generic [ref=e918]:
+    - generic [ref=e919]:
+      - generic [ref=e920]: Setting your comfort
+      - heading "Step-by-step process to bring your project to life" [level=3] [ref=e921]
+    - generic [ref=e923]:
+      - generic [ref=e924]:
+        - generic [ref=e925]:
+          - generic [ref=e926]: STEP
+          - heading "01" [level=2] [ref=e927]
+        - generic [ref=e928]:
+          - generic [ref=e930]: WILL GET TO YOU WITHIN 12 HOURS
+          - generic [ref=e931]:
+            - heading "Book free consultation" [level=3] [ref=e932]
+            - generic [ref=e933]: Get started by scheduling a free consultation. We’ll listen to your needs and explore how we can help bring your project to life.
+      - generic [ref=e934]:
+        - generic [ref=e935]:
+          - generic [ref=e936]: STEP
+          - heading "02" [level=2] [ref=e937]
+        - generic [ref=e938]:
+          - generic [ref=e940]: FULL PACK OF DOCUMENTS
+          - generic [ref=e941]:
+            - heading "Audit & documentation" [level=3] [ref=e942]
+            - generic [ref=e943]: Our team will conduct a thorough audit of your project, gathering essential details and preparing the documents for next steps.
+      - generic [ref=e944]:
+        - generic [ref=e945]:
+          - generic [ref=e946]: STEP
+          - heading "03" [level=2] [ref=e947]
+        - generic [ref=e948]:
+          - generic [ref=e950]: NOW IT SOUNDS LIKE A PLAN
+          - generic [ref=e951]:
+            - heading "Custom action plan creation" [level=3] [ref=e952]
+            - generic [ref=e953]: We’ll craft a personalized action plan tailored to your project’s goals. Sit back as we outline a clear, strategic path forward.
+      - generic [ref=e954]:
+        - generic [ref=e955]:
+          - generic [ref=e956]: STEP
+          - heading "04" [level=2] [ref=e957]
+        - generic [ref=e958]:
+          - generic [ref=e960]: KEEP IN TOUCH ON EVERY STEP
+          - generic [ref=e961]:
+            - heading "Review & feedback" [level=3] [ref=e962]
+            - generic [ref=e963]: Review the action plan we provide, and then let us know if there are any adjustments or suggestions. Collaboration is key!
+      - generic [ref=e964]:
+        - generic [ref=e965]:
+          - generic [ref=e966]: STEP
+          - heading "05" [level=2] [ref=e967]
+        - generic [ref=e968]:
+          - generic [ref=e970]: REASONABLY PRICED CONTRACT
+          - generic [ref=e971]:
+            - heading "Finalize offer & pricing" [level=3] [ref=e972]
+            - generic [ref=e973]: Our team will conduct a thorough audit of your project, gathering essential details and preparing the documents for next steps.
+      - generic [ref=e974]:
+        - generic [ref=e975]:
+          - generic [ref=e976]: STEP
+          - heading "06" [level=2] [ref=e977]
+        - generic [ref=e978]:
+          - generic [ref=e980]: GET STARTED & THE ROCKET TAKES OFF
+          - generic [ref=e981]:
+            - heading "Launch & execution" [level=3] [ref=e982]
+            - generic [ref=e983]: With everything set, our team gets to work. Watch as your project takes off and progresses towards success!
+  - generic [ref=e986]:
+    - heading "Delegate your project to professionals" [level=3] [ref=e987]
+    - generic [ref=e988]: Leave your contact details & we’ll get back to you within 12 hours.
+    - link "G G G E e E T t T F F F R r R E e E E e E C C C O o O N n N S s S U u U L l L T t T A a A T t T I i I O o O N n N" [ref=e989] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=e990]:
+        - generic [ref=e992]:
+          - generic: G G G
+          - generic: E e E
+          - generic: T t T
+        - generic [ref=e994]:
+          - generic: F F F
+          - generic: R r R
+          - generic: E e E
+          - generic: E e E
+        - generic [ref=e996]:
+          - generic: C C C
+          - generic: O o O
+          - generic: N n N
+          - generic: S s S
+          - generic: U u U
+          - generic: L l L
+          - generic: T t T
+          - generic: A a A
+          - generic: T t T
+          - generic: I i I
+          - generic: O o O
+          - generic: N n N
+    - img "CTA image" [ref=e998]
+  - generic [ref=e1001]:
+    - generic [ref=e1002]:
+      - generic [ref=e1004]:
+        - link "A A A B b B O o O U u U T t T U u U S s S" [ref=e1005] [cursor=pointer]:
+          - /url: "#about"
+          - generic [ref=e1006]:
+            - generic [ref=e1008]:
+              - generic: A A A
+              - generic: B b B
+              - generic: O o O
+              - generic: U u U
+              - generic: T t T
+            - generic [ref=e1010]:
+              - generic: U u U
+              - generic: S s S
+        - link "S S S E e E R r R V v V I i I C c C E e E S s S" [ref=e1011] [cursor=pointer]:
+          - /url: "#services"
+          - generic [ref=e1012]:
+            - generic: S S S
+            - generic: E e E
+            - generic: R r R
+            - generic: V v V
+            - generic: I i I
+            - generic: C c C
+            - generic: E e E
+            - generic: S s S
+        - link "B B B E e E N n N E e E F f F I i I T t T S s S" [ref=e1013] [cursor=pointer]:
+          - /url: "#benefits"
+          - generic [ref=e1014]:
+            - generic: B B B
+            - generic: E e E
+            - generic: N n N
+            - generic: E e E
+            - generic: F f F
+            - generic: I i I
+            - generic: T t T
+            - generic: S s S
+        - link "P P P R r R O o O C c C E e E S s S S s S" [ref=e1015] [cursor=pointer]:
+          - /url: "#steps"
+          - generic [ref=e1016]:
+            - generic: P P P
+            - generic: R r R
+            - generic: O o O
+            - generic: C c C
+            - generic: E e E
+            - generic: S s S
+            - generic: S s S
+      - generic [ref=e1018]:
+        - link "P p P R r R I i I V v V A a A C c C Y y Y P p P O o O L l L I i I C c C Y y Y" [ref=e1019] [cursor=pointer]:
+          - /url: /privacy-policy
+          - generic [ref=e1020]:
+            - generic [ref=e1022]:
+              - generic: P p P
+              - generic: R r R
+              - generic: I i I
+              - generic: V v V
+              - generic: A a A
+              - generic: C c C
+              - generic: Y y Y
+            - generic [ref=e1024]:
+              - generic: P p P
+              - generic: O o O
+              - generic: L l L
+              - generic: I i I
+              - generic: C c C
+              - generic: Y y Y
+        - link "T T T E e E R r R M m M S s S &AMP; & &AMP; C C C O o O N n N D d D I i I T t T I i I O o O N n N S s S" [ref=e1025] [cursor=pointer]:
+          - /url: /terms-conditions
+          - generic [ref=e1026]:
+            - generic [ref=e1028]:
+              - generic: T T T
+              - generic: E e E
+              - generic: R r R
+              - generic: M m M
+              - generic: S s S
+            - generic [ref=e1030]:
+              - generic: "&AMP; & &AMP;"
+            - generic [ref=e1032]:
+              - generic: C C C
+              - generic: O o O
+              - generic: N n N
+              - generic: D d D
+              - generic: I i I
+              - generic: T t T
+              - generic: I i I
+              - generic: O o O
+              - generic: N n N
+              - generic: S s S
+    - generic [ref=e1035]:
+      - generic [ref=e1037]: © 2025, Coinsetters. All rights reserved
+      - generic [ref=e1038]:
+        - link [ref=e1039] [cursor=pointer]:
+          - /url: "#"
+        - link [ref=e1040] [cursor=pointer]:
+          - /url: https://x.com/Coinsetters_io
+        - link [ref=e1041] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/coinsetters-io

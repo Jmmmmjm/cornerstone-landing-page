@@ -54,12 +54,12 @@ export function PlanSection() {
   const [activeTab, setActiveTab] = useState<string | null>('keystone');
   
   return (
-    <section className="relative min-h-screen md:h-screen w-full bg-transparent flex flex-col overflow-hidden select-none border-b border-slate-200 dark:border-[#8892B0]/10 font-sans">
+    <section className="relative min-h-screen md:h-screen w-full bg-transparent flex flex-col overflow-hidden select-none font-sans">
       
-      {/* Right-aligned Architectural Header */}
-      <div className="pt-24 px-6 md:px-12 pb-16 shrink-0 z-20 w-full flex flex-col items-end text-right">
+      {/* Left-aligned Architectural Header */}
+      <div className="pt-24 px-6 md:px-12 pb-16 shrink-0 z-20 w-full flex flex-col items-start text-left">
         <motion.div 
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           className="font-mono text-xs md:text-sm text-teal-600 dark:text-[#64FFDA] tracking-[0.2em] uppercase mb-4"
@@ -70,7 +70,7 @@ export function PlanSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-6xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase w-full text-right"
+          className="text-6xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase w-full text-left"
         >
           PLANS
         </motion.h2>
@@ -177,7 +177,7 @@ export function PlanSection() {
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.5 }}
                       >
-                        <div className="grid grid-cols-1 gap-y-3 md:gap-y-4 pt-6 border-t border-slate-100 dark:border-[#8892B0]/10">
+                        <div className="grid grid-cols-1 gap-y-3 md:gap-y-4 pt-6">
                             {plan.features.map((feature, i) => (
                             <motion.div 
                                 key={feature}
@@ -200,22 +200,7 @@ export function PlanSection() {
 
                 {/* Bottom Visual Anchors */}
                 <div className="flex justify-between items-end relative shrink-0 mt-8">
-                  <motion.div 
-                    animate={{ 
-                        opacity: isExpanded ? 1 : 0.15,
-                        scale: isExpanded ? 1 : 0.95
-                    }}
-                    className="flex flex-col gap-3 mb-2"
-                  >
-                     <span className="text-[9px] font-mono text-[#8892B0] uppercase tracking-widest opacity-50">Stability_Index</span>
-                     <div className="w-32 md:w-40 h-[2px] bg-slate-200 dark:bg-white/5 relative">
-                        <motion.div 
-                          animate={{ width: `${plan.scale}%` }}
-                          transition={{ type: 'spring', stiffness: 50, damping: 20 }}
-                          className="absolute top-0 left-0 h-full bg-teal-500 dark:bg-[#64FFDA] shadow-[0_0_15px_rgba(100,255,218,0.6)]"
-                        />
-                     </div>
-                  </motion.div>
+                  <div /> {/* Empty div to push icon to the right if needed, though absolute positioning handles it */}
 
                   <AnimatePresence>
                     {isExpanded && (
