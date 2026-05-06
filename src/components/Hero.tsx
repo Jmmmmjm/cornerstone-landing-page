@@ -20,10 +20,11 @@ export function Hero() {
   const centeredLogoRef = useRef<HTMLDivElement>(null);
 
   const scatterPositions = useMemo(() => {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
     return ICONS.map((_, i) => {
       const angle = (i / ICONS.length) * Math.PI * 2;
-      const rx = 35 + Math.random() * 15; // vw
-      const ry = 30 + Math.random() * 15; // vh
+      const rx = isMobile ? (25 + Math.random() * 10) : (35 + Math.random() * 15); // Reduced for mobile
+      const ry = isMobile ? (20 + Math.random() * 10) : (30 + Math.random() * 15); // Reduced for mobile
       return {
         x: Math.cos(angle) * rx,
         y: Math.sin(angle) * ry,
@@ -37,8 +38,9 @@ export function Hero() {
   useGSAP(() => {
     if (!containerRef.current) return;
 
-    // Magnetic Repel Logic
+    // Magnetic Repel Logic - Only for Desktop
     const handleMouseMove = (e: MouseEvent) => {
+      if (window.innerWidth < 768) return;
       const { clientX, clientY } = e;
       
       magneticRefs.current.forEach((ref) => {
@@ -49,18 +51,18 @@ export function Hero() {
         const iconY = rect.top + rect.height / 2;
         
         const dist = Math.hypot(clientX - iconX, clientY - iconY);
-        const threshold = 150; // Reduced from 180
+        const threshold = 150; 
         
         if (dist < threshold) {
           const angle = Math.atan2(iconY - clientY, iconX - clientX);
           const force = (threshold - dist) / threshold;
-          const moveX = Math.cos(angle) * force * 35; // Reduced from 60
-          const moveY = Math.sin(angle) * force * 35; // Reduced from 60
+          const moveX = Math.cos(angle) * force * 35;
+          const moveY = Math.sin(angle) * force * 35;
           
           gsap.to(ref, {
             x: moveX,
             y: moveY,
-            duration: 0.8, // Slightly slower for smoothness
+            duration: 0.8,
             ease: "power2.out"
           });
         } else {
@@ -79,8 +81,9 @@ export function Hero() {
     // Idle animation for floating icons
     innerIconsRef.current.forEach((icon, i) => {
       if (!icon) return;
+      const isMobile = window.innerWidth < 768;
       const tween = gsap.to(icon, {
-        y: 15,
+        y: isMobile ? 8 : 15,
         rotation: 10,
         duration: 2 + (i % 3),
         repeat: -1,
@@ -105,7 +108,6 @@ export function Hero() {
             tween.timeScale(Math.max(0, 1 - progress * 2));
           });
           
-          // Disable magnetic effect as icons converge
           if (progress > 0.1) {
             magneticRefs.current.forEach(ref => {
               if (ref) gsap.to(ref, { x: 0, y: 0, duration: 0.3 });
@@ -129,9 +131,10 @@ export function Hero() {
     iconsRef.current.forEach((icon, i) => {
       if (!icon) return;
       const pos = scatterPositions[i];
+      const isMobile = window.innerWidth < 768;
       gsap.set(icon, {
-        x: `${pos.x}vw`,
-        y: `${pos.y}vh`,
+        x: isMobile ? `${pos.x * 1.5}vw` : `${pos.x}vw`,
+        y: isMobile ? `${pos.y * 1.5}vh` : `${pos.y}vh`,
         xPercent: -50,
         yPercent: -50,
         rotation: pos.rotation
@@ -224,7 +227,7 @@ export function Hero() {
       <BreathingGrid />
 
       <div ref={questionRef} className="absolute z-30 text-center px-6">
-        <h2 className="text-[#0A192F]/70 dark:text-[#8892B0] font-display font-light text-2xl md:text-3xl tracking-[0.2em] uppercase max-w-2xl">
+        <h2 className="text-[#0A192F]/70 dark:text-[#8892B0] font-display font-light text-xl md:text-3xl tracking-[0.2em] uppercase max-w-2xl">
           Tired of manual work holding you back?
         </h2>
       </div>
@@ -239,7 +242,7 @@ export function Hero() {
             >
               <div ref={el => { magneticRefs.current[i] = el; }}>
                 <div ref={el => { innerIconsRef.current[i] = el; }}>
-                  <Icon size={32} strokeWidth={1.5} />
+                  <Icon size={24} className="md:w-8 md:h-8" strokeWidth={1.5} />
                 </div>
               </div>
             </div>
@@ -249,24 +252,24 @@ export function Hero() {
 
       <div 
         ref={centeredLogoRef}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[500] w-[140px] h-[140px] md:w-[180px] md:h-[180px] pointer-events-none flex items-center justify-center -mt-[10vh]"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[500] w-[100px] h-[100px] md:w-[180px] md:h-[180px] pointer-events-none flex items-center justify-center -mt-[10vh]"
       >
         <Logo className="absolute w-full h-full text-[#0A192F] dark:text-[#F8F9FA]" />
       </div>
 
-      <div ref={textRef} className="absolute z-50 flex flex-col items-center justify-center text-center opacity-0 top-[65%] left-1/2 -translate-x-1/2">
-        <h1 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-bold text-4xl md:text-6xl lg:text-7xl tracking-[0.15em] uppercase whitespace-nowrap drop-shadow-lg">
-          Save 15 Hours Every Week
+      <div ref={textRef} className="absolute z-50 flex flex-col items-center justify-center text-center opacity-0 top-[65%] left-1/2 -translate-x-1/2 w-full px-4">
+        <h1 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-bold text-3xl md:text-6xl lg:text-7xl tracking-[0.1em] md:tracking-[0.15em] uppercase drop-shadow-lg leading-tight">
+          Save 15 Hours <br className="md:hidden" /> Every Week
         </h1>
-        <p className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-light text-lg md:text-xl lg:text-2xl mt-4 tracking-normal drop-shadow-md">
+        <p className="text-[#0A192F] dark:text-[#8892B0] font-display font-light text-base md:text-xl lg:text-2xl mt-4 tracking-normal drop-shadow-md max-w-md md:max-w-none">
           Automate the work. Accelerate your growth.
         </p>
         
-        <div id="hero-scroll-anchor" className="mt-16 flex flex-col items-center gap-3">
+        <div id="hero-scroll-anchor" className="mt-12 md:mt-16 flex flex-col items-center gap-3">
           <span className="text-[#0A192F]/40 dark:text-[#8892B0]/50 font-sans font-bold tracking-[0.4em] uppercase text-[10px]">
             Scroll
           </span>
-          <div id="hero-scroll-line" className="w-[1px] h-12 bg-gradient-to-b from-teal-500/50 to-transparent relative overflow-hidden">
+          <div id="hero-scroll-line" className="w-[1px] h-10 md:h-12 bg-gradient-to-b from-teal-500/50 to-transparent relative overflow-hidden">
              <div className="absolute top-0 left-0 w-full h-1/2 bg-teal-500 animate-scroll-line" />
           </div>
         </div>

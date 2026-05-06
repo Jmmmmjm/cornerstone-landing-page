@@ -58,31 +58,31 @@ export function PortfolioSection() {
           style={{ opacity: titleOpacity, scale: titleScale }}
           className="absolute inset-0 flex items-center justify-center pointer-events-none px-6 md:px-12 z-0"
         >
-           <div className="flex items-center justify-center gap-6 md:gap-12 lg:gap-20 w-full">
-              <h2 className="text-5xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#F8F9FA] dark:text-[#F8F9FA] tracking-tighter leading-none uppercase">
+           <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-12 lg:gap-20 w-full">
+              <h2 className="text-4xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#F8F9FA] dark:text-[#F8F9FA] tracking-tighter leading-none uppercase">
                  FEATURED
               </h2>
 
               {/* Invisible spacer matching CURATED column width */}
-              <div className="w-[60px] md:w-[100px] lg:w-[140px] shrink-0 invisible" />
+              <div className="hidden md:block w-[60px] md:w-[100px] lg:w-[140px] shrink-0 invisible" />
 
-              <h2 className="text-5xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#F8F9FA] dark:text-[#F8F9FA] tracking-tighter leading-none uppercase">
+              <h2 className="text-4xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#F8F9FA] dark:text-[#F8F9FA] tracking-tighter leading-none uppercase">
                  PROJECTS
               </h2>
            </div>
         </motion.div>
 
-        {/* OUTPUT column - always visible, never fades */}
+        {/* OUTPUT column - hidden or simplified on mobile to save space */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-          <div className="flex flex-col items-center shrink-0">
-            <div className="w-8 md:w-12 lg:w-16 h-5 border-t-[3px] border-x-[3px] border-teal-500/90" />
-            <div className="flex flex-col items-center gap-4 py-8">
+          <div className="flex flex-col items-center shrink-0 opacity-20 md:opacity-100">
+            <div className="w-6 md:w-12 lg:w-16 h-3 md:h-5 border-t-[2px] md:border-t-[3px] border-x-[2px] md:border-x-[3px] border-teal-500/90" />
+            <div className="flex flex-col items-center gap-2 md:gap-4 py-4 md:py-8">
                {['O','U','T','P','U','T'].map((char, i) => (
                   <span 
                     key={i} 
-                    className="text-xl md:text-4xl lg:text-5xl font-display font-black text-teal-500 dark:text-[#64FFDA] leading-none"
+                    className="text-lg md:text-4xl lg:text-5xl font-display font-black text-teal-500 dark:text-[#64FFDA] leading-none"
                     style={{ 
-                      WebkitTextStroke: '1.5px currentColor',
+                      WebkitTextStroke: '1px md:1.5px currentColor',
                       paintOrder: 'stroke fill',
                       strokeLinejoin: 'round'
                     }}
@@ -91,25 +91,25 @@ export function PortfolioSection() {
                   </span>
                ))}
             </div>
-            <div className="w-8 md:w-12 lg:w-16 h-5 border-b-[3px] border-x-[3px] border-teal-500/90" />
+            <div className="w-6 md:w-12 lg:w-16 h-3 md:h-5 border-b-[2px] md:border-b-[3px] border-x-[2px] md:border-x-[3px] border-teal-500/90" />
           </div>
         </div>
 
         {/* MAIN INTERACTIVE LAYER - Projects slide up at FULL opacity */}
         <motion.div 
            style={{ y: projectsY, opacity: projectsOpacity }}
-           className="relative z-10 w-full max-w-[1800px] px-6 md:px-12 lg:px-24 grid grid-cols-[1fr_auto_1fr] items-center gap-8 md:gap-16 lg:gap-32"
+           className="relative z-10 w-full max-w-[1800px] px-6 md:px-12 lg:px-24 flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] items-center gap-12 md:gap-16 lg:gap-32"
         >
            {/* Left Project */}
-           <div className="flex justify-end">
+           <div className="flex justify-center md:justify-end w-full">
               <ProjectCard project={projects[0]} side="left" />
            </div>
 
            {/* Central Spacer (Matches CURATED column width) */}
-           <div className="w-[60px] md:w-[100px] lg:w-[140px] invisible" />
+           <div className="hidden md:block w-[60px] md:w-[100px] lg:w-[140px] invisible" />
 
            {/* Right Project */}
-           <div className="flex justify-start">
+           <div className="flex justify-center md:justify-start w-full">
               <ProjectCard project={projects[1]} side="right" />
            </div>
         </motion.div>
@@ -122,8 +122,8 @@ export function PortfolioSection() {
 
 function ProjectCard({ project, side }: { project: typeof projects[0], side: 'left' | 'right' }) {
   return (
-    <div className={`w-full max-w-[550px] flex flex-col group cursor-pointer ${side === 'right' ? 'translate-y-16' : '-translate-y-16'}`}>
-      <div className="relative aspect-[16/11] overflow-hidden bg-slate-200 dark:bg-[#112240] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] border border-white/5">
+    <div className={`w-full max-w-[400px] md:max-w-[550px] flex flex-col group cursor-pointer ${side === 'right' ? 'md:translate-y-16' : 'md:-translate-y-16'}`}>
+      <div className="relative aspect-[16/11] overflow-hidden bg-slate-200 dark:bg-[#112240] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] md:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] border border-white/5">
          <motion.img 
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}

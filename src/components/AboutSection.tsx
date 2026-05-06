@@ -22,19 +22,19 @@ export function AboutSection() {
     <section className="relative w-full bg-transparent py-24 md:py-32 select-none font-sans overflow-x-clip">
       
       {/* Intro Header */}
-      <div className="px-4 md:px-8 w-full mb-20 md:mb-32">
+      <div className="px-6 md:px-12 w-full mb-16 md:mb-32">
         <Reveal>
           <div className="font-mono text-xs md:text-sm text-teal-600 dark:text-[#64FFDA] tracking-[0.2em] uppercase mb-6">
             Who we are
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="text-5xl md:text-7xl lg:text-[8rem] font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase max-w-5xl">
-            Work <span className="text-teal-600 dark:text-[#64FFDA]">faster.</span> Scale <span className="text-teal-600 dark:text-[#64FFDA]">smarter.</span>
+          <h2 className="text-4xl md:text-7xl lg:text-[8rem] font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase max-w-5xl">
+            Work <span className="text-teal-600 dark:text-[#64FFDA]">faster.</span> <br className="md:hidden" /> Scale <span className="text-teal-600 dark:text-[#64FFDA]">smarter.</span>
           </h2>
         </Reveal>
         <Reveal delay={0.2}>
-          <p className="mt-12 text-xl md:text-3xl text-[#0A192F]/70 dark:text-white/60 max-w-3xl leading-relaxed">
+          <p className="mt-8 md:mt-12 text-lg md:text-3xl text-[#0A192F]/70 dark:text-white/60 max-w-3xl leading-relaxed">
             We help teams save 10+ hours per week by automating workflows and building systems that let you focus on what matters.
           </p>
         </Reveal>

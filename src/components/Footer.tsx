@@ -20,7 +20,7 @@ export function Footer() {
               className="font-display uppercase"
               dominantBaseline="text-before-edge"
               style={{
-                fontSize: '13.5vw',
+                fontSize: typeof window !== 'undefined' && window.innerWidth < 768 ? '16vw' : '13.5vw',
                 letterSpacing: '-0.05em',
                 fontWeight: 900,
                 paintOrder: 'stroke fill'
@@ -57,15 +57,15 @@ export function Footer() {
       </div>
 
       {/* 3. Content Container */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 mt-40 md:mt-56">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 mt-24 md:mt-56">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-16 md:mb-24">
 
           {/* Column 1: Navigation */}
-          <div>
+          <div className="col-span-1">
             <ul className="space-y-3">
               {['Home', 'About Us', 'Architecture', 'Solutions'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-slate-900/80 hover:text-slate-900 transition-colors text-sm font-bold tracking-wide uppercase">
+                  <a href="#" className="text-slate-900/80 hover:text-slate-900 transition-colors text-xs md:text-sm font-bold tracking-wide uppercase">
                     {item}
                   </a>
                 </li>
@@ -74,11 +74,11 @@ export function Footer() {
           </div>
 
           {/* Column 2: Connect */}
-          <div>
+          <div className="col-span-1">
             <ul className="space-y-3">
-              {['LinkedIn', 'Twitter', 'GitHub', 'Documentation'].map((item) => (
+              {['LinkedIn', 'Twitter', 'GitHub', 'Docs'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-slate-900/80 hover:text-slate-900 transition-colors text-sm font-bold tracking-wide uppercase">
+                  <a href="#" className="text-slate-900/80 hover:text-slate-900 transition-colors text-xs md:text-sm font-bold tracking-wide uppercase">
                     {item}
                   </a>
                 </li>
@@ -87,8 +87,8 @@ export function Footer() {
           </div>
 
           {/* Column 3: Telemetry / Status */}
-          <div className="lg:col-span-2 flex flex-col justify-end items-start md:items-end">
-            <div className="text-left md:text-right font-mono text-[10px] text-slate-900/60 space-y-1 font-bold uppercase">
+          <div className="col-span-2 flex flex-col justify-end items-start md:items-end mt-4 md:mt-0">
+            <div className="text-left md:text-right font-mono text-[9px] md:text-[10px] text-slate-900/60 space-y-1 font-bold uppercase">
               <p>System Status: Operational</p>
               <p>Build: v2.4.0-Stable</p>
               <p>Latency: 24ms // Protocol: Secure</p>
@@ -98,10 +98,10 @@ export function Footer() {
 
         {/* 4. Final Legal Row */}
         <div className="pt-8 border-t border-slate-900/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-mono text-[10px] text-slate-900/70 tracking-wider font-bold uppercase">
+          <p className="font-mono text-[9px] md:text-[10px] text-slate-900/70 tracking-wider font-bold uppercase">
             © 2026 Cornerstone Industrial Systems • All Rights Reserved
           </p>
-          <div className="flex gap-8 font-mono text-[10px] uppercase tracking-wider text-slate-900/70 font-bold">
+          <div className="flex gap-8 font-mono text-[9px] md:text-[10px] uppercase tracking-wider text-slate-900/70 font-bold">
             <a href="#" className="hover:text-slate-900 transition-colors">Privacy</a>
             <a href="#" className="hover:text-slate-900 transition-colors">Terms</a>
             <a href="#" className="hover:text-slate-900 transition-colors">Contact</a>

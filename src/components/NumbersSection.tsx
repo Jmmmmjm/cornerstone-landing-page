@@ -85,40 +85,40 @@ export function NumbersSection() {
         </div>
 
         {/* Header - Moved to Top Right as requested */}
-        <div className="pt-20 px-8 lg:px-12 text-right relative z-10">
+        <div className="pt-24 px-6 md:px-12 text-left md:text-right relative z-10">
           <Reveal>
-            <div className="font-mono text-sm text-[#0A192F]/40 tracking-widest uppercase mb-4">
+            <div className="font-mono text-xs md:text-sm text-[#0A192F]/40 tracking-widest uppercase mb-4">
               Numbers that matter
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="text-4xl md:text-5xl lg:text-[4.4vw] font-display font-bold uppercase tracking-tight text-[#0A192F] leading-none ml-auto max-w-2xl">
+            <h2 className="text-3xl md:text-5xl lg:text-[4.4vw] font-display font-bold uppercase tracking-tight text-[#0A192F] leading-[1.1] md:ml-auto max-w-2xl">
               Facts and figures that define us
             </h2>
           </Reveal>
         </div>
 
         {/* Track Container (div-block-22) */}
-        <div className="flex-1 flex items-center px-8 lg:px-12 relative z-10">
+        <div className="flex-1 flex items-center px-6 md:px-12 relative z-10 overflow-hidden">
           <motion.div style={{ x }} className="flex">
             {stats.map((stat, i) => (
               <div 
                 key={i} 
-                className="w-[30vw] min-w-[350px] h-[45vh] bg-transparent p-10 flex flex-col justify-between border-r border-black/10 last:border-r-0"
+                className="w-[85vw] md:w-[30vw] min-w-[280px] md:min-w-[350px] h-[40vh] md:h-[45vh] bg-transparent p-6 md:p-10 flex flex-col justify-between border-r border-black/10 last:border-r-0"
               >
                 <div className="flex flex-col">
                   <div className="flex items-baseline gap-1">
-                    {stat.prefix && <span className="text-4xl md:text-6xl font-display font-bold text-[#0A192F]">{stat.prefix}</span>}
-                    <h2 className="text-7xl md:text-[8vw] font-display font-bold text-[#0A192F] leading-none tracking-tighter">
+                    {stat.prefix && <span className="text-2xl md:text-6xl font-display font-bold text-[#0A192F]">{stat.prefix}</span>}
+                    <h2 className="text-5xl md:text-[8vw] font-display font-bold text-[#0A192F] leading-none tracking-tighter">
                       {stat.value}
                     </h2>
-                    {stat.suffix && <span className="text-4xl md:text-6xl font-display font-bold text-[#0A192F]">{stat.suffix}</span>}
+                    {stat.suffix && <span className="text-2xl md:text-6xl font-display font-bold text-[#0A192F]">{stat.suffix}</span>}
                   </div>
-                  <div className="font-sans text-lg font-bold text-[#0A192F] mt-6 leading-tight">
+                  <div className="font-sans text-base md:text-lg font-bold text-[#0A192F] mt-4 md:mt-6 leading-tight">
                     {stat.label}
                   </div>
                 </div>
-                <p className="text-base text-[#0A192F]/70 leading-relaxed max-w-[280px]">
+                <p className="text-xs md:text-base text-[#0A192F]/70 leading-relaxed max-w-[240px] md:max-w-[280px]">
                   {stat.description}
                 </p>
               </div>

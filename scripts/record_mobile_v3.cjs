@@ -13,9 +13,10 @@ const fs = require('fs');
 
   const context = await browser.newContext({
     ...iPhone12,
+    deviceScaleFactor: 3,
     recordVideo: { 
-      dir: videoDir
-      // Removing explicit size to prevent letterboxing/padding
+      dir: videoDir,
+      size: { width: 390, height: 844 }
     }
   });
   

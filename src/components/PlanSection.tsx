@@ -57,7 +57,7 @@ export function PlanSection() {
     <section className="relative min-h-screen md:h-screen w-full bg-transparent flex flex-col overflow-hidden select-none font-sans">
       
       {/* Left-aligned Architectural Header */}
-      <div className="pt-24 px-6 md:px-12 pb-16 shrink-0 z-20 w-full flex flex-col items-start text-left">
+      <div className="pt-24 px-6 md:px-12 pb-8 md:pb-16 shrink-0 z-20 w-full flex flex-col items-start text-left">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -70,14 +70,14 @@ export function PlanSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-6xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase w-full text-left"
+          className="text-5xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase w-full text-left"
         >
           PLANS
         </motion.h2>
       </div>
 
-      {/* Main Interactive Grid - Switched to column on mobile */}
-      <div className="flex-1 flex flex-col md:flex-row w-full overflow-hidden bg-transparent">
+      {/* Main Interactive Grid */}
+      <div className="flex-1 flex flex-col md:flex-row w-full overflow-y-auto md:overflow-hidden bg-transparent">
         {plans.map((plan, index) => {
           const isExpanded = activeTab === plan.id;
           const Icon = plan.Icon;
@@ -85,60 +85,45 @@ export function PlanSection() {
           return (
             <motion.div
               key={plan.id}
-              onMouseEnter={() => setActiveTab(plan.id)}
-              onClick={() => setActiveTab(plan.id)} // Touch support
+              onMouseEnter={() => window.innerWidth >= 768 && setActiveTab(plan.id)}
+              onClick={() => setActiveTab(plan.id)}
               animate={{ 
                 flex: isExpanded ? 5 : 2.5,
-                // On mobile we expand height instead of width
-                height: typeof window !== 'undefined' && window.innerWidth < 768 
-                  ? (isExpanded ? '450px' : '100px') 
-                  : 'auto',
-                borderTopColor: isExpanded ? 'rgba(0,0,0,0)' : (document.documentElement.classList.contains('dark') ? 'rgba(136, 146, 176, 0.1)' : 'rgba(226, 232, 240, 1)')
+                // Always use auto height on mobile so content is never clipped
+                height: 'auto',
               }}
               transition={{ 
                 type: 'spring',
                 stiffness: 250,
                 damping: 32,
-                restDelta: 0.001
               }}
-              className="relative min-w-[150px] md:min-w-[280px] md:h-full group border-t md:border-r border-slate-200 dark:border-[#8892B0]/10 last:border-r-0 cursor-pointer overflow-hidden will-change-[flex,height]"
-              style={{ flexBasis: 0 }}
+              className="relative min-w-[150px] md:min-w-[280px] md:h-full group border-t border-slate-200 dark:border-[#8892B0]/10 md:border-t-0 md:border-r last:border-r-0 cursor-pointer overflow-hidden will-change-[flex,height]"
             >
-              {/* Material Backdrop - Darken when NOT expanded to make hovered one pop */}
-              <motion.div 
-                animate={{ 
-                    opacity: isExpanded ? 0 : 0.3,
-                }}
-                className="absolute inset-0 pointer-events-none hide-mobile will-change-opacity bg-slate-900/10 dark:bg-black/40" 
-              />
-
               <div className="relative h-full w-full p-6 md:p-12 flex flex-col justify-between overflow-hidden">
                 
-                {/* Content Container - Switched to fluid max-w */}
-                <div className="w-full max-w-2xl relative z-10" style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden' }}>
-                  <div className="mb-4 md:mb-8">
+                <div className="w-full max-w-2xl relative z-10">
+                  <div className="mb-2 md:mb-8">
                     <motion.div 
                       animate={{ 
-                          y: isExpanded ? 0 : 5, 
                           opacity: isExpanded ? 0.6 : 0.2 
                       }}
-                      className="font-mono text-[10px] text-teal-500 dark:text-[#64FFDA] tracking-[0.3em] uppercase"
+                      className="font-mono text-[9px] md:text-[10px] text-teal-500 dark:text-[#64FFDA] tracking-[0.3em] uppercase"
                     >
                       {plan.label} // 0{index + 1}
                     </motion.div>
                   </div>
 
-                  <div className="mb-6 md:mb-10">
-                    <div className="overflow-hidden min-h-[40px] md:min-h-[100px] flex items-end">
+                  <div className="mb-4 md:mb-10">
+                    <div className="overflow-hidden min-h-[30px] md:min-h-[100px] flex items-end">
                         <motion.h3 
                           animate={{ 
-                              scale: isExpanded ? 1 : (typeof window !== 'undefined' && window.innerWidth < 768 ? 0.6 : 0.4),
+                              // On desktop, scale down significantly (0.38) when collapsed to fit within 280px card
+                              scale: isExpanded ? 1 : (typeof window !== 'undefined' && window.innerWidth < 768 ? 0.8 : 0.38),
                               originX: 0,
                               originY: 1,
                               opacity: isExpanded ? 1 : 0.4,
                           }}
-                          transition={{ type: 'spring', stiffness: 200, damping: 25 }}
-                          className="font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] text-3xl md:text-6xl tracking-tighter uppercase leading-none will-change-transform"
+                          className="font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] text-2xl md:text-6xl tracking-tighter uppercase leading-none will-change-transform whitespace-nowrap"
                         >
                           {plan.name}
                         </motion.h3>
@@ -146,68 +131,52 @@ export function PlanSection() {
                     
                     <motion.div 
                       animate={{ 
-                          width: isExpanded ? '8rem' : '1.5rem',
+                          width: isExpanded ? '6rem' : '1.5rem',
                           opacity: isExpanded ? 1 : 0.1,
-                          marginTop: isExpanded ? '1.5rem' : '0.5rem'
+                          marginTop: isExpanded ? '1rem' : '0.25rem'
                       }}
-                      className="h-1.5 bg-teal-500 dark:bg-[#64FFDA] will-change-[width]" 
+                      className="h-1 bg-teal-500 dark:bg-[#64FFDA]" 
                     />
                   </div>
 
-                  {/* Description - Always visible but slightly faded when minimized */}
-                  <div className="mt-4 md:mt-6">
-                    <motion.p 
-                      animate={{ 
-                        opacity: isExpanded ? 1 : 0.5,
-                        scale: isExpanded ? 1 : 0.9,
-                        originX: 0
-                      }}
-                      className="text-[#0A192F]/80 dark:text-[#8892B0] text-sm md:text-lg leading-relaxed max-w-lg font-sans mb-8"
-                    >
+                  {/* Details - Always visible on both Desktop and Mobile */}
+                  <motion.div
+                    animate={{ 
+                      opacity: isExpanded ? 1 : 0.5,
+                    }}
+                    className="overflow-hidden"
+                  >
+                    <p className="text-[#0A192F]/80 dark:text-[#8892B0] text-sm md:text-lg leading-relaxed max-w-lg font-sans mb-6 md:mb-8">
                       {plan.description}
-                    </motion.p>
-                  </div>
+                    </p>
 
-                  {/* Features - Only visible when expanded for focus */}
-                  <AnimatePresence mode="wait">
-                    {isExpanded && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.5 }}
-                      >
-                        <div className="grid grid-cols-1 gap-y-3 md:gap-y-4 pt-6">
-                            {plan.features.map((feature, i) => (
-                            <motion.div 
-                                key={feature}
-                                initial={{ opacity: 0, x: -5 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: 0.1 + (i * 0.04) }}
-                                className="flex items-center gap-3"
-                            >
-                                <div className="w-1 h-1 rounded-full bg-teal-500 shrink-0" />
-                                <span className="text-[10px] md:text-xs text-[#0A192F] dark:text-[#CCD6F6] font-bold uppercase tracking-[0.2em] whitespace-nowrap">
-                                {feature}
-                                </span>
-                            </motion.div>
-                            ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-y-3 md:gap-y-4 pb-8 md:pb-0">
+                        {plan.features.map((feature, i) => (
+                        <motion.div 
+                            key={feature}
+                            animate={{ opacity: isExpanded ? 1 : 0.6 }}
+                            transition={{ delay: 0.1 + (i * 0.04) }}
+                            className="flex items-center gap-3"
+                        >
+                            <div className="w-1 h-1 rounded-full bg-teal-500 shrink-0" />
+                            <span className="text-[9px] md:text-xs text-[#0A192F] dark:text-[#CCD6F6] font-bold uppercase tracking-[0.2em] whitespace-nowrap">
+                            {feature}
+                            </span>
+                        </motion.div>
+                        ))}
+                    </div>
+                  </motion.div>
                 </div>
 
-                {/* Bottom Visual Anchors */}
-                <div className="flex justify-between items-end relative shrink-0 mt-8">
-                  <div /> {/* Empty div to push icon to the right if needed, though absolute positioning handles it */}
-
+                {/* Bottom Visual Anchors - Icon only shown when expanded */}
+                <div className="hidden md:flex justify-between items-end relative shrink-0 mt-8">
+                  <div />
                   <AnimatePresence>
                     {isExpanded && (
                       <motion.div 
-                        initial={{ opacity: 0, scale: 0.5, x: 50 }}
-                        animate={{ opacity: 0.4, scale: 1, x: 0 }}
-                        exit={{ opacity: 0, scale: 0.5, x: 50, transition: { duration: 0.3 } }}
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 0.4, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.5 }}
                         className="absolute bottom-0 right-0 w-48 h-48 md:w-80 md:h-80 pointer-events-none select-none z-0"
                       >
                         <Icon className="w-full h-full" isHovered={isExpanded} />
