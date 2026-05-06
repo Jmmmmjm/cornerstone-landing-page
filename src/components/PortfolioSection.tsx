@@ -12,13 +12,13 @@ const projects = [
     id: 'mindjoin',
     client: 'LIVERPOOL FC',
     type: 'MOBILE APP',
-    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
+    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
   },
   {
     id: 'theunknown',
     client: 'THE NORWEGIAN CAPSULE',
     type: 'RESPONSIVE WEB',
-    img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200',
+    img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
   }
 ];
 
