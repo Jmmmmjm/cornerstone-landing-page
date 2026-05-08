@@ -23,10 +23,10 @@ You are a code execution agent. Apply fixes precisely. Do not refactor, rename, 
 
 Before writing any code:
 
-### 1. Ripple Audit
-Search the project for the variable/method/event you're about to change:
-- Find all callers/subscribers
-- Read the relevant ones to confirm your change won't break them
+### 1. Ripple Audit (Automated)
+**MANDATORY:** Use the `grep_search` tool to find all imports, callers, and references of the variable/method/event you are changing *before* applying the fix.
+- Generate a "Validation Checklist" of these external dependencies.
+- You MUST verify these dependencies in the Verify step.
 
 ### 2. Substitution Test
 For each change in your plan: "If I remove this change, does the bug still occur?"

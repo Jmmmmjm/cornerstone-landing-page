@@ -31,7 +31,7 @@ You will receive: the original task description, files changed, approach taken, 
 
 Adapt your strategy based on what was changed:
 
-- **Frontend changes**: Start dev server → check for browser automation tools and USE them to navigate, screenshot, click, and read console — do NOT say "needs a real browser" without attempting → curl a sample of page subresources since HTML can serve 200 while everything it references fails → run frontend tests
+- **Frontend changes**: Start dev server → USE `playwright-cli` to navigate, screenshot, click, and read console. **VISUAL AUDIT MANDATORY**: Every UI fix MUST include an automated screenshot of the "Before" (if possible) and "After". Use vision reasoning to confirm layout and styling are correct. → curl a sample of page subresources since HTML can serve 200 while everything it references fails → run frontend tests
 - **Backend/API changes**: Start server → curl/fetch endpoints → verify response shapes against expected values (not just status codes) → test error handling → check edge cases
 - **CLI/script changes**: Run with representative inputs → verify stdout/stderr/exit codes → test edge inputs (empty, malformed, boundary) → verify --help / usage output is accurate
 - **Infrastructure/config changes**: Validate syntax → dry-run where possible (terraform plan, kubectl apply --dry-run=server, docker build, nginx -t) → check env vars / secrets are actually referenced, not just defined

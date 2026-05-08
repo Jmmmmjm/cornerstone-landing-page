@@ -1,0 +1,430 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "Junop" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "Junop" [ref=e4]
+    - generic [ref=e6]:
+      - generic "IntroAbout meServicesWorksPlayground" [ref=e7]:
+        - link [ref=e10] [cursor=pointer]:
+          - /url: "#intro"
+          - text: Intro
+        - link [ref=e13] [cursor=pointer]:
+          - /url: "#about-me"
+          - text: About me
+        - link [ref=e16] [cursor=pointer]:
+          - /url: "#services"
+          - text: Services
+        - link [ref=e19] [cursor=pointer]:
+          - /url: "#works"
+          - text: Works
+        - link [ref=e22] [cursor=pointer]:
+          - /url: "#playground"
+          - text: Playground
+      - link "Contact" [ref=e24] [cursor=pointer]:
+        - /url: mailto:hello@dariohowell.com
+  - generic "Dario Howell" [ref=e34]:
+    - generic [ref=e36]: Dario
+    - generic [ref=e38]: Howell
+  - banner [ref=e39]:
+    - generic [ref=e40]:
+      - img "Dario Howell" [ref=e41]
+      - heading "Creative WebDesigner" [level=1] [ref=e42]:
+        - generic [ref=e45]: Creative
+        - generic [ref=e48]: Web
+        - generic [ref=e50]: Designer
+      - paragraph [ref=e51]:
+        - generic [ref=e53]: I’m Dario Howell, a multidisciplinary
+        - generic [ref=e55]: designer creating clear, considered visual
+        - generic [ref=e57]: systems that balance function and
+        - generic [ref=e59]: character.
+  - main [ref=e60]:
+    - generic [ref=e61]:
+      - generic [ref=e62]:
+        - heading "About Me" [level=2] [ref=e63]:
+          - generic [ref=e65]: About
+          - generic [ref=e67]: Me
+        - paragraph [ref=e68]:
+          - generic [ref=e70]: HEY. I’M DARIO HOWELL, A WEB
+          - generic [ref=e72]: DESIGNER BASED IN BERLIN. I
+          - generic [ref=e74]: DESIGN CLEAR, MINIMAL DIGITAL
+          - generic [ref=e76]: EXPERIENCES THAT BALANCE
+          - generic [ref=e78]: FUNCTION, VISUAL CHARACTER,
+          - generic [ref=e80]: AND STRUCTURE. BUILT WITH CARE
+          - generic [ref=e82]: AND RESTRAINT.
+      - generic [ref=e83]:
+        - img "Dario Howell" [ref=e84]
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - generic "12+" [ref=e87]:
+              - generic [ref=e89]: 12+
+            - paragraph [ref=e90]:
+              - generic [ref=e92]: Years of design experience
+          - generic [ref=e93]:
+            - generic "75+" [ref=e94]:
+              - generic [ref=e96]: 75+
+            - paragraph [ref=e97]:
+              - generic [ref=e99]: Projects done successfully
+    - generic [ref=e100]:
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - generic "Services" [ref=e103]:
+            - generic [ref=e104]:
+              - generic [ref=e106]: S
+              - generic [ref=e108]: e
+              - generic [ref=e110]: r
+              - generic [ref=e112]: v
+              - generic [ref=e114]: i
+              - generic [ref=e116]: c
+              - generic [ref=e118]: e
+              - generic [ref=e120]: s
+          - heading "What I Do" [level=2] [ref=e121]:
+            - generic [ref=e123]: What
+            - generic [ref=e125]: I
+            - generic [ref=e127]: Do
+        - generic [ref=e128]:
+          - generic [ref=e130]:
+            - generic [ref=e131]: "01"
+            - heading "Web Design" [level=3] [ref=e132]
+            - generic [ref=e134]:
+              - heading "Web Design" [level=3] [ref=e136]
+              - generic [ref=e137]:
+                - list [ref=e138]:
+                  - listitem [ref=e139]: Social Media
+                  - listitem [ref=e140]: Print Assets
+                - img "Web Design" [ref=e141]
+              - paragraph [ref=e142]: Crafting bold, purposeful visuals that communicate clearly and leave a lasting impression across print and digital touchpoints.
+          - generic [ref=e147]:
+            - generic [ref=e148]: "02"
+            - heading "UI/UX DESIGN" [level=3] [ref=e150]
+            - generic [ref=e151]:
+              - heading "UI/UX DESIGN" [level=3] [ref=e153]
+              - generic [ref=e154]:
+                - list [ref=e155]:
+                  - listitem [ref=e156]: Research
+                  - listitem [ref=e157]: Wireframes
+                  - listitem [ref=e158]: Prototyping
+                  - listitem [ref=e159]: Usability Testing
+                - img "UI/UX Design" [ref=e160]
+              - paragraph [ref=e161]: Designing intuitive, structured interfaces that balance aesthetics and usability to create seamless digital experiences.
+            - generic "button" [ref=e163] [cursor=pointer]
+          - generic [ref=e165]:
+            - generic [ref=e166]: "03"
+            - heading "BRAND IDENTITY" [level=3] [ref=e168]
+            - generic [ref=e169]:
+              - heading "BRAND IDENTITY" [level=3] [ref=e171]
+              - generic [ref=e172]:
+                - list [ref=e173]:
+                  - listitem [ref=e174]: Logo System
+                  - listitem [ref=e175]: Visual Language
+                  - listitem [ref=e176]: Brand Guidelines
+                - img "Brand Identity" [ref=e177]
+              - paragraph [ref=e178]: Building cohesive brand systems that define how a business looks, feels, and communicates across every platform.
+            - generic "button" [ref=e180] [cursor=pointer]
+          - generic [ref=e182]:
+            - generic [ref=e183]: "04"
+            - heading "FRONTEND DEV" [level=3] [ref=e185]
+            - generic [ref=e186]:
+              - heading "FRONTEND DEV" [level=3] [ref=e188]
+              - generic [ref=e189]:
+                - list [ref=e190]:
+                  - listitem [ref=e191]: HTML/CSS/JS
+                  - listitem [ref=e192]: Responsiveness
+                  - listitem [ref=e193]: Interactions
+                  - listitem [ref=e194]: Performance
+                  - listitem [ref=e195]: Deployment
+                - img "Frontend Development" [ref=e196]
+              - paragraph [ref=e197]: Transforming design concepts into fast, scalable, and maintainable digital products with clean, structured code.
+            - generic "button" [ref=e199] [cursor=pointer]
+      - generic [ref=e200]:
+        - generic [ref=e201]:
+          - generic "Testimonial" [ref=e202]:
+            - generic [ref=e203]:
+              - generic [ref=e205]: T
+              - generic [ref=e207]: e
+              - generic [ref=e209]: s
+              - generic [ref=e211]: t
+              - generic [ref=e213]: i
+              - generic [ref=e215]: m
+              - generic [ref=e217]: o
+              - generic [ref=e219]: "n"
+              - generic [ref=e221]: i
+              - generic [ref=e223]: a
+              - generic [ref=e225]: l
+          - heading "Client Words" [level=2] [ref=e226]:
+            - generic [ref=e228]: Client
+            - generic [ref=e230]: Words
+        - img "Client Quotes"
+        - region "carousel" [ref=e232]:
+          - generic [ref=e233]:
+            - group "1 of 4" [ref=e234]:
+              - paragraph [ref=e235]:
+                - generic [ref=e237]: “Dario delivered a website that feels clear, intentional, and
+                - generic [ref=e239]: beautifully structured. The balance between visual
+                - generic [ref=e241]: character and usability was exactly what we needed.”
+              - generic "— Alex Morgan, Creative Director" [ref=e242]:
+                - generic [ref=e244]: —
+                - strong [ref=e245]:
+                  - generic [ref=e247]: Alex
+                  - generic [ref=e249]: Morgan
+                - generic [ref=e251]: ","
+                - generic [ref=e253]: Creative
+                - generic [ref=e255]: Director
+            - group [ref=e256]:
+              - paragraph [ref=e257]: “Dario completely redefined how my brand presents itself online. The site feels effortless, refined, and exactly aligned with the personality I wanted to communicate.”
+              - generic [ref=e258]:
+                - text: —
+                - strong [ref=e259]: Lena Morris
+                - text: ", Brand Strategist"
+            - group [ref=e260]:
+              - paragraph [ref=e261]: “Working with Dario was seamless from start to finish. The attention to typography and layout detail made our website feel both modern and timeless.”
+              - generic [ref=e262]:
+                - text: —
+                - strong [ref=e263]: Marcus Ellery
+                - text: ", Creative Director"
+            - group [ref=e264]:
+              - paragraph [ref=e265]: “The final result exceeded expectations. Dario has a rare ability to balance minimal design with strong visual storytelling.”
+              - generic [ref=e266]:
+                - text: —
+                - strong [ref=e267]: Sofia Alvarez
+                - text: ", Marketing Consultant"
+          - button "previous slide" [ref=e269] [cursor=pointer]:
+            - img "Navigate Slide"
+          - button "next slide" [ref=e270] [cursor=pointer]:
+            - img "Navigate Slide"
+      - generic "Want more proof?Explore my projects" [ref=e276]:
+        - paragraph [ref=e278]:
+          - generic [ref=e280]: Want
+          - generic [ref=e282]: more
+          - generic [ref=e284]: proof?
+          - generic [ref=e286]: Explore
+          - generic [ref=e288]: my
+          - generic [ref=e290]: projects
+    - generic [ref=e293]:
+      - link "Aurora View Project Aurora Modern portfolio website designed to highlight visual identity, smooth interactions, and clear storytelling." [ref=e294] [cursor=pointer]:
+        - /url: https://webflow.com/templates/designers/dhanidev
+        - generic [ref=e295]:
+          - img "Aurora" [ref=e296]
+          - generic [ref=e297]:
+            - img "View Project"
+        - generic [ref=e298]:
+          - heading "Aurora" [level=3] [ref=e299]:
+            - generic [ref=e301]: Aurora
+          - paragraph [ref=e302]:
+            - generic [ref=e304]: Modern portfolio website designed to highlight visual identity, smooth interactions,
+            - generic [ref=e306]: and clear storytelling.
+      - link "Fieldnote View Project Fieldnote Minimal editorial website focused on readability, strong typography, and a refined content layout." [ref=e307] [cursor=pointer]:
+        - /url: https://webflow.com/templates/designers/dhanidev
+        - generic [ref=e308]:
+          - img "Fieldnote" [ref=e309]
+          - generic [ref=e310]:
+            - img "View Project"
+        - generic [ref=e311]:
+          - heading "Fieldnote" [level=3] [ref=e312]:
+            - generic [ref=e314]: Fieldnote
+          - paragraph [ref=e315]:
+            - generic [ref=e317]: Minimal editorial website focused on readability, strong typography, and a refined
+            - generic [ref=e319]: content layout.
+      - link "Aether View Project Aether A monochrome-heavy website for a contemporary architecture studio. Strong grid, oversized typography, restrained imagery." [ref=e320] [cursor=pointer]:
+        - /url: https://webflow.com/templates/designers/dhanidev
+        - generic [ref=e321]:
+          - img "Aether" [ref=e322]
+          - generic [ref=e323]:
+            - img "View Project"
+        - generic [ref=e324]:
+          - heading "Aether" [level=3] [ref=e325]:
+            - generic [ref=e327]: Aether
+          - paragraph [ref=e328]:
+            - generic [ref=e330]: A monochrome-heavy website for a contemporary architecture studio. Strong grid,
+            - generic [ref=e332]: oversized typography, restrained imagery.
+      - link "Nova Finance View Project Nova Finance A clean financial dashboard with bold headings, variable font weight hierarchy, and sharp data visualization." [ref=e333] [cursor=pointer]:
+        - /url: https://webflow.com/templates/designers/dhanidev
+        - generic [ref=e334]:
+          - img "Nova Finance" [ref=e335]
+          - generic [ref=e336]:
+            - img "View Project"
+        - generic [ref=e337]:
+          - heading "Nova Finance" [level=3] [ref=e338]:
+            - generic [ref=e340]: Nova
+            - generic [ref=e342]: Finance
+          - paragraph [ref=e343]:
+            - generic [ref=e345]: A clean financial dashboard with bold headings, variable font weight hierarchy, and
+            - generic [ref=e347]: sharp data visualization.
+      - link "Vintage View Project Vintage Logo system, typography exploration, layout mockups, social identity applications." [ref=e348] [cursor=pointer]:
+        - /url: https://webflow.com/templates/designers/dhanidev
+        - generic [ref=e349]:
+          - img "Vintage" [ref=e350]
+          - generic [ref=e351]:
+            - img "View Project"
+        - generic [ref=e352]:
+          - heading "Vintage" [level=3] [ref=e353]:
+            - generic [ref=e355]: Vintage
+          - paragraph [ref=e356]:
+            - generic [ref=e358]: Logo system, typography exploration, layout mockups, social identity applications.
+      - link "Monoform View Project Monoform A bold typographic landing page with staggered text, dark sections, and animated transitions." [ref=e359] [cursor=pointer]:
+        - /url: https://webflow.com/templates/designers/dhanidev
+        - generic [ref=e360]:
+          - img "Monoform" [ref=e361]
+          - generic [ref=e362]:
+            - img "View Project"
+        - generic [ref=e363]:
+          - heading "Monoform" [level=3] [ref=e364]:
+            - generic [ref=e366]: Monoform
+          - paragraph [ref=e367]:
+            - generic [ref=e369]: A bold typographic landing page with staggered text, dark sections, and animated
+            - generic [ref=e371]: transitions.
+    - generic "I have more,Check out my" [ref=e372]:
+      - paragraph [ref=e374]:
+        - generic [ref=e376]: I
+        - generic [ref=e378]: have
+        - generic [ref=e380]: more,
+        - generic [ref=e382]: Check
+        - generic [ref=e384]: out
+        - generic [ref=e386]: my
+    - generic:
+      - generic "Playground":
+        - paragraph:
+          - generic:
+            - generic:
+              - generic: P
+            - generic:
+              - generic: l
+            - generic:
+              - generic: a
+            - generic:
+              - generic: "y"
+            - generic:
+              - generic: g
+            - generic:
+              - generic: r
+            - generic:
+              - generic: o
+            - generic:
+              - generic: u
+            - generic:
+              - generic: "n"
+            - generic:
+              - generic: d
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: "001"
+              - img "Playground 1"
+              - generic: Signal Study
+        - generic:
+          - generic:
+            - generic:
+              - generic: "002"
+              - img "Playground 2"
+              - generic: Soft Contrast
+        - generic:
+          - generic:
+            - generic:
+              - generic: "003"
+              - img "Playground 3"
+              - generic: Quiet Motion
+        - generic:
+          - generic:
+            - generic:
+              - generic: "004"
+              - img "Playground 4"
+              - generic: Grid Experiments
+        - generic:
+          - generic:
+            - generic:
+              - generic: "005"
+              - img "Playground 5"
+              - generic: Echo Interface
+        - generic:
+          - generic:
+            - generic:
+              - generic: "006"
+              - img "Playground 6"
+              - generic: Offset Rhythm
+        - generic:
+          - generic:
+            - generic:
+              - generic: "007"
+              - img "Playground 7"
+              - generic: Mono Archive
+        - generic:
+          - generic:
+            - generic:
+              - generic: "008"
+              - img "Playground 8"
+              - generic: After Hours Lab
+        - generic:
+          - generic:
+            - generic:
+              - generic: "009"
+              - img "Playground 9"
+              - generic: Form & Friction
+  - contentinfo [ref=e388]:
+    - link "Let’s WorkTogether View Project" [ref=e389] [cursor=pointer]:
+      - /url: "#"
+      - heading "Let’s WorkTogether" [level=2] [ref=e390]:
+        - generic [ref=e391]: Let’s
+        - generic [ref=e392]: Work
+        - generic [ref=e393]: Together
+      - generic [ref=e394]:
+        - img "View Project"
+    - generic "Contact Me" [ref=e395]:
+      - generic [ref=e396]:
+        - generic [ref=e398]: C
+        - generic [ref=e400]: o
+        - generic [ref=e402]: "n"
+        - generic [ref=e404]: t
+        - generic [ref=e406]: a
+        - generic [ref=e408]: c
+        - generic [ref=e410]: t
+      - generic [ref=e411]:
+        - generic [ref=e413]: M
+        - generic [ref=e415]: e
+    - link "name@domain.com" [ref=e416] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=e417]:
+        - generic [ref=e419]: "n"
+        - generic [ref=e421]: a
+        - generic [ref=e423]: m
+        - generic [ref=e425]: e
+        - generic [ref=e427]: "@"
+        - generic [ref=e429]: d
+        - generic [ref=e431]: o
+        - generic [ref=e433]: m
+        - generic [ref=e435]: a
+        - generic [ref=e437]: i
+        - generic [ref=e439]: "n"
+        - generic [ref=e441]: .
+        - generic [ref=e443]: c
+        - generic [ref=e445]: o
+        - generic [ref=e447]: m
+    - generic [ref=e448]:
+      - generic [ref=e449]:
+        - text: Designed by
+        - link "DhaniDev" [ref=e450] [cursor=pointer]:
+          - /url: https://webflow.com/templates/designers/dhanidev
+        - text: . Powered by
+        - link "Webflow" [ref=e451] [cursor=pointer]:
+          - /url: https://webflow.com/
+        - text: .
+      - generic [ref=e452]:
+        - link "Style Guide" [ref=e453] [cursor=pointer]:
+          - /url: /utility/style-guide
+        - link "Licenses" [ref=e454] [cursor=pointer]:
+          - /url: /utility/license
+        - link "Change Log" [ref=e455] [cursor=pointer]:
+          - /url: /utility/change-log
+        - link "Template Guide" [ref=e456] [cursor=pointer]:
+          - /url: /utility/template-guide
+  - generic [ref=e466]:
+    - link "Webflow Buy Template" [ref=e467] [cursor=pointer]:
+      - /url: https://webflow.com/templates/html/junop-website-template
+      - img "Webflow" [ref=e468]
+      - generic [ref=e469]: Buy Template
+    - link "DhaniDev More Templates" [ref=e470] [cursor=pointer]:
+      - /url: https://webflow.com/templates/designers/dhanidev
+      - img "DhaniDev" [ref=e471]
+      - generic [ref=e472]: More Templates
+  - link "Made in Webflow" [ref=e473] [cursor=pointer]:
+    - /url: https://webflow.com?utm_campaign=brandjs
+    - img "Made in Webflow" [ref=e474]

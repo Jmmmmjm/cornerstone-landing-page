@@ -107,9 +107,20 @@ A3: <answer — or [UNCERTAIN — BACK-CHANNEL NEEDED]>
 ...
 ```
 
-### Stage 2D — Refined Root Cause
+### Stage 2D — Gold Master Comparison (Differential Analysis)
 
-Cross-reference your baseline hypothesis against your verification answers. Explicitly state where the baseline was correct, where it was wrong, and synthesize the final root cause. Assign a final confidence score.
+If the bug relates to UI, components, or API logic, find a *working counterpart* in the codebase (e.g., a working button, a working route).
+Compare the broken code against the working reference implementation line-by-line.
+
+```
+[GOLD MASTER COMPARISON]
+Working counterpart found: <file:line>
+Differences identified: <missing dependencies, structural differences, state mismatches>
+```
+
+### Stage 2E — Refined Root Cause
+
+Cross-reference your baseline hypothesis against your verification answers and Gold Master comparison. Explicitly state where the baseline was correct, where it was wrong, and synthesize the final root cause. Assign a final confidence score.
 
 ```
 [REFINED ROOT CAUSE]

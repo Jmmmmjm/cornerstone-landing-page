@@ -48,7 +48,13 @@ async function cloneSite() {
       script.src = window.location.origin + '/src/main.tsx';
       document.body.appendChild(script);
     </script>`;
-    html = html.replace('</body>', viteScript + '\n    </body>');
+    
+    const lastBodyCloseTag = html.toLowerCase().lastIndexOf('</body>');
+    if (lastBodyCloseTag !== -1) {
+      html = html.slice(0, lastBodyCloseTag) + viteScript + html.slice(lastBodyCloseTag);
+    } else {
+      html += viteScript;
+    }
 
     // 5. Add base tag
     const baseTag = `\n    <base href="${url}">`;

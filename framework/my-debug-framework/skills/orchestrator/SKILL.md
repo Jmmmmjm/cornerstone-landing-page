@@ -235,7 +235,8 @@ VERDICT: PASS
 VERDICT: FAIL
 ```
 
-If PASS — output the completion summary and suggest a commit message:
+If PASS — output the completion summary and suggest a commit message. **MANDATORY**: Append a "Bug Post-Mortem" entry (Date | Symptom -> Root Cause -> Preventative Measure) to the `docs/bug-registry.md` file in the repository root. This ensures the entire team can learn from past bugs.
+
 ```
 fix(<scope>): <short description>
 
