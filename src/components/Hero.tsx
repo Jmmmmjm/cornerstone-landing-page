@@ -76,7 +76,9 @@ export function Hero() {
       });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    if (window.innerWidth >= 768) {
+      window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    }
 
     // Idle animation for floating icons
     innerIconsRef.current.forEach((icon, i) => {
@@ -219,7 +221,11 @@ export function Hero() {
     tl.to({}, { duration: 1.5 }, 1.7);
     tl.addLabel("end");
 
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    return () => {
+      if (window.innerWidth >= 768) {
+        window.removeEventListener('mousemove', handleMouseMove, { passive: true } as any);
+      }
+    };
   }, { scope: containerRef });
 
   return (

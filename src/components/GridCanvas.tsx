@@ -25,10 +25,12 @@ export function GridCanvas() {
     window.addEventListener('resize', handleResize);
 
     let animationFrameId: number;
+    let isVisible = false;
 
     const draw = () => {
+      if (!isVisible) return;
+
       const progress = store.progress;
-      ctx.clearRect(0, 0, width, height);
       
       // Grid phase: 0.2 to 0.4
       let gridProgress = 0;
@@ -36,15 +38,18 @@ export function GridCanvas() {
         gridProgress = Math.min(1, (progress - 0.2) / 0.2);
       }
       
+      if (gridProgress <= 0) {
+        ctx.clearRect(0, 0, width, height);
+        animationFrameId = requestAnimationFrame(draw);
+        return;
+      }
+
+      ctx.clearRect(0, 0, width, height);
+
       // Fade out slightly in phase 5
       let baseOpacity = 0.15;
       if (progress >= 0.85) {
         baseOpacity = 0.15 * (1 - ((progress - 0.85) / 0.15) * 0.5); // Fade to half
-      }
-
-      if (gridProgress <= 0) {
-        animationFrameId = requestAnimationFrame(draw);
-        return;
       }
 
       // Breathing pulse
@@ -95,14 +100,32 @@ export function GridCanvas() {
       animationFrameId = requestAnimationFrame(draw);
     };
 
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) {
+          animationFrameId = requestAnimationFrame(draw);
+        } else {
+          cancelAnimationFrame(animationFrameId);
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(canvas);
+
     const unsubscribe = store.subscribe(() => {
-      // We don't need to call draw here anymore since it's in a rAF loop
+      // Re-trigger draw if progress changes and it was potentially idle
+      if (isVisible && store.progress >= 0.2) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = requestAnimationFrame(draw);
+      }
     });
     
     draw();
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      observer.disconnect();
       unsubscribe();
       cancelAnimationFrame(animationFrameId);
     };

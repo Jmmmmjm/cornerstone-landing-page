@@ -76,7 +76,7 @@ export function NumbersSection() {
             timeSpeed={0.12}
             grainAmount={0.05}
             grainScale={2.0}
-            grainAnimated
+            grainAnimated={typeof window !== 'undefined' && !window.matchMedia('(pointer: coarse)').matches}
             warpStrength={0.4}
             warpFrequency={1.8}
             zoom={1.1}

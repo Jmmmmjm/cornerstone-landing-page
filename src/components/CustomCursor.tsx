@@ -2,6 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 export function CustomCursor() {
+  // No hardware cursor on touch devices — skip entirely
+  if (typeof window !== 'undefined' && !window.matchMedia('(pointer: fine)').matches) {
+    return null;
+  }
+
   const tipRef = useRef<HTMLDivElement>(null);
   const midRef = useRef<HTMLDivElement>(null);
   const botRef = useRef<HTMLDivElement>(null);
@@ -28,7 +33,7 @@ export function CustomCursor() {
       mouseY = e.clientY;
     };
 
-    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
 
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
@@ -38,7 +43,7 @@ export function CustomCursor() {
         setIsHovering(false);
       }
     };
-    window.addEventListener('mouseover', handleMouseOver);
+    window.addEventListener('mouseover', handleMouseOver, { passive: true });
 
     let animationFrameId: number;
     const render = () => {

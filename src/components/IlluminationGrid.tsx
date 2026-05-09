@@ -4,6 +4,9 @@ export function IlluminationGrid() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    // This component is CSS-hidden on mobile — skip JS entirely
+    if (window.matchMedia('(max-width: 767px)').matches) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -44,7 +47,7 @@ export function IlluminationGrid() {
       clickRipple = 1;
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     window.addEventListener('mouseleave', handleMouseLeave);
     window.addEventListener('click', handleClick);
 
@@ -129,7 +132,7 @@ export function IlluminationGrid() {
     draw();
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMove, { passive: true } as any);
       window.removeEventListener('mouseleave', handleMouseLeave);
       window.removeEventListener('click', handleClick);
       window.removeEventListener('resize', handleResize);

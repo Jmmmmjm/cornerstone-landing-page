@@ -5,17 +5,15 @@ import { store } from '../store';
 
 function Structure() {
   const groupRef = useRef<THREE.Group>(null);
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const mouseRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMouse({
-        x: (e.clientX / window.innerWidth) * 2 - 1,
-        y: -(e.clientY / window.innerHeight) * 2 + 1
-      });
+      mouseRef.current.x = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseRef.current.y = -(e.clientY / window.innerHeight) * 2 + 1;
     };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    return () => window.removeEventListener('mousemove', handleMouseMove, { passive: true } as any);
   }, []);
 
   // Generate some architectural rectangular forms
@@ -23,18 +21,23 @@ function Structure() {
     const items = [];
     const count = 25;
     for (let i = 0; i < count; i++) {
+      const scale: [number, number, number] = [
+        Math.random() * 8 + 2,
+        Math.random() * 8 + 2,
+        Math.random() * 1 + 0.2
+      ];
+      const geometry = new THREE.BoxGeometry(scale[0], scale[1], scale[2]);
+      const edges = new THREE.EdgesGeometry(geometry);
       items.push({
         position: [
           (Math.random() - 0.5) * 24,
           (Math.random() - 0.5) * 16,
           (Math.random() - 0.5) * 8
         ] as [number, number, number],
-        scale: [
-          Math.random() * 8 + 2,
-          Math.random() * 8 + 2,
-          Math.random() * 1 + 0.2
-        ] as [number, number, number],
-        delay: Math.random() * 0.8 // Delay within the 40-65% phase
+        scale,
+        delay: Math.random() * 0.8, // Delay within the 40-65% phase
+        geometry,
+        edges,
       });
     }
     return items;
@@ -72,8 +75,8 @@ function Structure() {
     }
 
     // Parallax tilt (2-3 degrees max is ~0.05 radians)
-    const targetRotX = mouse.y * 0.05;
-    const targetRotY = mouse.x * 0.05;
+    const targetRotX = mouseRef.current.y * 0.05;
+    const targetRotY = mouseRef.current.x * 0.05;
     
     groupRef.current.rotation.x += (targetRotX - groupRef.current.rotation.x) * 0.1;
     groupRef.current.rotation.y += (targetRotY - groupRef.current.rotation.y) * 0.1;
@@ -106,16 +109,12 @@ function Structure() {
 
   return (
     <group ref={groupRef}>
-      {forms.map((form, i) => {
-        const geometry = new THREE.BoxGeometry(form.scale[0], form.scale[1], form.scale[2]);
-        const edges = new THREE.EdgesGeometry(geometry);
-        return (
-          <group key={i} position={form.position}>
-            <mesh geometry={geometry} material={materials.fill} />
-            <lineSegments geometry={edges} material={materials.outline} />
-          </group>
-        );
-      })}
+      {forms.map((form, i) => (
+        <group key={i} position={form.position}>
+          <mesh geometry={form.geometry} material={materials.fill} />
+          <lineSegments geometry={form.edges} material={materials.outline} />
+        </group>
+      ))}
     </group>
   );
 }

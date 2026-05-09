@@ -164,11 +164,14 @@ const Grainient = ({
   useEffect(() => {
     if (!containerRef.current) return;
 
+    const isMobile = window.matchMedia('(pointer: coarse)').matches;
     const renderer = new Renderer({
       webgl: 2,
       alpha: true,
       antialias: false,
-      dpr: Math.min(window.devicePixelRatio || 1, 2)
+      dpr: isMobile
+        ? Math.min(window.devicePixelRatio || 1, 1)
+        : Math.min(window.devicePixelRatio || 1, 2)
     });
 
     const gl = renderer.gl;

@@ -49,14 +49,23 @@ export function AboutSection() {
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-8">
               {[
-                'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800',
-                'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800',
-                'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800',
-                'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800',
-                'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800'
+                'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500&q=75',
+                'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=75',
+                'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=500&q=75',
+                'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=75',
+                'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=500&q=75'
               ].map((url, index) => (
                 <div key={index} className="w-[300px] md:w-[500px] aspect-[4/3] bg-slate-200 dark:bg-[#112240] overflow-hidden">
-                  <img src={url} alt="Office life" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                  <img
+                    src={url}
+                    alt="Office life"
+                    width={500}
+                    height={375}
+                    loading="lazy"
+                    fetchPriority="low"
+                    decoding="async"
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  />
                 </div>
               ))}
             </div>

@@ -10,8 +10,8 @@ interface IconProps {
   isHovered?: boolean;
 }
 
-const springTransition = { type: 'spring', stiffness: 200, damping: 25 };
-const slowSpring = { type: 'spring', stiffness: 40, damping: 20, mass: 1.5 };
+const springTransition = { type: 'spring', stiffness: 200, damping: 25 } as const;
+const slowSpring = { type: 'spring', stiffness: 40, damping: 20, mass: 1.5 } as const;
 
 /**
  * TIER 1: FOUNDATION (FREE)

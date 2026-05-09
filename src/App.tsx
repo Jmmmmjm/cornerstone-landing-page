@@ -46,23 +46,53 @@ export default function App() {
 
     if (!introDone) return;
 
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    });
+    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+    
+    if (!isTouchDevice) {
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 2,
+      });
 
-    lenis.on('scroll', ScrollTrigger.update);
+      lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
+      const tickerHandler = (time: number) => {
+        lenis.raf(time * 1000);
+      };
+      
+      gsap.ticker.add(tickerHandler);
+      gsap.ticker.lagSmoothing(0);
 
+      gsap.to(scrollbarRef.current, {
+        scaleY: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "html",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true,
+          invalidateOnRefresh: true,
+        }
+      });
+
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 500);
+
+      return () => {
+        lenis.destroy();
+        gsap.ticker.remove(tickerHandler);
+        ScrollTrigger.getAll().forEach(t => t.kill());
+        observer.disconnect();
+      };
+    }
+
+    // Still want scrollbar and refresh on touch
     gsap.to(scrollbarRef.current, {
       scaleY: 1,
       ease: "none",
@@ -80,10 +110,12 @@ export default function App() {
     }, 500);
 
     return () => {
-      lenis.destroy();
       ScrollTrigger.getAll().forEach(t => t.kill());
+      observer.disconnect();
     };
   }, [introDone]);
+
+  const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches;
 
   return (
     <main ref={mainRef} className="bg-transparent text-[#0A192F] dark:text-[#F8F9FA] cursor-none">
@@ -104,7 +136,7 @@ export default function App() {
           timeSpeed={0.12}
           grainAmount={isDark ? 0.08 : 0.03}
           grainScale={2.2}
-          grainAnimated
+          grainAnimated={!isTouchDevice}
           warpStrength={0.4}
           warpFrequency={1.8}
           zoom={1.1}
