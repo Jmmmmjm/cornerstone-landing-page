@@ -20,6 +20,7 @@ import { BookingModal } from './components/BookingModal';
 const AboutSection = lazy(() => import('./components/sections/AboutSection').then(module => ({ default: module.AboutSection })));
 const PortfolioSection = lazy(() => import('./components/sections/PortfolioSection').then(module => ({ default: module.PortfolioSection })));
 const PlanSection = lazy(() => import('./components/sections/PlanSection').then(module => ({ default: module.PlanSection })));
+const ResultsSection = lazy(() => import('./components/sections/ResultsSection').then(module => ({ default: module.ResultsSection })));
 const Section6 = lazy(() => import('./components/sections/Section6').then(module => ({ default: module.Section6 })));
 const Footer = lazy(() => import('./components/layout/Footer').then(module => ({ default: module.Footer })));
 const LogoIntro = lazy(() => import('./components/layout/LogoIntro').then(module => ({ default: module.LogoIntro })));
@@ -125,6 +126,7 @@ export default function App() {
           <div id="pricing">
             <PlanSection />
           </div>
+          <ResultsSection />
           <Section6 onBookClick={() => setIsBookingOpen(true)} />
           <Footer />
         </Suspense>
