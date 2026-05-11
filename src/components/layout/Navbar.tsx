@@ -36,7 +36,6 @@ export function Navbar({ onBookClick }: { onBookClick: () => void }) {
             y: scrolled ? 0 : 10,
             width: scrolled ? 'min(calc(100% - 3rem), 1100px)' : '100%',
             backgroundColor: navBg,
-            padding: scrolled ? '0.75rem 2rem' : '1.5rem 3rem md:px-16',
             boxShadow: scrolled ? '0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 4px 10px -5px rgba(0, 0, 0, 0.02)' : 'none',
           }}
           transition={{
@@ -45,7 +44,7 @@ export function Navbar({ onBookClick }: { onBookClick: () => void }) {
             damping: 24,
             mass: 1.2,
           }}
-          className="pointer-events-auto flex items-center justify-between relative group/nav will-change-transform mx-4 md:mx-0 rounded-none border-none"
+          className={`pointer-events-auto flex items-center justify-between relative group/nav will-change-transform mx-4 md:mx-0 rounded-none border-none transition-all duration-300 ${scrolled ? 'py-3 px-8' : 'py-6 px-6 md:px-16'}`}
         >
           <div className="flex items-center gap-2 relative z-10">
             <motion.div animate={{ color: activeTextColor }} transition={{ duration: 0.4 }}>
