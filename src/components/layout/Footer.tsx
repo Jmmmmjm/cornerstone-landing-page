@@ -76,22 +76,30 @@ export function Footer() {
           {/* Column 2: Connect */}
           <div className="col-span-1">
             <ul className="space-y-3">
-              {['LinkedIn', 'Twitter', 'GitHub', 'Docs'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-slate-900/80 hover:text-slate-900 transition-colors text-xs md:text-sm font-bold tracking-wide uppercase">
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="https://www.tiktok.com/@csmnlofficial" target="_blank" rel="noopener noreferrer" className="text-slate-900/80 hover:text-slate-900 transition-colors text-xs md:text-sm font-bold tracking-wide uppercase">
+                  TikTok
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/csmnlofficial" target="_blank" rel="noopener noreferrer" className="text-slate-900/80 hover:text-slate-900 transition-colors text-xs md:text-sm font-bold tracking-wide uppercase">
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="mailto:csuite@cornerstonemnl.com" className="text-slate-900/80 hover:text-slate-900 transition-colors text-xs md:text-sm font-bold tracking-wide uppercase">
+                  Email Us
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Column 3: Telemetry / Status */}
+          {/* Column 3: Contact Details */}
           <div className="col-span-2 flex flex-col justify-end items-start md:items-end mt-4 md:mt-0">
             <div className="text-left md:text-right font-mono text-[9px] md:text-[10px] text-slate-900/60 space-y-1 font-bold uppercase">
+              <p>@csmnlofficial</p>
+              <p>csuite@cornerstonemnl.com</p>
               <p>System Status: Operational</p>
-              <p>Build: v2.4.0-Stable</p>
-              <p>Latency: 24ms // Protocol: Secure</p>
             </div>
           </div>
         </div>
