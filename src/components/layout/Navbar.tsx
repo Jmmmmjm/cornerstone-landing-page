@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { Logo } from '../ui/Logo';
 
-export function Navbar() {
+export function Navbar({ onBookClick }: { onBookClick: () => void }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -79,7 +79,7 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-2 md:gap-6 relative z-10">
-            <motion.a
+            <motion.button
               initial={false}
               animate={{
                 backgroundColor: activeTextColor,
@@ -88,13 +88,11 @@ export function Navbar() {
               }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href={appointmentLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:flex items-center justify-center min-w-[120px] h-10 border-none font-bold tracking-widest uppercase text-[10px] transition-colors duration-300 rounded-none"
+              onClick={onBookClick}
+              className="hidden sm:flex items-center justify-center min-w-[120px] h-10 border-none font-bold tracking-widest uppercase text-[10px] transition-colors duration-300 rounded-none cursor-none"
             >
               <span>Book a Call</span>
-            </motion.a>
+            </motion.button>
 
             <motion.button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -136,15 +134,15 @@ export function Navbar() {
               transition={{ delay: 0.4 }}
               className="mt-auto pb-12"
             >
-               <a 
-                href={appointmentLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block w-full py-5 bg-[#64FFDA] text-center font-bold tracking-widest uppercase text-xs text-[#0A192F] rounded-none"
+               <button 
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onBookClick();
+                }}
+                className="block w-full py-5 bg-[#64FFDA] text-center font-bold tracking-widest uppercase text-xs text-[#0A192F] rounded-none cursor-none border-none"
                >
                  Book a Call
-               </a>
+               </button>
             </motion.div>
           </motion.div>
         )}

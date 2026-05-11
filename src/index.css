@@ -76,12 +76,23 @@ h1, h2, h3, h4, h5, h6 {
 
 * {
   scrollbar-width: none;
-  cursor: none !important;
 }
 
-a, button, input, [role="button"] {
-  cursor: none !important;
+@media (pointer: fine) {
+  body:not(.modal-open) * {
+    cursor: none !important;
+  }
+  body:not(.modal-open) a, 
+  body:not(.modal-open) button, 
+  body:not(.modal-open) input, 
+  body:not(.modal-open) [role="button"] {
+    cursor: none !important;
+  }
+  body.modal-open * {
+    cursor: auto !important;
+  }
 }
+
 @keyframes scroll-line {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(200%); }
@@ -111,4 +122,13 @@ a, button, input, [role="button"] {
 .bg-gradient-noise > * {
   position: relative;
   z-index: 1;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Disable pointer events for everything except the modal portal when modal is open */
+body.modal-open > *:not(#modal-root) {
+  pointer-events: none !important;
 }

@@ -14,6 +14,7 @@ import { Hero } from './components/sections/Hero';
 import { CustomCursor } from './components/effects/CustomCursor';
 import { IlluminationGrid } from './components/effects/IlluminationGrid';
 import Grainient from './components/effects/Grainient';
+import { BookingModal } from './components/BookingModal';
 
 // Lazy load sections
 const AboutSection = lazy(() => import('./components/sections/AboutSection').then(module => ({ default: module.AboutSection })));
@@ -27,6 +28,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const [introDone, setIntroDone] = useState(false);
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
   const scrollbarRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
 
@@ -111,7 +113,7 @@ export default function App() {
       {introDone && (
         <Suspense fallback={null}>
           <div className="relative z-[1000]">
-            <Navbar />
+            <Navbar onBookClick={() => setIsBookingOpen(true)} />
           </div>
           <Hero />
           <div id="about">
@@ -123,10 +125,12 @@ export default function App() {
           <div id="pricing">
             <PlanSection />
           </div>
-          <Section6 />
+          <Section6 onBookClick={() => setIsBookingOpen(true)} />
           <Footer />
         </Suspense>
       )}
+
+      <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </main>
   );
 }

@@ -5,11 +5,11 @@ import { useGSAP } from '@gsap/react';
 import { ActiveGrid } from '../effects/ActiveGrid';
 import { Reveal } from '../ui/Reveal';
 
-export function Section6() {
+export function Section6({ onBookClick }: { onBookClick: () => void }) {
   const containerRef = useRef<HTMLElement>(null);
   const wordmarkRef = useRef<HTMLDivElement>(null);
   const summaryRefs = useRef<(HTMLSpanElement | null)[]>([]);
-  const ctaRef = useRef<HTMLAnchorElement>(null);
+  const ctaRef = useRef<HTMLButtonElement>(null);
 
   useGSAP(() => {
     if (!containerRef.current) return;
@@ -81,15 +81,14 @@ export function Section6() {
           <span ref={el => { summaryRefs.current[4] = el; }}>Kick-off</span>
         </div>
         
-        <a 
+        <button
           ref={ctaRef}
-          href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2eEOUtyaVnNrgyCwVj_5zBnmIYLxtjY1xfkc8nQA_S3CvSQfvzaGxkmkdVg7A6LZuhULIgg9gC" 
-          target="_blank" 
-          rel="noreferrer"
-          className="bg-[#64FFDA] text-[#0A192F] hover:bg-[#4dffcc] px-8 py-4 text-base font-bold tracking-[0.2em] uppercase transition-all duration-300 rounded-none inline-block shadow-[0_0_20px_rgba(100,255,218,0.3)]"
+          onClick={onBookClick}
+          id="cta-book-discovery-call"
+          className="bg-[#64FFDA] text-[#0A192F] hover:bg-[#4dffcc] px-8 py-4 text-base font-bold tracking-[0.2em] uppercase transition-all duration-300 rounded-none inline-block shadow-[0_0_20px_rgba(100,255,218,0.3)] cursor-none border-none"
         >
           Book your Discovery Call
-        </a>
+        </button>
       </div>
     </section>
   );

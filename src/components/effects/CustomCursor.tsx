@@ -6,12 +6,24 @@ export function CustomCursor() {
   const midRef = useRef<HTMLDivElement>(null);
   const botRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const tip = tipRef.current;
     const mid = midRef.current;
     const bot = botRef.current;
     if (!tip || !mid || !bot) return;
+
+    // Check for modal-open class
+    const checkModal = () => {
+      setIsModalOpen(document.body.classList.contains('modal-open'));
+    };
+
+    // Initial check
+    checkModal();
+
+    const observer = new MutationObserver(checkModal);
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
 
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
@@ -65,11 +77,27 @@ export function CustomCursor() {
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('mouseover', handleMouseOver);
+      observer.disconnect();
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
   useEffect(() => {
+    if (isModalOpen) {
+       gsap.to([botRef.current, midRef.current, tipRef.current], { 
+        opacity: 0,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+      return;
+    }
+
+    gsap.to([botRef.current, midRef.current, tipRef.current], { 
+      opacity: 1,
+      duration: 0.3,
+      ease: "power2.in"
+    });
+
     if (isHovering) {
       gsap.to([botRef.current, midRef.current, tipRef.current], { 
         scale: 1.25, 
@@ -85,13 +113,13 @@ export function CustomCursor() {
         stagger: 0.02
       });
     }
-  }, [isHovering]);
+  }, [isHovering, isModalOpen]);
 
   return (
     <>
       <div 
         ref={botRef} 
-        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[9997] drop-shadow-sm origin-top-left transition-colors duration-300"
+        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[10001] drop-shadow-sm origin-top-left transition-colors duration-300"
       >
          <svg className="w-full h-full" style={{ transform: 'rotate(-75deg)' }} viewBox="0 0 100 100">
            <path 
@@ -107,7 +135,7 @@ export function CustomCursor() {
 
       <div 
         ref={midRef} 
-        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[9998] drop-shadow-sm origin-top-left"
+        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[10002] drop-shadow-sm origin-top-left"
       >
          <svg className="w-full h-full" style={{ transform: 'rotate(-75deg)' }} viewBox="0 0 100 100">
            <path d="M 0 30 H 70 V 100 H 50 V 50 H 0 Z" fill="currentColor" className="text-[#F8F9FA]" />
@@ -116,7 +144,7 @@ export function CustomCursor() {
 
       <div 
         ref={tipRef} 
-        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[9999] drop-shadow-md origin-top-left"
+        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[10003] drop-shadow-md origin-top-left"
       >
          <svg className="w-full h-full" style={{ transform: 'rotate(-75deg)' }} viewBox="0 0 100 100">
            <path d="M 0 0 H 100 V 100 H 80 V 20 H 0 Z" fill="currentColor" className="text-[#F8F9FA]" />
