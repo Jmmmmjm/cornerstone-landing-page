@@ -55,25 +55,25 @@ export function Section6() {
       <ActiveGrid />
       
       <div className="relative z-10 flex flex-col items-center text-center px-6">
-        <div ref={wordmarkRef} className="text-[#0A192F]/70 dark:text-[#8892B0] font-display font-medium tracking-widest uppercase text-2xl md:text-4xl mb-6 flex">
+        <div ref={wordmarkRef} className="text-[#8892B0] font-display font-medium tracking-widest uppercase text-2xl md:text-4xl mb-6 flex">
           {"CORNERSTONE".split('').map((char, i) => (
             <span key={i}>{char}</span>
           ))}
         </div>
         
         <Reveal delay={0.2}>
-          <h2 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-bold text-4xl md:text-6xl lg:text-7xl tracking-[0.15em] uppercase whitespace-nowrap drop-shadow-lg mb-6">
+          <h2 className="text-[#F8F9FA] font-display font-bold text-4xl md:text-6xl lg:text-7xl tracking-[0.15em] uppercase whitespace-nowrap drop-shadow-lg mb-6">
             Scale On Stability
           </h2>
         </Reveal>
         
         <Reveal delay={0.3}>
-          <p className="text-[#0A192F]/70 dark:text-[#8892B0] font-display font-light text-xl md:text-2xl mb-16">
+          <p className="text-[#8892B0] font-display font-light text-xl md:text-2xl mb-16">
             Built for industries that can't afford to fail.
           </p>
         </Reveal>
         
-        <div className="flex items-center gap-4 text-[#0A192F]/70 dark:text-[#8892B0] font-sans text-sm tracking-widest uppercase mb-12">
+        <div className="flex items-center gap-4 text-[#8892B0] font-sans text-sm tracking-widest uppercase mb-12">
           <span ref={el => { summaryRefs.current[0] = el; }}>Discovery Call</span>
           <span ref={el => { summaryRefs.current[1] = el; }}>&rarr;</span>
           <span ref={el => { summaryRefs.current[2] = el; }}>Draft Solution</span>
@@ -86,7 +86,7 @@ export function Section6() {
           href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2eEOUtyaVnNrgyCwVj_5zBnmIYLxtjY1xfkc8nQA_S3CvSQfvzaGxkmkdVg7A6LZuhULIgg9gC" 
           target="_blank" 
           rel="noreferrer"
-          className="bg-teal-500 dark:bg-[#64FFDA] text-white dark:text-[#0A192F] hover:bg-teal-600 dark:hover:bg-[#4dffcc] px-8 py-4 text-base font-bold tracking-[0.2em] uppercase transition-all duration-300 rounded-none inline-block shadow-[0_0_20px_rgba(20,184,166,0.3)] dark:shadow-[0_0_20px_rgba(100,255,218,0.3)]"
+          className="bg-[#64FFDA] text-[#0A192F] hover:bg-[#4dffcc] px-8 py-4 text-base font-bold tracking-[0.2em] uppercase transition-all duration-300 rounded-none inline-block shadow-[0_0_20px_rgba(100,255,218,0.3)]"
         >
           Book your Discovery Call
         </a>

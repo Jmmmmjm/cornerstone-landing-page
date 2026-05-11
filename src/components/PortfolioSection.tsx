@@ -59,14 +59,14 @@ export function PortfolioSection() {
           className="absolute inset-0 flex items-center justify-center pointer-events-none px-6 md:px-12 z-0"
         >
            <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-12 lg:gap-20 w-full">
-              <h2 className="text-4xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#F8F9FA] dark:text-[#F8F9FA] tracking-tighter leading-none uppercase">
+              <h2 className="text-4xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#F8F9FA] tracking-tighter leading-none uppercase">
                  FEATURED
               </h2>
 
               {/* Invisible spacer matching CURATED column width */}
               <div className="hidden md:block w-[60px] md:w-[100px] lg:w-[140px] shrink-0 invisible" />
 
-              <h2 className="text-4xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#F8F9FA] dark:text-[#F8F9FA] tracking-tighter leading-none uppercase">
+              <h2 className="text-4xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#F8F9FA] tracking-tighter leading-none uppercase">
                  PROJECTS
               </h2>
            </div>
@@ -80,7 +80,7 @@ export function PortfolioSection() {
                {['O','U','T','P','U','T'].map((char, i) => (
                   <span 
                     key={i} 
-                    className="text-lg md:text-4xl lg:text-5xl font-display font-black text-teal-500 dark:text-[#64FFDA] leading-none"
+                    className="text-lg md:text-4xl lg:text-5xl font-display font-black text-[#64FFDA] leading-none"
                     style={{ 
                       WebkitTextStroke: '1px md:1.5px currentColor',
                       paintOrder: 'stroke fill',
@@ -123,7 +123,7 @@ export function PortfolioSection() {
 function ProjectCard({ project, side }: { project: typeof projects[0], side: 'left' | 'right' }) {
   return (
     <div className={`w-full max-w-[400px] md:max-w-[550px] flex flex-col group cursor-pointer ${side === 'right' ? 'md:translate-y-16' : 'md:-translate-y-16'}`}>
-      <div className="relative aspect-[16/11] overflow-hidden bg-slate-200 dark:bg-[#112240] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] md:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] border border-white/5">
+      <div className="relative aspect-[16/11] overflow-hidden bg-[#112240] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] md:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] border border-white/5">
          <motion.img 
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -137,7 +137,7 @@ function ProjectCard({ project, side }: { project: typeof projects[0], side: 'le
          <span className="font-mono text-[9px] md:text-[10px] tracking-widest text-[#F8F9FA]/40 uppercase mb-1">
             {project.client}
          </span>
-         <h3 className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] font-bold text-teal-500 dark:text-[#64FFDA] uppercase">
+         <h3 className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] font-bold text-[#64FFDA] uppercase">
             {project.type}
          </h3>
       </div>

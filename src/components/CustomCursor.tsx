@@ -98,8 +98,8 @@ export function CustomCursor() {
             d="M 0 60 H 40 V 100 Z" 
             fill="currentColor" 
             className={isHovering 
-              ? "text-teal-500 dark:text-[#64FFDA]" 
-              : "text-slate-400 dark:text-[#8892B0]"
+              ? "text-[#64FFDA]" 
+              : "text-[#8892B0]"
             } 
            />
          </svg>
@@ -110,7 +110,7 @@ export function CustomCursor() {
         className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[9998] drop-shadow-sm origin-top-left"
       >
          <svg className="w-full h-full" style={{ transform: 'rotate(-75deg)' }} viewBox="0 0 100 100">
-           <path d="M 0 30 H 70 V 100 H 50 V 50 H 0 Z" fill="currentColor" className="text-[#0A192F] dark:text-[#F8F9FA]" />
+           <path d="M 0 30 H 70 V 100 H 50 V 50 H 0 Z" fill="currentColor" className="text-[#F8F9FA]" />
          </svg>
       </div>
 
@@ -119,7 +119,7 @@ export function CustomCursor() {
         className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[9999] drop-shadow-md origin-top-left"
       >
          <svg className="w-full h-full" style={{ transform: 'rotate(-75deg)' }} viewBox="0 0 100 100">
-           <path d="M 0 0 H 100 V 100 H 80 V 20 H 0 Z" fill="currentColor" className="text-[#0A192F] dark:text-[#F8F9FA]" />
+           <path d="M 0 0 H 100 V 100 H 80 V 20 H 0 Z" fill="currentColor" className="text-[#F8F9FA]" />
          </svg>
       </div>
     </>

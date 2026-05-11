@@ -7,12 +7,7 @@
     <link rel="preload" href="/fonts/Proxima-Nova-Regular.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/fonts/Proxima-Nova-Bold.woff" as="font" type="font/woff" crossorigin>
     <script>
-      const storedTheme = localStorage.getItem('theme');
-      if (storedTheme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
+      document.documentElement.classList.add('dark');
     </script>
   </head>
   <body>

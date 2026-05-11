@@ -78,7 +78,7 @@ export function HorizontalScrollSection() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative w-full h-screen bg-[#F8F9FA] dark:bg-[#0A192F] overflow-hidden">
+    <section ref={containerRef} className="relative w-full h-screen bg-gradient-noise overflow-hidden">
       <div className="relative z-10 h-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-12 md:gap-20">
         
         {/* Left Side: Text Content */}
@@ -90,19 +90,19 @@ export function HorizontalScrollSection() {
                 className={`step-text-${i} absolute inset-0 flex flex-col justify-center transition-opacity duration-300 ${activeIndex === i ? 'pointer-events-auto' : 'pointer-events-none opacity-0'}`}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 bg-teal-500/10 dark:bg-[#64FFDA]/10 flex items-center justify-center border border-teal-500/20 dark:border-[#64FFDA]/20">
-                    <step.Icon size={20} className="text-teal-600 dark:text-[#64FFDA]" />
+                  <div className="w-10 h-10 bg-[#64FFDA]/10 flex items-center justify-center border border-[#64FFDA]/20">
+                    <step.Icon size={20} className="text-[#64FFDA]" />
                   </div>
-                  <span className="text-teal-600 dark:text-[#64FFDA] font-sans text-[10px] font-bold tracking-[0.3em] uppercase">
+                  <span className="text-[#64FFDA] font-sans text-[10px] font-bold tracking-[0.3em] uppercase">
                     {step.subtitle}
                   </span>
                 </div>
                 
-                <h2 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-bold text-3xl md:text-5xl tracking-tight mb-6">
+                <h2 className="text-[#F8F9FA] font-display font-bold text-3xl md:text-5xl tracking-tight mb-6">
                   {step.title}
                 </h2>
                 
-                <p className="text-[#0A192F]/70 dark:text-[#8892B0] text-lg leading-relaxed mb-8 max-w-md">
+                <p className="text-[#8892B0] text-lg leading-relaxed mb-8 max-w-md">
                   {step.description}
                 </p>
 
@@ -111,7 +111,7 @@ export function HorizontalScrollSection() {
                     {STEPS.map((_, dotIndex) => (
                       <div 
                         key={dotIndex}
-                        className={`h-1 transition-all duration-300 ${activeIndex === dotIndex ? 'w-8 bg-teal-500 dark:bg-[#64FFDA]' : 'w-2 bg-slate-300 dark:bg-[#8892B0]/20'}`}
+                        className={`h-1 transition-all duration-300 ${activeIndex === dotIndex ? 'w-8 bg-[#64FFDA]' : 'w-2 bg-[#8892B0]/20'}`}
                       />
                     ))}
                   </div>
@@ -124,8 +124,8 @@ export function HorizontalScrollSection() {
         {/* Right Side: Pinned Window */}
         <div className="w-full md:w-1/2 flex items-center justify-center">
           <div className="w-full max-w-2xl relative aspect-[16/10]">
-             <WindowUI className="w-full h-full shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] dark:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)] border border-slate-300 dark:border-[#8892B0]/20">
-               <div className="relative w-full h-full bg-slate-100 dark:bg-[#0D1B2A] overflow-hidden">
+             <WindowUI className="w-full h-full shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)] border border-[#8892B0]/20">
+               <div className="relative w-full h-full bg-[#0D1B2A] overflow-hidden">
                  {STEPS.map((step, i) => (
                    <img 
                     key={i}
@@ -134,7 +134,7 @@ export function HorizontalScrollSection() {
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${activeIndex === i ? 'opacity-100' : 'opacity-0'}`}
                    />
                  ))}
-                 <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent dark:from-[#0A192F]/20" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/20 via-transparent to-transparent" />
                </div>
              </WindowUI>
           </div>

@@ -25,7 +25,7 @@ export function SystemMapUI() {
   }, []);
 
   return (
-    <div className="w-full max-w-md bg-slate-50 dark:bg-[#112240] rounded-none border border-slate-300 dark:border-[#8892B0]/20 p-6 h-[300px] flex items-center justify-center">
+    <div className="w-full max-w-md bg-[#112240] rounded-none border border-[#8892B0]/20 p-6 h-[300px] flex items-center justify-center">
       <svg ref={svgRef} viewBox="0 0 400 300" className="w-full h-full">
         {/* Lines */}
         <path className="line" d="M 100 150 L 200 150" stroke="#64FFDA" strokeWidth="2" fill="none" />
@@ -33,10 +33,10 @@ export function SystemMapUI() {
         <path className="line" d="M 200 150 L 300 200" stroke="#64FFDA" strokeWidth="2" fill="none" />
         
         {/* Nodes */}
-        <circle className="node dark:fill-[#0A192F]" cx="100" cy="150" r="20" fill="white" stroke="#8892B0" strokeWidth="2" />
-        <circle className="node dark:fill-[#0A192F]" cx="200" cy="150" r="24" fill="white" stroke="#64FFDA" strokeWidth="2" />
-        <circle className="node dark:fill-[#0A192F]" cx="300" cy="100" r="20" fill="white" stroke="#8892B0" strokeWidth="2" />
-        <circle className="node dark:fill-[#0A192F]" cx="300" cy="200" r="20" fill="white" stroke="#8892B0" strokeWidth="2" />
+        <circle className="node" cx="100" cy="150" r="20" fill="#0A192F" stroke="#8892B0" strokeWidth="2" />
+        <circle className="node" cx="200" cy="150" r="24" fill="#0A192F" stroke="#64FFDA" strokeWidth="2" />
+        <circle className="node" cx="300" cy="100" r="20" fill="#0A192F" stroke="#8892B0" strokeWidth="2" />
+        <circle className="node" cx="300" cy="200" r="20" fill="#0A192F" stroke="#8892B0" strokeWidth="2" />
 
         {/* Labels */}
         <text className="node" x="100" y="190" fill="#8892B0" fontSize="10" textAnchor="middle">Legacy ERP</text>

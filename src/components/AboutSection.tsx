@@ -24,24 +24,24 @@ export function AboutSection() {
       {/* Intro Header */}
       <div className="px-6 md:px-12 w-full mb-16 md:mb-32">
         <Reveal>
-          <div className="font-mono text-xs md:text-sm text-teal-600 dark:text-[#64FFDA] tracking-[0.2em] uppercase mb-6">
+          <div className="font-mono text-xs md:text-sm text-[#64FFDA] tracking-[0.2em] uppercase mb-6">
             Who we are
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="text-4xl md:text-7xl lg:text-[8rem] font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase max-w-5xl">
-            Work <span className="text-teal-600 dark:text-[#64FFDA]">faster.</span> <br className="md:hidden" /> Scale <span className="text-teal-600 dark:text-[#64FFDA]">smarter.</span>
+          <h2 className="text-4xl md:text-7xl lg:text-[8rem] font-display font-bold text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase max-w-5xl">
+            Work <span className="text-[#64FFDA]">faster.</span> <br className="md:hidden" /> Scale <span className="text-[#64FFDA]">smarter.</span>
           </h2>
         </Reveal>
         <Reveal delay={0.2}>
-          <p className="mt-8 md:mt-12 text-lg md:text-3xl text-[#0A192F]/70 dark:text-white/60 max-w-3xl leading-relaxed">
+          <p className="mt-8 md:mt-12 text-lg md:text-3xl text-white/60 max-w-3xl leading-relaxed">
             We help teams save 10+ hours per week by automating workflows and building systems that let you focus on what matters.
           </p>
         </Reveal>
       </div>
 
       {/* Team Image Marquee - Parallax effect */}
-      <div ref={marqueeRef} className="relative w-full mb-32 overflow-hidden border-y border-slate-200 dark:border-white/10 py-12">
+      <div ref={marqueeRef} className="relative w-full mb-32 overflow-hidden border-y border-white/10 py-12">
         <motion.div 
           style={{ x: xMarquee }}
           className="flex gap-8 whitespace-nowrap"
@@ -55,7 +55,7 @@ export function AboutSection() {
                 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800',
                 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800'
               ].map((url, index) => (
-                <div key={index} className="w-[300px] md:w-[500px] aspect-[4/3] bg-slate-200 dark:bg-[#112240] overflow-hidden">
+                <div key={index} className="w-[300px] md:w-[500px] aspect-[4/3] bg-[#112240] overflow-hidden">
                   <img src={url} alt="Office life" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
                 </div>
               ))}

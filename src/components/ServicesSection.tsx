@@ -54,12 +54,12 @@ export function ServicesSection() {
         {/* Right Column - Fixed Header */}
         <div className="w-full lg:w-1/2 h-auto lg:h-full flex flex-col justify-center pt-24 lg:pt-0 px-6 lg:px-12 z-10 text-left lg:text-right bg-transparent shrink-0">
           <Reveal>
-            <div className="font-mono text-xs md:text-sm text-black/40 dark:text-[#F8F9FA]/40 tracking-widest uppercase mb-4">
+            <div className="font-mono text-xs md:text-sm text-[#F8F9FA]/40 tracking-widest uppercase mb-4">
               Our Core Expertise
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <h3 className="text-3xl md:text-5xl lg:text-[4.4vw] font-display font-bold uppercase tracking-tight text-[#0A192F] dark:text-[#F8F9FA] leading-[1.1] lg:ml-auto max-w-2xl">
+            <h3 className="text-3xl md:text-5xl lg:text-[4.4vw] font-display font-bold uppercase tracking-tight text-[#F8F9FA] leading-[1.1] lg:ml-auto max-w-2xl">
               Customer-centric services focused on exceptional client experience
             </h3>
           </Reveal>
@@ -74,13 +74,13 @@ export function ServicesSection() {
             {services.map((service, i) => (
               <div key={i} className="flex flex-col w-full">
                 {i > 0 && (
-                  <div className="w-full h-px bg-black/10 dark:bg-[#F8F9FA]/10 mb-8 md:mb-12" />
+                  <div className="w-full h-px bg-[#F8F9FA]/10 mb-8 md:mb-12" />
                 )}
                 <div className="bg-transparent min-h-[400px] md:min-h-[480px] flex flex-col justify-between group">
                   <div className="flex flex-col">
                     <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-6 md:mb-8">
-                       <span className="font-display text-xl md:text-2xl font-bold text-teal-600 dark:text-[#64FFDA]">{service.number}</span>
-                       <h4 className="text-xl md:text-3xl font-display font-bold uppercase text-[#0A192F] dark:text-[#F8F9FA]">
+                       <span className="font-display text-xl md:text-2xl font-bold text-[#64FFDA]">{service.number}</span>
+                       <h4 className="text-xl md:text-3xl font-display font-bold uppercase text-[#F8F9FA]">
                          {service.title}
                        </h4>
                     </div>
@@ -92,7 +92,7 @@ export function ServicesSection() {
                     </div>
                   </div>
 
-                  <p className="text-sm md:text-base text-[#0A192F]/70 dark:text-[#F8F9FA]/60 leading-relaxed font-sans">
+                  <p className="text-sm md:text-base text-[#F8F9FA]/60 leading-relaxed font-sans">
                     {service.description}
                   </p>
                 </div>

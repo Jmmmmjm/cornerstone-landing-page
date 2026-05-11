@@ -1,43 +1,19 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Sun, Moon, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Logo } from './Logo';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme === 'light') {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');
-    } else {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    }
-
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleTheme = () => {
-    setIsDark(prev => {
-      const newDark = !prev;
-      if (newDark) {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-      return newDark;
-    });
-  };
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -47,11 +23,8 @@ export function Navbar() {
 
   const appointmentLink = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2eEOUtyaVnNrgyCwVj_5zBnmIYLxtjY1xfkc8nQA_S3CvSQfvzaGxkmkdVg7A6LZuhULIgg9gC";
 
-  // Dynamic colors based on scroll and theme
-  const activeTextColor = scrolled 
-    ? '#0A192F' 
-    : (isDark ? '#F8F9FA' : '#0A192F');
-  
+  // Dynamic colors based on scroll only (dark mode only)
+  const activeTextColor = scrolled ? '#0A192F' : '#F8F9FA';
   const navBg = scrolled ? '#FFFFFF' : 'rgba(255, 255, 255, 0)';
 
   return (
@@ -106,20 +79,11 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-2 md:gap-6 relative z-10">
-            <motion.button 
-              onClick={toggleTheme}
-              animate={{ color: activeTextColor }}
-              className="transition-colors p-2 opacity-70 hover:opacity-100"
-              aria-label="Toggle Theme"
-            >
-              {isDark ? <Moon size={18} /> : <Sun size={18} />}
-            </motion.button>
-            
             <motion.a
               initial={false}
               animate={{
                 backgroundColor: activeTextColor,
-                color: scrolled ? '#FFFFFF' : (isDark ? '#0A192F' : '#FFFFFF'),
+                color: scrolled ? '#FFFFFF' : '#0A192F',
                 padding: scrolled ? '0.5rem 1rem' : '0.5rem 1.25rem',
               }}
               whileHover={{ scale: 1.02 }}
@@ -150,7 +114,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-[1000] bg-white pt-32 px-8 flex flex-col gap-8 md:hidden"
+            className="fixed inset-0 z-[1000] bg-[#0A192F] pt-32 px-8 flex flex-col gap-8 md:hidden"
           >
             {navLinks.map((item, i) => (
               <motion.a
@@ -160,7 +124,7 @@ export function Navbar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-4xl font-display font-bold text-[#0A192F] tracking-tighter uppercase border-b border-slate-100 pb-4"
+                className="text-4xl font-display font-bold text-[#F8F9FA] tracking-tighter uppercase border-b border-[#8892B0]/10 pb-4"
               >
                 {item.name}
               </motion.a>
@@ -177,7 +141,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block w-full py-5 bg-[#0A192F] text-center font-bold tracking-widest uppercase text-xs text-white rounded-none"
+                className="block w-full py-5 bg-[#64FFDA] text-center font-bold tracking-widest uppercase text-xs text-[#0A192F] rounded-none"
                >
                  Book a Call
                </a>

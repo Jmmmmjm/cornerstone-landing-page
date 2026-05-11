@@ -31,18 +31,18 @@ export function WindowUI({ className = "", style = {}, partial = false, buildAni
   }, { scope: containerRef, dependencies: [buildAnimation] });
 
   return (
-    <div ref={containerRef} style={style} className={`flex flex-col bg-[#F8F9FA] dark:bg-[#0A192F] border border-slate-300 dark:border-[#8892B0]/30 rounded-none overflow-hidden shadow-2xl ${className}`}>
+    <div ref={containerRef} style={style} className={`flex flex-col bg-[#0A192F] border border-[#8892B0]/30 rounded-none overflow-hidden shadow-2xl ${className}`}>
       {/* Title bar */}
-      <div ref={titleBarRef} className="h-10 bg-slate-50 dark:bg-[#112240] flex items-center px-4 gap-2 border-b border-slate-300 dark:border-[#8892B0]/20">
+      <div ref={titleBarRef} className="h-10 bg-[#112240] flex items-center px-4 gap-2 border-b border-[#8892B0]/20">
         <div className="w-3 h-3 rounded-none bg-[#FF5F56]"></div>
         <div className="w-3 h-3 rounded-none bg-[#FFBD2E]"></div>
         <div className="w-3 h-3 rounded-none bg-[#27C93F]"></div>
       </div>
       {/* Content */}
       {children || (
-      <div className="flex-1 flex p-6 gap-6 bg-[#F8F9FA] dark:bg-[#0A192F]">
+      <div className="flex-1 flex p-6 gap-6 bg-[#0A192F]">
         {/* Sidebar */}
-        <div ref={sidebarRef} className="w-48 flex flex-col gap-4 border-r border-slate-300 dark:border-[#8892B0]/10 pr-6">
+        <div ref={sidebarRef} className="w-48 flex flex-col gap-4 border-r border-[#8892B0]/10 pr-6">
           <div className="h-6 bg-[#8892B0]/20 rounded-none w-3/4 mb-4"></div>
           <div className="h-4 bg-[#8892B0]/10 rounded-none w-full"></div>
           <div className="h-4 bg-[#8892B0]/10 rounded-none w-5/6"></div>
@@ -51,11 +51,11 @@ export function WindowUI({ className = "", style = {}, partial = false, buildAni
         </div>
         {/* Main */}
         <div ref={mainRef} className="flex-1 flex flex-col gap-6">
-          <div ref={el => { contentRefs.current[0] = el; }} className={`h-32 rounded-none border flex items-center justify-center transition-all duration-1000 ${partial ? 'bg-transparent border-dashed border-slate-300 dark:border-[#8892B0]/30' : 'bg-slate-50 dark:bg-[#112240] border-slate-300 dark:border-[#8892B0]/20'}`}>
-            {!partial && <div className="w-16 h-16 rounded-none border-4 border-slate-300 dark:border-[#8892B0]/30 border-t-[#64FFDA]"></div>}
+          <div ref={el => { contentRefs.current[0] = el; }} className={`h-32 rounded-none border flex items-center justify-center transition-all duration-1000 ${partial ? 'bg-transparent border-dashed border-[#8892B0]/30' : 'bg-[#112240] border-[#8892B0]/20'}`}>
+            {!partial && <div className="w-16 h-16 rounded-none border-4 border-[#8892B0]/30 border-t-[#64FFDA]"></div>}
           </div>
           <div className="flex gap-6 flex-1">
-            <div ref={el => { contentRefs.current[1] = el; }} className={`flex-1 rounded-none border p-4 flex flex-col gap-3 transition-all duration-1000 ${partial ? 'bg-transparent border-dashed border-slate-300 dark:border-[#8892B0]/30' : 'bg-slate-50 dark:bg-[#112240] border-slate-300 dark:border-[#8892B0]/20'}`}>
+            <div ref={el => { contentRefs.current[1] = el; }} className={`flex-1 rounded-none border p-4 flex flex-col gap-3 transition-all duration-1000 ${partial ? 'bg-transparent border-dashed border-[#8892B0]/30' : 'bg-[#112240] border-[#8892B0]/20'}`}>
                {!partial && (
                  <>
                    <div className="h-4 bg-[#8892B0]/20 rounded-none w-1/2"></div>
@@ -63,7 +63,7 @@ export function WindowUI({ className = "", style = {}, partial = false, buildAni
                  </>
                )}
             </div>
-            <div ref={el => { contentRefs.current[2] = el; }} className={`flex-1 rounded-none border p-4 flex flex-col gap-3 transition-all duration-1000 ${partial ? 'bg-transparent border-dashed border-slate-300 dark:border-[#8892B0]/30' : 'bg-slate-50 dark:bg-[#112240] border-slate-300 dark:border-[#8892B0]/20'}`}>
+            <div ref={el => { contentRefs.current[2] = el; }} className={`flex-1 rounded-none border p-4 flex flex-col gap-3 transition-all duration-1000 ${partial ? 'bg-transparent border-dashed border-[#8892B0]/30' : 'bg-[#112240] border-[#8892B0]/20'}`}>
                {!partial && (
                  <>
                    <div className="h-4 bg-[#8892B0]/20 rounded-none w-1/3"></div>

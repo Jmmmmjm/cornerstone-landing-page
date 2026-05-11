@@ -5,21 +5,21 @@
 
 export function PlaceholderSection({ title, number }: { title: string, number: number }) {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center bg-[#F8F9FA] dark:bg-[#0A192F] border-b border-slate-100 dark:border-[#8892B0]/10">
+    <section className="relative h-screen w-full flex items-center justify-center bg-[#0A192F] border-b border-[#8892B0]/10">
       <div className="text-center">
-        <span className="text-8xl md:text-[12rem] font-display font-bold text-[#0A192F]/5 dark:text-[#F8F9FA]/5 select-none block leading-none">
+        <span className="text-8xl md:text-[12rem] font-display font-bold text-[#F8F9FA]/5 select-none block leading-none">
           {String(number).padStart(2, '0')}
         </span>
         <div className="relative -mt-12 md:-mt-24">
-          <h2 className="text-4xl md:text-6xl font-display font-medium text-[#0A192F] dark:text-[#F8F9FA] tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-display font-medium text-[#F8F9FA] tracking-tight">
             {title}
           </h2>
           <div className="mt-6 flex items-center justify-center gap-4">
-            <div className="h-px w-8 bg-teal-500 dark:bg-[#64FFDA]" />
-            <p className="text-[#0A192F]/50 dark:text-[#8892B0] font-sans tracking-[0.3em] uppercase text-xs font-bold">
+            <div className="h-px w-8 bg-[#64FFDA]" />
+            <p className="text-[#8892B0] font-sans tracking-[0.3em] uppercase text-xs font-bold">
               Placeholder Section
             </p>
-            <div className="h-px w-8 bg-teal-500 dark:bg-[#64FFDA]" />
+            <div className="h-px w-8 bg-[#64FFDA]" />
           </div>
         </div>
       </div>

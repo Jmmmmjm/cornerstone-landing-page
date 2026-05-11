@@ -27,22 +27,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const [introDone, setIntroDone] = useState(false);
-  const [isDark, setIsDark] = useState(true);
   const scrollbarRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Sync theme state with document class
-    const checkTheme = () => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    };
-    
-    // Initial check
-    checkTheme();
-
-    // Observe class changes on html element
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    // Ensure dark mode is always set
+    document.documentElement.classList.add('dark');
 
     if (!introDone) return;
 
@@ -86,7 +76,7 @@ export default function App() {
   }, [introDone]);
 
   return (
-    <main ref={mainRef} className="bg-transparent text-[#0A192F] dark:text-[#F8F9FA] cursor-none">
+    <main ref={mainRef} className="bg-transparent text-[#F8F9FA] cursor-none">
       <AnimatePresence>
         {!introDone && (
           <Suspense fallback={null}>
@@ -98,24 +88,24 @@ export default function App() {
       <CustomCursor />
       <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
         <Grainient
-          color1={isDark ? "#4A5568" : "#F8FAFC"}
-          color2={isDark ? "#112240" : "#F1F5F9"}
-          color3={isDark ? "#0A192F" : "#E2E8F0"}
+          color1="#4A5568"
+          color2="#112240"
+          color3="#0A192F"
           timeSpeed={0.12}
-          grainAmount={isDark ? 0.08 : 0.03}
+          grainAmount={0.08}
           grainScale={2.2}
           grainAnimated
           warpStrength={0.4}
           warpFrequency={1.8}
           zoom={1.1}
-          contrast={isDark ? 1.5 : 1.1}
+          contrast={1.5}
         />
       </div>
       <IlluminationGrid />
 
       {/* Custom Scrollbar */}
-      <div className="fixed top-0 right-0 w-1.5 h-full bg-slate-50 dark:bg-[#112240] z-[100] hidden md:block">
-        <div ref={scrollbarRef} className="w-full bg-teal-500 dark:bg-[#64FFDA] origin-top scale-y-0 rounded-none" style={{ height: '100%' }} />
+      <div className="fixed top-0 right-0 w-1.5 h-full bg-[#112240] z-[100] hidden md:block">
+        <div ref={scrollbarRef} className="w-full bg-[#64FFDA] origin-top scale-y-0 rounded-none" style={{ height: '100%' }} />
       </div>
 
       {introDone && (

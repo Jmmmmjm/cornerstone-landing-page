@@ -39,7 +39,7 @@ export function LegacyUI() {
   );
 
   return (
-    <div ref={containerRef} className="absolute inset-0 bg-[#F8F9FA] dark:bg-[#0A192F] overflow-hidden">
+    <div ref={containerRef} className="absolute inset-0 bg-[#0A192F] overflow-hidden">
       {/* Background noise grid */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
 

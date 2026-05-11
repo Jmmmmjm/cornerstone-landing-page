@@ -62,7 +62,7 @@ export function PlanSection() {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="font-mono text-xs md:text-sm text-teal-600 dark:text-[#64FFDA] tracking-[0.2em] uppercase mb-4"
+          className="font-mono text-xs md:text-sm text-[#64FFDA] tracking-[0.2em] uppercase mb-4"
         >
           Pricing
         </motion.div>
@@ -70,7 +70,7 @@ export function PlanSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase w-full text-left"
+          className="text-5xl md:text-8xl lg:text-[10rem] font-display font-bold text-[#F8F9FA] tracking-tighter leading-[0.85] uppercase w-full text-left"
         >
           PLANS
         </motion.h2>
@@ -97,7 +97,7 @@ export function PlanSection() {
                 stiffness: 250,
                 damping: 32,
               }}
-              className="relative min-w-[150px] md:min-w-[280px] md:h-full group border-t border-slate-200 dark:border-[#8892B0]/10 md:border-t-0 md:border-r last:border-r-0 cursor-pointer overflow-hidden will-change-[flex,height]"
+              className="relative min-w-[150px] md:min-w-[280px] md:h-full group border-t border-[#8892B0]/10 md:border-t-0 md:border-r last:border-r-0 cursor-pointer overflow-hidden will-change-[flex,height]"
             >
               <div className="relative h-full w-full p-6 md:p-12 flex flex-col justify-between overflow-hidden">
                 
@@ -107,7 +107,7 @@ export function PlanSection() {
                       animate={{ 
                           opacity: isExpanded ? 0.6 : 0.2 
                       }}
-                      className="font-mono text-[9px] md:text-[10px] text-teal-500 dark:text-[#64FFDA] tracking-[0.3em] uppercase"
+                      className="font-mono text-[9px] md:text-[10px] text-[#64FFDA] tracking-[0.3em] uppercase"
                     >
                       {plan.label} // 0{index + 1}
                     </motion.div>
@@ -123,7 +123,7 @@ export function PlanSection() {
                               originY: 1,
                               opacity: isExpanded ? 1 : 0.4,
                           }}
-                          className="font-display font-bold text-[#0A192F] dark:text-[#F8F9FA] text-2xl md:text-6xl tracking-tighter uppercase leading-none will-change-transform whitespace-nowrap"
+                          className="font-display font-bold text-[#F8F9FA] text-2xl md:text-6xl tracking-tighter uppercase leading-none will-change-transform whitespace-nowrap"
                         >
                           {plan.name}
                         </motion.h3>
@@ -135,7 +135,7 @@ export function PlanSection() {
                           opacity: isExpanded ? 1 : 0.1,
                           marginTop: isExpanded ? '1rem' : '0.25rem'
                       }}
-                      className="h-1 bg-teal-500 dark:bg-[#64FFDA]" 
+                      className="h-1 bg-[#64FFDA]" 
                     />
                   </div>
 
@@ -146,7 +146,7 @@ export function PlanSection() {
                     }}
                     className="overflow-hidden"
                   >
-                    <p className="text-[#0A192F]/80 dark:text-[#8892B0] text-sm md:text-lg leading-relaxed max-w-lg font-sans mb-6 md:mb-8">
+                    <p className="text-[#8892B0] text-sm md:text-lg leading-relaxed max-w-lg font-sans mb-6 md:mb-8">
                       {plan.description}
                     </p>
 
@@ -159,7 +159,7 @@ export function PlanSection() {
                             className="flex items-center gap-3"
                         >
                             <div className="w-1 h-1 rounded-full bg-teal-500 shrink-0" />
-                            <span className="text-[9px] md:text-xs text-[#0A192F] dark:text-[#CCD6F6] font-bold uppercase tracking-[0.2em] whitespace-nowrap">
+                            <span className="text-[9px] md:text-xs text-[#CCD6F6] font-bold uppercase tracking-[0.2em] whitespace-nowrap">
                             {feature}
                             </span>
                         </motion.div>

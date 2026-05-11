@@ -227,7 +227,7 @@ export function Hero() {
       <BreathingGrid />
 
       <div ref={questionRef} className="absolute z-30 text-center px-6">
-        <h2 className="text-[#0A192F]/70 dark:text-[#8892B0] font-display font-light text-xl md:text-3xl tracking-[0.2em] uppercase max-w-2xl">
+        <h2 className="text-[#8892B0] font-display font-light text-xl md:text-3xl tracking-[0.2em] uppercase max-w-2xl">
           Tired of manual work holding you back?
         </h2>
       </div>
@@ -238,7 +238,7 @@ export function Hero() {
             <div
               key={i}
               ref={el => { iconsRef.current[i] = el; }}
-              className="absolute text-[#0A192F]/70 dark:text-[#8892B0] will-change-transform"
+              className="absolute text-[#8892B0] will-change-transform"
             >
               <div ref={el => { magneticRefs.current[i] = el; }}>
                 <div ref={el => { innerIconsRef.current[i] = el; }}>
@@ -254,19 +254,19 @@ export function Hero() {
         ref={centeredLogoRef}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[500] w-[100px] h-[100px] md:w-[180px] md:h-[180px] pointer-events-none flex items-center justify-center -mt-[10vh]"
       >
-        <Logo className="absolute w-full h-full text-[#0A192F] dark:text-[#F8F9FA]" />
+        <Logo className="absolute w-full h-full text-[#F8F9FA]" />
       </div>
 
       <div ref={textRef} className="absolute z-50 flex flex-col items-center justify-center text-center opacity-0 top-[65%] left-1/2 -translate-x-1/2 w-full px-4">
-        <h1 className="text-[#0A192F] dark:text-[#F8F9FA] font-display font-bold text-3xl md:text-6xl lg:text-7xl tracking-[0.1em] md:tracking-[0.15em] uppercase drop-shadow-lg leading-tight">
+        <h1 className="text-[#F8F9FA] font-display font-bold text-3xl md:text-6xl lg:text-7xl tracking-[0.1em] md:tracking-[0.15em] uppercase drop-shadow-lg leading-tight">
           Save 15 Hours <br className="md:hidden" /> Every Week
         </h1>
-        <p className="text-[#0A192F] dark:text-[#8892B0] font-display font-light text-base md:text-xl lg:text-2xl mt-4 tracking-normal drop-shadow-md max-w-md md:max-w-none">
+        <p className="text-[#8892B0] font-display font-light text-base md:text-xl lg:text-2xl mt-4 tracking-normal drop-shadow-md max-w-md md:max-w-none">
           Automate the work. Accelerate your growth.
         </p>
         
         <div id="hero-scroll-anchor" className="mt-12 md:mt-16 flex flex-col items-center gap-3">
-          <span className="text-[#0A192F]/40 dark:text-[#8892B0]/50 font-sans font-bold tracking-[0.4em] uppercase text-[10px]">
+          <span className="text-[#8892B0]/50 font-sans font-bold tracking-[0.4em] uppercase text-[10px]">
             Scroll
           </span>
           <div id="hero-scroll-line" className="w-[1px] h-10 md:h-12 bg-gradient-to-b from-teal-500/50 to-transparent relative overflow-hidden">

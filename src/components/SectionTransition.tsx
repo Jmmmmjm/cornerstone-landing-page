@@ -32,8 +32,8 @@ export function SectionTransition() {
 
   return (
     <div ref={containerRef} className="w-full relative flex items-center justify-center py-12 z-20">
-      <div ref={lineRef} className="absolute w-full h-px bg-[#0A192F]/20 dark:bg-[#64FFDA]/40 origin-center" />
-      <div ref={shapeRef} className="absolute w-2 h-2 border border-[#0A192F]/40 dark:border-[#64FFDA] bg-[#F8F9FA] dark:bg-[#0A192F] rotate-45" />
+      <div ref={lineRef} className="absolute w-full h-px bg-[#64FFDA]/40 origin-center" />
+      <div ref={shapeRef} className="absolute w-2 h-2 border border-[#64FFDA] bg-[#0A192F] rotate-45" />
     </div>
   );
 }
