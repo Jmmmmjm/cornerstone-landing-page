@@ -44,7 +44,7 @@ export function Navbar({ onBookClick }: { onBookClick: () => void }) {
             damping: 24,
             mass: 1.2,
           }}
-          className={`pointer-events-auto flex items-center justify-between relative group/nav will-change-transform mx-4 md:mx-0 rounded-none border-none transition-all duration-300 ${scrolled ? 'py-3 px-8' : 'py-6 px-6 md:px-16'}`}
+          className={`pointer-events-auto flex items-center justify-between relative group/nav will-change-transform mx-4 md:mx-0 rounded-none border-none transition-[padding] duration-300 ${scrolled ? 'py-3 px-8' : 'py-6 px-6 md:px-16'}`}
         >
           <div className="flex items-center gap-2 relative z-10">
             <motion.div animate={{ color: activeTextColor }} transition={{ duration: 0.4 }}>
