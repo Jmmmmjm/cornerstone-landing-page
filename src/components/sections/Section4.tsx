@@ -2,9 +2,9 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { WorkflowDiagramUI } from './WorkflowDiagramUI';
-import { CustomCanvasUI } from './CustomCanvasUI';
-import { Reveal } from './Reveal';
+import { WorkflowDiagramUI } from '../ui/WorkflowDiagramUI';
+import { CustomCanvasUI } from '../ui/CustomCanvasUI';
+import { Reveal } from '../ui/Reveal';
 
 export function Section4() {
   const containerRef = useRef<HTMLDivElement>(null);

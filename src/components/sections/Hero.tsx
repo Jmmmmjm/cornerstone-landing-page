@@ -3,8 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { FileSpreadsheet, Mail, Database, FileText, LayoutDashboard, MessageSquare, PieChart, FolderOpen, Calendar, Briefcase } from 'lucide-react';
-import { BreathingGrid } from './BreathingGrid';
-import { Logo } from './Logo';
+import { BreathingGrid } from '../effects/BreathingGrid';
+import { Logo } from '../ui/Logo';
 
 gsap.registerPlugin(ScrollTrigger);
 

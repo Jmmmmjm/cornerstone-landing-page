@@ -5,7 +5,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { Reveal } from './Reveal';
+import { Reveal } from '../ui/Reveal';
 import { ServicesSection } from './ServicesSection';
 import { NumbersSection } from './NumbersSection';
 

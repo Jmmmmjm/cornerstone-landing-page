@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Reveal } from './Reveal';
+import { Reveal } from '../ui/Reveal';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
-import Grainient from './Grainient';
+import Grainient from '../effects/Grainient';
 
 const stats = [
   {

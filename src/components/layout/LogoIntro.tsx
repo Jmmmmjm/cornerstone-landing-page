@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Logo } from './Logo';
+import { Logo } from '../ui/Logo';
 
 export function LogoIntro({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {

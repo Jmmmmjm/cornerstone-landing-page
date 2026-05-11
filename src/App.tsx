@@ -9,19 +9,19 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { AnimatePresence } from 'motion/react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { CustomCursor } from './components/CustomCursor';
-import { IlluminationGrid } from './components/IlluminationGrid';
-import Grainient from './components/Grainient';
+import { Navbar } from './components/layout/Navbar';
+import { Hero } from './components/sections/Hero';
+import { CustomCursor } from './components/effects/CustomCursor';
+import { IlluminationGrid } from './components/effects/IlluminationGrid';
+import Grainient from './components/effects/Grainient';
 
 // Lazy load sections
-const AboutSection = lazy(() => import('./components/AboutSection').then(module => ({ default: module.AboutSection })));
-const PortfolioSection = lazy(() => import('./components/PortfolioSection').then(module => ({ default: module.PortfolioSection })));
-const PlanSection = lazy(() => import('./components/PlanSection').then(module => ({ default: module.PlanSection })));
-const Section6 = lazy(() => import('./components/Section6').then(module => ({ default: module.Section6 })));
-const Footer = lazy(() => import('./components/Footer').then(module => ({ default: module.Footer })));
-const LogoIntro = lazy(() => import('./components/LogoIntro').then(module => ({ default: module.LogoIntro })));
+const AboutSection = lazy(() => import('./components/sections/AboutSection').then(module => ({ default: module.AboutSection })));
+const PortfolioSection = lazy(() => import('./components/sections/PortfolioSection').then(module => ({ default: module.PortfolioSection })));
+const PlanSection = lazy(() => import('./components/sections/PlanSection').then(module => ({ default: module.PlanSection })));
+const Section6 = lazy(() => import('./components/sections/Section6').then(module => ({ default: module.Section6 })));
+const Footer = lazy(() => import('./components/layout/Footer').then(module => ({ default: module.Footer })));
+const LogoIntro = lazy(() => import('./components/layout/LogoIntro').then(module => ({ default: module.LogoIntro })));
 
 gsap.registerPlugin(ScrollTrigger);
 

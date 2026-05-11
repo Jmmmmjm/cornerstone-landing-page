@@ -2,8 +2,8 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { ActiveGrid } from './ActiveGrid';
-import { Reveal } from './Reveal';
+import { ActiveGrid } from '../effects/ActiveGrid';
+import { Reveal } from '../ui/Reveal';
 
 export function Section6() {
   const containerRef = useRef<HTMLElement>(null);

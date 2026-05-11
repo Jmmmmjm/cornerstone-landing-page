@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Factory, Truck, Building2, ArrowRight } from 'lucide-react';
-import { CountUp } from './CountUp';
-import { Reveal } from './Reveal';
+import { CountUp } from '../ui/CountUp';
+import { Reveal } from '../ui/Reveal';
 
 const CASE_STUDIES = [
   {

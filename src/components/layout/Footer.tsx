@@ -1,4 +1,4 @@
-import Grainient from './Grainient';
+import Grainient from '../effects/Grainient';
 
 export function Footer() {
   return (

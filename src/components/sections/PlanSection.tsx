@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { PlateIcon, BlockIcon, KeystoneIcon, CornerstoneIcon, FrameworkIcon } from './ArchitecturalIcons';
+import { PlateIcon, BlockIcon, KeystoneIcon, CornerstoneIcon, FrameworkIcon } from '../ui/ArchitecturalIcons';
 
 const plans = [
   {

@@ -2,10 +2,10 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { LiveWindowUIOverlay } from './LiveWindowUIOverlay';
-import { LegacyUI } from './LegacyUI';
-import { Reveal } from './Reveal';
-import { WindowUI } from './WindowUI';
+import { LiveWindowUIOverlay } from '../ui/LiveWindowUIOverlay';
+import { LegacyUI } from '../ui/LegacyUI';
+import { Reveal } from '../ui/Reveal';
+import { WindowUI } from '../ui/WindowUI';
 
 export function Section2() {
   const containerRef = useRef<HTMLDivElement>(null);
