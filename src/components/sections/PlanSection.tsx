@@ -1,17 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { PlateIcon, BlockIcon, KeystoneIcon, CornerstoneIcon, FrameworkIcon } from '../ui/ArchitecturalIcons';
+import { BlockIcon, KeystoneIcon, CornerstoneIcon, FrameworkIcon } from '../ui/ArchitecturalIcons';
 
 const plans = [
-  {
-    id: 'free',
-    name: 'Free',
-    label: 'Foundation',
-    description: 'Entry-level access to the Cornerstone architecture. Perfect for identifying core bottlenecks.',
-    features: ['Consultation Call', 'Bottleneck Analysis', 'Templated Design', '24h Delivery'],
-    scale: 20,
-    Icon: PlateIcon
-  },
   {
     id: 'capstone',
     name: 'Capstone',
