@@ -20,7 +20,7 @@ export function AboutSection() {
 
   return (
     <section className="relative w-full bg-transparent py-24 md:py-32 select-none font-sans overflow-x-clip">
-      
+
       {/* Intro Header */}
       <div className="px-6 md:px-12 w-full mb-16 md:mb-32">
         <Reveal>
@@ -35,14 +35,14 @@ export function AboutSection() {
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mt-8 md:mt-12 text-lg md:text-3xl text-white/60 max-w-3xl leading-relaxed">
-            We help teams save 10+ hours per week by automating workflows and building systems that let you focus on what matters.
+            We help teams save over 200k+ minutes a year by building automated systems that let you focus on what matters.
           </p>
         </Reveal>
       </div>
 
       {/* Team Image Marquee - Parallax effect */}
       <div ref={marqueeRef} className="relative w-full mb-32 overflow-hidden border-y border-white/10 py-12">
-        <motion.div 
+        <motion.div
           style={{ x: xMarquee }}
           className="flex gap-8 whitespace-nowrap"
         >
@@ -68,12 +68,12 @@ export function AboutSection() {
       <div className="relative w-full">
         {/* Services Section - Stays sticky so Numbers can slide over it */}
         <div className="relative z-10">
-           <ServicesSection />
+          <ServicesSection />
         </div>
 
         {/* Numbers Section - Higher Z-index to cover Services */}
         <div className="relative z-20 -mt-[100vh]">
-           <NumbersSection />
+          <NumbersSection />
         </div>
       </div>
 

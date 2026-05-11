@@ -42,23 +42,23 @@ export function Hero() {
     const handleMouseMove = (e: MouseEvent) => {
       if (window.innerWidth < 768) return;
       const { clientX, clientY } = e;
-      
+
       magneticRefs.current.forEach((ref) => {
         if (!ref) return;
-        
+
         const rect = ref.getBoundingClientRect();
         const iconX = rect.left + rect.width / 2;
         const iconY = rect.top + rect.height / 2;
-        
+
         const dist = Math.hypot(clientX - iconX, clientY - iconY);
-        const threshold = 150; 
-        
+        const threshold = 150;
+
         if (dist < threshold) {
           const angle = Math.atan2(iconY - clientY, iconX - clientX);
           const force = (threshold - dist) / threshold;
           const moveX = Math.cos(angle) * force * 35;
           const moveY = Math.sin(angle) * force * 35;
-          
+
           gsap.to(ref, {
             x: moveX,
             y: moveY,
@@ -107,7 +107,7 @@ export function Hero() {
           idleTweens.current.forEach(tween => {
             tween.timeScale(Math.max(0, 1 - progress * 2));
           });
-          
+
           if (progress > 0.1) {
             magneticRefs.current.forEach(ref => {
               if (ref) gsap.to(ref, { x: 0, y: 0, duration: 0.3 });
@@ -167,25 +167,25 @@ export function Hero() {
         if (i === 2) return;
         const p = path as SVGPathElement;
         const length = p.getTotalLength();
-        
-        tl.set(p, { 
-          strokeDasharray: length, 
+
+        tl.set(p, {
+          strokeDasharray: length,
           strokeDashoffset: length,
           stroke: 'currentColor',
           strokeWidth: 2,
           fillOpacity: 0,
-          opacity: 1 
+          opacity: 1
         }, 0.1);
 
-        tl.to(p, { 
-          strokeDashoffset: 0, 
-          duration: 0.5, 
-          ease: "power1.inOut" 
+        tl.to(p, {
+          strokeDashoffset: 0,
+          duration: 0.5,
+          ease: "power1.inOut"
         }, 0.1 + (i * 0.05));
-        
-        tl.to(p, { 
-          fillOpacity: 1, 
-          strokeWidth: 0, 
+
+        tl.to(p, {
+          fillOpacity: 1,
+          strokeWidth: 0,
           duration: 0.3,
           ease: "power1.out"
         }, 0.4 + (i * 0.05));
@@ -193,9 +193,9 @@ export function Hero() {
 
       const trianglePath = paths[2];
       if (trianglePath) {
-        tl.fromTo(trianglePath, 
-          { opacity: 0, x: -15, y: 15 }, 
-          { opacity: 1, x: 0, y: 0, duration: 0.4, ease: "back.out(1.5)" }, 
+        tl.fromTo(trianglePath,
+          { opacity: 0, x: -15, y: 15 },
+          { opacity: 1, x: 0, y: 0, duration: 0.4, ease: "back.out(1.5)" },
           0.5
         );
       }
@@ -250,7 +250,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div 
+      <div
         ref={centeredLogoRef}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[500] w-[100px] h-[100px] md:w-[180px] md:h-[180px] pointer-events-none flex items-center justify-center -mt-[10vh]"
       >
@@ -259,18 +259,18 @@ export function Hero() {
 
       <div ref={textRef} className="absolute z-50 flex flex-col items-center justify-center text-center opacity-0 top-[65%] left-1/2 -translate-x-1/2 w-full px-4">
         <h1 className="text-[#F8F9FA] font-display font-bold text-3xl md:text-6xl lg:text-7xl tracking-[0.1em] md:tracking-[0.15em] uppercase drop-shadow-lg leading-tight">
-          Save 15 Hours <br className="md:hidden" /> Every Week
+          Save 200k+ Minutes <br className="md:hidden" /> a Year
         </h1>
         <p className="text-[#8892B0] font-display font-light text-base md:text-xl lg:text-2xl mt-4 tracking-normal drop-shadow-md max-w-md md:max-w-none">
-          Automate the work. Accelerate your growth.
+          We Build Stunning Platforms That Save Time and Make Money.
         </p>
-        
+
         <div id="hero-scroll-anchor" className="mt-12 md:mt-16 flex flex-col items-center gap-3">
           <span className="text-[#8892B0]/50 font-sans font-bold tracking-[0.4em] uppercase text-[10px]">
             Scroll
           </span>
           <div id="hero-scroll-line" className="w-[1px] h-10 md:h-12 bg-gradient-to-b from-teal-500/50 to-transparent relative overflow-hidden">
-             <div className="absolute top-0 left-0 w-full h-1/2 bg-teal-500 animate-scroll-line" />
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-teal-500 animate-scroll-line" />
           </div>
         </div>
       </div>
