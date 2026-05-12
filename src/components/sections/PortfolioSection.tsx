@@ -9,15 +9,15 @@ import { motion, useScroll, useTransform } from 'motion/react';
 
 const projects = [
   {
-    id: 'mindjoin',
-    client: 'LIVERPOOL FC',
-    type: 'MOBILE APP',
+    id: 'creativevision',
+    client: 'CREATIVEVISION',
+    type: 'CONTENT AGENCY',
     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
   },
   {
-    id: 'theunknown',
-    client: 'THE NORWEGIAN CAPSULE',
-    type: 'RESPONSIVE WEB',
+    id: '4six-creative',
+    client: '4SIX CREATIVE',
+    type: 'SOCIAL AGENCY',
     img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
   }
 ];
@@ -134,12 +134,12 @@ function ProjectCard({ project, side }: { project: typeof projects[0], side: 'le
       </div>
       
       <div className={`mt-8 flex flex-col ${side === 'right' ? 'items-end text-right' : 'items-start text-left'}`}>
-         <span className="font-mono text-[9px] md:text-[10px] tracking-widest text-[#F8F9FA]/40 uppercase mb-1">
-            {project.client}
-         </span>
-         <h3 className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] font-bold text-[#64FFDA] uppercase">
+         <h3 className="font-mono text-[10px] md:text-xs tracking-widest text-[#F8F9FA]/40 uppercase mb-2">
             {project.type}
          </h3>
+         <span className="font-display text-2xl md:text-4xl font-bold text-[#64FFDA] tracking-tighter uppercase leading-none">
+            {project.client}
+         </span>
       </div>
     </div>
   );
