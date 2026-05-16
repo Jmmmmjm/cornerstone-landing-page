@@ -265,7 +265,7 @@ export function Hero() {
           We Build Stunning Platforms That Save Time and Make Money.
         </p>
 
-        <div id="hero-scroll-anchor" className="mt-12 md:mt-16 flex flex-col items-center gap-3">
+        <div id="hero-scroll-anchor" className="mt-12 md:mt-16 mb-24 md:mb-32 flex flex-col items-center gap-3">
           <span className="text-[#8892B0]/50 font-sans font-bold tracking-[0.4em] uppercase text-[10px]">
             Scroll
           </span>

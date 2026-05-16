@@ -49,7 +49,7 @@ export function ServicesSection() {
         {/* Right Column - Fixed Header */}
         <div className="w-full lg:w-1/2 h-auto lg:h-full flex flex-col justify-start pt-24 lg:pt-32 px-6 lg:px-12 z-10 text-left lg:text-right bg-transparent shrink-0">
           <Reveal>
-            <div className="font-mono text-xs md:text-sm text-[#64FFDA] tracking-widest uppercase mb-4">
+            <div className="font-mono text-xs md:text-sm text-[#64FFDA] tracking-widest uppercase mb-6">
               How we work
             </div>
           </Reveal>

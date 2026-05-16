@@ -59,7 +59,7 @@ export function Section4() {
   }, { scope: containerRef });
 
   return (
-    <section id="solutions" ref={containerRef} className="relative py-32 bg-gradient-noise overflow-hidden">
+    <section id="solutions" ref={containerRef} className="relative py-24 md:py-32 bg-gradient-noise overflow-hidden">
       
       {/* Full-width Intro Moment */}
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-0 z-0">
@@ -71,7 +71,7 @@ export function Section4() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         <div className="relative flex flex-col md:flex-row items-stretch justify-center gap-12 md:gap-24">
           

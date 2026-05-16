@@ -35,25 +35,25 @@ const Counter = ({ value, prefix = '', suffix = '', duration = 2.5 }: { value: n
 
 export function ResultsSection() {
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-[#0A192F] text-[#F8F9FA] overflow-hidden border-t border-white/10">
-      <div className="container mx-auto px-6 md:px-12 py-24 flex flex-col lg:flex-row gap-16 lg:gap-32 items-center">
+    <section className="relative w-full min-h-screen flex flex-col bg-transparent text-[#F8F9FA] overflow-hidden">
+      <div className="w-full px-6 md:px-12 py-24 md:py-32 flex flex-col gap-16 md:gap-32">
 
         {/* Headline */}
-        <div className="lg:w-5/12 relative z-10 w-full shrink-0">
+        <div className="relative z-10 w-full shrink-0">
           <Reveal>
             <div className="font-mono text-xs md:text-sm text-[#64FFDA] tracking-[0.2em] uppercase mb-6">
               System Telemetry // Performance
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="text-6xl md:text-7xl lg:text-[6vw] font-display font-bold uppercase tracking-tighter leading-[0.85] text-[#F8F9FA]">
+            <h2 className="text-6xl md:text-7xl lg:text-[8rem] font-display font-bold uppercase tracking-tighter leading-[0.85] text-[#F8F9FA] max-w-4xl">
               Real <br className="hidden md:block" /> Results
             </h2>
           </Reveal>
         </div>
 
         {/* Stats Grid */}
-        <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-16 md:gap-y-24 w-full relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-16 md:gap-y-24 w-full relative z-10">
 
           <div className="flex flex-col border-l-2 border-[#8892B0]/20 pl-6 md:pl-10">
             <Reveal delay={0.3}>

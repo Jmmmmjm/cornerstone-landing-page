@@ -99,8 +99,8 @@ export function NumbersSection() {
         </div>
 
         {/* Track Container (div-block-22) */}
-        <div className="flex-1 flex items-center px-6 md:px-12 relative z-10 overflow-hidden">
-          <motion.div style={{ x }} className="flex">
+        <div className="flex-1 flex items-center relative z-10 overflow-hidden">
+          <motion.div style={{ x }} className="flex px-6 md:px-12">
             {stats.map((stat, i) => (
               <div 
                 key={i} 

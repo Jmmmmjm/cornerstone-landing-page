@@ -22,7 +22,7 @@ export function AboutSection() {
     <section className="relative w-full bg-transparent py-24 md:py-32 select-none font-sans overflow-x-clip">
 
       {/* Intro Header */}
-      <div className="px-6 md:px-12 w-full mb-16 md:mb-32">
+      <div className="w-full mb-24 md:mb-32 px-6 md:px-12">
         <Reveal>
           <div className="font-mono text-xs md:text-sm text-[#64FFDA] tracking-[0.2em] uppercase mb-6">
             Who we are

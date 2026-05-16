@@ -48,7 +48,7 @@ export function PortfolioSection() {
   console.log('PORTFOLIO: titleOpacity at current scroll =', titleOpacity.get());
 
   return (
-    <div ref={containerRef} className="relative h-[300vh] w-full bg-transparent">
+    <div ref={containerRef} className="relative h-[300vh] w-full bg-transparent py-24 md:py-32">
       
       {/* Sticky Reveal Container */}
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden isolate">

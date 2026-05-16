@@ -82,7 +82,7 @@ export function HorizontalScrollSection() {
       <div className="relative z-10 h-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-12 md:gap-20">
         
         {/* Left Side: Text Content */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center py-20">
+        <div className="w-full md:w-1/2 flex flex-col justify-center py-24 md:py-32">
           <div className="relative h-[300px]">
             {STEPS.map((step, i) => (
               <div 

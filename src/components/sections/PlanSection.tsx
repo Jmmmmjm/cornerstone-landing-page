@@ -48,12 +48,12 @@ export function PlanSection() {
     <section className="relative min-h-screen md:h-screen w-full bg-transparent flex flex-col overflow-hidden select-none font-sans">
       
       {/* Left-aligned Architectural Header */}
-      <div className="pt-24 px-6 md:px-12 pb-8 md:pb-16 shrink-0 z-20 w-full flex flex-col items-start text-left">
+      <div className="pt-24 md:pt-32 px-6 md:px-12 pb-8 md:pb-16 shrink-0 z-20 w-full flex flex-col items-start text-left">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="font-mono text-xs md:text-sm text-[#64FFDA] tracking-[0.2em] uppercase mb-4"
+          className="font-mono text-xs md:text-sm text-[#64FFDA] tracking-[0.2em] uppercase mb-6"
         >
           Pricing
         </motion.div>
@@ -119,15 +119,6 @@ export function PlanSection() {
                           {plan.name}
                         </motion.h3>
                     </div>
-                    
-                    <motion.div 
-                      animate={{ 
-                          width: isExpanded ? '6rem' : '1.5rem',
-                          opacity: isExpanded ? 1 : 0.1,
-                          marginTop: isExpanded ? '1rem' : '0.25rem'
-                      }}
-                      className="h-1 bg-[#64FFDA]" 
-                    />
                   </div>
 
                   {/* Details - Always visible on both Desktop and Mobile */}

@@ -47,10 +47,10 @@ export function Section5() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0); // First card preloaded
 
   return (
-    <section id="results" className="py-32 bg-gradient-noise overflow-hidden min-h-screen flex flex-col justify-center">
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
+    <section id="results" className="py-24 md:py-32 bg-gradient-noise overflow-hidden min-h-screen flex flex-col justify-center">
+      <div className="relative z-10 w-full flex flex-col items-center">
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 px-6 md:px-12">
           <Reveal delay={0}>
             <span className="text-[#64FFDA] font-sans text-sm tracking-[0.3em] uppercase mb-4 block">Success Stories</span>
           </Reveal>
@@ -59,7 +59,7 @@ export function Section5() {
           </Reveal>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-0 w-full h-[600px] md:h-[550px] border border-[#8892B0]/20">
+        <div className="flex flex-col md:flex-row gap-0 w-full h-[70vh] border-y border-[#8892B0]/20">
           {CASE_STUDIES.map((study, i) => {
             const isExpanded = hoveredIndex === i;
             const Icon = study.Icon;

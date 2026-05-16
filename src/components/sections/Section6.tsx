@@ -64,13 +64,13 @@ export function Section6({ onBookClick }: { onBookClick: () => void }) {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative min-h-screen bg-transparent flex items-center justify-center overflow-hidden py-24">
+    <section ref={containerRef} className="relative min-h-screen bg-transparent flex items-center justify-center overflow-hidden py-24 md:py-32">
       <ActiveGrid />
       
       {/* Ambient glow behind the CTA */}
       <div ref={glowRef} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#64FFDA]/[0.04] blur-[120px] pointer-events-none z-0" />
       
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 flex flex-col items-center text-center px-6 md:px-12 max-w-4xl mx-auto">
 
         {/* FREE badge — large and impossible to miss */}
         <div ref={badgeRef} className="mb-8">
