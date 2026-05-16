@@ -45,6 +45,7 @@
 @theme {
   --font-sans: "Proxima Nova", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Proxima Nova", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Proxima Nova", ui-monospace, monospace;
   --color-brand-bg: #0A192F;
   --color-brand-accent: #8892B0;
   --color-brand-text: #F8F9FA;
@@ -57,7 +58,7 @@ html {
 }
 
 body {
-  font-weight: 450;
+  font-weight: 400;
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   position: relative;
@@ -65,7 +66,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 800 !important;
+  font-weight: 800;
   letter-spacing: -0.02em;
 }
 
