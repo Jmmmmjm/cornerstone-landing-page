@@ -1,3 +1,4 @@
+"use client"
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -5,6 +6,8 @@ import { useGSAP } from '@gsap/react';
 import { WorkflowDiagramUI } from '../ui/WorkflowDiagramUI';
 import { CustomCanvasUI } from '../ui/CustomCanvasUI';
 import { Reveal } from '../ui/Reveal';
+
+import React from "react"
 
 export function Section4() {
   const containerRef = useRef<HTMLDivElement>(null);

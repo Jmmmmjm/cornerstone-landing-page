@@ -1,4 +1,7 @@
+"use client"
 import { useState, useEffect } from 'react';
+
+import React from "react"
 
 const MESSAGES = [
   { sender: 'them', text: "We're currently using 4 different tools just to generate our weekly reports." },

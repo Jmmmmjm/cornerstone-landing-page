@@ -1,6 +1,9 @@
+"use client"
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Logo } from '../ui/Logo';
+
+import React from "react"
 
 export function LogoIntro({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {

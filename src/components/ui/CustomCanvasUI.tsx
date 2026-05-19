@@ -1,5 +1,8 @@
+"use client"
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+
+import React from "react"
 
 export function CustomCanvasUI() {
   const containerRef = useRef<HTMLDivElement>(null);

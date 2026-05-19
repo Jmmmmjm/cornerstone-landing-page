@@ -1,8 +1,11 @@
+"use client"
 import { useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Reveal } from '../ui/Reveal';
+
+import React from "react"
 
 gsap.registerPlugin(ScrollTrigger);
 

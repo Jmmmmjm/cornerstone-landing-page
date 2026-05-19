@@ -1,9 +1,12 @@
+"use client"
 import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { WindowUI } from '../ui/WindowUI';
 import { BarChart3, Laptop, TrendingUp, ArrowRight } from 'lucide-react';
+
+import React from "react"
 
 const STEPS = [
   {

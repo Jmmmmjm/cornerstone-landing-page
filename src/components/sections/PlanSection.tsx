@@ -1,6 +1,9 @@
+"use client"
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BlockIcon, KeystoneIcon, CornerstoneIcon, FrameworkIcon } from '../ui/ArchitecturalIcons';
+
+import React from "react"
 
 const plans = [
   {

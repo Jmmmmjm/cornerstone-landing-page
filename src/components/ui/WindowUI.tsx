@@ -1,6 +1,9 @@
+"use client"
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+
+import React from "react"
 
 export function WindowUI({ className = "", style = {}, partial = false, buildAnimation = false, children }: { className?: string; style?: React.CSSProperties; partial?: boolean; buildAnimation?: boolean; children?: React.ReactNode }) {
   const containerRef = useRef<HTMLDivElement>(null);

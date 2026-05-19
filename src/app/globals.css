@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/Proxima-Nova-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/Proxima-Nova-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/Proxima-Nova-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/Proxima-Nova-Extrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/Proxima-Nova-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Proxima Nova", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Proxima Nova", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Proxima Nova", ui-monospace, monospace;
+  --color-brand-bg: #0A192F;
+  --color-brand-accent: #8892B0;
+  --color-brand-text: #F8F9FA;
+}
+
+html {
+  overflow-x: clip;
+  height: auto;
+  scroll-behavior: auto !important;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Hide native scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+@media (pointer: fine) {
+  body:not(.modal-open) * {
+    cursor: none !important;
+  }
+  body:not(.modal-open) a, 
+  body:not(.modal-open) button, 
+  body:not(.modal-open) input, 
+  body:not(.modal-open) [role="button"] {
+    cursor: none !important;
+  }
+  /* Force system cursor to reappear everywhere inside the portal overlay */
+  body.modal-open #modal-root * {
+    cursor: auto !important;
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@keyframes scroll-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+
+.animate-scroll-line {
+  animation: scroll-line 2s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+
+/* Gradient-to-gray background with noise for sections that were white */
+.bg-gradient-noise {
+  background: linear-gradient(135deg, #0A192F 0%, #112240 30%, #1a2a3f 60%, #1e2d44 80%, #233347 100%);
+  position: relative;
+}
+
+.bg-gradient-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-gradient-noise > * {
+  position: relative;
+  z-index: 1;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Clear out the old rigid 'body.modal-open > *:not(#modal-root)' rule.
+   Instead, explicitly disable interaction only on your main content block: */
+body.modal-open main {
+  pointer-events: none !important;
+}
+
+/* Ensure the modal portal tree maintains full interactive target status */
+#modal-root {
+  position: relative;
+  z-index: 10000;
+  pointer-events: auto !important;
+}
+
+/* Force standard hardware cursor systems to wake back up inside the modal container */
+body.modal-open #modal-root * {
+  cursor: auto !important;
+}

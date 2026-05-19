@@ -1,3 +1,4 @@
+"use client"
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -6,6 +7,8 @@
 import { useRef } from 'react';
 import { useMotionValueEvent } from 'motion/react';
 import { motion, useScroll, useTransform } from 'motion/react';
+
+import React from "react"
 
 const projects = [
   {

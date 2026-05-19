@@ -1,7 +1,10 @@
+"use client"
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { Logo } from '../ui/Logo';
+
+import React from "react"
 
 export function Navbar({ onBookClick }: { onBookClick: () => void }) {
   const [scrolled, setScrolled] = useState(false);

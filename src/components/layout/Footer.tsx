@@ -1,4 +1,7 @@
+"use client"
 import Grainient from '../effects/Grainient';
+
+import React from "react"
 
 export function Footer() {
   return (

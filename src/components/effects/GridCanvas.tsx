@@ -1,5 +1,8 @@
+"use client"
 import { useEffect, useRef } from 'react';
 import { store } from '../store';
+
+import React from "react"
 
 export function GridCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

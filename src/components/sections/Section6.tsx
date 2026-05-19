@@ -1,9 +1,12 @@
+"use client"
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { ActiveGrid } from '../effects/ActiveGrid';
 import { Reveal } from '../ui/Reveal';
+
+import React from "react"
 
 export function Section6({ onBookClick }: { onBookClick: () => void }) {
   const containerRef = useRef<HTMLElement>(null);

@@ -1,6 +1,9 @@
+"use client"
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import React from "react"
 
 export function CountUp({ end, suffix = "", duration = 2, className = "" }: { end: number, suffix?: string, duration?: number, className?: string }) {
   const [count, setCount] = useState(0);

@@ -1,5 +1,8 @@
+"use client"
 import { forwardRef } from 'react';
 import { motion } from 'motion/react';
+
+import React from "react"
 
 export const Logo = forwardRef<SVGSVGElement, { className?: string; isAnimated?: boolean }>(({ className, isAnimated = false }, ref) => {
   return (

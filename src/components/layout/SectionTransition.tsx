@@ -1,7 +1,10 @@
+"use client"
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+
+import React from "react"
 
 export function SectionTransition() {
   const lineRef = useRef<HTMLDivElement>(null);

@@ -1,3 +1,4 @@
+"use client"
 import { useRef, useMemo } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -5,6 +6,8 @@ import { useGSAP } from '@gsap/react';
 import { FileSpreadsheet, Mail, Database, FileText, LayoutDashboard, MessageSquare, PieChart, FolderOpen, Calendar, Briefcase } from 'lucide-react';
 import { BreathingGrid } from '../effects/BreathingGrid';
 import { Logo } from '../ui/Logo';
+
+import React from "react"
 
 gsap.registerPlugin(ScrollTrigger);
 
