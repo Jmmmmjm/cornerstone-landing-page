@@ -1,5 +1,8 @@
+"use client"
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+
+import React from "react"
 
 export function WorkflowDiagramUI() {
   const svgRef = useRef<SVGSVGElement>(null);

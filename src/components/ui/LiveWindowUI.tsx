@@ -1,5 +1,8 @@
+"use client"
 import { useRef, useEffect, useState } from 'react';
 import { WindowUI } from './WindowUI';
+
+import React from "react"
 
 export function LiveWindowUI({ className = "" }: { className?: string }) {
   const [count, setCount] = useState(1240);

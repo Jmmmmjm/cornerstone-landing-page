@@ -1,8 +1,11 @@
+"use client"
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Factory, Truck, Building2, ArrowRight } from 'lucide-react';
 import { CountUp } from '../ui/CountUp';
 import { Reveal } from '../ui/Reveal';
+
+import React from "react"
 
 const CASE_STUDIES = [
   {

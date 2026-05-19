@@ -1,4 +1,7 @@
+"use client"
 import { useRef, useEffect, useState } from 'react';
+
+import React from "react"
 
 export function LiveWindowUIOverlay() {
   const [count, setCount] = useState(1240);

@@ -1,9 +1,12 @@
+"use client"
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
 
 import { motion } from 'motion/react';
+
+import React from "react"
 
 export function GrainyBackground() {
   return (

@@ -1,3 +1,4 @@
+"use client"
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -8,6 +9,8 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { Reveal } from '../ui/Reveal';
 import { ServicesSection } from './ServicesSection';
 import { NumbersSection } from './NumbersSection';
+
+import React from "react"
 
 export function AboutSection() {
   const marqueeRef = useRef<HTMLDivElement>(null);

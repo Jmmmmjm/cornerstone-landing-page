@@ -1,3 +1,4 @@
+"use client"
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -7,6 +8,8 @@ import { Reveal } from '../ui/Reveal';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import Grainient from '../effects/Grainient';
+
+import React from "react"
 
 const stats = [
   {

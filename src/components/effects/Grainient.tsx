@@ -1,3 +1,4 @@
+"use client"
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -6,6 +7,8 @@
 import { useEffect, useRef } from 'react';
 import { Renderer, Program, Mesh, Triangle } from 'ogl';
 import './Grainient.css';
+
+import React from "react"
 
 interface GrainientProps {
   timeSpeed?: number;

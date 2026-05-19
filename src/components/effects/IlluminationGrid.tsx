@@ -1,4 +1,7 @@
+"use client"
 import { useEffect, useRef } from 'react';
+
+import React from "react"
 
 export function IlluminationGrid() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

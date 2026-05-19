@@ -1,3 +1,4 @@
+"use client"
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -6,6 +7,8 @@ import { LiveWindowUIOverlay } from '../ui/LiveWindowUIOverlay';
 import { LegacyUI } from '../ui/LegacyUI';
 import { Reveal } from '../ui/Reveal';
 import { WindowUI } from '../ui/WindowUI';
+
+import React from "react"
 
 export function Section2() {
   const containerRef = useRef<HTMLDivElement>(null);

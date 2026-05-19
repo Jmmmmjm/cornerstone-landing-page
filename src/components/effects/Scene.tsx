@@ -1,7 +1,10 @@
+"use client"
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef, useMemo, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { store } from '../store';
+
+import React from "react"
 
 function Structure() {
   const groupRef = useRef<THREE.Group>(null);

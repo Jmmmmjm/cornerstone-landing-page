@@ -1,6 +1,9 @@
-import { useRef } from 'react';
+"use client"
+mport { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+
+import React from "react"
 
 export function LegacyUI() {
   const containerRef = useRef<HTMLDivElement>(null);

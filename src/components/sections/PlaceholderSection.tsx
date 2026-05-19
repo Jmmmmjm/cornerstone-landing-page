@@ -1,7 +1,10 @@
+"use client"
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
+
+import React from "react"
 
 export function PlaceholderSection({ title, number }: { title: string, number: number }) {
   return (
