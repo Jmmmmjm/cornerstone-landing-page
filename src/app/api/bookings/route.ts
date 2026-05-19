@@ -26,12 +26,12 @@ export async function GET(request: Request) {
     if (dateParam) {
       timeMin = new Date(`${dateParam} 00:00:00 UTC+8`).toISOString();
       timeMax = new Date(`${dateParam} 23:59:59 UTC+8`).toISOString();
-    } 
+    }
     // --- MODE B: Fetching availability for an entire month ---
     else if (monthParam && yearParam) {
       const year = parseInt(yearParam);
       const month = parseInt(monthParam);
-      
+
       // First day of the month at midnight PHT
       timeMin = new Date(year, month, 1, 0, 0, 0).toISOString();
       // Last day of the month at 11:59 PM PHT
@@ -53,9 +53,10 @@ export async function GET(request: Request) {
     const busySegments = check.data.calendars?.[calendarId]?.busy || [];
 
     return NextResponse.json({ success: true, busy: busySegments }, { status: 200 });
-  } catch (error: any) {
-    console.error('Google Calendar Availability Fetch Error:', error);
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred';
+    console.error('Google Calendar Availability Fetch:', error);
+    return NextResponse.json({ success: false, error: errorMessage }, { status: 500 });
   }
 }
 
@@ -96,7 +97,7 @@ export async function POST(request: Request) {
       },
       attendees: [
         { email: email, displayName: name },
-        { email: 'csuite@cornerstonemnl.com', displayName: 'Cornerstone'}
+        { email: 'csuite@cornerstonemnl.com', displayName: 'Cornerstone' }
       ],
       conferenceData: {
         createRequest: {
@@ -115,11 +116,9 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ success: true, data: response.data }, { status: 200 });
-  } catch (error: any) {
-    console.error('Google Calendar Service Account Object Param Error:', error);
-    return NextResponse.json(
-      { success: false, error: error.message || 'Failed to insert calendar event.' },
-      { status: 500 }
-    );
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred';
+    console.error('Google Calendar Error:', error);
+    return NextResponse.json({ success: false, error: errorMessage }, { status: 500 });
   }
 }
