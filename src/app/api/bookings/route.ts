@@ -10,9 +10,17 @@ export async function GET(request: Request) {
 
     const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
     const calendarId = process.env.GOOGLE_CALENDAR_ID || 'primary';
+    const serviceEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL
+
+    if (!serviceEmail || !privateKey || !calendarId) {
+      return NextResponse.json(
+        { success: false, error: 'Internal server configuration missing.' },
+        { status: 500 }
+      );
+    }
 
     const auth = new google.auth.JWT({
-      email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+      email: serviceEmail,
       key: privateKey,
       scopes: ['https://www.googleapis.com/auth/calendar.readonly'],
     });
