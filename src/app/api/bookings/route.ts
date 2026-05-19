@@ -109,9 +109,9 @@ export async function POST(request: Request) {
     // 5. Commit insertion to Google's registry
     const response = await calendar.events.insert({
       calendarId: calendarId,
-      resource: event,
       conferenceDataVersion: 1, // Required flag for automated video linkage
       sendUpdates: 'all',       // Dispatches dynamic notification invites to all attendees
+      requestBody: event
     });
 
     return NextResponse.json({ success: true, data: response.data }, { status: 200 });
