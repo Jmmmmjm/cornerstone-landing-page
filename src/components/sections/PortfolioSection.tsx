@@ -17,6 +17,7 @@ const projects = [
     type: 'CONTENT AGENCY',
     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
     video: '/videos/portfolio/CreativeVision_1280x720_30fps.mp4',
+    webm: '/videos/portfolio/CreativeVision.webm',
     link: '#'
   },
   {
@@ -25,6 +26,7 @@ const projects = [
     type: 'SOCIAL AGENCY',
     img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
     video: '/videos/portfolio/4sixcreative_1280x720_30fps.mp4',
+    webm: '/videos/portfolio/4sixcreative.webm',
     link: 'https://4six-creative.vercel.app/'
   }
 ];
@@ -152,6 +154,7 @@ function ProjectCard({ project, side }: { project: typeof projects[0], side: 'le
                poster={project.img}
                className="w-full h-full object-cover transition-all duration-700"
              >
+               {project.webm && <source src={project.webm} type="video/webm" />}
                <source src={project.video} type="video/mp4" />
              </video>
            </motion.div>
